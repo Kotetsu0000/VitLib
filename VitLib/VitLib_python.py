@@ -223,7 +223,7 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
 
     return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
 
-def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int, del_area:int=100, radius:int=3):
+def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int=128, del_area:int=100, radius:int=3):
     """細胞膜画像の評価を行う関数.
 
     Args:
