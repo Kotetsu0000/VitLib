@@ -1,5 +1,5 @@
 import sys
-from setuptools import setup, Extension
+from setuptools import setup, Extension, find_packages
 import numpy
 try:
     from Cython.Build import build_ext, cythonize
@@ -29,7 +29,7 @@ else:
 
 setup_kwargs = {
     "name": "VitLib",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A fast NWG Library",
     "author": "Kotetsu0000",
     'ext_modules': ext_modules,
@@ -37,7 +37,8 @@ setup_kwargs = {
     'install_requires' : [
         'numpy',
         'opencv_python',
-    ]
+    ],
+    'packages': find_packages(),
 }
 
 setup(**setup_kwargs)
