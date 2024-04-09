@@ -154,7 +154,6 @@ def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
     contours.sort()
     return contours
 
-
 def modifyLineWidth(img:np.ndarray, radius:int=1) -> np.ndarray:
     """細線化された画像の線の太さを変更する. 
 

@@ -507,7 +507,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] 
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef dict calc_membrane_eval(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):
+cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):
     """細胞膜画像の評価を行う関数.
 
     Args:
@@ -566,12 +566,13 @@ cpdef dict calc_membrane_eval(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray
     return return_dict
 ###
 
-cpdef dict calc_membrane_eval_2(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int del_area=100, int radius=3):
+cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold, int del_area=100, int radius=3):
     """細胞膜画像の評価を行う関数.
 
     Args:
-        pred_img_th_nwg (np.ndarray): 予測画像.
+        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.
         ans_img_th_nwg (np.ndarray): 正解画像.
+        threshold (int): 二値化の閾値(返却用).
         del_area (int): 小領域削除の閾値.
         radius (int): 評価指標の計算に使用する半径.
 
@@ -608,5 +609,5 @@ cpdef dict calc_membrane_eval_2(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cn
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'del_area':del_area}
+    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
     return return_dict
