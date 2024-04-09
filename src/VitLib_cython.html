@@ -8412,7 +8412,7 @@ static PyObject *__pyx_pf_13VitLib_cython_18calc_membrane_eval_2(CYTHON_UNUSED P
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_tip_length = __pyx_t_5;
 </pre><pre class="cython line score-0">&#xA0;<span class="">603</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">604</span>:     ## 正解の内部に含まれていない細線化した抽出</pre>
+<pre class="cython line score-0">&#xA0;<span class="">604</span>:     ## 正解の内部に含まれていない細線化した抽出結果の長さ</pre>
 <pre class="cython line score-59" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">605</span>:     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))</pre>
 <pre class='cython code score-59 '>  <span class='pyx_c_api'>__Pyx_GetModuleGlobalName</span>(__pyx_t_2, __pyx_n_s_np);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 605, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
@@ -8517,8 +8517,8 @@ static PyObject *__pyx_pf_13VitLib_cython_18calc_membrane_eval_2(CYTHON_UNUSED P
   }
   __pyx_v_fmeasure = __pyx_t_18;
 </pre><pre class="cython line score-0">&#xA0;<span class="">610</span>: </pre>
-<pre class="cython line score-35" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">611</span>:     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure}</pre>
-<pre class='cython code score-35 '>  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(3);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 611, __pyx_L1_error)</span>
+<pre class="cython line score-43" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">611</span>:     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'del_area':del_area}</pre>
+<pre class='cython code score-43 '>  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(4);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 611, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_t_3 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_precision);<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 611, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_3);
@@ -8532,10 +8532,13 @@ static PyObject *__pyx_pf_13VitLib_cython_18calc_membrane_eval_2(CYTHON_UNUSED P
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_3);
   if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_1, __pyx_n_s_fmeasure, __pyx_t_3) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 611, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = <span class='pyx_c_api'>__Pyx_PyInt_From_int</span>(__pyx_v_del_area);<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 611, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_3);
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_1, __pyx_n_s_del_area, __pyx_t_3) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 611, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_return_dict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">612</span>: </pre>
-<pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">613</span>:     return return_dict</pre>
+</pre><pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">612</span>:     return return_dict</pre>
 <pre class='cython code score-2 '>  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
   <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_v_return_dict);
   __pyx_r = __pyx_v_return_dict;

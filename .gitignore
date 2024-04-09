@@ -1,4 +1,5 @@
 .env
+VitLib.egg-info
 .python-version
 build
 main.py

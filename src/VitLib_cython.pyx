@@ -608,5 +608,5 @@ cpdef dict calc_membrane_eval_2(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cn
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
+    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'del_area':del_area}
     return return_dict
