@@ -520,7 +520,7 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
         otsu (bool): 二値化の閾値を自動で設定するかどうか.
 
     Returns:
-        dict: 評価指標の辞書. precision, recall, fmeasureをキーとする.
+        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] pred_img_th, ans_img_th, pred_img_th_nwg, ans_img_th_nwg, pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
     cdef int membrane_length, tip_length, miss_length
@@ -577,7 +577,7 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
         radius (int): 評価指標の計算に使用する半径.
 
     Returns:
-        dict: 評価指標の辞書. precision, recall, fmeasureをキーとする.
+        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
     cdef int membrane_length, tip_length, miss_length

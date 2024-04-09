@@ -170,7 +170,7 @@ def modifyLineWidth(img:np.ndarray, radius:int=1) -> np.ndarray:
         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)
     return src
 
-def calc_membrane_eval(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=128, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False) -> dict:
+def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=128, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False) -> dict:
     """細胞膜画像の評価を行う関数.
 
     Args:
@@ -183,7 +183,7 @@ def calc_membrane_eval(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=12
         otsu (bool): 二値化の閾値を自動で設定するかどうか.
 
     Returns:
-        dict: 評価指標の辞書. precision, recall, fmeasureをキーとする.
+        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
     """
     # 画像の二値化
     if otsu:
@@ -221,5 +221,44 @@ def calc_membrane_eval(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=12
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure}
+    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
 
+def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int, del_area:int=100, radius:int=3):
+    """細胞膜画像の評価を行う関数.
+
+    Args:
+        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.
+        ans_img_th_nwg (np.ndarray): 正解画像.
+        threshold (int): 二値化の閾値(返却用).
+        del_area (int): 小領域削除の閾値.
+        radius (int): 評価指標の計算に使用する半径.
+
+    Returns:
+        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
+    """
+    # 正解画像と推論画像を[0,1]に変換
+    pred_img_th_nwg = (pred_img_th_nwg//255).astype(np.uint8)
+    ans_img_th_nwg = (ans_img_th_nwg//255).astype(np.uint8)
+
+    # 小領域削除
+    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+
+    # 評価指標の計算
+    ## 正解の細胞膜の長さ
+    membrane_length = np.sum(ans_img_th_nwg)
+
+    ## 推定画像と正解画像の線幅を変更
+    pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)
+
+    ## 膨張した推定結果の内部に含まれる細線化した正解の長さ(target in predicted)
+    tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))
+
+    ## 正解の内部に含まれていない細線化した抽出結果の長さ
+    miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))
+
+    precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
+    recall = 0 if membrane_length==0 else tip_length / membrane_length
+    fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
+
+    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
