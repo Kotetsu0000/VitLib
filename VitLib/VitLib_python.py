@@ -145,6 +145,28 @@ def smallAreaReduction(img, area_th=100):
     return labeled_img.astype(np.uint8)
 
 def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
+    """2値画像の小領域の削除面積のリストを作成する関数.
+
+    Args:
+        img (np.ndarray): 2値画像.
+
+    Returns:
+        np.ndarray: 小領域の面積のリスト.
+
+    Example:
+        >>> import numpy as np
+        >>> from nwg_cython import detect_deleted_area_candidates
+        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 1, 1, 1]])
+        >>> detect_deleted_area_candidates(img)
+        array([0, 3])
+    """
     labeling_result = cv2.connectedComponentsWithStats(img)
     num_of_labels, labeled_img, contours, centroids = labeling_result
     contours = np.zeros(num_of_labels, dtype=np.uint64)
