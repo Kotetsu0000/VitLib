@@ -176,6 +176,26 @@ def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
     contours.sort()
     return contours
 
+def extract_threshold_values(img:np.ndarray) -> np.ndarray:
+    """画像から閾値を抽出する.
+    
+    Args:
+        img (np.ndarray): 2値画像.
+
+    Returns:
+        np.ndarray: 画像から抽出した閾値のリスト.
+
+    Examples:
+        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
+        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
+        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
+        >>> extract_threshold_values(a)
+        array([126, 254], dtype=uint8)
+    """
+    img_flatten = np.ravel(img)
+    img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
+    return img_unique
+
 def modifyLineWidth(img:np.ndarray, radius:int=1) -> np.ndarray:
     """細線化された画像の線の太さを変更する. 
 

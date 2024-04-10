@@ -486,6 +486,29 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarr
     return contours
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):
+    """画像から閾値を抽出する.
+    
+    Args:
+        img (np.ndarray): 2値画像.
+
+    Returns:
+        np.ndarray: 画像から抽出した閾値のリスト.
+
+    Examples:
+        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
+        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
+        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
+        >>> extract_threshold_values(a)
+        array([126, 254], dtype=uint8)
+    """
+    cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)
+    cdef cnp.ndarray[DTYPE_t, ndim=1] img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
+    return img_unique
+###
+
 cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
     """細線化された画像の線の太さを変更する. 
 
