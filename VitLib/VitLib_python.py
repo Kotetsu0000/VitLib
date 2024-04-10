@@ -97,7 +97,7 @@ def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
         if True in cond:
             switch = not switch
         else:
-            return src[1:ROW-1, 1:COLUMN-1]*255
+            return (src[1:ROW-1, 1:COLUMN-1]*255).astype(np.uint8)
 
         src[r[cond], c[cond]] = 0
 
