@@ -27,18 +27,22 @@ else:
         )
     ]
 
-setup_kwargs = {
-    "name": "VitLib",
-    "version": "0.0.8",
-    "description": "A fast NWG Library",
-    "author": "Kotetsu0000",
-    'ext_modules': ext_modules,
-    'include_dirs': [numpy.get_include()],
-    'install_requires' : [
-        'numpy',
-        'opencv_python',
-    ],
-    'packages': find_packages(),
-}
+try:
+    setup_kwargs = {
+        "name": "VitLib",
+        "version": "0.0.8",
+        "description": "A fast NWG Library",
+        "author": "Kotetsu0000",
+        'ext_modules': ext_modules,
+        'include_dirs': [numpy.get_include()],
+        'install_requires' : [
+            'numpy',
+            'opencv_python',
+        ],
+        'packages': find_packages(),
+    }
 
-setup(**setup_kwargs)
+    setup(**setup_kwargs)
+except:
+    del setup_kwargs['ext_modules']
+    setup(**setup_kwargs)
