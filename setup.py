@@ -13,7 +13,7 @@ except:
 if use_Cython:
     ext_modules = cythonize([
         Extension(
-            "VitLib_cython",
+            "VitLib.VitLib_cython",
             ["src/VitLib_cython.pyx"],
             language="c++",
         )
@@ -21,7 +21,7 @@ if use_Cython:
 else:
     ext_modules = [
         Extension(
-            "VitLib_cython",
+            "VitLib.VitLib_cython",
             ["src/VitLib_cython.cpp"],
             language="c++",
         )
@@ -30,7 +30,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "0.0.9",
+        "version": "1.0.0",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
