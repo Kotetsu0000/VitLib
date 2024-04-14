@@ -509,6 +509,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t
     return img_unique
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
     """細線化された画像の線の太さを変更する. 
 
@@ -589,6 +591,8 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     return return_dict
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):
     """細胞膜画像の評価を行う関数.
 
