@@ -24,3 +24,20 @@ def gamma_correction(img:np.ndarray, gamma:float=2.2):
         numpy.ndarray: ガンマ補正された画像
     """
     return (np.power(img/255, 1/gamma)*255).astype(np.uint8)
+
+def change_hue(img_list:list, hue_degree:float):
+    """
+    画像リスト内の各画像の色相を変更します。
+
+    Args:
+        img_list (list): 画像リスト
+        hue_degree (float): 色相の変更量
+
+    Returns:
+        list: 色相が変更された画像リスト
+    """
+    for i in range(len(img_list)):
+        img_list[i] = cv2.cvtColor(img_list[i], cv2.COLOR_BGR2HSV)
+        img_list[i][:,:,0] = (img_list[i][:,:,0]+hue_degree)%180
+        img_list[i] = cv2.cvtColor(img_list[i], cv2.COLOR_HSV2BGR)
+    return img_list
