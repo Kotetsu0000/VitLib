@@ -40,6 +40,22 @@ def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
+def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
+    """
+    画像の彩度を変更します。
+
+    Args:
+        img (numpy.ndarray): 画像
+        saturation_ratio (float): 彩度の変更量(0~1)
+
+    Returns:
+        numpy.ndarray: 彩度が変更された画像
+    """
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    img[:,:,1] = np.clip(img[:,:,1]*saturation_ratio, 0, 255).astype(np.uint8)
+    img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+    return img
+
 def img_show(img:np.ndarray):
     """
     画像を表示します。
