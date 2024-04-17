@@ -56,6 +56,22 @@ def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
+def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
+    """
+    画像のコントラストを変更します。
+
+    Args:
+        img (numpy.ndarray): 画像
+        contrast_ratio (float): コントラストの変更量(0~1)
+
+    Returns:
+        numpy.ndarray: コントラストが変更された画像
+    """
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    img[:,:,2] = np.clip(img[:,:,2]*contrast_ratio, 0, 255).astype(np.uint8)
+    img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+    return img
+
 def img_show(img:np.ndarray):
     """
     画像を表示します。
