@@ -12,7 +12,7 @@ Todo:
 import cv2
 import numpy as np
 
-def gamma_correction(img:np.ndarray, gamma:float=2.2):
+def gamma_correction(img:np.ndarray, gamma:float=2.2) -> np.ndarray:
     """ガンマ補正を行う関数
 
     Args:
@@ -24,13 +24,13 @@ def gamma_correction(img:np.ndarray, gamma:float=2.2):
     """
     return (np.power(img/255, 1/gamma)*255).astype(np.uint8)
 
-def change_hue(img:np.ndarray, hue_degree:float):
+def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
     """
     画像リスト内の各画像の色相を変更します。
 
     Args:
         img_list (list): 画像リスト
-        hue_degree (float): 色相の変更量(0~180)
+        hue_degree (int): 色相の変更量(0~180)
 
     Returns:
         list: 色相が変更された画像リスト
