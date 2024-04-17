@@ -1,9 +1,6 @@
 """画像の処理系をまとめたモジュール
 
 Todo:
-    - 画像の明るさを変更する関数を追加する
-    - 画像の彩度を変更する関数を追加する
-    - 画像のコントラストを変更する関数を追加する
     - 画像の切り取りを行う関数を追加する
     - 画像の回転の関数を追加する
     - 画像の上下左右反転の関数を追加する
@@ -71,6 +68,20 @@ def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
     img[:,:,2] = np.clip(img[:,:,2]*contrast_ratio, 0, 255).astype(np.uint8)
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
+
+def cut_image(img:np.ndarray, top_left:tuple, size:tuple) -> np.ndarray:
+    """
+    画像を切り取ります。
+
+    Args:
+        img (numpy.ndarray): 画像
+        top_left (tuple): 切り取りの左上の座標
+        size (tuple): 切り取りのサイズ
+
+    Returns:
+        numpy.ndarray: 切り取られた画像
+    """
+    return img[top_left[0]:top_left[0]+size[0], top_left[1]:top_left[1]+size[1]]
 
 def img_show(img:np.ndarray):
     """
