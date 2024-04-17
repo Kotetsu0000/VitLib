@@ -1,7 +1,6 @@
 """画像の処理系をまとめたモジュール
 
 Todo:
-    - 画像の色相を変更する関数を追加する
     - 画像の明るさを変更する関数を追加する
     - 画像の彩度を変更する関数を追加する
     - 画像のコントラストを変更する関数を追加する
@@ -40,3 +39,14 @@ def change_hue(img:np.ndarray, hue_degree:float):
     img[:,:,0] = (img[:,:,0]+hue_degree)%180
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
+
+def img_show(img:np.ndarray):
+    """
+    画像を表示します。
+
+    Args:
+        img (numpy.ndarray): 画像
+    """
+    cv2.imshow('image', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
