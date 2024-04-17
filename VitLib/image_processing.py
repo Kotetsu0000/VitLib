@@ -30,7 +30,7 @@ def change_hue(img:np.ndarray, hue_degree:float):
 
     Args:
         img_list (list): 画像リスト
-        hue_degree (float): 色相の変更量
+        hue_degree (float): 色相の変更量(0~180)
 
     Returns:
         list: 色相が変更された画像リスト
