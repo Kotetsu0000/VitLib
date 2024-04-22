@@ -30,6 +30,20 @@ def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
+def random_hue(img_list:list, hue_degree_range:tuple) -> list:
+    """
+    画像リスト内の各画像の色相をランダムに変更します。
+
+    Args:
+        img_list (list): 画像リスト
+        hue_degree_range (tuple): 色相の変更範囲(0~180)
+
+    Returns:
+        list: 色相が変更された画像リスト
+    """
+    hue_degree = np.random.randint(hue_degree_range[0], hue_degree_range[1])
+    return [change_hue(img, hue_degree) for img in img_list]
+
 def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
     """
     画像の彩度を変更します。
