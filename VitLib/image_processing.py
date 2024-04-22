@@ -152,7 +152,7 @@ def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
         rotate_code = cv2.ROTATE_90_COUNTERCLOCKWISE
     return cv2.rotate(img, rotate_code)
 
-def random_rotate_image(img_list:list, rotate_times_range:tuple) -> list:
+def random_rotate_image(img_list:list) -> list:
     """
     画像リスト内の各画像をランダムに回転します。
 
@@ -163,7 +163,7 @@ def random_rotate_image(img_list:list, rotate_times_range:tuple) -> list:
     Returns:
         list: 回転された画像リスト
     """
-    rotate_times = np.random.randint(rotate_times_range[0], rotate_times_range[1])
+    rotate_times = np.random.randint(0, 3)
     return [rotate_image(img, rotate_times) for img in img_list]
 
 def flip_image(img:np.ndarray, flip_code:int) -> np.ndarray:
