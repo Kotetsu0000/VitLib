@@ -1,8 +1,6 @@
 """画像の処理系をまとめたモジュール
 
 Todo:
-    - 画像の切り取りを行う関数を追加する
-    - 画像の回転の関数を追加する
     - 画像の上下左右反転の関数を追加する
     - 画像を表示する関数を追加する
 """
@@ -103,6 +101,22 @@ def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
     elif rotate_times%4==3:
         rotate_code = cv2.ROTATE_90_COUNTERCLOCKWISE
     return cv2.rotate(img, rotate_code)
+
+def flip_image(img:np.ndarray, flip_code:int) -> np.ndarray:
+    """
+    画像を反転します。
+
+    Args:
+        img (numpy.ndarray): 画像
+        flip_code (int): 反転コード
+            - 0: 上下反転
+            - 1: 左右反転
+            - -1: 上下左右反転
+
+    Returns:
+        numpy.ndarray: 反転された画像
+    """
+    return cv2.flip(img, flip_code)
 
 def img_show(img:np.ndarray):
     """
