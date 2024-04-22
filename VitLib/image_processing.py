@@ -90,6 +90,20 @@ def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
+def random_contrast(img_list:list, contrast_ratio_range:tuple) -> list:
+    """
+    画像リスト内の各画像のコントラストをランダムに変更します。
+    
+    Args:
+        img_list (list): 画像リスト
+        contrast_ratio_range (tuple): コントラストの変更範囲(0~1)
+
+    Returns:
+        list: コントラストが変更された画像リスト
+    """
+    contrast_ratio = np.random.uniform(contrast_ratio_range[0], contrast_ratio_range[1])
+    return [change_contrast(img, contrast_ratio) for img in img_list]
+
 def cut_image(img:np.ndarray, top_left:tuple, size:tuple) -> np.ndarray:
     """
     画像を切り取ります。
