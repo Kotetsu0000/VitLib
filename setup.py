@@ -11,13 +11,16 @@ except:
     use_Cython = False
 
 if use_Cython:
-    ext_modules = cythonize([
-        Extension(
-            "VitLib.VitLib_cython",
-            ["src/VitLib_cython.pyx"],
-            language="c++",
-        )
-    ])
+    ext_modules = cythonize(
+        [
+            Extension(
+                "VitLib.VitLib_cython",
+                ["src/VitLib_cython.pyx"],
+                language="c++",
+            )
+        ],
+        compiler_directives={'language_level' : "3"}
+    )
 else:
     ext_modules = [
         Extension(
@@ -30,7 +33,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
