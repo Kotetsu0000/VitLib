@@ -3,3 +3,4 @@ VitLib.egg-info
 .python-version
 build
 main.py
+src/VitLib_cython.html
