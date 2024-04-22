@@ -118,7 +118,7 @@ def cut_image(img:np.ndarray, top_left:tuple, size:tuple) -> np.ndarray:
     """
     return img[top_left[0]:top_left[0]+size[0], top_left[1]:top_left[1]+size[1]]
 
-def random_cut_image(img_list:list, top_left_range:tuple, size:tuple) -> list:
+def random_cut_image(img_list:list, size:tuple) -> list:
     """
     画像リスト内の各画像をランダムに切り取ります。
     
@@ -127,7 +127,8 @@ def random_cut_image(img_list:list, top_left_range:tuple, size:tuple) -> list:
         top_left_range (tuple): 切り取りの左上の座標の範囲
         size (tuple): 切り取りのサイズ
     """
-    top_left = (np.random.randint(top_left_range[0], top_left_range[1]), np.random.randint(top_left_range[0], top_left_range[1]))
+    img_size = img_list[0].shape
+    top_left = (np.random.randint(0, img_size[0]-size[0]), np.random.randint(0, img_size[1]-size[1]))
     return [cut_image(img, top_left, size) for img in img_list]
 
 def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
