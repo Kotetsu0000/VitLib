@@ -6,18 +6,25 @@ try:
     import Cython.Compiler.Options
     Cython.Compiler.Options.annotate = True
     Cython.Compiler.Options.docstrings = True
+    Cython.Compiler.Options.embed_pos_in_docstring = True
     use_Cython = True
 except:
     use_Cython = False
 
 if use_Cython:
-    ext_modules = cythonize([
-        Extension(
-            "VitLib.VitLib_cython",
-            ["src/VitLib_cython.pyx"],
-            language="c++",
-        )
-    ])
+    ext_modules = cythonize(
+        [
+            Extension(
+                "VitLib.VitLib_cython",
+                ["src/VitLib_cython.pyx"],
+                language="c++",
+            )
+        ],
+        compiler_directives={
+            'language_level' : "3",
+            'embedsignature': True
+        }
+    )
 else:
     ext_modules = [
         Extension(
@@ -30,7 +37,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
