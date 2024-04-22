@@ -182,6 +182,26 @@ def flip_image(img:np.ndarray, flip_code:int) -> np.ndarray:
     """
     return cv2.flip(img, flip_code)
 
+def random_flip_image(img_list:list) -> list:
+    """
+    画像リスト内の各画像をランダムに反転します。
+
+    Args:
+        img_list (list): 画像リスト
+        flip_code_range (tuple): 反転コードの範囲
+            - 0: 上下反転
+            - 1: 左右反転
+            - -1: 上下左右反転
+            - 2: なし
+
+    Returns:
+        list: 反転された画像リスト
+    """
+    flip_code = np.random.randint(-1, 2)
+    if flip_code==2:
+        return img_list
+    return [flip_image(img, flip_code) for img in img_list]
+
 def img_show(img:np.ndarray):
     """
     画像を表示します。
