@@ -60,6 +60,20 @@ def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
     img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
+def random_saturation(img_list:list, saturation_ratio_range:tuple) -> list:
+    """
+    画像リスト内の各画像の彩度をランダムに変更します。
+
+    Args:
+        img_list (list): 画像リスト
+        saturation_ratio_range (tuple): 彩度の変更範囲(0~1)
+
+    Returns:
+        list: 彩度が変更された画像リスト
+    """
+    saturation_ratio = np.random.uniform(saturation_ratio_range[0], saturation_ratio_range[1])
+    return [change_saturation(img, saturation_ratio) for img in img_list]
+
 def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
     """
     画像のコントラストを変更します。
