@@ -83,6 +83,27 @@ def cut_image(img:np.ndarray, top_left:tuple, size:tuple) -> np.ndarray:
     """
     return img[top_left[0]:top_left[0]+size[0], top_left[1]:top_left[1]+size[1]]
 
+def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
+    """
+    画像を回転します。(1回転につき90度)
+
+    Args:
+        img (numpy.ndarray): 画像
+        rotate_times (int): 回転回数(1回につき90度)
+
+    Returns:
+        numpy.ndarray: 回転された画像
+    """
+    if rotate_times%4==0:
+        return img
+    elif rotate_times%4==1:
+        rotate_code = cv2.ROTATE_90_CLOCKWISE
+    elif rotate_times%4==2:
+        rotate_code = cv2.ROTATE_180
+    elif rotate_times%4==3:
+        rotate_code = cv2.ROTATE_90_COUNTERCLOCKWISE
+    return cv2.rotate(img, rotate_code)
+
 def img_show(img:np.ndarray):
     """
     画像を表示します。
