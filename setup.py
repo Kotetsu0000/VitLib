@@ -19,7 +19,10 @@ if use_Cython:
                 language="c++",
             )
         ],
-        compiler_directives={'language_level' : "3"}
+        compiler_directives={
+            'language_level' : "3",
+            'embedsignature': True
+        }
     )
 else:
     ext_modules = [
@@ -33,7 +36,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
