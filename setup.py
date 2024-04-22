@@ -6,6 +6,7 @@ try:
     import Cython.Compiler.Options
     Cython.Compiler.Options.annotate = True
     Cython.Compiler.Options.docstrings = True
+    Cython.Compiler.Options.embed_pos_in_docstring = True
     use_Cython = True
 except:
     use_Cython = False
@@ -36,7 +37,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
