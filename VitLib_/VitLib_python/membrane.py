@@ -212,7 +212,7 @@ def modifyLineWidth(img:np.ndarray, radius:int=1) -> np.ndarray:
         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)
     return src
 
-def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=128, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False) -> dict:
+def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=127, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False) -> dict:
     """細胞膜画像の評価を行う関数.
 
     Args:
@@ -265,7 +265,7 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
 
     return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
 
-def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int=128, del_area:int=100, radius:int=3):
+def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int=127, del_area:int=100, radius:int=3):
     """細胞膜画像の評価を行う関数.
 
     Args:

@@ -6927,7 +6927,7 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth {
 <pre class="cython line score-0">&#xA0;<span class="">531</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">532</span>: @cython.boundscheck(False)</pre>
 <pre class="cython line score-0">&#xA0;<span class="">533</span>: @cython.wraparound(False)</pre>
-<pre class="cython line score-256" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">534</span>: cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):</pre>
+<pre class="cython line score-256" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">534</span>: cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):</pre>
 <pre class='cython code score-256 '>static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
@@ -6936,7 +6936,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
 static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction(PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction *__pyx_optional_args) {
-  int __pyx_v_threshold = ((int)0x80);
+  int __pyx_v_threshold = ((int)0x7F);
   int __pyx_v_del_area = ((int)0x64);
   int __pyx_v_symmetric = ((int)0);
   int __pyx_v_radius = ((int)3);
@@ -7096,7 +7096,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -&gt; dict\nFile: src/membrane.pyx (starting at line 534)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -&gt; dict\nFile: src/membrane.pyx (starting at line 534)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction = {"evaluate_membrane_prediction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -7232,7 +7232,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     if (values[2]) {
       __pyx_v_threshold = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[2]); if (unlikely((__pyx_v_threshold == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 534, __pyx_L3_error)</span>
     } else {
-      __pyx_v_threshold = ((int)0x80);
+      __pyx_v_threshold = ((int)0x7F);
     }
     if (values[3]) {
       __pyx_v_del_area = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[3]); if (unlikely((__pyx_v_del_area == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 534, __pyx_L3_error)</span>
@@ -7359,7 +7359,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_
   <span class='pyx_c_api'>__Pyx_CyFunction_SetDefaultsTuple</span>(__pyx_t_3, __pyx_tuple__27);
   if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_evaluate_membrane_prediction, __pyx_t_3) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 534, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_tuple__27 = <span class='py_c_api'>PyTuple_Pack</span>(5, __pyx_int_128, __pyx_int_100, Py_False, __pyx_int_3, Py_False);<span class='error_goto'> if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 534, __pyx_L1_error)</span>
+  __pyx_tuple__27 = <span class='py_c_api'>PyTuple_Pack</span>(5, __pyx_int_127, __pyx_int_100, Py_False, __pyx_int_3, Py_False);<span class='error_goto'> if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 534, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple__27);
   <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple__27);
 /* … */
@@ -8111,7 +8111,7 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_predic
 <pre class="cython line score-0">&#xA0;<span class="">592</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">593</span>: @cython.boundscheck(False)</pre>
 <pre class="cython line score-0">&#xA0;<span class="">594</span>: @cython.wraparound(False)</pre>
-<pre class="cython line score-195" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">595</span>: cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):</pre>
+<pre class="cython line score-195" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">595</span>: cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):</pre>
 <pre class='cython code score-195 '>static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
@@ -8120,7 +8120,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
 static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg(PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg *__pyx_optional_args) {
-  int __pyx_v_threshold = ((int)0x80);
+  int __pyx_v_threshold = ((int)0x7F);
   int __pyx_v_del_area = ((int)0x64);
   int __pyx_v_radius = ((int)3);
   PyArrayObject *__pyx_v_pred_img_th_nwg_del = 0;
@@ -8236,7 +8236,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3) -&gt; dict\nFile: src/membrane.pyx (starting at line 595)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3) -&gt; dict\nFile: src/membrane.pyx (starting at line 595)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg = {"evaluate_membrane_prediction_nwg", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -8348,7 +8348,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     if (values[2]) {
       __pyx_v_threshold = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[2]); if (unlikely((__pyx_v_threshold == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 595, __pyx_L3_error)</span>
     } else {
-      __pyx_v_threshold = ((int)0x80);
+      __pyx_v_threshold = ((int)0x7F);
     }
     if (values[3]) {
       __pyx_v_del_area = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[3]); if (unlikely((__pyx_v_del_area == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 595, __pyx_L3_error)</span>
