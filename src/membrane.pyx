@@ -227,6 +227,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int sym
         Note:
             imgは2値画像を想定しており、[0, 255]の配列である必要がある。
             cv2で二値化した画像を入れることで正常に動作する。
+            using cython.
     '''
     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')
     cdef cnp.ndarray[DTYPE_t, ndim=2] Q
@@ -420,6 +421,9 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0]])
+        
+    Note:
+        using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)
     cdef tuple labeling_result = cv2.connectedComponentsWithStats(src)
@@ -467,6 +471,9 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarr
         ...                 [0, 0, 0, 0, 0, 1, 1, 1]])
         >>> detect_deleted_area_candidates(img)
         array([0, 3])
+
+    Note:
+        using cython.
     """
     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)
     cdef int num_of_labels = labeling_result[0]
@@ -502,6 +509,9 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t
         ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
         >>> extract_threshold_values(a)
         array([126, 254], dtype=uint8)
+
+    Note:
+        using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)
     cdef cnp.ndarray[DTYPE_t, ndim=1] img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
@@ -519,6 +529,9 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] 
 
     Returns:
         np.ndarray: 線の太さを変更した画像.
+
+    Note:
+        using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)
     cdef r_list, c_list
@@ -545,6 +558,9 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
 
     Returns:
         dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
+
+    Note:
+        using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] pred_img_th, ans_img_th, pred_img_th_nwg, ans_img_th_nwg, pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
     cdef int membrane_length, tip_length, miss_length
@@ -604,6 +620,9 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
 
     Returns:
         dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
+
+    Note:
+        using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
     cdef int membrane_length, tip_length, miss_length
