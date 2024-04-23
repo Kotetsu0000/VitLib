@@ -101,7 +101,7 @@ def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
 
         src[r[cond], c[cond]] = 0
 
-def smallAreaReduction(img, area_th=100):
+def smallAreaReduction(img:np.ndarray, area_th:int=100):
     """2値画像の小領域削除を行う.
 
     Args:
