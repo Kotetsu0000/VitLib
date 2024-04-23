@@ -18,6 +18,11 @@ if use_Cython:
                 "VitLib.VitLib_cython.membrane",
                 ["src/membrane.pyx"],
                 language="c++",
+            ),
+            Extension(
+                "VitLib.VitLib_cython.nucleus",
+                ["src/nucleus.pyx"],
+                language="c++",
             )
         ],
         compiler_directives={
@@ -31,13 +36,18 @@ else:
             "VitLib.VitLib_cython.membrane",
             ["src/membrane.cpp"],
             language="c++",
+        ),
+        Extension(
+            "VitLib.VitLib_cython.nucleus",
+            ["src/nucleus.cpp"],
+            language="c++",
         )
     ]
 
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
