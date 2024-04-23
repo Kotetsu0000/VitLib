@@ -1,9 +1,8 @@
-# VitLib_cython.pyx
+# membrane.pyx
 import cv2
 import numpy as np
 cimport numpy as cnp
 cimport cython
-from cython.parallel import prange
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
