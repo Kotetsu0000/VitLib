@@ -5,12 +5,12 @@
     "distutils": {
         "depends": [],
         "language": "c++",
-        "name": "VitLib.VitLib_cython",
+        "name": "VitLib.VitLib_cython.membrane",
         "sources": [
-            "src/VitLib_cython.pyx"
+            "src/membrane.pyx"
         ]
     },
-    "module_name": "VitLib.VitLib_cython"
+    "module_name": "VitLib.VitLib_cython.membrane"
 }
 END: Cython Metadata */
 
@@ -1242,8 +1242,8 @@ static CYTHON_INLINE float __PYX_NAN() {
     #define __PYX_EXTERN_C extern "C++"
 #endif
 
-#define __PYX_HAVE__VitLib__VitLib_cython
-#define __PYX_HAVE_API__VitLib__VitLib_cython
+#define __PYX_HAVE__VitLib__VitLib_cython__membrane
+#define __PYX_HAVE_API__VitLib__VitLib_cython__membrane
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1525,7 +1525,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "src/VitLib_cython.pyx",
+  "src/membrane.pyx",
   "__init__.cython-30.pxd",
   "type.pxd",
 };
@@ -1572,7 +1572,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":730
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":730
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1581,7 +1581,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":731
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":731
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1590,7 +1590,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":732
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":732
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1599,7 +1599,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":733
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":733
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1608,7 +1608,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":737
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":737
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1617,7 +1617,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":738
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":738
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1626,7 +1626,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":739
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":739
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1635,7 +1635,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":740
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":740
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1644,7 +1644,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":744
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":744
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1653,7 +1653,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":745
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":745
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1662,7 +1662,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":754
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":754
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1671,7 +1671,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":755
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":755
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1680,7 +1680,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":757
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":757
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1689,7 +1689,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":758
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":758
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1698,7 +1698,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":760
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":760
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1707,7 +1707,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":761
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":761
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1716,7 +1716,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":763
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":763
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1725,7 +1725,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":764
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":764
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1734,7 +1734,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":765
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":765
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1743,14 +1743,14 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "src/VitLib_cython.pyx":9
+/* "src/membrane.pyx":9
  * 
  * DTYPE = np.uint8
  * ctypedef cnp.uint8_t DTYPE_t             # <<<<<<<<<<<<<<
  * 
  * def NWG_nofix(img):
  */
-typedef __pyx_t_5numpy_uint8_t __pyx_t_6VitLib_13VitLib_cython_DTYPE_t;
+typedef __pyx_t_5numpy_uint8_t __pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t;
 /* #### Code section: complex_type_declarations ### */
 /* Declarations.proto */
 #if CYTHON_CCOMPLEX && (1) && (!0 || __cplusplus)
@@ -1780,7 +1780,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 /*--- Type declarations ---*/
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":767
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":767
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1789,7 +1789,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":768
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":768
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1798,7 +1798,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":769
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":769
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1807,7 +1807,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":771
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":771
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1815,56 +1815,56 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  * cdef inline object PyArray_MultiIterNew1(a):
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
-struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG;
-struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction;
-struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth;
-struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction;
-struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg;
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG;
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction;
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth;
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction;
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg;
 
-/* "src/VitLib_cython.pyx":196
+/* "src/membrane.pyx":196
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
  *     '''NWG. (0)(255)2(cv22).
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
-struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG {
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG {
   int __pyx_n;
   int symmetric;
 };
 
-/* "src/VitLib_cython.pyx":394
+/* "src/membrane.pyx":394
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction {
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction {
   int __pyx_n;
   int area_th;
 };
 
-/* "src/VitLib_cython.pyx":514
+/* "src/membrane.pyx":514
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth {
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth {
   int __pyx_n;
   int radius;
 };
 
-/* "src/VitLib_cython.pyx":535
+/* "src/membrane.pyx":535
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction {
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction {
   int __pyx_n;
   int threshold;
   int del_area;
@@ -1873,14 +1873,14 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction {
   int otsu;
 };
 
-/* "src/VitLib_cython.pyx":596
+/* "src/membrane.pyx":596
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg {
+struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg {
   int __pyx_n;
   int threshold;
   int del_area;
@@ -2771,26 +2771,26 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
 
 /* Module declarations from "cython" */
 
-/* Module declarations from "VitLib.VitLib_cython" */
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG *__pyx_optional_args); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction *__pyx_optional_args); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candidates(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(PyArrayObject *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg(PyArrayObject *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg *__pyx_optional_args); /*proto*/
+/* Module declarations from "VitLib.VitLib_cython.membrane" */
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG *__pyx_optional_args); /*proto*/
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_smallAreaReduction(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction *__pyx_optional_args); /*proto*/
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_detect_deleted_area_candidates(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_extract_threshold_values(PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction(PyArrayObject *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg(PyArrayObject *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg *__pyx_optional_args); /*proto*/
 /* #### Code section: typeinfo ### */
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t = { "DTYPE_t", NULL, sizeof(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t), { 0 }, 0, __PYX_IS_UNSIGNED(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t) ? 'U' : 'I', __PYX_IS_UNSIGNED(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t), 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t = { "DTYPE_t", NULL, sizeof(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t), { 0 }, 0, __PYX_IS_UNSIGNED(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t) ? 'U' : 'I', __PYX_IS_UNSIGNED(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t = { "int64_t", NULL, sizeof(__pyx_t_5numpy_int64_t), { 0 }, 0, __PYX_IS_UNSIGNED(__pyx_t_5numpy_int64_t) ? 'U' : 'I', __PYX_IS_UNSIGNED(__pyx_t_5numpy_int64_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_uint8_t = { "uint8_t", NULL, sizeof(__pyx_t_5numpy_uint8_t), { 0 }, 0, __PYX_IS_UNSIGNED(__pyx_t_5numpy_uint8_t) ? 'U' : 'I', __PYX_IS_UNSIGNED(__pyx_t_5numpy_uint8_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t = { "uint64_t", NULL, sizeof(__pyx_t_5numpy_uint64_t), { 0 }, 0, __PYX_IS_UNSIGNED(__pyx_t_5numpy_uint64_t) ? 'U' : 'I', __PYX_IS_UNSIGNED(__pyx_t_5numpy_uint64_t), 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "VitLib.VitLib_cython"
-extern int __pyx_module_is_main_VitLib__VitLib_cython;
-int __pyx_module_is_main_VitLib__VitLib_cython = 0;
+#define __Pyx_MODULE_NAME "VitLib.VitLib_cython.membrane"
+extern int __pyx_module_is_main_VitLib__VitLib_cython__membrane;
+int __pyx_module_is_main_VitLib__VitLib_cython__membrane = 0;
 
-/* Implementation of "VitLib.VitLib_cython" */
+/* Implementation of "VitLib.VitLib_cython.membrane" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_zip;
@@ -2883,24 +2883,24 @@ static const char __pyx_k_labeling_result[] = "labeling_result";
 static const char __pyx_k_modifyLineWidth[] = "modifyLineWidth";
 static const char __pyx_k_pred_img_th_nwg[] = "pred_img_th_nwg";
 static const char __pyx_k_NWG_old_line_100[] = "NWG_old (line 100)";
+static const char __pyx_k_src_membrane_pyx[] = "src/membrane.pyx";
 static const char __pyx_k_NWG_nofix_line_11[] = "NWG_nofix (line 11)";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_smallAreaReduction[] = "smallAreaReduction";
-static const char __pyx_k_VitLib_VitLib_cython[] = "VitLib.VitLib_cython";
-static const char __pyx_k_src_VitLib_cython_pyx[] = "src/VitLib_cython.pyx";
 static const char __pyx_k_extract_threshold_values[] = "extract_threshold_values";
 static const char __pyx_k_smallAreaReduction_nofix[] = "smallAreaReduction_nofix";
 static const char __pyx_k_smallAreaReduction_line_394[] = "smallAreaReduction (line 394)";
 static const char __pyx_k_connectedComponentsWithStats[] = "connectedComponentsWithStats";
 static const char __pyx_k_evaluate_membrane_prediction[] = "evaluate_membrane_prediction";
 static const char __pyx_k_smallAreaReduction_nofix_old[] = "smallAreaReduction_nofix_old";
+static const char __pyx_k_VitLib_VitLib_cython_membrane[] = "VitLib.VitLib_cython.membrane";
 static const char __pyx_k_detect_deleted_area_candidates[] = "detect_deleted_area_candidates";
 static const char __pyx_k_2_Args_img_np_ndarray_2_Returns[] = "2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\343\201\256\345\211\212\351\231\244\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210\343\202\222\344\275\234\346\210\220\343\201\231\343\202\213\351\226\242\346\225\260.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\343\201\256\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import detect_deleted_area_candidates\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 1, 1, 1]])\n        >>> detect_deleted_area_candidates(img)\n        array([0, 3])\n    ";
 static const char __pyx_k_2_Args_img_np_ndarray_2_area_th[] = "2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction_nofix_old\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction_nofix_old(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ";
 static const char __pyx_k_Args_img_np_ndarray_2_Returns_n[] = "\347\224\273\345\203\217\343\201\213\343\202\211\351\226\276\345\200\244\343\202\222\346\212\275\345\207\272\343\201\231\343\202\213.\n    \n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \347\224\273\345\203\217\343\201\213\343\202\211\346\212\275\345\207\272\343\201\227\343\201\237\351\226\276\345\200\244\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Examples:\n        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],\n        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],\n        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)\n        >>> extract_threshold_values(a)\n        array([126, 254], dtype=uint8)\n    ";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
-static const char __pyx_k_File_src_VitLib_cython_pyx_start[] = "File: src/VitLib_cython.pyx (starting at line 1)";
+static const char __pyx_k_File_src_membrane_pyx_starting_a[] = "File: src/membrane.pyx (starting at line 1)";
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n       ""        [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
 static const char __pyx_k_detect_deleted_area_candidates_l[] = "detect_deleted_area_candidates (line 449)";
 static const char __pyx_k_evaluate_membrane_prediction_nwg[] = "evaluate_membrane_prediction_nwg";
@@ -2913,17 +2913,17 @@ static const char __pyx_k_2_Args_img_np_ndarray_2_area_th_3[] = "2\345\200\244\3
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_2[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   ""0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_3[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0"",   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_symmetric); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_area_th); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidates(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_radius); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_symmetric, int __pyx_v_radius, int __pyx_v_otsu); /* proto */
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction_nwg(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_radius); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_2NWG_old(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_4NWG(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_symmetric); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_6smallAreaReduction_nofix_old(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_8smallAreaReduction_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_10smallAreaReduction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_area_th); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_12detect_deleted_area_candidates(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_14extract_threshold_values(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_16modifyLineWidth(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_radius); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_symmetric, int __pyx_v_radius, int __pyx_v_otsu); /* proto */
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_radius); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -3009,7 +3009,7 @@ typedef struct {
   PyObject *__pyx_n_s_ROW;
   PyObject *__pyx_n_s_THRESH_BINARY;
   PyObject *__pyx_n_s_THRESH_OTSU;
-  PyObject *__pyx_n_s_VitLib_VitLib_cython;
+  PyObject *__pyx_n_s_VitLib_VitLib_cython_membrane;
   PyObject *__pyx_n_s__31;
   PyObject *__pyx_n_s__5;
   PyObject *__pyx_n_s_ans_img;
@@ -3092,7 +3092,7 @@ typedef struct {
   PyObject *__pyx_n_s_sort;
   PyObject *__pyx_n_s_spec;
   PyObject *__pyx_n_s_src;
-  PyObject *__pyx_kp_s_src_VitLib_cython_pyx;
+  PyObject *__pyx_kp_s_src_membrane_pyx;
   PyObject *__pyx_n_s_sum;
   PyObject *__pyx_n_s_switch;
   PyObject *__pyx_n_s_symmetric;
@@ -3223,7 +3223,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_ROW);
   Py_CLEAR(clear_module_state->__pyx_n_s_THRESH_BINARY);
   Py_CLEAR(clear_module_state->__pyx_n_s_THRESH_OTSU);
-  Py_CLEAR(clear_module_state->__pyx_n_s_VitLib_VitLib_cython);
+  Py_CLEAR(clear_module_state->__pyx_n_s_VitLib_VitLib_cython_membrane);
   Py_CLEAR(clear_module_state->__pyx_n_s__31);
   Py_CLEAR(clear_module_state->__pyx_n_s__5);
   Py_CLEAR(clear_module_state->__pyx_n_s_ans_img);
@@ -3306,7 +3306,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_sort);
   Py_CLEAR(clear_module_state->__pyx_n_s_spec);
   Py_CLEAR(clear_module_state->__pyx_n_s_src);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_src_VitLib_cython_pyx);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_src_membrane_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_s_sum);
   Py_CLEAR(clear_module_state->__pyx_n_s_switch);
   Py_CLEAR(clear_module_state->__pyx_n_s_symmetric);
@@ -3415,7 +3415,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_ROW);
   Py_VISIT(traverse_module_state->__pyx_n_s_THRESH_BINARY);
   Py_VISIT(traverse_module_state->__pyx_n_s_THRESH_OTSU);
-  Py_VISIT(traverse_module_state->__pyx_n_s_VitLib_VitLib_cython);
+  Py_VISIT(traverse_module_state->__pyx_n_s_VitLib_VitLib_cython_membrane);
   Py_VISIT(traverse_module_state->__pyx_n_s__31);
   Py_VISIT(traverse_module_state->__pyx_n_s__5);
   Py_VISIT(traverse_module_state->__pyx_n_s_ans_img);
@@ -3498,7 +3498,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_sort);
   Py_VISIT(traverse_module_state->__pyx_n_s_spec);
   Py_VISIT(traverse_module_state->__pyx_n_s_src);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_src_VitLib_cython_pyx);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_src_membrane_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_s_sum);
   Py_VISIT(traverse_module_state->__pyx_n_s_switch);
   Py_VISIT(traverse_module_state->__pyx_n_s_symmetric);
@@ -3637,7 +3637,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_ROW __pyx_mstate_global->__pyx_n_s_ROW
 #define __pyx_n_s_THRESH_BINARY __pyx_mstate_global->__pyx_n_s_THRESH_BINARY
 #define __pyx_n_s_THRESH_OTSU __pyx_mstate_global->__pyx_n_s_THRESH_OTSU
-#define __pyx_n_s_VitLib_VitLib_cython __pyx_mstate_global->__pyx_n_s_VitLib_VitLib_cython
+#define __pyx_n_s_VitLib_VitLib_cython_membrane __pyx_mstate_global->__pyx_n_s_VitLib_VitLib_cython_membrane
 #define __pyx_n_s__31 __pyx_mstate_global->__pyx_n_s__31
 #define __pyx_n_s__5 __pyx_mstate_global->__pyx_n_s__5
 #define __pyx_n_s_ans_img __pyx_mstate_global->__pyx_n_s_ans_img
@@ -3720,7 +3720,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_sort __pyx_mstate_global->__pyx_n_s_sort
 #define __pyx_n_s_spec __pyx_mstate_global->__pyx_n_s_spec
 #define __pyx_n_s_src __pyx_mstate_global->__pyx_n_s_src
-#define __pyx_kp_s_src_VitLib_cython_pyx __pyx_mstate_global->__pyx_kp_s_src_VitLib_cython_pyx
+#define __pyx_kp_s_src_membrane_pyx __pyx_mstate_global->__pyx_kp_s_src_membrane_pyx
 #define __pyx_n_s_sum __pyx_mstate_global->__pyx_n_s_sum
 #define __pyx_n_s_switch __pyx_mstate_global->__pyx_n_s_switch
 #define __pyx_n_s_symmetric __pyx_mstate_global->__pyx_n_s_symmetric
@@ -3775,7 +3775,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__29 __pyx_mstate_global->__pyx_codeobj__29
 /* #### Code section: module_code ### */
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":245
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3786,7 +3786,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":248
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":248
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -3796,7 +3796,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":245
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3809,7 +3809,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":251
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3823,7 +3823,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":254
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":254
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -3836,7 +3836,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":251
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3851,7 +3851,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":257
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3862,7 +3862,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":260
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":260
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -3872,7 +3872,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":257
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3885,7 +3885,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":263
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3896,7 +3896,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":268
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":268
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -3906,7 +3906,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":263
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3919,7 +3919,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":271
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3930,7 +3930,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":275
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":275
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -3940,7 +3940,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":271
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3953,7 +3953,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":278
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3964,7 +3964,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":281
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":281
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -3974,7 +3974,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":278
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3987,7 +3987,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":284
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -3998,7 +3998,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":290
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":290
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -4008,7 +4008,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":284
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -4021,7 +4021,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":773
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4038,7 +4038,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":774
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -4052,7 +4052,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":773
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4071,7 +4071,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":776
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4088,7 +4088,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":777
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -4102,7 +4102,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":776
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4121,7 +4121,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":779
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4138,7 +4138,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":780
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -4152,7 +4152,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":779
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4171,7 +4171,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":782
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4188,7 +4188,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":783
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -4202,7 +4202,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":782
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4221,7 +4221,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":785
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4238,7 +4238,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":786
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -4252,7 +4252,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":785
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4271,7 +4271,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":788
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4285,7 +4285,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":789
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4295,7 +4295,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":790
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":790
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -4307,7 +4307,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":789
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4316,7 +4316,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":792
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":792
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -4330,7 +4330,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":788
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4345,7 +4345,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":968
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4359,7 +4359,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":969
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":969
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -4368,7 +4368,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":970
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":970
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -4377,7 +4377,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_t_1 = PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 970, __pyx_L1_error)
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":968
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4392,7 +4392,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_L0:;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":972
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4407,7 +4407,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":973
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":973
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -4416,7 +4416,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":974
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4426,7 +4426,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":975
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":975
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -4437,7 +4437,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":974
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4446,7 +4446,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":976
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":976
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -4458,7 +4458,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":972
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4473,7 +4473,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":980
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4497,7 +4497,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4513,7 +4513,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":982
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":982
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4522,7 +4522,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 982, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4536,7 +4536,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":983
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":983
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4551,7 +4551,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":984
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4566,7 +4566,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4582,7 +4582,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":980
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4605,7 +4605,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":986
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4629,7 +4629,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4645,7 +4645,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":988
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":988
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4654,7 +4654,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 988, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4668,7 +4668,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":989
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":989
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4683,7 +4683,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":990
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4698,7 +4698,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4714,7 +4714,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":986
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4737,7 +4737,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":992
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4761,7 +4761,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4777,7 +4777,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":994
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":994
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4786,7 +4786,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 994, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4800,7 +4800,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":995
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":995
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4815,7 +4815,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":996
+      /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":996
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4830,7 +4830,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
+    /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4846,7 +4846,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":992
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4869,7 +4869,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":999
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4880,7 +4880,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1011
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1011
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -4890,7 +4890,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":999
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4903,7 +4903,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4914,7 +4914,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1026
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1026
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -4924,7 +4924,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4937,7 +4937,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4948,7 +4948,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1036
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1036
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4958,7 +4958,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4971,7 +4971,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1039
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4982,7 +4982,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1043
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1043
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4992,7 +4992,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1039
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5005,7 +5005,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1046
+/* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5016,7 +5016,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1050
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1050
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -5024,7 +5024,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1046
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5037,7 +5037,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":11
+/* "src/membrane.pyx":11
  * ctypedef cnp.uint8_t DTYPE_t
  * 
  * def NWG_nofix(img):             # <<<<<<<<<<<<<<
@@ -5046,16 +5046,16 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_1NWG_nofix(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_1NWG_nofix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_NWG_nofix, "NWG_nofix(img)\nFile: src/VitLib_cython.pyx (starting at line 11)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],""\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_1NWG_nofix = {"NWG_nofix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_1NWG_nofix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_NWG_nofix};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_1NWG_nofix(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_NWG_nofix, "NWG_nofix(img)\nFile: src/membrane.pyx (starting at line 11)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n   ""            [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_1NWG_nofix = {"NWG_nofix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_1NWG_nofix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_NWG_nofix};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_1NWG_nofix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5125,11 +5125,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(__pyx_self, __pyx_v_img);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(__pyx_self, __pyx_v_img);
 
   /* function exit code */
   {
@@ -5142,7 +5142,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img) {
   PyObject *__pyx_v_src = NULL;
   PyObject *__pyx_v_ROW = NULL;
   PyObject *__pyx_v_COLUMN = NULL;
@@ -5183,7 +5183,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("NWG_nofix", 1);
 
-  /* "src/VitLib_cython.pyx":47
+  /* "src/membrane.pyx":47
  *             cv2
  *     '''
  *     src = np.copy(img)//255             # <<<<<<<<<<<<<<
@@ -5223,7 +5223,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   __pyx_v_src = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":50
+  /* "src/membrane.pyx":50
  * 
  *     # zero padding
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2             # <<<<<<<<<<<<<<
@@ -5251,7 +5251,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   __pyx_v_COLUMN = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":51
+  /* "src/membrane.pyx":51
  *     # zero padding
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2
  *     pad = np.zeros((ROW, COLUMN))             # <<<<<<<<<<<<<<
@@ -5297,7 +5297,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   __pyx_v_pad = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":52
+  /* "src/membrane.pyx":52
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2
  *     pad = np.zeros((ROW, COLUMN))
  *     pad[1:ROW-1, 1:COLUMN-1] = src             # <<<<<<<<<<<<<<
@@ -5325,7 +5325,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   if (unlikely((PyObject_SetItem(__pyx_v_pad, __pyx_t_1, __pyx_v_src) < 0))) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":53
+  /* "src/membrane.pyx":53
  *     pad = np.zeros((ROW, COLUMN))
  *     pad[1:ROW-1, 1:COLUMN-1] = src
  *     src = pad             # <<<<<<<<<<<<<<
@@ -5335,7 +5335,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   __Pyx_INCREF(__pyx_v_pad);
   __Pyx_DECREF_SET(__pyx_v_src, __pyx_v_pad);
 
-  /* "src/VitLib_cython.pyx":55
+  /* "src/membrane.pyx":55
  *     src = pad
  * 
  *     switch = True             # <<<<<<<<<<<<<<
@@ -5344,7 +5344,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
  */
   __pyx_v_switch = 1;
 
-  /* "src/VitLib_cython.pyx":56
+  /* "src/membrane.pyx":56
  * 
  *     switch = True
  *     while True:             # <<<<<<<<<<<<<<
@@ -5353,7 +5353,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
  */
   while (1) {
 
-    /* "src/VitLib_cython.pyx":57
+    /* "src/membrane.pyx":57
  *     switch = True
  *     while True:
  *         r, c = src.nonzero()             # <<<<<<<<<<<<<<
@@ -5435,7 +5435,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "src/VitLib_cython.pyx":58
+    /* "src/membrane.pyx":58
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -5489,7 +5489,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "src/VitLib_cython.pyx":59
+    /* "src/membrane.pyx":59
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],             # <<<<<<<<<<<<<<
@@ -5540,7 +5540,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "src/VitLib_cython.pyx":60
+    /* "src/membrane.pyx":60
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))             # <<<<<<<<<<<<<<
@@ -5576,7 +5576,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "src/VitLib_cython.pyx":58
+    /* "src/membrane.pyx":58
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -5635,7 +5635,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_nei, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "src/VitLib_cython.pyx":63
+    /* "src/membrane.pyx":63
  * 
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0)             # <<<<<<<<<<<<<<
@@ -5663,7 +5663,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_nei_sum, __pyx_t_13);
     __pyx_t_13 = 0;
 
-    /* "src/VitLib_cython.pyx":64
+    /* "src/membrane.pyx":64
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0)
  *         cond1 = np.logical_and(2 <= nei_sum, nei_sum <= 6)             # <<<<<<<<<<<<<<
@@ -5704,7 +5704,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_cond1, __pyx_t_13);
     __pyx_t_13 = 0;
 
-    /* "src/VitLib_cython.pyx":67
+    /* "src/membrane.pyx":67
  * 
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)             # <<<<<<<<<<<<<<
@@ -5775,7 +5775,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "src/VitLib_cython.pyx":68
+    /* "src/membrane.pyx":68
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -5814,7 +5814,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_cond2, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":69
+    /* "src/membrane.pyx":69
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -5827,7 +5827,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":70
+      /* "src/membrane.pyx":70
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -5840,7 +5840,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":71
+      /* "src/membrane.pyx":71
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -5890,7 +5890,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       }
 
-      /* "src/VitLib_cython.pyx":70
+      /* "src/membrane.pyx":70
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -5903,7 +5903,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error);
       __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":71
+      /* "src/membrane.pyx":71
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -5920,7 +5920,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "src/VitLib_cython.pyx":70
+      /* "src/membrane.pyx":70
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -5939,7 +5939,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       __pyx_t_3 = 0;
     }
 
-    /* "src/VitLib_cython.pyx":72
+    /* "src/membrane.pyx":72
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1             # <<<<<<<<<<<<<<
@@ -5951,7 +5951,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_DECREF_SET(__pyx_v_cond2, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":73
+    /* "src/membrane.pyx":73
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -5963,7 +5963,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":76
+    /* "src/membrane.pyx":76
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
@@ -5976,7 +5976,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "src/VitLib_cython.pyx":77
+    /* "src/membrane.pyx":77
  *         # condition 3
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -6044,7 +6044,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_c3a, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":78
+    /* "src/membrane.pyx":78
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
@@ -6057,7 +6057,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "src/VitLib_cython.pyx":79
+    /* "src/membrane.pyx":79
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -6125,7 +6125,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_c3b, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":80
+    /* "src/membrane.pyx":80
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)             # <<<<<<<<<<<<<<
@@ -6162,7 +6162,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_cond3, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":83
+    /* "src/membrane.pyx":83
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -6171,7 +6171,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
  */
     if (__pyx_v_switch) {
 
-      /* "src/VitLib_cython.pyx":84
+      /* "src/membrane.pyx":84
  *         # condition 4
  *         if switch:
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0             # <<<<<<<<<<<<<<
@@ -6204,7 +6204,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       __Pyx_XDECREF_SET(__pyx_v_cond4, __pyx_t_14);
       __pyx_t_14 = 0;
 
-      /* "src/VitLib_cython.pyx":83
+      /* "src/membrane.pyx":83
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -6214,7 +6214,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       goto __pyx_L9;
     }
 
-    /* "src/VitLib_cython.pyx":86
+    /* "src/membrane.pyx":86
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0
  *         else:
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0             # <<<<<<<<<<<<<<
@@ -6250,7 +6250,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     }
     __pyx_L9:;
 
-    /* "src/VitLib_cython.pyx":88
+    /* "src/membrane.pyx":88
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))             # <<<<<<<<<<<<<<
@@ -6315,7 +6315,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_cond, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "src/VitLib_cython.pyx":89
+    /* "src/membrane.pyx":89
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)             # <<<<<<<<<<<<<<
@@ -6352,7 +6352,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_DECREF_SET(__pyx_v_cond, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "src/VitLib_cython.pyx":90
+    /* "src/membrane.pyx":90
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -6362,7 +6362,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __pyx_t_16 = (__Pyx_PySequence_ContainsTF(Py_True, __pyx_v_cond, Py_EQ)); if (unlikely((__pyx_t_16 < 0))) __PYX_ERR(0, 90, __pyx_L1_error)
     if (__pyx_t_16) {
 
-      /* "src/VitLib_cython.pyx":91
+      /* "src/membrane.pyx":91
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:
  *             switch = not switch             # <<<<<<<<<<<<<<
@@ -6371,7 +6371,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
  */
       __pyx_v_switch = (!__pyx_v_switch);
 
-      /* "src/VitLib_cython.pyx":90
+      /* "src/membrane.pyx":90
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -6381,7 +6381,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
       goto __pyx_L10;
     }
 
-    /* "src/VitLib_cython.pyx":93
+    /* "src/membrane.pyx":93
  *             switch = not switch
  *         else:
  *             return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -6420,7 +6420,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     }
     __pyx_L10:;
 
-    /* "src/VitLib_cython.pyx":95
+    /* "src/membrane.pyx":95
  *             return src[1:ROW-1, 1:COLUMN-1]*255
  * 
  *         src[r[cond], c[cond]] = 0             # <<<<<<<<<<<<<<
@@ -6443,7 +6443,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "src/VitLib_cython.pyx":11
+  /* "src/membrane.pyx":11
  * ctypedef cnp.uint8_t DTYPE_t
  * 
  * def NWG_nofix(img):             # <<<<<<<<<<<<<<
@@ -6467,7 +6467,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_src);
@@ -6491,7 +6491,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":100
+/* "src/membrane.pyx":100
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -6499,14 +6499,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_NWG_nofix(CYTHON_UNUSED PyObje
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_3NWG_old(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyArrayObject *__pyx_v_src = 0;
   int __pyx_v_ROW;
   int __pyx_v_COLUMN;
@@ -6521,7 +6521,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   PyArrayObject *__pyx_v_cond3 = 0;
   PyArrayObject *__pyx_v_cond4 = 0;
   PyArrayObject *__pyx_v_cond = 0;
-  __pyx_t_6VitLib_13VitLib_cython_DTYPE_t __pyx_v_switch;
+  __pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t __pyx_v_switch;
   PyObject *__pyx_v_nei = NULL;
   PyObject *__pyx_v_i = NULL;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_c;
@@ -6635,11 +6635,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 100, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 100, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":136
+  /* "src/membrane.pyx":136
  *             cv2
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255             # <<<<<<<<<<<<<<
@@ -6680,7 +6680,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_src = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_src.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 136, __pyx_L1_error)
     } else {__pyx_pybuffernd_src.diminfo[0].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_src.diminfo[0].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_src.diminfo[1].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_src.diminfo[1].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[1];
@@ -6690,7 +6690,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_v_src = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":137
+  /* "src/membrane.pyx":137
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255
  *     cdef int ROW = src.shape[0]+2             # <<<<<<<<<<<<<<
@@ -6700,7 +6700,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L1_error)
   __pyx_v_ROW = ((__pyx_t_6[0]) + 2);
 
-  /* "src/VitLib_cython.pyx":138
+  /* "src/membrane.pyx":138
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255
  *     cdef int ROW = src.shape[0]+2
  *     cdef int COLUMN = src.shape[1]+2             # <<<<<<<<<<<<<<
@@ -6710,7 +6710,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L1_error)
   __pyx_v_COLUMN = ((__pyx_t_6[1]) + 2);
 
-  /* "src/VitLib_cython.pyx":140
+  /* "src/membrane.pyx":140
  *     cdef int COLUMN = src.shape[1]+2
  * 
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] pad = np.zeros((ROW, COLUMN), dtype=DTYPE)             # <<<<<<<<<<<<<<
@@ -6754,7 +6754,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_t_8 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pad.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pad.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_pad = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_pad.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 140, __pyx_L1_error)
     } else {__pyx_pybuffernd_pad.diminfo[0].strides = __pyx_pybuffernd_pad.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pad.diminfo[0].shape = __pyx_pybuffernd_pad.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pad.diminfo[1].strides = __pyx_pybuffernd_pad.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pad.diminfo[1].shape = __pyx_pybuffernd_pad.rcbuffer->pybuffer.shape[1];
@@ -6764,7 +6764,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __pyx_v_pad = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":147
+  /* "src/membrane.pyx":147
  *     cdef cnp.ndarray[cnp.uint8_t, ndim=1] nei_sum
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] cond1, cond2, c3a, c3b, cond3, cond4, cond
  *     cdef DTYPE_t switch = True             # <<<<<<<<<<<<<<
@@ -6773,7 +6773,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
  */
   __pyx_v_switch = 1;
 
-  /* "src/VitLib_cython.pyx":149
+  /* "src/membrane.pyx":149
  *     cdef DTYPE_t switch = True
  * 
  *     pad[1:ROW-1, 1:COLUMN-1] = src             # <<<<<<<<<<<<<<
@@ -6801,7 +6801,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_pad), __pyx_t_3, ((PyObject *)__pyx_v_src)) < 0))) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":150
+  /* "src/membrane.pyx":150
  * 
  *     pad[1:ROW-1, 1:COLUMN-1] = src
  *     src = pad             # <<<<<<<<<<<<<<
@@ -6811,10 +6811,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
-    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_v_pad), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_v_pad), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_4 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -6828,7 +6828,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
   __Pyx_INCREF((PyObject *)__pyx_v_pad);
   __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_v_pad));
 
-  /* "src/VitLib_cython.pyx":152
+  /* "src/membrane.pyx":152
  *     src = pad
  * 
  *     while True:             # <<<<<<<<<<<<<<
@@ -6837,7 +6837,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
  */
   while (1) {
 
-    /* "src/VitLib_cython.pyx":153
+    /* "src/membrane.pyx":153
  * 
  *     while True:
  *         r, c = src.nonzero()             # <<<<<<<<<<<<<<
@@ -6959,7 +6959,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_c, ((PyArrayObject *)__pyx_t_7));
     __pyx_t_7 = 0;
 
-    /* "src/VitLib_cython.pyx":154
+    /* "src/membrane.pyx":154
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -7013,7 +7013,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "src/VitLib_cython.pyx":155
+    /* "src/membrane.pyx":155
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],             # <<<<<<<<<<<<<<
@@ -7064,7 +7064,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_GOTREF(__pyx_t_18);
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
 
-    /* "src/VitLib_cython.pyx":156
+    /* "src/membrane.pyx":156
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))             # <<<<<<<<<<<<<<
@@ -7100,7 +7100,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_GOTREF(__pyx_t_20);
     __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
 
-    /* "src/VitLib_cython.pyx":154
+    /* "src/membrane.pyx":154
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -7159,7 +7159,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":159
+    /* "src/membrane.pyx":159
  * 
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0, dtype=DTYPE)             # <<<<<<<<<<<<<<
@@ -7211,7 +7211,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_nei_sum, ((PyArrayObject *)__pyx_t_20));
     __pyx_t_20 = 0;
 
-    /* "src/VitLib_cython.pyx":160
+    /* "src/membrane.pyx":160
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0, dtype=DTYPE)
  *         cond1 = np.logical_and(2 <= nei_sum, nei_sum <= 6)             # <<<<<<<<<<<<<<
@@ -7254,10 +7254,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond1.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond1.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond1.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond1.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond1, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond1.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond1, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7272,7 +7272,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_cond1, ((PyArrayObject *)__pyx_t_20));
     __pyx_t_20 = 0;
 
-    /* "src/VitLib_cython.pyx":163
+    /* "src/membrane.pyx":163
  * 
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)             # <<<<<<<<<<<<<<
@@ -7343,7 +7343,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_19);
     __pyx_t_19 = 0;
 
-    /* "src/VitLib_cython.pyx":164
+    /* "src/membrane.pyx":164
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)             # <<<<<<<<<<<<<<
@@ -7381,10 +7381,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7399,7 +7399,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_cond2, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":165
+    /* "src/membrane.pyx":165
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -7412,7 +7412,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":166
+      /* "src/membrane.pyx":166
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -7425,7 +7425,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __Pyx_GOTREF(__pyx_t_20);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":167
+      /* "src/membrane.pyx":167
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -7475,7 +7475,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
         __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
       }
 
-      /* "src/VitLib_cython.pyx":166
+      /* "src/membrane.pyx":166
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -7488,7 +7488,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       if (__Pyx_PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error);
       __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":167
+      /* "src/membrane.pyx":167
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -7505,7 +7505,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_19) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
 
-      /* "src/VitLib_cython.pyx":166
+      /* "src/membrane.pyx":166
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -7525,10 +7525,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
         __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer);
-        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
         if (unlikely(__pyx_t_4 < 0)) {
           PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
             Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
             __Pyx_RaiseBufferFallbackError();
           } else {
@@ -7544,7 +7544,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __pyx_t_3 = 0;
     }
 
-    /* "src/VitLib_cython.pyx":168
+    /* "src/membrane.pyx":168
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1             # <<<<<<<<<<<<<<
@@ -7557,10 +7557,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond2.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond2, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7575,7 +7575,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_DECREF_SET(__pyx_v_cond2, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":169
+    /* "src/membrane.pyx":169
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -7587,7 +7587,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":172
+    /* "src/membrane.pyx":172
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
@@ -7600,7 +7600,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_GOTREF(__pyx_t_21);
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
 
-    /* "src/VitLib_cython.pyx":173
+    /* "src/membrane.pyx":173
  *         # condition 3
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -7666,7 +7666,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
     }
 
-    /* "src/VitLib_cython.pyx":172
+    /* "src/membrane.pyx":172
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
@@ -7678,10 +7678,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_c3a.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3a.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3a.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3a.rcbuffer->pybuffer, (PyObject*)__pyx_v_c3a, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3a.rcbuffer->pybuffer, (PyObject*)__pyx_v_c3a, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7696,7 +7696,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_c3a, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":174
+    /* "src/membrane.pyx":174
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
@@ -7709,7 +7709,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
 
-    /* "src/VitLib_cython.pyx":175
+    /* "src/membrane.pyx":175
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -7775,7 +7775,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     }
 
-    /* "src/VitLib_cython.pyx":174
+    /* "src/membrane.pyx":174
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
@@ -7787,10 +7787,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_c3b.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3b.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3b.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3b.rcbuffer->pybuffer, (PyObject*)__pyx_v_c3b, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_c3b.rcbuffer->pybuffer, (PyObject*)__pyx_v_c3b, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7805,7 +7805,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_c3b, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":176
+    /* "src/membrane.pyx":176
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)             # <<<<<<<<<<<<<<
@@ -7844,10 +7844,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond3.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond3.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond3.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond3.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond3, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond3.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond3, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -7862,7 +7862,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_cond3, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":179
+    /* "src/membrane.pyx":179
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -7872,7 +7872,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __pyx_t_25 = (__pyx_v_switch != 0);
     if (__pyx_t_25) {
 
-      /* "src/VitLib_cython.pyx":180
+      /* "src/membrane.pyx":180
  *         # condition 4
  *         if switch:
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0             # <<<<<<<<<<<<<<
@@ -7907,10 +7907,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
         __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer);
-        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
         if (unlikely(__pyx_t_4 < 0)) {
           PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
-          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond4, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond4, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
             Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
             __Pyx_RaiseBufferFallbackError();
           } else {
@@ -7925,7 +7925,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       __Pyx_XDECREF_SET(__pyx_v_cond4, ((PyArrayObject *)__pyx_t_21));
       __pyx_t_21 = 0;
 
-      /* "src/VitLib_cython.pyx":179
+      /* "src/membrane.pyx":179
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -7935,7 +7935,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       goto __pyx_L9;
     }
 
-    /* "src/VitLib_cython.pyx":182
+    /* "src/membrane.pyx":182
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0
  *         else:
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0             # <<<<<<<<<<<<<<
@@ -7971,10 +7971,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
         __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer);
-        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+        __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
         if (unlikely(__pyx_t_4 < 0)) {
           PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond4, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond4.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond4, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
             Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
             __Pyx_RaiseBufferFallbackError();
           } else {
@@ -7991,7 +7991,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     }
     __pyx_L9:;
 
-    /* "src/VitLib_cython.pyx":184
+    /* "src/membrane.pyx":184
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)             # <<<<<<<<<<<<<<
@@ -8058,10 +8058,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -8076,7 +8076,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_XDECREF_SET(__pyx_v_cond, ((PyArrayObject *)__pyx_t_19));
     __pyx_t_19 = 0;
 
-    /* "src/VitLib_cython.pyx":185
+    /* "src/membrane.pyx":185
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)             # <<<<<<<<<<<<<<
@@ -8115,10 +8115,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_cond.rcbuffer->pybuffer);
-      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
       if (unlikely(__pyx_t_4 < 0)) {
         PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_cond.rcbuffer->pybuffer, (PyObject*)__pyx_v_cond, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -8133,7 +8133,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_DECREF_SET(__pyx_v_cond, ((PyArrayObject *)__pyx_t_19));
     __pyx_t_19 = 0;
 
-    /* "src/VitLib_cython.pyx":186
+    /* "src/membrane.pyx":186
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -8143,7 +8143,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __pyx_t_25 = (__Pyx_PySequence_ContainsTF(Py_True, ((PyObject *)__pyx_v_cond), Py_EQ)); if (unlikely((__pyx_t_25 < 0))) __PYX_ERR(0, 186, __pyx_L1_error)
     if (__pyx_t_25) {
 
-      /* "src/VitLib_cython.pyx":187
+      /* "src/membrane.pyx":187
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:
  *             switch = not switch             # <<<<<<<<<<<<<<
@@ -8152,7 +8152,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
  */
       __pyx_v_switch = (!(__pyx_v_switch != 0));
 
-      /* "src/VitLib_cython.pyx":186
+      /* "src/membrane.pyx":186
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -8162,7 +8162,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
       goto __pyx_L10;
     }
 
-    /* "src/VitLib_cython.pyx":189
+    /* "src/membrane.pyx":189
  *             switch = not switch
  *         else:
  *             return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -8202,7 +8202,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     }
     __pyx_L10:;
 
-    /* "src/VitLib_cython.pyx":191
+    /* "src/membrane.pyx":191
  *             return src[1:ROW-1, 1:COLUMN-1]*255
  * 
  *         src[r[cond], c[cond]] = 0             # <<<<<<<<<<<<<<
@@ -8225,7 +8225,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "src/VitLib_cython.pyx":100
+  /* "src/membrane.pyx":100
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -8267,7 +8267,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_r.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8305,16 +8305,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG_old(PyArrayObject *__p
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_3NWG_old(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_2NWG_old, "NWG_old(ndarray img) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 100)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],""\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_3NWG_old = {"NWG_old", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_3NWG_old, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_2NWG_old};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_3NWG_old(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_2NWG_old, "NWG_old(ndarray img) -> ndarray\nFile: src/membrane.pyx (starting at line 100)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n      ""         [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_3NWG_old = {"NWG_old", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_2NWG_old};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -8384,12 +8384,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 100, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_2NWG_old(__pyx_self, __pyx_v_img);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_2NWG_old(__pyx_self, __pyx_v_img);
 
   /* function exit code */
   goto __pyx_L0;
@@ -8406,7 +8406,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_2NWG_old(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
@@ -8422,11 +8422,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObjec
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 100, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 100, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_NWG_old(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8441,7 +8441,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObjec
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8452,7 +8452,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":196
+/* "src/membrane.pyx":196
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -8460,14 +8460,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_2NWG_old(CYTHON_UNUSED PyObjec
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_5NWG(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG *__pyx_optional_args) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG *__pyx_optional_args) {
   int __pyx_v_symmetric = ((int)0);
   PyArrayObject *__pyx_v_src = 0;
   PyArrayObject *__pyx_v_Q = 0;
@@ -8545,11 +8545,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":232
+  /* "src/membrane.pyx":232
  *             cv2
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')             # <<<<<<<<<<<<<<
@@ -8618,7 +8618,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_src = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_src.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 232, __pyx_L1_error)
     } else {__pyx_pybuffernd_src.diminfo[0].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_src.diminfo[0].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_src.diminfo[1].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_src.diminfo[1].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[1];
@@ -8628,7 +8628,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_v_src = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":234
+  /* "src/membrane.pyx":234
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] Q
  *     cdef int ROW = src.shape[0]             # <<<<<<<<<<<<<<
@@ -8638,7 +8638,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_t_8 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_8 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L1_error)
   __pyx_v_ROW = (__pyx_t_8[0]);
 
-  /* "src/VitLib_cython.pyx":235
+  /* "src/membrane.pyx":235
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] Q
  *     cdef int ROW = src.shape[0]
  *     cdef int COLUMN = src.shape[1]             # <<<<<<<<<<<<<<
@@ -8648,7 +8648,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_t_8 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_8 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 235, __pyx_L1_error)
   __pyx_v_COLUMN = (__pyx_t_8[1]);
 
-  /* "src/VitLib_cython.pyx":243
+  /* "src/membrane.pyx":243
  * 
  *     #
  *     g = 1             # <<<<<<<<<<<<<<
@@ -8657,7 +8657,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
   __pyx_v_g = 1;
 
-  /* "src/VitLib_cython.pyx":244
+  /* "src/membrane.pyx":244
  *     #
  *     g = 1
  *     h = 1             # <<<<<<<<<<<<<<
@@ -8666,7 +8666,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
   __pyx_v_h = 1;
 
-  /* "src/VitLib_cython.pyx":245
+  /* "src/membrane.pyx":245
  *     g = 1
  *     h = 1
  *     while h==1:             # <<<<<<<<<<<<<<
@@ -8677,7 +8677,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     __pyx_t_9 = (__pyx_v_h == 1);
     if (!__pyx_t_9) break;
 
-    /* "src/VitLib_cython.pyx":246
+    /* "src/membrane.pyx":246
  *     h = 1
  *     while h==1:
  *         Q = np.zeros_like(src)             # <<<<<<<<<<<<<<
@@ -8716,10 +8716,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_Q.rcbuffer->pybuffer);
-      __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_Q.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack);
+      __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_Q.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_6 < 0)) {
         PyErr_Fetch(&__pyx_t_11, &__pyx_t_12, &__pyx_t_13);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_Q.rcbuffer->pybuffer, (PyObject*)__pyx_v_Q, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_Q.rcbuffer->pybuffer, (PyObject*)__pyx_v_Q, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -8734,7 +8734,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     __Pyx_XDECREF_SET(__pyx_v_Q, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "src/VitLib_cython.pyx":247
+    /* "src/membrane.pyx":247
  *     while h==1:
  *         Q = np.zeros_like(src)
  *         g = 1 - g             # <<<<<<<<<<<<<<
@@ -8743,7 +8743,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
     __pyx_v_g = (1 - __pyx_v_g);
 
-    /* "src/VitLib_cython.pyx":248
+    /* "src/membrane.pyx":248
  *         Q = np.zeros_like(src)
  *         g = 1 - g
  *         h = 0             # <<<<<<<<<<<<<<
@@ -8752,7 +8752,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
     __pyx_v_h = 0;
 
-    /* "src/VitLib_cython.pyx":250
+    /* "src/membrane.pyx":250
  *         h = 0
  * 
  *         for x in range(1,COLUMN-1):             # <<<<<<<<<<<<<<
@@ -8764,7 +8764,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     for (__pyx_t_6 = 1; __pyx_t_6 < __pyx_t_15; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "src/VitLib_cython.pyx":251
+      /* "src/membrane.pyx":251
  * 
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):             # <<<<<<<<<<<<<<
@@ -8776,7 +8776,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
       for (__pyx_t_18 = 1; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
         __pyx_v_y = __pyx_t_18;
 
-        /* "src/VitLib_cython.pyx":252
+        /* "src/membrane.pyx":252
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:             # <<<<<<<<<<<<<<
@@ -8785,10 +8785,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
         __pyx_t_19 = __pyx_v_y;
         __pyx_t_20 = __pyx_v_x;
-        __pyx_t_9 = ((*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides)) == 1);
+        __pyx_t_9 = ((*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides)) == 1);
         if (__pyx_t_9) {
 
-          /* "src/VitLib_cython.pyx":253
+          /* "src/membrane.pyx":253
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:
  *                     p[0] = src[y-1, x]             # <<<<<<<<<<<<<<
@@ -8797,9 +8797,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_20 = (__pyx_v_y - 1);
           __pyx_t_19 = __pyx_v_x;
-          (__pyx_v_p[0]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[0]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":254
+          /* "src/membrane.pyx":254
  *                 if src[y,x]==1:
  *                     p[0] = src[y-1, x]
  *                     p[1] = src[y-1, x+1]             # <<<<<<<<<<<<<<
@@ -8808,9 +8808,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_19 = (__pyx_v_y - 1);
           __pyx_t_20 = (__pyx_v_x + 1);
-          (__pyx_v_p[1]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[1]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":255
+          /* "src/membrane.pyx":255
  *                     p[0] = src[y-1, x]
  *                     p[1] = src[y-1, x+1]
  *                     p[2] = src[y, x+1]             # <<<<<<<<<<<<<<
@@ -8819,9 +8819,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_20 = __pyx_v_y;
           __pyx_t_19 = (__pyx_v_x + 1);
-          (__pyx_v_p[2]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[2]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":256
+          /* "src/membrane.pyx":256
  *                     p[1] = src[y-1, x+1]
  *                     p[2] = src[y, x+1]
  *                     p[3] = src[y+1, x+1]             # <<<<<<<<<<<<<<
@@ -8830,9 +8830,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_19 = (__pyx_v_y + 1);
           __pyx_t_20 = (__pyx_v_x + 1);
-          (__pyx_v_p[3]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[3]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":257
+          /* "src/membrane.pyx":257
  *                     p[2] = src[y, x+1]
  *                     p[3] = src[y+1, x+1]
  *                     p[4] = src[y+1, x]             # <<<<<<<<<<<<<<
@@ -8841,9 +8841,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_20 = (__pyx_v_y + 1);
           __pyx_t_19 = __pyx_v_x;
-          (__pyx_v_p[4]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[4]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":258
+          /* "src/membrane.pyx":258
  *                     p[3] = src[y+1, x+1]
  *                     p[4] = src[y+1, x]
  *                     p[5] = src[y+1, x-1]             # <<<<<<<<<<<<<<
@@ -8852,9 +8852,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_19 = (__pyx_v_y + 1);
           __pyx_t_20 = (__pyx_v_x - 1);
-          (__pyx_v_p[5]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[5]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":259
+          /* "src/membrane.pyx":259
  *                     p[4] = src[y+1, x]
  *                     p[5] = src[y+1, x-1]
  *                     p[6] = src[y, x-1]             # <<<<<<<<<<<<<<
@@ -8863,9 +8863,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_20 = __pyx_v_y;
           __pyx_t_19 = (__pyx_v_x - 1);
-          (__pyx_v_p[6]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[6]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":260
+          /* "src/membrane.pyx":260
  *                     p[5] = src[y+1, x-1]
  *                     p[6] = src[y, x-1]
  *                     p[7] = src[y-1, x-1]             # <<<<<<<<<<<<<<
@@ -8874,9 +8874,9 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_t_19 = (__pyx_v_y - 1);
           __pyx_t_20 = (__pyx_v_x - 1);
-          (__pyx_v_p[7]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
+          (__pyx_v_p[7]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_src.diminfo[1].strides));
 
-          /* "src/VitLib_cython.pyx":261
+          /* "src/membrane.pyx":261
  *                     p[6] = src[y, x-1]
  *                     p[7] = src[y-1, x-1]
  *                     p[8] = p[0]             # <<<<<<<<<<<<<<
@@ -8885,7 +8885,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           (__pyx_v_p[8]) = (__pyx_v_p[0]);
 
-          /* "src/VitLib_cython.pyx":264
+          /* "src/membrane.pyx":264
  * 
  *                     # condition 1
  *                     p_sum = p[0]+p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]             # <<<<<<<<<<<<<<
@@ -8894,7 +8894,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
           __pyx_v_p_sum = ((((((((__pyx_v_p[0]) + (__pyx_v_p[1])) + (__pyx_v_p[2])) + (__pyx_v_p[3])) + (__pyx_v_p[4])) + (__pyx_v_p[5])) + (__pyx_v_p[6])) + (__pyx_v_p[7]));
 
-          /* "src/VitLib_cython.pyx":265
+          /* "src/membrane.pyx":265
  *                     # condition 1
  *                     p_sum = p[0]+p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]
  *                     cond1 = 1<p_sum and p_sum<7             # <<<<<<<<<<<<<<
@@ -8912,7 +8912,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_L10_bool_binop_done:;
           __pyx_v_cond1 = __pyx_t_21;
 
-          /* "src/VitLib_cython.pyx":268
+          /* "src/membrane.pyx":268
  * 
  *                     # condition 2
  *                     a=0             # <<<<<<<<<<<<<<
@@ -8922,7 +8922,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __Pyx_INCREF(__pyx_int_0);
           __Pyx_XDECREF_SET(__pyx_v_a, __pyx_int_0);
 
-          /* "src/VitLib_cython.pyx":269
+          /* "src/membrane.pyx":269
  *                     # condition 2
  *                     a=0
  *                     for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -8932,7 +8932,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           for (__pyx_t_21 = 1; __pyx_t_21 < 9; __pyx_t_21+=1) {
             __pyx_v_i = __pyx_t_21;
 
-            /* "src/VitLib_cython.pyx":270
+            /* "src/membrane.pyx":270
  *                     a=0
  *                     for i in range(1, 9):
  *                         a += 1 if p[i-1]==0 and p[i]==1 else 0             # <<<<<<<<<<<<<<
@@ -8962,7 +8962,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             __pyx_t_5 = 0;
           }
 
-          /* "src/VitLib_cython.pyx":271
+          /* "src/membrane.pyx":271
  *                     for i in range(1, 9):
  *                         a += 1 if p[i-1]==0 and p[i]==1 else 0
  *                     cond2 = a==1             # <<<<<<<<<<<<<<
@@ -8975,7 +8975,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __pyx_v_cond2 = __pyx_t_21;
 
-          /* "src/VitLib_cython.pyx":274
+          /* "src/membrane.pyx":274
  * 
  *                     # condition 3
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2             # <<<<<<<<<<<<<<
@@ -8993,7 +8993,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_L16_bool_binop_done:;
           __pyx_v_cond3a = __pyx_t_21;
 
-          /* "src/VitLib_cython.pyx":275
+          /* "src/membrane.pyx":275
  *                     # condition 3
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2             # <<<<<<<<<<<<<<
@@ -9011,7 +9011,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_L18_bool_binop_done:;
           __pyx_v_cond3b = __pyx_t_21;
 
-          /* "src/VitLib_cython.pyx":276
+          /* "src/membrane.pyx":276
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:             # <<<<<<<<<<<<<<
@@ -9021,7 +9021,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_t_9 = (__pyx_v_symmetric != 0);
           if (__pyx_t_9) {
 
-            /* "src/VitLib_cython.pyx":277
+            /* "src/membrane.pyx":277
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2             # <<<<<<<<<<<<<<
@@ -9039,7 +9039,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             __pyx_L21_bool_binop_done:;
             __pyx_v_cond3c = __pyx_t_21;
 
-            /* "src/VitLib_cython.pyx":278
+            /* "src/membrane.pyx":278
  *                     if symmetric:
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2             # <<<<<<<<<<<<<<
@@ -9057,7 +9057,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             __pyx_L23_bool_binop_done:;
             __pyx_v_cond3d = __pyx_t_21;
 
-            /* "src/VitLib_cython.pyx":279
+            /* "src/membrane.pyx":279
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2
  *                         c = cond3a or cond3b             # <<<<<<<<<<<<<<
@@ -9073,7 +9073,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             __pyx_L25_bool_binop_done:;
             __pyx_v_c = __pyx_t_21;
 
-            /* "src/VitLib_cython.pyx":280
+            /* "src/membrane.pyx":280
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2
  *                         c = cond3a or cond3b
  *                         d = cond3c or cond3d             # <<<<<<<<<<<<<<
@@ -9089,7 +9089,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             __pyx_L27_bool_binop_done:;
             __pyx_v_d = __pyx_t_21;
 
-            /* "src/VitLib_cython.pyx":281
+            /* "src/membrane.pyx":281
  *                         c = cond3a or cond3b
  *                         d = cond3c or cond3d
  *                         cond3 = (1 - g)*c + g*d == 1             # <<<<<<<<<<<<<<
@@ -9098,7 +9098,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
             __pyx_v_cond3 = ((((1 - __pyx_v_g) * __pyx_v_c) + (__pyx_v_g * __pyx_v_d)) == 1);
 
-            /* "src/VitLib_cython.pyx":276
+            /* "src/membrane.pyx":276
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:             # <<<<<<<<<<<<<<
@@ -9108,7 +9108,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             goto __pyx_L20;
           }
 
-          /* "src/VitLib_cython.pyx":283
+          /* "src/membrane.pyx":283
  *                         cond3 = (1 - g)*c + g*d == 1
  *                     else:
  *                         cond3 = cond3a or cond3b             # <<<<<<<<<<<<<<
@@ -9127,7 +9127,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           }
           __pyx_L20:;
 
-          /* "src/VitLib_cython.pyx":287
+          /* "src/membrane.pyx":287
  * 
  *                     # condition 4
  *                     if g==0:             # <<<<<<<<<<<<<<
@@ -9137,7 +9137,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_t_9 = (__pyx_v_g == 0);
           if (__pyx_t_9) {
 
-            /* "src/VitLib_cython.pyx":288
+            /* "src/membrane.pyx":288
  *                     # condition 4
  *                     if g==0:
  *                         cond4 = (p[2]+p[4])*p[0]*p[6] == 0             # <<<<<<<<<<<<<<
@@ -9146,7 +9146,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
             __pyx_v_cond4 = (((((__pyx_v_p[2]) + (__pyx_v_p[4])) * (__pyx_v_p[0])) * (__pyx_v_p[6])) == 0);
 
-            /* "src/VitLib_cython.pyx":287
+            /* "src/membrane.pyx":287
  * 
  *                     # condition 4
  *                     if g==0:             # <<<<<<<<<<<<<<
@@ -9156,7 +9156,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             goto __pyx_L31;
           }
 
-          /* "src/VitLib_cython.pyx":290
+          /* "src/membrane.pyx":290
  *                         cond4 = (p[2]+p[4])*p[0]*p[6] == 0
  *                     else:
  *                         cond4 = (p[0]+p[6])*p[2]*p[4] == 0             # <<<<<<<<<<<<<<
@@ -9168,7 +9168,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           }
           __pyx_L31:;
 
-          /* "src/VitLib_cython.pyx":291
+          /* "src/membrane.pyx":291
  *                     else:
  *                         cond4 = (p[0]+p[6])*p[2]*p[4] == 0
  *                     cond = cond1 and (cond2 or cond3) and cond4             # <<<<<<<<<<<<<<
@@ -9194,7 +9194,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_L32_bool_binop_done:;
           __pyx_v_cond = __pyx_t_21;
 
-          /* "src/VitLib_cython.pyx":293
+          /* "src/membrane.pyx":293
  *                     cond = cond1 and (cond2 or cond3) and cond4
  * 
  *                     if cond:             # <<<<<<<<<<<<<<
@@ -9204,7 +9204,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           __pyx_t_9 = (__pyx_v_cond != 0);
           if (__pyx_t_9) {
 
-            /* "src/VitLib_cython.pyx":294
+            /* "src/membrane.pyx":294
  * 
  *                     if cond:
  *                         h=1             # <<<<<<<<<<<<<<
@@ -9213,7 +9213,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
  */
             __pyx_v_h = 1;
 
-            /* "src/VitLib_cython.pyx":293
+            /* "src/membrane.pyx":293
  *                     cond = cond1 and (cond2 or cond3) and cond4
  * 
  *                     if cond:             # <<<<<<<<<<<<<<
@@ -9223,7 +9223,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
             goto __pyx_L36;
           }
 
-          /* "src/VitLib_cython.pyx":296
+          /* "src/membrane.pyx":296
  *                         h=1
  *                     else:
  *                         Q[y,x]=1             # <<<<<<<<<<<<<<
@@ -9233,11 +9233,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
           /*else*/ {
             __pyx_t_20 = __pyx_v_y;
             __pyx_t_19 = __pyx_v_x;
-            *__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_DTYPE_t *, __pyx_pybuffernd_Q.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_Q.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_Q.diminfo[1].strides) = 1;
+            *__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_Q.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_Q.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_Q.diminfo[1].strides) = 1;
           }
           __pyx_L36:;
 
-          /* "src/VitLib_cython.pyx":252
+          /* "src/membrane.pyx":252
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:             # <<<<<<<<<<<<<<
@@ -9248,7 +9248,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
       }
     }
 
-    /* "src/VitLib_cython.pyx":297
+    /* "src/membrane.pyx":297
  *                     else:
  *                         Q[y,x]=1
  *         src = Q             # <<<<<<<<<<<<<<
@@ -9258,10 +9258,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
-      __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_v_Q), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_v_Q), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_6 < 0)) {
         PyErr_Fetch(&__pyx_t_13, &__pyx_t_12, &__pyx_t_11);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -9276,7 +9276,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_v_Q));
   }
 
-  /* "src/VitLib_cython.pyx":298
+  /* "src/membrane.pyx":298
  *                         Q[y,x]=1
  *         src = Q
  *     return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -9313,7 +9313,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":196
+  /* "src/membrane.pyx":196
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -9336,7 +9336,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9353,16 +9353,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_NWG(PyArrayObject *__pyx_v
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_5NWG(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_4NWG, "NWG(ndarray img, int symmetric=False) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 196)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0,   0,   0,   ""0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_5NWG = {"NWG", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_5NWG, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_4NWG};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_5NWG(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_4NWG, "NWG(ndarray img, int symmetric=False) -> ndarray\nFile: src/membrane.pyx (starting at line 196)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0,   0,   0,   0,   ""0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_5NWG = {"NWG", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_4NWG};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -9451,12 +9451,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 196, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_4NWG(__pyx_self, __pyx_v_img, __pyx_v_symmetric);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_4NWG(__pyx_self, __pyx_v_img, __pyx_v_symmetric);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9473,13 +9473,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_symmetric) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_4NWG(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_symmetric) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG __pyx_t_2;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -9490,13 +9490,13 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *_
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.symmetric = __pyx_v_symmetric;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_NWG(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9511,7 +9511,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *_
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.NWG", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9522,7 +9522,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":301
+/* "src/membrane.pyx":301
  * ###
  * 
  * def smallAreaReduction_nofix_old(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -9531,16 +9531,16 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_4NWG(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_7smallAreaReduction_nofix_old(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_7smallAreaReduction_nofix_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old, "smallAreaReduction_nofix_old(img, area_th=100)\nFile: src/VitLib_cython.pyx (starting at line 301)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction_nofix_old\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction_nofix_old(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_7smallAreaReduction_nofix_old = {"smallAreaReduction_nofix_old", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_7smallAreaReduction_nofix_old, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_7smallAreaReduction_nofix_old(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_6smallAreaReduction_nofix_old, "smallAreaReduction_nofix_old(img, area_th=100)\nFile: src/membrane.pyx (starting at line 301)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction_nofix_old\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction_nofix_old(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_7smallAreaReduction_nofix_old = {"smallAreaReduction_nofix_old", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_7smallAreaReduction_nofix_old, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_6smallAreaReduction_nofix_old};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_7smallAreaReduction_nofix_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -9626,11 +9626,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction_nofix_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction_nofix_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(__pyx_self, __pyx_v_img, __pyx_v_area_th);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_6smallAreaReduction_nofix_old(__pyx_self, __pyx_v_img, __pyx_v_area_th);
 
   /* function exit code */
   {
@@ -9643,7 +9643,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_6smallAreaReduction_nofix_old(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th) {
   PyObject *__pyx_v_src = NULL;
   PyObject *__pyx_v_labeling_result = NULL;
   PyObject *__pyx_v_num_of_labels = NULL;
@@ -9669,7 +9669,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("smallAreaReduction_nofix_old", 1);
 
-  /* "src/VitLib_cython.pyx":332
+  /* "src/membrane.pyx":332
  *                [0, 0, 0, 0, 0, 0, 0, 0]])
  *     """
  *     src = np.copy(img)             # <<<<<<<<<<<<<<
@@ -9706,7 +9706,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   __pyx_v_src = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":333
+  /* "src/membrane.pyx":333
  *     """
  *     src = np.copy(img)
  *     labeling_result = cv2.connectedComponentsWithStats(src)             # <<<<<<<<<<<<<<
@@ -9743,7 +9743,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   __pyx_v_labeling_result = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":334
+  /* "src/membrane.pyx":334
  *     src = np.copy(img)
  *     labeling_result = cv2.connectedComponentsWithStats(src)
  *     num_of_labels, labeled_img, contours, centroids = labeling_result             # <<<<<<<<<<<<<<
@@ -9816,7 +9816,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   __pyx_v_centroids = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":336
+  /* "src/membrane.pyx":336
  *     num_of_labels, labeled_img, contours, centroids = labeling_result
  * 
  *     for label in range(1, num_of_labels):             # <<<<<<<<<<<<<<
@@ -9890,7 +9890,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
     __Pyx_XDECREF_SET(__pyx_v_label, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":337
+    /* "src/membrane.pyx":337
  * 
  *     for label in range(1, num_of_labels):
  *         labeled_src = np.copy(labeled_img)             # <<<<<<<<<<<<<<
@@ -9927,7 +9927,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
     __Pyx_XDECREF_SET(__pyx_v_labeled_src, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":338
+    /* "src/membrane.pyx":338
  *     for label in range(1, num_of_labels):
  *         labeled_src = np.copy(labeled_img)
  *         labeled_src[labeled_src != label] = 0             # <<<<<<<<<<<<<<
@@ -9938,7 +9938,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
     if (unlikely((PyObject_SetItem(__pyx_v_labeled_src, __pyx_t_3, __pyx_int_0) < 0))) __PYX_ERR(0, 338, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":339
+    /* "src/membrane.pyx":339
  *         labeled_src = np.copy(labeled_img)
  *         labeled_src[labeled_src != label] = 0
  *         labeled_src[labeled_src == label] = 1             # <<<<<<<<<<<<<<
@@ -9949,7 +9949,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
     if (unlikely((PyObject_SetItem(__pyx_v_labeled_src, __pyx_t_3, __pyx_int_1) < 0))) __PYX_ERR(0, 339, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":341
+    /* "src/membrane.pyx":341
  *         labeled_src[labeled_src == label] = 1
  * 
  *         if np.sum(labeled_src) < area_th:             # <<<<<<<<<<<<<<
@@ -9989,7 +9989,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_10) {
 
-      /* "src/VitLib_cython.pyx":342
+      /* "src/membrane.pyx":342
  * 
  *         if np.sum(labeled_src) < area_th:
  *             labeled_img[labeled_img == label] = 0             # <<<<<<<<<<<<<<
@@ -10000,7 +10000,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
       if (unlikely((PyObject_SetItem(__pyx_v_labeled_img, __pyx_t_2, __pyx_int_0) < 0))) __PYX_ERR(0, 342, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "src/VitLib_cython.pyx":341
+      /* "src/membrane.pyx":341
  *         labeled_src[labeled_src == label] = 1
  * 
  *         if np.sum(labeled_src) < area_th:             # <<<<<<<<<<<<<<
@@ -10009,7 +10009,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
  */
     }
 
-    /* "src/VitLib_cython.pyx":336
+    /* "src/membrane.pyx":336
  *     num_of_labels, labeled_img, contours, centroids = labeling_result
  * 
  *     for label in range(1, num_of_labels):             # <<<<<<<<<<<<<<
@@ -10019,7 +10019,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":344
+  /* "src/membrane.pyx":344
  *             labeled_img[labeled_img == label] = 0
  * 
  *     labeled_img[labeled_img > 0] = 1             # <<<<<<<<<<<<<<
@@ -10030,7 +10030,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   if (unlikely((PyObject_SetItem(__pyx_v_labeled_img, __pyx_t_5, __pyx_int_1) < 0))) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":345
+  /* "src/membrane.pyx":345
  * 
  *     labeled_img[labeled_img > 0] = 1
  *     return np.array(np.expand_dims(labeled_img, -1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -10093,7 +10093,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":301
+  /* "src/membrane.pyx":301
  * ###
  * 
  * def smallAreaReduction_nofix_old(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -10108,7 +10108,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction_nofix_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction_nofix_old", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_src);
@@ -10124,7 +10124,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":348
+/* "src/membrane.pyx":348
  * ###
  * 
  * def smallAreaReduction_nofix(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -10133,16 +10133,16 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_6smallAreaReduction_nofix_old(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_9smallAreaReduction_nofix(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_9smallAreaReduction_nofix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8smallAreaReduction_nofix, "smallAreaReduction_nofix(img, area_th=100)\nFile: src/VitLib_cython.pyx (starting at line 348)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction_nofix\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction_nofix(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_9smallAreaReduction_nofix = {"smallAreaReduction_nofix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_9smallAreaReduction_nofix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8smallAreaReduction_nofix};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_9smallAreaReduction_nofix(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_8smallAreaReduction_nofix, "smallAreaReduction_nofix(img, area_th=100)\nFile: src/membrane.pyx (starting at line 348)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction_nofix\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction_nofix(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_9smallAreaReduction_nofix = {"smallAreaReduction_nofix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_9smallAreaReduction_nofix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_8smallAreaReduction_nofix};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_9smallAreaReduction_nofix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -10228,11 +10228,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(__pyx_self, __pyx_v_img, __pyx_v_area_th);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_8smallAreaReduction_nofix(__pyx_self, __pyx_v_img, __pyx_v_area_th);
 
   /* function exit code */
   {
@@ -10245,7 +10245,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_8smallAreaReduction_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_area_th) {
   PyObject *__pyx_v_src = NULL;
   PyObject *__pyx_v_labeling_result = NULL;
   PyObject *__pyx_v_num_of_labels = NULL;
@@ -10271,7 +10271,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("smallAreaReduction_nofix", 1);
 
-  /* "src/VitLib_cython.pyx":379
+  /* "src/membrane.pyx":379
  *                [0, 0, 0, 0, 0, 0, 0, 0]])
  *     """
  *     src = np.copy(img)             # <<<<<<<<<<<<<<
@@ -10308,7 +10308,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   __pyx_v_src = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":380
+  /* "src/membrane.pyx":380
  *     """
  *     src = np.copy(img)
  *     labeling_result = cv2.connectedComponentsWithStats(src)             # <<<<<<<<<<<<<<
@@ -10345,7 +10345,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   __pyx_v_labeling_result = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":381
+  /* "src/membrane.pyx":381
  *     src = np.copy(img)
  *     labeling_result = cv2.connectedComponentsWithStats(src)
  *     num_of_labels, labeled_img, contours, centroids = labeling_result             # <<<<<<<<<<<<<<
@@ -10418,7 +10418,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   __pyx_v_centroids = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":383
+  /* "src/membrane.pyx":383
  *     num_of_labels, labeled_img, contours, centroids = labeling_result
  * 
  *     for label in range(1, num_of_labels):             # <<<<<<<<<<<<<<
@@ -10492,7 +10492,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
     __Pyx_XDECREF_SET(__pyx_v_label, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":384
+    /* "src/membrane.pyx":384
  * 
  *     for label in range(1, num_of_labels):
  *         label_sum = np.sum(labeled_img == label)             # <<<<<<<<<<<<<<
@@ -10531,7 +10531,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
     __Pyx_XDECREF_SET(__pyx_v_label_sum, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":385
+    /* "src/membrane.pyx":385
  *     for label in range(1, num_of_labels):
  *         label_sum = np.sum(labeled_img == label)
  *         if label_sum < area_th:             # <<<<<<<<<<<<<<
@@ -10543,7 +10543,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_10) {
 
-      /* "src/VitLib_cython.pyx":386
+      /* "src/membrane.pyx":386
  *         label_sum = np.sum(labeled_img == label)
  *         if label_sum < area_th:
  *             labeled_img[labeled_img == label] = 0             # <<<<<<<<<<<<<<
@@ -10554,7 +10554,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
       if (unlikely((PyObject_SetItem(__pyx_v_labeled_img, __pyx_t_3, __pyx_int_0) < 0))) __PYX_ERR(0, 386, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "src/VitLib_cython.pyx":385
+      /* "src/membrane.pyx":385
  *     for label in range(1, num_of_labels):
  *         label_sum = np.sum(labeled_img == label)
  *         if label_sum < area_th:             # <<<<<<<<<<<<<<
@@ -10563,7 +10563,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
  */
     }
 
-    /* "src/VitLib_cython.pyx":383
+    /* "src/membrane.pyx":383
  *     num_of_labels, labeled_img, contours, centroids = labeling_result
  * 
  *     for label in range(1, num_of_labels):             # <<<<<<<<<<<<<<
@@ -10573,7 +10573,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":388
+  /* "src/membrane.pyx":388
  *             labeled_img[labeled_img == label] = 0
  * 
  *     labeled_img[labeled_img > 0] = 1             # <<<<<<<<<<<<<<
@@ -10584,7 +10584,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   if (unlikely((PyObject_SetItem(__pyx_v_labeled_img, __pyx_t_5, __pyx_int_1) < 0))) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":389
+  /* "src/membrane.pyx":389
  * 
  *     labeled_img[labeled_img > 0] = 1
  *     return labeled_img.astype(np.uint8)             # <<<<<<<<<<<<<<
@@ -10626,7 +10626,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":348
+  /* "src/membrane.pyx":348
  * ###
  * 
  * def smallAreaReduction_nofix(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -10641,7 +10641,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction_nofix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_src);
@@ -10657,7 +10657,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":394
+/* "src/membrane.pyx":394
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):             # <<<<<<<<<<<<<<
@@ -10665,14 +10665,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8smallAreaReduction_nofix(CYTH
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_11smallAreaReduction(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction *__pyx_optional_args) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_smallAreaReduction(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction *__pyx_optional_args) {
   int __pyx_v_area_th = ((int)0x64);
   PyArrayObject *__pyx_v_src = 0;
   PyObject *__pyx_v_labeling_result = 0;
@@ -10747,11 +10747,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 394, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 394, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":425
+  /* "src/membrane.pyx":425
  *                [0, 0, 0, 0, 0, 0, 0, 0]])
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)             # <<<<<<<<<<<<<<
@@ -10789,7 +10789,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_src = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_src.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 425, __pyx_L1_error)
     } else {__pyx_pybuffernd_src.diminfo[0].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_src.diminfo[0].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_src.diminfo[1].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_src.diminfo[1].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[1];
@@ -10799,7 +10799,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_v_src = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":426
+  /* "src/membrane.pyx":426
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(src)             # <<<<<<<<<<<<<<
@@ -10837,7 +10837,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_v_labeling_result = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":427
+  /* "src/membrane.pyx":427
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(src)
  *     cdef int num_of_labels = labeling_result[0]             # <<<<<<<<<<<<<<
@@ -10851,7 +10851,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_t_4 = __Pyx_PyInt_As_int(PyTuple_GET_ITEM(__pyx_v_labeling_result, 0)); if (unlikely((__pyx_t_4 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 427, __pyx_L1_error)
   __pyx_v_num_of_labels = __pyx_t_4;
 
-  /* "src/VitLib_cython.pyx":428
+  /* "src/membrane.pyx":428
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(src)
  *     cdef int num_of_labels = labeling_result[0]
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] return_img = np.zeros_like(src)             # <<<<<<<<<<<<<<
@@ -10889,7 +10889,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_return_img.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_return_img.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_return_img = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_return_img.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 428, __pyx_L1_error)
     } else {__pyx_pybuffernd_return_img.diminfo[0].strides = __pyx_pybuffernd_return_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_return_img.diminfo[0].shape = __pyx_pybuffernd_return_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_return_img.diminfo[1].strides = __pyx_pybuffernd_return_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_return_img.diminfo[1].shape = __pyx_pybuffernd_return_img.rcbuffer->pybuffer.shape[1];
@@ -10899,7 +10899,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_v_return_img = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":429
+  /* "src/membrane.pyx":429
  *     cdef int num_of_labels = labeling_result[0]
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] return_img = np.zeros_like(src)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)             # <<<<<<<<<<<<<<
@@ -10954,7 +10954,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_v_labeled_img = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":430
+  /* "src/membrane.pyx":430
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] return_img = np.zeros_like(src)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.zeros(num_of_labels, dtype=np.uint64)             # <<<<<<<<<<<<<<
@@ -11001,7 +11001,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_v_contours = ((PyArrayObject *)__pyx_t_9);
   __pyx_t_9 = 0;
 
-  /* "src/VitLib_cython.pyx":431
+  /* "src/membrane.pyx":431
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.zeros(num_of_labels, dtype=np.uint64)
  *     cdef int ROW = src.shape[0]             # <<<<<<<<<<<<<<
@@ -11011,7 +11011,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_t_11 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_11 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L1_error)
   __pyx_v_ROW = (__pyx_t_11[0]);
 
-  /* "src/VitLib_cython.pyx":432
+  /* "src/membrane.pyx":432
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.zeros(num_of_labels, dtype=np.uint64)
  *     cdef int ROW = src.shape[0]
  *     cdef int COLUMN = src.shape[1]             # <<<<<<<<<<<<<<
@@ -11021,7 +11021,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_t_11 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src)); if (unlikely(__pyx_t_11 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 432, __pyx_L1_error)
   __pyx_v_COLUMN = (__pyx_t_11[1]);
 
-  /* "src/VitLib_cython.pyx":435
+  /* "src/membrane.pyx":435
  *     cdef int row, column, label
  * 
  *     for row in range(ROW):             # <<<<<<<<<<<<<<
@@ -11033,7 +11033,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
     __pyx_v_row = __pyx_t_13;
 
-    /* "src/VitLib_cython.pyx":436
+    /* "src/membrane.pyx":436
  * 
  *     for row in range(ROW):
  *         for column in range(COLUMN):             # <<<<<<<<<<<<<<
@@ -11045,7 +11045,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
     for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
       __pyx_v_column = __pyx_t_16;
 
-      /* "src/VitLib_cython.pyx":437
+      /* "src/membrane.pyx":437
  *     for row in range(ROW):
  *         for column in range(COLUMN):
  *             label = labeled_img[row, column]             # <<<<<<<<<<<<<<
@@ -11056,7 +11056,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
       __pyx_t_18 = __pyx_v_column;
       __pyx_v_label = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_labeled_img.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_labeled_img.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_labeled_img.diminfo[1].strides));
 
-      /* "src/VitLib_cython.pyx":438
+      /* "src/membrane.pyx":438
  *         for column in range(COLUMN):
  *             label = labeled_img[row, column]
  *             contours[label] += 1             # <<<<<<<<<<<<<<
@@ -11068,7 +11068,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
     }
   }
 
-  /* "src/VitLib_cython.pyx":440
+  /* "src/membrane.pyx":440
  *             contours[label] += 1
  * 
  *     for label in range(1, num_of_labels):             # <<<<<<<<<<<<<<
@@ -11080,7 +11080,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   for (__pyx_t_13 = 1; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
     __pyx_v_label = __pyx_t_13;
 
-    /* "src/VitLib_cython.pyx":441
+    /* "src/membrane.pyx":441
  * 
  *     for label in range(1, num_of_labels):
  *         if contours[label] >= area_th:             # <<<<<<<<<<<<<<
@@ -11091,7 +11091,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
     __pyx_t_19 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_contours.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_contours.diminfo[0].strides)) >= __pyx_v_area_th);
     if (__pyx_t_19) {
 
-      /* "src/VitLib_cython.pyx":442
+      /* "src/membrane.pyx":442
  *     for label in range(1, num_of_labels):
  *         if contours[label] >= area_th:
  *             return_img[labeled_img == label] = 1             # <<<<<<<<<<<<<<
@@ -11105,7 +11105,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
       if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_return_img), __pyx_t_1, __pyx_int_1) < 0))) __PYX_ERR(0, 442, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "src/VitLib_cython.pyx":441
+      /* "src/membrane.pyx":441
  * 
  *     for label in range(1, num_of_labels):
  *         if contours[label] >= area_th:             # <<<<<<<<<<<<<<
@@ -11115,7 +11115,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
     }
   }
 
-  /* "src/VitLib_cython.pyx":444
+  /* "src/membrane.pyx":444
  *             return_img[labeled_img == label] = 1
  * 
  *     return return_img             # <<<<<<<<<<<<<<
@@ -11127,7 +11127,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
   __pyx_r = ((PyArrayObject *)__pyx_v_return_img);
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":394
+  /* "src/membrane.pyx":394
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):             # <<<<<<<<<<<<<<
@@ -11152,7 +11152,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_return_img.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -11173,16 +11173,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(PyArray
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_11smallAreaReduction(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_10smallAreaReduction, "smallAreaReduction(ndarray img, int area_th=100) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 394)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n        \n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_11smallAreaReduction = {"smallAreaReduction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_11smallAreaReduction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_10smallAreaReduction};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_11smallAreaReduction(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_10smallAreaReduction, "smallAreaReduction(ndarray img, int area_th=100) -> ndarray\nFile: src/membrane.pyx (starting at line 394)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\202\222\350\241\214\343\201\206.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        area_th (int): \351\235\242\347\251\215\343\201\256\351\226\276\345\200\244.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\345\276\214\343\201\2562\345\200\244\347\224\273\345\203\217.\n        \n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import smallAreaReduction\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])\n        >>> smallAreaReduction(img, area_th=100)\n        array([[0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0],\n               [0, 0, 0, 0, 0, 0, 0, 0]])\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction = {"smallAreaReduction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_10smallAreaReduction};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -11271,12 +11271,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 394, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(__pyx_self, __pyx_v_img, __pyx_v_area_th);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_10smallAreaReduction(__pyx_self, __pyx_v_img, __pyx_v_area_th);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11293,13 +11293,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_area_th) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_10smallAreaReduction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_area_th) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction __pyx_t_2;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -11310,13 +11310,13 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UN
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 394, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 394, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.area_th = __pyx_v_area_th;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_smallAreaReduction(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11331,7 +11331,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UN
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.smallAreaReduction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -11342,7 +11342,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UN
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":449
+/* "src/membrane.pyx":449
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -11350,14 +11350,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_10smallAreaReduction(CYTHON_UN
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_13detect_deleted_area_candidates(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candidates(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_detect_deleted_area_candidates(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_v_labeling_result = 0;
   int __pyx_v_num_of_labels;
   PyArrayObject *__pyx_v_labeled_img = 0;
@@ -11412,11 +11412,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 449, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 449, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":472
+  /* "src/membrane.pyx":472
  *         array([0, 3])
  *     """
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)             # <<<<<<<<<<<<<<
@@ -11454,7 +11454,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_v_labeling_result = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":473
+  /* "src/membrane.pyx":473
  *     """
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)
  *     cdef int num_of_labels = labeling_result[0]             # <<<<<<<<<<<<<<
@@ -11468,7 +11468,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_t_4 = __Pyx_PyInt_As_int(PyTuple_GET_ITEM(__pyx_v_labeling_result, 0)); if (unlikely((__pyx_t_4 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 473, __pyx_L1_error)
   __pyx_v_num_of_labels = __pyx_t_4;
 
-  /* "src/VitLib_cython.pyx":474
+  /* "src/membrane.pyx":474
  *     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)
  *     cdef int num_of_labels = labeling_result[0]
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)             # <<<<<<<<<<<<<<
@@ -11523,7 +11523,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_v_labeled_img = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":475
+  /* "src/membrane.pyx":475
  *     cdef int num_of_labels = labeling_result[0]
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.ones(num_of_labels, dtype=np.uint64)             # <<<<<<<<<<<<<<
@@ -11570,7 +11570,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_v_contours = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "src/VitLib_cython.pyx":476
+  /* "src/membrane.pyx":476
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.ones(num_of_labels, dtype=np.uint64)
  *     cdef int ROW = img.shape[0]             # <<<<<<<<<<<<<<
@@ -11580,7 +11580,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_t_9 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_img)); if (unlikely(__pyx_t_9 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 476, __pyx_L1_error)
   __pyx_v_ROW = (__pyx_t_9[0]);
 
-  /* "src/VitLib_cython.pyx":477
+  /* "src/membrane.pyx":477
  *     cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.ones(num_of_labels, dtype=np.uint64)
  *     cdef int ROW = img.shape[0]
  *     cdef int COLUMN = img.shape[1]             # <<<<<<<<<<<<<<
@@ -11590,7 +11590,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_t_9 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_img)); if (unlikely(__pyx_t_9 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 477, __pyx_L1_error)
   __pyx_v_COLUMN = (__pyx_t_9[1]);
 
-  /* "src/VitLib_cython.pyx":479
+  /* "src/membrane.pyx":479
  *     cdef int COLUMN = img.shape[1]
  *     cdef int row, column, label, length
  *     for row in range(ROW):             # <<<<<<<<<<<<<<
@@ -11602,7 +11602,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_row = __pyx_t_11;
 
-    /* "src/VitLib_cython.pyx":480
+    /* "src/membrane.pyx":480
  *     cdef int row, column, label, length
  *     for row in range(ROW):
  *         for column in range(COLUMN):             # <<<<<<<<<<<<<<
@@ -11614,7 +11614,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
     for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
       __pyx_v_column = __pyx_t_14;
 
-      /* "src/VitLib_cython.pyx":481
+      /* "src/membrane.pyx":481
  *     for row in range(ROW):
  *         for column in range(COLUMN):
  *             label = labeled_img[row, column]             # <<<<<<<<<<<<<<
@@ -11625,7 +11625,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
       __pyx_t_16 = __pyx_v_column;
       __pyx_v_label = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_labeled_img.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_labeled_img.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_labeled_img.diminfo[1].strides));
 
-      /* "src/VitLib_cython.pyx":482
+      /* "src/membrane.pyx":482
  *         for column in range(COLUMN):
  *             label = labeled_img[row, column]
  *             contours[label] += 1             # <<<<<<<<<<<<<<
@@ -11637,7 +11637,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
     }
   }
 
-  /* "src/VitLib_cython.pyx":483
+  /* "src/membrane.pyx":483
  *             label = labeled_img[row, column]
  *             contours[label] += 1
  *     contours[0] = 0             # <<<<<<<<<<<<<<
@@ -11647,7 +11647,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_t_16 = 0;
   *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_contours.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_contours.diminfo[0].strides) = 0;
 
-  /* "src/VitLib_cython.pyx":484
+  /* "src/membrane.pyx":484
  *             contours[label] += 1
  *     contours[0] = 0
  *     contours = np.unique(contours)             # <<<<<<<<<<<<<<
@@ -11704,7 +11704,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __Pyx_DECREF_SET(__pyx_v_contours, ((PyArrayObject *)__pyx_t_7));
   __pyx_t_7 = 0;
 
-  /* "src/VitLib_cython.pyx":485
+  /* "src/membrane.pyx":485
  *     contours[0] = 0
  *     contours = np.unique(contours)
  *     contours.sort()             # <<<<<<<<<<<<<<
@@ -11737,7 +11737,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/VitLib_cython.pyx":486
+  /* "src/membrane.pyx":486
  *     contours = np.unique(contours)
  *     contours.sort()
  *     return contours             # <<<<<<<<<<<<<<
@@ -11749,7 +11749,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
   __pyx_r = ((PyArrayObject *)__pyx_v_contours);
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":449
+  /* "src/membrane.pyx":449
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -11772,7 +11772,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_labeled_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -11789,16 +11789,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candid
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_13detect_deleted_area_candidates(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_12detect_deleted_area_candidates, "detect_deleted_area_candidates(ndarray img) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 449)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\343\201\256\345\211\212\351\231\244\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210\343\202\222\344\275\234\346\210\220\343\201\231\343\202\213\351\226\242\346\225\260.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\343\201\256\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import detect_deleted_area_candidates\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 1, 1, 1]])\n        >>> detect_deleted_area_candidates(img)\n        array([0, 3])\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_13detect_deleted_area_candidates = {"detect_deleted_area_candidates", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_13detect_deleted_area_candidates, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_12detect_deleted_area_candidates};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_13detect_deleted_area_candidates(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_12detect_deleted_area_candidates, "detect_deleted_area_candidates(ndarray img) -> ndarray\nFile: src/membrane.pyx (starting at line 449)\n2\345\200\244\347\224\273\345\203\217\343\201\256\345\260\217\351\240\230\345\237\237\343\201\256\345\211\212\351\231\244\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210\343\202\222\344\275\234\346\210\220\343\201\231\343\202\213\351\226\242\346\225\260.\n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \345\260\217\351\240\230\345\237\237\343\201\256\351\235\242\347\251\215\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import detect_deleted_area_candidates\n        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 1, 1, 1, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 0, 0, 0],\n        ...                 [0, 0, 0, 0, 0, 1, 1, 1]])\n        >>> detect_deleted_area_candidates(img)\n        array([0, 3])\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates = {"detect_deleted_area_candidates", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_12detect_deleted_area_candidates};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -11868,12 +11868,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 449, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidates(__pyx_self, __pyx_v_img);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_12detect_deleted_area_candidates(__pyx_self, __pyx_v_img);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11890,7 +11890,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidates(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_12detect_deleted_area_candidates(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
@@ -11906,11 +11906,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidat
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 449, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 449, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_detect_deleted_area_candidates(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_detect_deleted_area_candidates(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11925,7 +11925,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidat
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.detect_deleted_area_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -11936,7 +11936,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidat
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":491
+/* "src/membrane.pyx":491
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -11944,14 +11944,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_12detect_deleted_area_candidat
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_15extract_threshold_values(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_extract_threshold_values(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyArrayObject *__pyx_v_img_flatten = 0;
   PyArrayObject *__pyx_v_img_unique = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
@@ -11987,11 +11987,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":507
+  /* "src/membrane.pyx":507
  *         array([126, 254], dtype=uint8)
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)             # <<<<<<<<<<<<<<
@@ -12029,7 +12029,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img_flatten.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img_flatten.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_img_flatten = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_img_flatten.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 507, __pyx_L1_error)
     } else {__pyx_pybuffernd_img_flatten.diminfo[0].strides = __pyx_pybuffernd_img_flatten.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img_flatten.diminfo[0].shape = __pyx_pybuffernd_img_flatten.rcbuffer->pybuffer.shape[0];
@@ -12039,7 +12039,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_v_img_flatten = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":508
+  /* "src/membrane.pyx":508
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] img_unique = np.unique(img_flatten[img_flatten!=0]) - 1             # <<<<<<<<<<<<<<
@@ -12085,7 +12085,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img_unique.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img_unique.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_img_unique = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_img_unique.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 508, __pyx_L1_error)
     } else {__pyx_pybuffernd_img_unique.diminfo[0].strides = __pyx_pybuffernd_img_unique.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img_unique.diminfo[0].shape = __pyx_pybuffernd_img_unique.rcbuffer->pybuffer.shape[0];
@@ -12095,7 +12095,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_v_img_unique = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/VitLib_cython.pyx":509
+  /* "src/membrane.pyx":509
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
  *     return img_unique             # <<<<<<<<<<<<<<
@@ -12107,7 +12107,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
   __pyx_r = ((PyArrayObject *)__pyx_v_img_unique);
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":491
+  /* "src/membrane.pyx":491
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -12129,7 +12129,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img_flatten.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img_unique.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -12145,16 +12145,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(P
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_15extract_threshold_values(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_14extract_threshold_values, "extract_threshold_values(ndarray img) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 491)\n\347\224\273\345\203\217\343\201\213\343\202\211\351\226\276\345\200\244\343\202\222\346\212\275\345\207\272\343\201\231\343\202\213.\n    \n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \347\224\273\345\203\217\343\201\213\343\202\211\346\212\275\345\207\272\343\201\227\343\201\237\351\226\276\345\200\244\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Examples:\n        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],\n        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],\n        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)\n        >>> extract_threshold_values(a)\n        array([126, 254], dtype=uint8)\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_15extract_threshold_values = {"extract_threshold_values", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_15extract_threshold_values, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_14extract_threshold_values};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_15extract_threshold_values(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_14extract_threshold_values, "extract_threshold_values(ndarray img) -> ndarray\nFile: src/membrane.pyx (starting at line 491)\n\347\224\273\345\203\217\343\201\213\343\202\211\351\226\276\345\200\244\343\202\222\346\212\275\345\207\272\343\201\231\343\202\213.\n    \n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n\n    Returns:\n        np.ndarray: \347\224\273\345\203\217\343\201\213\343\202\211\346\212\275\345\207\272\343\201\227\343\201\237\351\226\276\345\200\244\343\201\256\343\203\252\343\202\271\343\203\210.\n\n    Examples:\n        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],\n        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],\n        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)\n        >>> extract_threshold_values(a)\n        array([126, 254], dtype=uint8)\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values = {"extract_threshold_values", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_14extract_threshold_values};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12224,12 +12224,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 491, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(__pyx_self, __pyx_v_img);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_14extract_threshold_values(__pyx_self, __pyx_v_img);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12246,7 +12246,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_14extract_threshold_values(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
@@ -12262,11 +12262,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYT
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 491, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_extract_threshold_values(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_extract_threshold_values(__pyx_v_img, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12281,7 +12281,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYT
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.extract_threshold_values", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -12292,7 +12292,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYT
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":514
+/* "src/membrane.pyx":514
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -12300,14 +12300,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_14extract_threshold_values(CYT
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_17modifyLineWidth(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth *__pyx_optional_args) {
+static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(PyArrayObject *__pyx_v_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth *__pyx_optional_args) {
   int __pyx_v_radius = ((int)1);
   PyArrayObject *__pyx_v_src = 0;
   PyObject *__pyx_v_r_list = 0;
@@ -12353,11 +12353,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 514, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 514, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":524
+  /* "src/membrane.pyx":524
  *         np.ndarray: .
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)             # <<<<<<<<<<<<<<
@@ -12395,7 +12395,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_src = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_src.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 524, __pyx_L1_error)
     } else {__pyx_pybuffernd_src.diminfo[0].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_src.diminfo[0].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_src.diminfo[1].strides = __pyx_pybuffernd_src.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_src.diminfo[1].shape = __pyx_pybuffernd_src.rcbuffer->pybuffer.shape[1];
@@ -12405,7 +12405,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   __pyx_v_src = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":527
+  /* "src/membrane.pyx":527
  *     cdef r_list, c_list
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)             # <<<<<<<<<<<<<<
@@ -12490,7 +12490,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   __pyx_v_c_list = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":528
+  /* "src/membrane.pyx":528
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):             # <<<<<<<<<<<<<<
@@ -12614,7 +12614,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
     __pyx_v_r = __pyx_t_4;
     __pyx_v_c = __pyx_t_11;
 
-    /* "src/VitLib_cython.pyx":529
+    /* "src/membrane.pyx":529
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):
  *         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)             # <<<<<<<<<<<<<<
@@ -12667,10 +12667,10 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
-      __pyx_t_11 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_11 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_11 < 0)) {
         PyErr_Fetch(&__pyx_t_12, &__pyx_t_13, &__pyx_t_14);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_src.rcbuffer->pybuffer, (PyObject*)__pyx_v_src, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_14);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -12685,7 +12685,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
     __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_t_10));
     __pyx_t_10 = 0;
 
-    /* "src/VitLib_cython.pyx":528
+    /* "src/membrane.pyx":528
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):             # <<<<<<<<<<<<<<
@@ -12695,7 +12695,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":530
+  /* "src/membrane.pyx":530
  *     for r, c in zip(r_list, c_list):
  *         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)
  *     return src             # <<<<<<<<<<<<<<
@@ -12707,7 +12707,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
   __pyx_r = ((PyArrayObject *)__pyx_v_src);
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":514
+  /* "src/membrane.pyx":514
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -12729,7 +12729,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_src.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -12745,16 +12745,16 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(PyArrayObj
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_17modifyLineWidth(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_16modifyLineWidth, "modifyLineWidth(ndarray img, int radius=1) -> ndarray\nFile: src/VitLib_cython.pyx (starting at line 514)\n\347\264\260\347\267\232\345\214\226\343\201\225\343\202\214\343\201\237\347\224\273\345\203\217\343\201\256\347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\231\343\202\213. \n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        radius (int): \347\267\232\343\201\256\345\244\252\343\201\225.\n\n    Returns:\n        np.ndarray: \347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\227\343\201\237\347\224\273\345\203\217.\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_17modifyLineWidth = {"modifyLineWidth", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_17modifyLineWidth, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_16modifyLineWidth};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_17modifyLineWidth(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_16modifyLineWidth, "modifyLineWidth(ndarray img, int radius=1) -> ndarray\nFile: src/membrane.pyx (starting at line 514)\n\347\264\260\347\267\232\345\214\226\343\201\225\343\202\214\343\201\237\347\224\273\345\203\217\343\201\256\347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\231\343\202\213. \n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        radius (int): \347\267\232\343\201\256\345\244\252\343\201\225.\n\n    Returns:\n        np.ndarray: \347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\227\343\201\237\347\224\273\345\203\217.\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth = {"modifyLineWidth", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_16modifyLineWidth};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12843,12 +12843,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_img), __pyx_ptype_5numpy_ndarray, 1, "img", 0))) __PYX_ERR(0, 514, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(__pyx_self, __pyx_v_img, __pyx_v_radius);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_16modifyLineWidth(__pyx_self, __pyx_v_img, __pyx_v_radius);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12865,13 +12865,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_radius) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_16modifyLineWidth(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img, int __pyx_v_radius) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_img;
   __Pyx_Buffer __pyx_pybuffer_img;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth __pyx_t_2;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -12882,13 +12882,13 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSE
   __pyx_pybuffernd_img.rcbuffer = &__pyx_pybuffer_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 514, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 514, __pyx_L1_error)
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.radius = __pyx_v_radius;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(__pyx_v_img, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12903,7 +12903,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSE
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.modifyLineWidth", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -12914,7 +12914,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":535
+/* "src/membrane.pyx":535
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -12922,14 +12922,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_16modifyLineWidth(CYTHON_UNUSE
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_19evaluate_membrane_prediction(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction *__pyx_optional_args) {
+static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction(PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction *__pyx_optional_args) {
   int __pyx_v_threshold = ((int)0x80);
   int __pyx_v_del_area = ((int)0x64);
   int __pyx_v_symmetric = ((int)0);
@@ -12981,9 +12981,9 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   PyObject *__pyx_t_10 = NULL;
   PyObject *__pyx_t_11 = NULL;
   PyObject *__pyx_t_12 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_NWG __pyx_t_13;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction __pyx_t_14;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth __pyx_t_15;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG __pyx_t_13;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction __pyx_t_14;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth __pyx_t_15;
   PyObject *__pyx_t_16 = NULL;
   PyObject *__pyx_t_17 = NULL;
   double __pyx_t_18;
@@ -13049,16 +13049,16 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_pybuffernd_ans_img.rcbuffer = &__pyx_pybuffer_ans_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
   }
   __pyx_pybuffernd_pred_img.diminfo[0].strides = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pred_img.diminfo[0].shape = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pred_img.diminfo[1].strides = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pred_img.diminfo[1].shape = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
   }
   __pyx_pybuffernd_ans_img.diminfo[0].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img.diminfo[0].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img.diminfo[1].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img.diminfo[1].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":555
+  /* "src/membrane.pyx":555
  *     cdef dict return_dict
  *     #
  *     if otsu:             # <<<<<<<<<<<<<<
@@ -13068,7 +13068,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_t_1 = (__pyx_v_otsu != 0);
   if (__pyx_t_1) {
 
-    /* "src/VitLib_cython.pyx":556
+    /* "src/membrane.pyx":556
  *     #
  *     if otsu:
  *         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)             # <<<<<<<<<<<<<<
@@ -13171,10 +13171,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer);
-      __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_7 < 0)) {
         PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -13189,7 +13189,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
     __pyx_v_pred_img_th = ((PyArrayObject *)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "src/VitLib_cython.pyx":555
+    /* "src/membrane.pyx":555
  *     cdef dict return_dict
  *     #
  *     if otsu:             # <<<<<<<<<<<<<<
@@ -13199,7 +13199,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
     goto __pyx_L3;
   }
 
-  /* "src/VitLib_cython.pyx":558
+  /* "src/membrane.pyx":558
  *         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
  *     else:
  *         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]             # <<<<<<<<<<<<<<
@@ -13251,10 +13251,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer);
-      __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_7 < 0)) {
         PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -13271,7 +13271,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   }
   __pyx_L3:;
 
-  /* "src/VitLib_cython.pyx":559
+  /* "src/membrane.pyx":559
  *     else:
  *         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
  *     ans_img_th = cv2.threshold(ans_img, threshold, 255, cv2.THRESH_BINARY)[1]             # <<<<<<<<<<<<<<
@@ -13322,10 +13322,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13340,7 +13340,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_ans_img_th = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":562
+  /* "src/membrane.pyx":562
  * 
  *     # NWG
  *     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)             # <<<<<<<<<<<<<<
@@ -13349,15 +13349,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
  */
   __pyx_t_13.__pyx_n = 1;
   __pyx_t_13.symmetric = __pyx_v_symmetric;
-  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_NWG(((PyArrayObject *)__pyx_v_pred_img_th), 0, &__pyx_t_13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 562, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(((PyArrayObject *)__pyx_v_pred_img_th), 0, &__pyx_t_13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 562, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13371,7 +13371,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_pred_img_th_nwg = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":563
+  /* "src/membrane.pyx":563
  *     # NWG
  *     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)
  *     ans_img_th_nwg = NWG(ans_img_th, symmetric=symmetric)             # <<<<<<<<<<<<<<
@@ -13380,15 +13380,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
  */
   __pyx_t_13.__pyx_n = 1;
   __pyx_t_13.symmetric = __pyx_v_symmetric;
-  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_NWG(((PyArrayObject *)__pyx_v_ans_img_th), 0, &__pyx_t_13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(((PyArrayObject *)__pyx_v_ans_img_th), 0, &__pyx_t_13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 563, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13402,7 +13402,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_ans_img_th_nwg = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":566
+  /* "src/membrane.pyx":566
  * 
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -13444,10 +13444,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13462,7 +13462,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __Pyx_DECREF_SET(__pyx_v_pred_img_th_nwg, ((PyArrayObject *)__pyx_t_5));
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":567
+  /* "src/membrane.pyx":567
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)
  *     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -13504,10 +13504,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13522,7 +13522,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __Pyx_DECREF_SET(__pyx_v_ans_img_th_nwg, ((PyArrayObject *)__pyx_t_5));
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":570
+  /* "src/membrane.pyx":570
  * 
  *     #
  *     pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)             # <<<<<<<<<<<<<<
@@ -13531,15 +13531,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
  */
   __pyx_t_14.__pyx_n = 1;
   __pyx_t_14.area_th = __pyx_v_del_area;
-  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(((PyArrayObject *)__pyx_v_pred_img_th_nwg), 0, &__pyx_t_14)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_smallAreaReduction(((PyArrayObject *)__pyx_v_pred_img_th_nwg), 0, &__pyx_t_14)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg_del, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg_del, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13553,7 +13553,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_pred_img_th_nwg_del = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":574
+  /* "src/membrane.pyx":574
  *     #
  *     ##
  *     membrane_length = np.sum(ans_img_th_nwg)             # <<<<<<<<<<<<<<
@@ -13591,7 +13591,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_membrane_length = __pyx_t_7;
 
-  /* "src/VitLib_cython.pyx":577
+  /* "src/membrane.pyx":577
  * 
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)             # <<<<<<<<<<<<<<
@@ -13600,15 +13600,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
  */
   __pyx_t_15.__pyx_n = 1;
   __pyx_t_15.radius = __pyx_v_radius;
-  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(((PyArrayObject *)__pyx_v_pred_img_th_nwg_del), 0, &__pyx_t_15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(((PyArrayObject *)__pyx_v_pred_img_th_nwg_del), 0, &__pyx_t_15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 577, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13622,7 +13622,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_pred_img_th_fattened = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":578
+  /* "src/membrane.pyx":578
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
  *     ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)             # <<<<<<<<<<<<<<
@@ -13631,15 +13631,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
  */
   __pyx_t_15.__pyx_n = 1;
   __pyx_t_15.radius = __pyx_v_radius;
-  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(((PyArrayObject *)__pyx_v_ans_img_th_nwg), 0, &__pyx_t_15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 578, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(((PyArrayObject *)__pyx_v_ans_img_th_nwg), 0, &__pyx_t_15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 578, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_5), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -13653,7 +13653,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_ans_img_th_fattened = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":581
+  /* "src/membrane.pyx":581
  * 
  *     ## (target in predicted)
  *     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))             # <<<<<<<<<<<<<<
@@ -13723,7 +13723,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_tip_length = __pyx_t_7;
 
-  /* "src/VitLib_cython.pyx":584
+  /* "src/membrane.pyx":584
  * 
  *     ##
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))             # <<<<<<<<<<<<<<
@@ -13793,7 +13793,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_miss_length = __pyx_t_7;
 
-  /* "src/VitLib_cython.pyx":586
+  /* "src/membrane.pyx":586
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)             # <<<<<<<<<<<<<<
@@ -13813,7 +13813,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   }
   __pyx_v_precision = __pyx_t_18;
 
-  /* "src/VitLib_cython.pyx":587
+  /* "src/membrane.pyx":587
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length             # <<<<<<<<<<<<<<
@@ -13832,7 +13832,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   }
   __pyx_v_recall = __pyx_t_18;
 
-  /* "src/VitLib_cython.pyx":588
+  /* "src/membrane.pyx":588
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)             # <<<<<<<<<<<<<<
@@ -13853,7 +13853,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   }
   __pyx_v_fmeasure = __pyx_t_19;
 
-  /* "src/VitLib_cython.pyx":590
+  /* "src/membrane.pyx":590
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}             # <<<<<<<<<<<<<<
@@ -13885,7 +13885,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_v_return_dict = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "src/VitLib_cython.pyx":591
+  /* "src/membrane.pyx":591
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
  *     return return_dict             # <<<<<<<<<<<<<<
@@ -13897,7 +13897,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
   __pyx_r = __pyx_v_return_dict;
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":535
+  /* "src/membrane.pyx":535
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -13928,7 +13928,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -13956,16 +13956,16 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(Py
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_19evaluate_membrane_prediction(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_18evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -> dict\nFile: src/VitLib_cython.pyx (starting at line 535)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_19evaluate_membrane_prediction = {"evaluate_membrane_prediction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_19evaluate_membrane_prediction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_18evaluate_membrane_prediction};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_19evaluate_membrane_prediction(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -> dict\nFile: src/membrane.pyx (starting at line 535)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction = {"evaluate_membrane_prediction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14137,13 +14137,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pred_img), __pyx_ptype_5numpy_ndarray, 1, "pred_img", 0))) __PYX_ERR(0, 535, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ans_img), __pyx_ptype_5numpy_ndarray, 1, "ans_img", 0))) __PYX_ERR(0, 535, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction(__pyx_self, __pyx_v_pred_img, __pyx_v_ans_img, __pyx_v_threshold, __pyx_v_del_area, __pyx_v_symmetric, __pyx_v_radius, __pyx_v_otsu);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction(__pyx_self, __pyx_v_pred_img, __pyx_v_ans_img, __pyx_v_threshold, __pyx_v_del_area, __pyx_v_symmetric, __pyx_v_radius, __pyx_v_otsu);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14160,7 +14160,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_symmetric, int __pyx_v_radius, int __pyx_v_otsu) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_18evaluate_membrane_prediction(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img, PyArrayObject *__pyx_v_ans_img, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_symmetric, int __pyx_v_radius, int __pyx_v_otsu) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_ans_img;
   __Pyx_Buffer __pyx_pybuffer_ans_img;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_pred_img;
@@ -14168,7 +14168,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction __pyx_t_2;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -14183,12 +14183,12 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
   __pyx_pybuffernd_ans_img.rcbuffer = &__pyx_pybuffer_ans_img;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
   }
   __pyx_pybuffernd_pred_img.diminfo[0].strides = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pred_img.diminfo[0].shape = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pred_img.diminfo[1].strides = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pred_img.diminfo[1].shape = __pyx_pybuffernd_pred_img.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 535, __pyx_L1_error)
   }
   __pyx_pybuffernd_ans_img.diminfo[0].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img.diminfo[0].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img.diminfo[1].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img.diminfo[1].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
@@ -14198,7 +14198,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
   __pyx_t_2.symmetric = __pyx_v_symmetric;
   __pyx_t_2.radius = __pyx_v_radius;
   __pyx_t_2.otsu = __pyx_v_otsu;
-  __pyx_t_1 = __pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction(__pyx_v_pred_img, __pyx_v_ans_img, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction(__pyx_v_pred_img, __pyx_v_ans_img, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14214,7 +14214,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -14226,7 +14226,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
   return __pyx_r;
 }
 
-/* "src/VitLib_cython.pyx":596
+/* "src/membrane.pyx":596
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -14234,14 +14234,14 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_18evaluate_membrane_prediction
  * 
  */
 
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg(PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg *__pyx_optional_args) {
+static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg(PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg *__pyx_optional_args) {
   int __pyx_v_threshold = ((int)0x80);
   int __pyx_v_del_area = ((int)0x64);
   int __pyx_v_radius = ((int)3);
@@ -14277,8 +14277,8 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   PyObject *__pyx_t_8 = NULL;
   PyObject *__pyx_t_9 = NULL;
   PyArrayObject *__pyx_t_10 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_smallAreaReduction __pyx_t_11;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_modifyLineWidth __pyx_t_12;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_smallAreaReduction __pyx_t_11;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
   PyObject *__pyx_t_14 = NULL;
   PyObject *__pyx_t_15 = NULL;
@@ -14326,16 +14326,16 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_pybuffernd_ans_img_th_nwg.rcbuffer = &__pyx_pybuffer_ans_img_th_nwg;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
   }
   __pyx_pybuffernd_pred_img_th_nwg.diminfo[0].strides = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[0].shape = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[1].strides = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[1].shape = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
   }
   __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[1];
 
-  /* "src/VitLib_cython.pyx":615
+  /* "src/membrane.pyx":615
  * 
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -14377,10 +14377,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -14395,7 +14395,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __Pyx_DECREF_SET(__pyx_v_pred_img_th_nwg, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":616
+  /* "src/membrane.pyx":616
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)
  *     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -14437,10 +14437,10 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -14455,7 +14455,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __Pyx_DECREF_SET(__pyx_v_ans_img_th_nwg, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":619
+  /* "src/membrane.pyx":619
  * 
  *     #
  *     pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)             # <<<<<<<<<<<<<<
@@ -14464,15 +14464,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
  */
   __pyx_t_11.__pyx_n = 1;
   __pyx_t_11.area_th = __pyx_v_del_area;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_smallAreaReduction(((PyArrayObject *)__pyx_v_pred_img_th_nwg), 0, &__pyx_t_11)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_smallAreaReduction(((PyArrayObject *)__pyx_v_pred_img_th_nwg), 0, &__pyx_t_11)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg_del, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg_del, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -14486,7 +14486,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_v_pred_img_th_nwg_del = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":623
+  /* "src/membrane.pyx":623
  *     #
  *     ##
  *     membrane_length = np.sum(ans_img_th_nwg)             # <<<<<<<<<<<<<<
@@ -14524,7 +14524,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_membrane_length = __pyx_t_5;
 
-  /* "src/VitLib_cython.pyx":626
+  /* "src/membrane.pyx":626
  * 
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)             # <<<<<<<<<<<<<<
@@ -14533,15 +14533,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
  */
   __pyx_t_12.__pyx_n = 1;
   __pyx_t_12.radius = __pyx_v_radius;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(((PyArrayObject *)__pyx_v_pred_img_th_nwg_del), 0, &__pyx_t_12)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 626, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(((PyArrayObject *)__pyx_v_pred_img_th_nwg_del), 0, &__pyx_t_12)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 626, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -14555,7 +14555,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_v_pred_img_th_fattened = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":627
+  /* "src/membrane.pyx":627
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
  *     ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)             # <<<<<<<<<<<<<<
@@ -14564,15 +14564,15 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
  */
   __pyx_t_12.__pyx_n = 1;
   __pyx_t_12.radius = __pyx_v_radius;
-  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_modifyLineWidth(((PyArrayObject *)__pyx_v_ans_img_th_nwg), 0, &__pyx_t_12)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(((PyArrayObject *)__pyx_v_ans_img_th_nwg), 0, &__pyx_t_12)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer);
-    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+    __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_1), &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
     if (unlikely(__pyx_t_5 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_fattened.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_fattened, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -14586,7 +14586,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_v_ans_img_th_fattened = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":630
+  /* "src/membrane.pyx":630
  * 
  *     ## (target in predicted)
  *     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))             # <<<<<<<<<<<<<<
@@ -14656,7 +14656,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_tip_length = __pyx_t_5;
 
-  /* "src/VitLib_cython.pyx":633
+  /* "src/membrane.pyx":633
  * 
  *     ##
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))             # <<<<<<<<<<<<<<
@@ -14726,7 +14726,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_miss_length = __pyx_t_5;
 
-  /* "src/VitLib_cython.pyx":635
+  /* "src/membrane.pyx":635
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)             # <<<<<<<<<<<<<<
@@ -14746,7 +14746,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   }
   __pyx_v_precision = __pyx_t_16;
 
-  /* "src/VitLib_cython.pyx":636
+  /* "src/membrane.pyx":636
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length             # <<<<<<<<<<<<<<
@@ -14765,7 +14765,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   }
   __pyx_v_recall = __pyx_t_16;
 
-  /* "src/VitLib_cython.pyx":637
+  /* "src/membrane.pyx":637
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)             # <<<<<<<<<<<<<<
@@ -14786,7 +14786,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   }
   __pyx_v_fmeasure = __pyx_t_18;
 
-  /* "src/VitLib_cython.pyx":639
+  /* "src/membrane.pyx":639
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}             # <<<<<<<<<<<<<<
@@ -14817,7 +14817,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_v_return_dict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/VitLib_cython.pyx":640
+  /* "src/membrane.pyx":640
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
  *     return return_dict             # <<<<<<<<<<<<<<
@@ -14827,7 +14827,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
   __pyx_r = __pyx_v_return_dict;
   goto __pyx_L0;
 
-  /* "src/VitLib_cython.pyx":596
+  /* "src/membrane.pyx":596
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -14854,7 +14854,7 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg_del.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -14876,16 +14876,16 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nw
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_20evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3) -> dict\nFile: src/VitLib_cython.pyx (starting at line 596)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
-static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg = {"evaluate_membrane_prediction_nwg", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_20evaluate_membrane_prediction_nwg};
-static PyObject *__pyx_pw_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3) -> dict\nFile: src/membrane.pyx (starting at line 596)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n    ");
+static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg = {"evaluate_membrane_prediction_nwg", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg};
+static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -15023,13 +15023,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pred_img_th_nwg), __pyx_ptype_5numpy_ndarray, 1, "pred_img_th_nwg", 0))) __PYX_ERR(0, 596, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ans_img_th_nwg), __pyx_ptype_5numpy_ndarray, 1, "ans_img_th_nwg", 0))) __PYX_ERR(0, 596, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction_nwg(__pyx_self, __pyx_v_pred_img_th_nwg, __pyx_v_ans_img_th_nwg, __pyx_v_threshold, __pyx_v_del_area, __pyx_v_radius);
+  __pyx_r = __pyx_pf_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg(__pyx_self, __pyx_v_pred_img_th_nwg, __pyx_v_ans_img_th_nwg, __pyx_v_threshold, __pyx_v_del_area, __pyx_v_radius);
 
   /* function exit code */
   goto __pyx_L0;
@@ -15046,7 +15046,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction_nwg(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_radius) {
+static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_20evaluate_membrane_prediction_nwg(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_pred_img_th_nwg, PyArrayObject *__pyx_v_ans_img_th_nwg, int __pyx_v_threshold, int __pyx_v_del_area, int __pyx_v_radius) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_ans_img_th_nwg;
   __Pyx_Buffer __pyx_pybuffer_ans_img_th_nwg;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_pred_img_th_nwg;
@@ -15054,7 +15054,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg __pyx_t_2;
+  struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -15069,12 +15069,12 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction
   __pyx_pybuffernd_ans_img_th_nwg.rcbuffer = &__pyx_pybuffer_ans_img_th_nwg;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_pred_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
   }
   __pyx_pybuffernd_pred_img_th_nwg.diminfo[0].strides = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[0].shape = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[1].strides = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pred_img_th_nwg.diminfo[1].shape = __pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer, (PyObject*)__pyx_v_ans_img_th_nwg, &__Pyx_TypeInfo_nn___pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 596, __pyx_L1_error)
   }
   __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
@@ -15082,7 +15082,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction
   __pyx_t_2.threshold = __pyx_v_threshold;
   __pyx_t_2.del_area = __pyx_v_del_area;
   __pyx_t_2.radius = __pyx_v_radius;
-  __pyx_t_1 = __pyx_f_6VitLib_13VitLib_cython_evaluate_membrane_prediction_nwg(__pyx_v_pred_img_th_nwg, __pyx_v_ans_img_th_nwg, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg(__pyx_v_pred_img_th_nwg, __pyx_v_ans_img_th_nwg, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15098,7 +15098,7 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_20evaluate_membrane_prediction
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pred_img_th_nwg.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VitLib.VitLib_cython.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -15146,7 +15146,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_ROW, __pyx_k_ROW, sizeof(__pyx_k_ROW), 0, 0, 1, 1},
     {&__pyx_n_s_THRESH_BINARY, __pyx_k_THRESH_BINARY, sizeof(__pyx_k_THRESH_BINARY), 0, 0, 1, 1},
     {&__pyx_n_s_THRESH_OTSU, __pyx_k_THRESH_OTSU, sizeof(__pyx_k_THRESH_OTSU), 0, 0, 1, 1},
-    {&__pyx_n_s_VitLib_VitLib_cython, __pyx_k_VitLib_VitLib_cython, sizeof(__pyx_k_VitLib_VitLib_cython), 0, 0, 1, 1},
+    {&__pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_k_VitLib_VitLib_cython_membrane, sizeof(__pyx_k_VitLib_VitLib_cython_membrane), 0, 0, 1, 1},
     {&__pyx_n_s__31, __pyx_k__31, sizeof(__pyx_k__31), 0, 0, 1, 1},
     {&__pyx_n_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 1},
     {&__pyx_n_s_ans_img, __pyx_k_ans_img, sizeof(__pyx_k_ans_img), 0, 0, 1, 1},
@@ -15229,7 +15229,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_sort, __pyx_k_sort, sizeof(__pyx_k_sort), 0, 0, 1, 1},
     {&__pyx_n_s_spec, __pyx_k_spec, sizeof(__pyx_k_spec), 0, 0, 1, 1},
     {&__pyx_n_s_src, __pyx_k_src, sizeof(__pyx_k_src), 0, 0, 1, 1},
-    {&__pyx_kp_s_src_VitLib_cython_pyx, __pyx_k_src_VitLib_cython_pyx, sizeof(__pyx_k_src_VitLib_cython_pyx), 0, 0, 1, 0},
+    {&__pyx_kp_s_src_membrane_pyx, __pyx_k_src_membrane_pyx, sizeof(__pyx_k_src_membrane_pyx), 0, 0, 1, 0},
     {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
     {&__pyx_n_s_switch, __pyx_k_switch, sizeof(__pyx_k_switch), 0, 0, 1, 1},
     {&__pyx_n_s_symmetric, __pyx_k_symmetric, sizeof(__pyx_k_symmetric), 0, 0, 1, 1},
@@ -15262,7 +15262,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":984
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -15273,7 +15273,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-pp6agw_h/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":990
+  /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-2m1d312o/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -15284,7 +15284,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "src/VitLib_cython.pyx":73
+  /* "src/membrane.pyx":73
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -15295,7 +15295,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "src/VitLib_cython.pyx":232
+  /* "src/membrane.pyx":232
  *             cv2
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')             # <<<<<<<<<<<<<<
@@ -15306,7 +15306,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "src/VitLib_cython.pyx":11
+  /* "src/membrane.pyx":11
  * ctypedef cnp.uint8_t DTYPE_t
  * 
  * def NWG_nofix(img):             # <<<<<<<<<<<<<<
@@ -15316,9 +15316,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(18, __pyx_n_s_img, __pyx_n_s_src, __pyx_n_s_ROW, __pyx_n_s_COLUMN, __pyx_n_s_pad, __pyx_n_s_switch, __pyx_n_s_r, __pyx_n_s_c, __pyx_n_s_nei, __pyx_n_s_nei_sum, __pyx_n_s_cond1, __pyx_n_s_cond2, __pyx_n_s_i, __pyx_n_s_c3a, __pyx_n_s_c3b, __pyx_n_s_cond3, __pyx_n_s_cond4, __pyx_n_s_cond); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_NWG_nofix, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_NWG_nofix, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":100
+  /* "src/membrane.pyx":100
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -15328,9 +15328,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_img); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_NWG_old, 100, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_NWG_old, 100, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 100, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":196
+  /* "src/membrane.pyx":196
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -15340,12 +15340,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(2, __pyx_n_s_img, __pyx_n_s_symmetric); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_NWG, 196, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_NWG, 196, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 196, __pyx_L1_error)
   __pyx_tuple__12 = PyTuple_Pack(1, Py_False); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "src/VitLib_cython.pyx":301
+  /* "src/membrane.pyx":301
  * ###
  * 
  * def smallAreaReduction_nofix_old(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -15355,12 +15355,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(10, __pyx_n_s_img, __pyx_n_s_area_th, __pyx_n_s_src, __pyx_n_s_labeling_result, __pyx_n_s_num_of_labels, __pyx_n_s_labeled_img, __pyx_n_s_contours, __pyx_n_s_centroids, __pyx_n_s_label, __pyx_n_s_labeled_src); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_smallAreaReduction_nofix_old, 301, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 301, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_smallAreaReduction_nofix_old, 301, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 301, __pyx_L1_error)
   __pyx_tuple__15 = PyTuple_Pack(1, ((PyObject *)__pyx_int_100)); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "src/VitLib_cython.pyx":348
+  /* "src/membrane.pyx":348
  * ###
  * 
  * def smallAreaReduction_nofix(img, area_th=100):             # <<<<<<<<<<<<<<
@@ -15370,9 +15370,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__16 = PyTuple_Pack(10, __pyx_n_s_img, __pyx_n_s_area_th, __pyx_n_s_src, __pyx_n_s_labeling_result, __pyx_n_s_num_of_labels, __pyx_n_s_labeled_img, __pyx_n_s_contours, __pyx_n_s_centroids, __pyx_n_s_label, __pyx_n_s_label_sum); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_smallAreaReduction_nofix, 348, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_smallAreaReduction_nofix, 348, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 348, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":394
+  /* "src/membrane.pyx":394
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):             # <<<<<<<<<<<<<<
@@ -15382,27 +15382,27 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(2, __pyx_n_s_img, __pyx_n_s_area_th); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_smallAreaReduction, 394, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_smallAreaReduction, 394, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 394, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":449
+  /* "src/membrane.pyx":449
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_detect_deleted_area_candidates, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_detect_deleted_area_candidates, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 449, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":491
+  /* "src/membrane.pyx":491
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_extract_threshold_values, 491, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_extract_threshold_values, 491, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 491, __pyx_L1_error)
 
-  /* "src/VitLib_cython.pyx":514
+  /* "src/membrane.pyx":514
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -15412,12 +15412,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(2, __pyx_n_s_img, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_modifyLineWidth, 514, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_modifyLineWidth, 514, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 514, __pyx_L1_error)
   __pyx_tuple__24 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
-  /* "src/VitLib_cython.pyx":535
+  /* "src/membrane.pyx":535
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -15427,12 +15427,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(7, __pyx_n_s_pred_img, __pyx_n_s_ans_img, __pyx_n_s_threshold, __pyx_n_s_del_area, __pyx_n_s_symmetric, __pyx_n_s_radius, __pyx_n_s_otsu); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_evaluate_membrane_prediction, 535, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_evaluate_membrane_prediction, 535, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 535, __pyx_L1_error)
   __pyx_tuple__27 = PyTuple_Pack(5, __pyx_int_128, __pyx_int_100, Py_False, __pyx_int_3, Py_False); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "src/VitLib_cython.pyx":596
+  /* "src/membrane.pyx":596
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -15442,7 +15442,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(5, __pyx_n_s_pred_img_th_nwg, __pyx_n_s_ans_img_th_nwg, __pyx_n_s_threshold, __pyx_n_s_del_area, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_VitLib_cython_pyx, __pyx_n_s_evaluate_membrane_prediction_nwg, 596, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_membrane_pyx, __pyx_n_s_evaluate_membrane_prediction_nwg, 596, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 596, __pyx_L1_error)
   __pyx_tuple__30 = PyTuple_Pack(3, __pyx_int_128, __pyx_int_100, __pyx_int_3); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
@@ -15611,10 +15611,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_VitLib_cython(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_membrane(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_VitLib_cython},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_membrane},
   {0, NULL}
 };
 #endif
@@ -15627,8 +15627,8 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "VitLib_cython",
-      __pyx_k_File_src_VitLib_cython_pyx_start, /* m_doc */
+      "membrane",
+      __pyx_k_File_src_membrane_pyx_starting_a, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
     #elif CYTHON_USE_MODULE_STATE
@@ -15675,11 +15675,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initVitLib_cython(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initVitLib_cython(void)
+__Pyx_PyMODINIT_FUNC initmembrane(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initmembrane(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_VitLib_cython(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_VitLib_cython(void)
+__Pyx_PyMODINIT_FUNC PyInit_membrane(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_membrane(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -15760,7 +15760,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_VitLib_cython(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_membrane(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -15778,7 +15778,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_VitLib_cython(PyObject *__pyx_pyin
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'VitLib_cython' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'membrane' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -15790,13 +15790,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_VitLib_cython(PyObject *__pyx_pyin
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("VitLib_cython", __pyx_methods, __pyx_k_File_src_VitLib_cython_pyx_start, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("membrane", __pyx_methods, __pyx_k_File_src_membrane_pyx_starting_a, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "VitLib_cython" pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "membrane" pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -15820,7 +15820,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_VitLib_cython(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_membrane(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -15858,14 +15858,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_VitLib__VitLib_cython) {
+  if (__pyx_module_is_main_VitLib__VitLib_cython__membrane) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "VitLib.VitLib_cython")) {
-      if (unlikely((PyDict_SetItemString(modules, "VitLib.VitLib_cython", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "VitLib.VitLib_cython.membrane")) {
+      if (unlikely((PyDict_SetItemString(modules, "VitLib.VitLib_cython.membrane", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -15886,7 +15886,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "src/VitLib_cython.pyx":2
+  /* "src/membrane.pyx":2
  * # VitLib_cython.pyx
  * import cv2             # <<<<<<<<<<<<<<
  * import numpy as np
@@ -15897,7 +15897,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_cv2, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/VitLib_cython.pyx":3
+  /* "src/membrane.pyx":3
  * # VitLib_cython.pyx
  * import cv2
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -15909,7 +15909,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/VitLib_cython.pyx":8
+  /* "src/membrane.pyx":8
  * from cython.parallel import prange
  * 
  * DTYPE = np.uint8             # <<<<<<<<<<<<<<
@@ -15924,146 +15924,146 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE, __pyx_t_3) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":11
+  /* "src/membrane.pyx":11
  * ctypedef cnp.uint8_t DTYPE_t
  * 
  * def NWG_nofix(img):             # <<<<<<<<<<<<<<
  *     '''NWG. (0)(255)2(cv22).
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_1NWG_nofix, 0, __pyx_n_s_NWG_nofix, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_1NWG_nofix, 0, __pyx_n_s_NWG_nofix, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG_nofix, __pyx_t_3) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":100
+  /* "src/membrane.pyx":100
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
  *     '''NWG. (0)(255)2(cv22).
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_3NWG_old, 0, __pyx_n_s_NWG_old, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_3NWG_old, 0, __pyx_n_s_NWG_old, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG_old, __pyx_t_3) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":196
+  /* "src/membrane.pyx":196
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
  *     '''NWG. (0)(255)2(cv22).
  *      : https://www.sciencedirect.com/science/article/pii/016786559500121V
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_5NWG, 0, __pyx_n_s_NWG, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_5NWG, 0, __pyx_n_s_NWG, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__12);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG, __pyx_t_3) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":301
+  /* "src/membrane.pyx":301
  * ###
  * 
  * def smallAreaReduction_nofix_old(img, area_th=100):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_7smallAreaReduction_nofix_old, 0, __pyx_n_s_smallAreaReduction_nofix_old, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 301, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_7smallAreaReduction_nofix_old, 0, __pyx_n_s_smallAreaReduction_nofix_old, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__15);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smallAreaReduction_nofix_old, __pyx_t_3) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":348
+  /* "src/membrane.pyx":348
  * ###
  * 
  * def smallAreaReduction_nofix(img, area_th=100):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_9smallAreaReduction_nofix, 0, __pyx_n_s_smallAreaReduction_nofix, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_9smallAreaReduction_nofix, 0, __pyx_n_s_smallAreaReduction_nofix, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__15);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smallAreaReduction_nofix, __pyx_t_3) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":394
+  /* "src/membrane.pyx":394
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_11smallAreaReduction, 0, __pyx_n_s_smallAreaReduction, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_11smallAreaReduction, 0, __pyx_n_s_smallAreaReduction, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__15);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smallAreaReduction, __pyx_t_3) < 0) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":449
+  /* "src/membrane.pyx":449
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
  *     """2.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_13detect_deleted_area_candidates, 0, __pyx_n_s_detect_deleted_area_candidates, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_13detect_deleted_area_candidates, 0, __pyx_n_s_detect_deleted_area_candidates, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_detect_deleted_area_candidates, __pyx_t_3) < 0) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":491
+  /* "src/membrane.pyx":491
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_15extract_threshold_values, 0, __pyx_n_s_extract_threshold_values, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_15extract_threshold_values, 0, __pyx_n_s_extract_threshold_values, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_extract_threshold_values, __pyx_t_3) < 0) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":514
+  /* "src/membrane.pyx":514
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_17modifyLineWidth, 0, __pyx_n_s_modifyLineWidth, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_17modifyLineWidth, 0, __pyx_n_s_modifyLineWidth, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__24);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_modifyLineWidth, __pyx_t_3) < 0) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":535
+  /* "src/membrane.pyx":535
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=128, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_19evaluate_membrane_prediction, 0, __pyx_n_s_evaluate_membrane_prediction, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_19evaluate_membrane_prediction, 0, __pyx_n_s_evaluate_membrane_prediction, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__27);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_evaluate_membrane_prediction, __pyx_t_3) < 0) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":596
+  /* "src/membrane.pyx":596
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=128, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
  *     """.
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_21evaluate_membrane_prediction_nwg, 0, __pyx_n_s_evaluate_membrane_prediction_nwg, NULL, __pyx_n_s_VitLib_VitLib_cython, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6VitLib_13VitLib_cython_8membrane_21evaluate_membrane_prediction_nwg, 0, __pyx_n_s_evaluate_membrane_prediction_nwg, NULL, __pyx_n_s_VitLib_VitLib_cython_membrane, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__30);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_evaluate_membrane_prediction_nwg, __pyx_t_3) < 0) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/VitLib_cython.pyx":1
+  /* "src/membrane.pyx":1
  * # VitLib_cython.pyx             # <<<<<<<<<<<<<<
  * import cv2
  * import numpy as np
@@ -16089,7 +16089,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init VitLib.VitLib_cython", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init VitLib.VitLib_cython.membrane", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -16103,7 +16103,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init VitLib.VitLib_cython");
+    PyErr_SetString(PyExc_ImportError, "init VitLib.VitLib_cython.membrane");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
