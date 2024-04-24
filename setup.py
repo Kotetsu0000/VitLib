@@ -15,6 +15,11 @@ if use_Cython:
     ext_modules = cythonize(
         [
             Extension(
+                "VitLib.VitLib_cython.common",
+                ["src/common.pyx"],
+                language="c++",
+            ),
+            Extension(
                 "VitLib.VitLib_cython.membrane",
                 ["src/membrane.pyx"],
                 language="c++",
@@ -23,7 +28,7 @@ if use_Cython:
                 "VitLib.VitLib_cython.nucleus",
                 ["src/nucleus.pyx"],
                 language="c++",
-            )
+            ),
         ],
         compiler_directives={
             'language_level' : "3",
@@ -33,6 +38,11 @@ if use_Cython:
 else:
     ext_modules = [
         Extension(
+            "VitLib.VitLib_cython.common",
+            ["src/common.cpp"],
+            language="c++",
+        ),
+        Extension(
             "VitLib.VitLib_cython.membrane",
             ["src/membrane.cpp"],
             language="c++",
@@ -41,7 +51,7 @@ else:
             "VitLib.VitLib_cython.nucleus",
             ["src/nucleus.cpp"],
             language="c++",
-        )
+        ),
     ]
 
 try:
