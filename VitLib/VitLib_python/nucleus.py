@@ -1,1 +1,1 @@
-from .membrane import smallAreaReduction
+from .common import smallAreaReduction
