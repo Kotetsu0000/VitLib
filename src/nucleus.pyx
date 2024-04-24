@@ -4,4 +4,4 @@ import numpy as np
 cimport numpy as cnp
 cimport cython
 
-from .membrane import smallAreaReduction
+from .common import smallAreaReduction

@@ -47,7 +47,7 @@ else:
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "2.0.3",
+        "version": "2.0.4",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
