@@ -27,6 +27,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     
     Note:
         例としてlower_ratio=0.1, heigher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
+        use_cython
     """
     cdef int ans_unique_len, out_lower_num, out_heigher_num, contours_len
     cdef cnp.ndarray[cnp.int32_t, ndim=3] contour
