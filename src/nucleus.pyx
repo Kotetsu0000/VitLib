@@ -11,6 +11,8 @@ from .common import smallAreaReduction
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=17, float heigher_ratio=0):
     """
     標準的核面積を計算する
@@ -26,7 +28,6 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     Note:
         例としてlower_ratio=0.1, heigher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
     """
-    cdef tuple contours
     cdef int ans_unique_len, out_lower_num, out_heigher_num, contours_len
     cdef cnp.ndarray[cnp.int32_t, ndim=3] contour
     cdef cnp.ndarray[cnp.float32_t, ndim=1] area_size, sorted_area_size
@@ -42,9 +43,9 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     contours_len = len(contours)
     area_size = np.zeros(contours_len, dtype=np.float32)
     for i in range(contours_len):
-        contour = contours[i]
-        area_size[i] = cv2.contourArea(contour)
+        area_size[i] = cv2.contourArea(contours[i])
     out_lower_num = int(contours_len*lower_ratio/100)
     out_heigher_num = int(contours_len*heigher_ratio/100)
     sorted_area_size = np.sort(area_size)[out_lower_num:contours_len-out_heigher_num]
     return np.mean(sorted_area_size)
+###
