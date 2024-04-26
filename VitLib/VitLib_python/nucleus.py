@@ -28,10 +28,9 @@ def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=0, heigher_
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
-    contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
-    print(type(contours))
+    contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     area_size = [cv2.contourArea(contour) for contour in contours]
     out_lower_num = int(len(area_size)*lower_ratio/100)
     out_heigher_num = int(len(area_size)*heigher_ratio/100)
-    sorted_area_size = sorted(area_size)[out_lower_num:-out_heigher_num]
+    sorted_area_size = sorted(area_size)[out_lower_num:len(area_size)-out_heigher_num]
     return np.mean(sorted_area_size)
