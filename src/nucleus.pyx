@@ -47,5 +47,5 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
         area_size[i] = cv2.contourArea(contour)
     out_lower_num = int(contours_len*lower_ratio/100)
     out_heigher_num = int(contours_len*heigher_ratio/100)
-    sorted_area_size = np.sorted(area_size)[out_lower_num:contours_len-out_heigher_num]
+    sorted_area_size = np.sort(area_size)[out_lower_num:contours_len-out_heigher_num]
     return np.mean(sorted_area_size)
