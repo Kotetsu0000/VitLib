@@ -11,7 +11,7 @@ from .common import smallAreaReduction
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
-cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=0, float heigher_ratio=0):
+cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=17, float heigher_ratio=0):
     """
     標準的核面積を計算する
 

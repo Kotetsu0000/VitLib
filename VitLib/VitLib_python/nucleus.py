@@ -5,7 +5,7 @@ import numpy as np
 
 from .common import smallAreaReduction
 
-def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=0, heigher_ratio:float=0):
+def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher_ratio:float=0):
     """
     標準的核面積を計算する
 
