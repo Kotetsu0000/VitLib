@@ -130,12 +130,12 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
     return_dict = {}
 
-    red = [i for i in contours if cv2.contourArea(i) < care_rate/100 * standard_nuclear_area]
+    '''red = [i for i in contours if cv2.contourArea(i) < care_rate/100 * standard_nuclear_area]
     red_len = len(red)
     green = [i for i in contours if not(cv2.contourArea(i) < care_rate/100 * standard_nuclear_area)]
     green_len = len(green)
 
-    '''eval_img = bf_img.copy()
+    eval_img = bf_img.copy()
     red_img = np.zeros_like(ans_img)
     green_img = np.zeros_like(ans_img)
 
