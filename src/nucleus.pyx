@@ -1,4 +1,5 @@
 # nucleus.pyx
+from typing import Optional
 import warnings
 
 import cv2
@@ -10,6 +11,29 @@ from .common import smallAreaReduction
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, ndim=2] img):
+    """
+    画像の面積のリストを取得する関数
+    
+    Args:
+        img (np.ndarray): 二値化画像
+
+    Returns:
+        np.ndarray: 面積のリスト
+    """
+    cdef int contours_len, i
+    cdef cnp.ndarray[cnp.int32_t, ndim=3] contours
+    cdef cnp.ndarray[cnp.float32_t, ndim=1] area_size
+    contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
+    contours_len = len(contours)
+    area_size = np.zeros(contours_len, dtype=np.float32)
+    for i in range(contours_len):
+        area_size[i] = cv2.contourArea(contours[i])
+    return area_size
+###
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
@@ -29,7 +53,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
         例としてlower_ratio=0.1, heigher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
         use_cython
     """
-    cdef int ans_unique_len, out_lower_num, out_heigher_num, contours_len
+    cdef int ans_unique_len, out_lower_num, out_heigher_num, contours_len, i
     cdef cnp.ndarray[cnp.int32_t, ndim=3] contour
     cdef cnp.ndarray[cnp.float32_t, ndim=1] area_size, sorted_area_size
     if lower_ratio + heigher_ratio < 0 or lower_ratio + heigher_ratio > 100:
@@ -40,13 +64,30 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
-    contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
-    contours_len = len(contours)
-    area_size = np.zeros(contours_len, dtype=np.float32)
-    for i in range(contours_len):
-        area_size[i] = cv2.contourArea(contours[i])
+    area_size = calc_contour_areas(ans_img)
+
     out_lower_num = int(contours_len*lower_ratio/100)
     out_heigher_num = int(contours_len*heigher_ratio/100)
     sorted_area_size = np.sort(area_size)[out_lower_num:contours_len-out_heigher_num]
     return np.mean(sorted_area_size)
+###
+
+cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=2] bf_img, float lower_ratio=17, float heigher_ratio=0):
+    """
+    評価用画像を作成する関数
+
+    Args:
+        ans_img (np.ndarray): 二値化画像
+        bf_img (np.ndarray): 明視野画像
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+
+    Returns:
+        dict: 評価用画像の辞書
+            - "eval_img": 評価用画像
+            - "red_img": DontCare領域画像
+            - "green_img": 正解領域画像
+    """
+    
+    return {"a":1}
 ###
