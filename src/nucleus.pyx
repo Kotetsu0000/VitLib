@@ -89,7 +89,7 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
     """
-    '''cdef tuple contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
+    cdef tuple contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     cdef float standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
     cdef list red, green
     cdef int red_len, green_len, contours_len, i
@@ -99,11 +99,9 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     cdef dict return_dict = {}
     contours_len = len(contours)
 
-    #red = [contours[i] for i in range(contours_len) if cv2.contourArea(contours[i]) < care_rate/100 * standard_nuclear_area]
-    red = []
+    red = [contours[i] for i in range(contours_len) if cv2.contourArea(contours[i]) < care_rate/100 * standard_nuclear_area]
     red_len = len(red)
-    #green = [contours[i] for i in range(contours_len) if cv2.contourArea(contours[i]) >= care_rate/100 * standard_nuclear_area]
-    green = []
+    green = [contours[i] for i in range(contours_len) if cv2.contourArea(contours[i]) >= care_rate/100 * standard_nuclear_area]
     green_len = len(green)
 
     eval_img = bf_img.copy()
@@ -124,34 +122,5 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     return_dict["eval_img"] = eval_img
     return_dict["red_img"] = red_img
     return_dict["green_img"] = green_img
-    return return_dict'''
-    #contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
-    #standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
-    #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-    return_dict = {}
-
-    '''red = [i for i in contours if cv2.contourArea(i) < care_rate/100 * standard_nuclear_area]
-    red_len = len(red)
-    green = [i for i in contours if not(cv2.contourArea(i) < care_rate/100 * standard_nuclear_area)]
-    green_len = len(green)
-
-    eval_img = bf_img.copy()
-    red_img = np.zeros_like(ans_img)
-    green_img = np.zeros_like(ans_img)
-
-    for i in range(red_len):
-        cv2.fillPoly(eval_img, [red[i][:,0,:]], (0,0,255), lineType=cv2.LINE_8, shift=0)
-        cv2.fillPoly(red_img, [red[i][:,0,:]], (255,255,255), lineType=cv2.LINE_8, shift=0)
-
-    for i in range(green_len):
-        cv2.fillPoly(eval_img, [green[i][:,0,:]], (0,255,0), lineType=cv2.LINE_8, shift=0)
-        cv2.fillPoly(green_img, [green[i][:,0,:]], (255,255,255), lineType=cv2.LINE_8, shift=0)
-
-    #オープニング
-    red_img = cv2.morphologyEx(red_img, cv2.MORPH_OPEN, kernel, iterations=2)
-
-    return_dict["eval_img"] = eval_img
-    return_dict["red_img"] = red_img
-    return_dict["green_img"] = green_img'''
     return return_dict
 ###
