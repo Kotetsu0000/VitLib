@@ -25,9 +25,8 @@ cdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, 
         np.ndarray: 面積のリスト
     """
     cdef int contours_len, i
-    cdef cnp.ndarray[cnp.int32_t, ndim=3] contours
+    cdef tuple contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     cdef cnp.ndarray[cnp.float32_t, ndim=1] area_size
-    contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     contours_len = len(contours)
     area_size = np.zeros(contours_len, dtype=np.float32)
     for i in range(contours_len):
@@ -64,11 +63,13 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
-    contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
+    '''contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     contours_len = len(contours)
     area_size = np.zeros(contours_len, dtype=np.float32)
     for i in range(contours_len):
-        area_size[i] = cv2.contourArea(contours[i])
+        area_size[i] = cv2.contourArea(contours[i])'''
+    area_size = calc_contour_areas(ans_img)
+    contours_len = len(area_size)
     out_lower_num = int(contours_len*lower_ratio/100)
     out_heigher_num = int(contours_len*heigher_ratio/100)
     sorted_area_size = np.sort(area_size)[out_lower_num:contours_len-out_heigher_num]
