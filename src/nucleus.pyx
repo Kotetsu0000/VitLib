@@ -72,7 +72,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     return np.mean(sorted_area_size)
 ###
 
-cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=2] bf_img, float care_rate, float lower_ratio=17, float heigher_ratio=0):
+cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=2] bf_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0):
     """
     評価用画像を作成する関数
 
@@ -94,7 +94,8 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     cdef float standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
     cdef list red, green
     cdef int red_len, green_len
-    cdef cnp.ndarray[DTYPE_t, ndim=2] eval_img, red_img, green_img
+    cdef cnp.ndarray[DTYPE_t, ndim=2] red_img, green_img
+    cdef cnp.ndarray[DTYPE_t, ndim=3] eval_img
     cdef cnp.ndarray[DTYPE_t, ndim=2] kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
     cdef dict return_dict = {}
 
