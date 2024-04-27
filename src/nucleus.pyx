@@ -65,6 +65,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     area_size = calc_contour_areas(ans_img)
+    contours_len = len(area_size)
 
     out_lower_num = int(contours_len*lower_ratio/100)
     out_heigher_num = int(contours_len*heigher_ratio/100)
