@@ -72,6 +72,8 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     return np.mean(sorted_area_size)
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=3] bf_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0):
     """
     評価用画像を作成する関数
