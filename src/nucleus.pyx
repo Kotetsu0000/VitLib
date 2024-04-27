@@ -135,7 +135,7 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     green = [i for i in contours if not(cv2.contourArea(i) < care_rate/100 * standard_nuclear_area)]
     green_len = len(green)
 
-    eval_img = bf_img.copy()
+    '''eval_img = bf_img.copy()
     red_img = np.zeros_like(ans_img)
     green_img = np.zeros_like(ans_img)
 
@@ -152,6 +152,6 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
 
     return_dict["eval_img"] = eval_img
     return_dict["red_img"] = red_img
-    return_dict["green_img"] = green_img
+    return_dict["green_img"] = green_img'''
     return return_dict
 ###
