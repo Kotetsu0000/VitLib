@@ -80,7 +80,7 @@ def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, 
     green = [i for i in contours if not(cv2.contourArea(i) < care_rate/100 * standard_nuclear_area)]
     green_len = len(green)
 
-    eval_img = ans_img.copy()
+    eval_img = bf_img.copy()
     red_img = np.zeros_like(ans_img)
     green_img = np.zeros_like(ans_img)
 
