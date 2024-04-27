@@ -125,9 +125,9 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     return_dict["red_img"] = red_img
     return_dict["green_img"] = green_img
     return return_dict'''
-    contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
-    standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+    #contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
+    #standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
+    #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
     return_dict = {}
 
     '''red = [i for i in contours if cv2.contourArea(i) < care_rate/100 * standard_nuclear_area]
