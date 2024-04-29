@@ -6,8 +6,7 @@ import numpy as np
 from .common import smallAreaReduction
 
 def calc_contour_areas(img:np.ndarray) -> np.ndarray:
-    """
-    画像の面積のリストを取得する関数
+    """画像の面積のリストを取得する関数
     
     Args:
         img (np.ndarray): 二値化画像
@@ -24,8 +23,7 @@ def calc_contour_areas(img:np.ndarray) -> np.ndarray:
     return area_size
 
 def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher_ratio:float=0):
-    """
-    標準的核面積を計算する
+    """標準的核面積を計算する
 
     Args:
         ans_img (np.ndarray): 二値化画像
@@ -54,8 +52,7 @@ def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher
     return np.mean(sorted_area_size)
 
 def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0):
-    """
-    評価用画像を作成する関数
+    """評価用画像を作成する関数
 
     Args:
         ans_img (np.ndarray): 二値化画像
@@ -99,3 +96,7 @@ def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, 
     return_dict["red_img"] = red_img
     return_dict["green_img"] = green_img
     return return_dict
+
+def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="centroid"):
+    """細胞核画像の評価を行う関数.
+    """

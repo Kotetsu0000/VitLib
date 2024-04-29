@@ -15,8 +15,7 @@ ctypedef cnp.uint8_t DTYPE_t
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, ndim=2] img):
-    """
-    画像の面積のリストを取得する関数
+    """画像の面積のリストを取得する関数
     
     Args:
         img (np.ndarray): 二値化画像
@@ -39,8 +38,7 @@ cdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, 
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=17, float heigher_ratio=0):
-    """
-    標準的核面積を計算する
+    """標準的核面積を計算する
 
     Args:
         ans_img (np.ndarray): 二値化画像
@@ -75,8 +73,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=3] bf_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0):
-    """
-    評価用画像を作成する関数
+    """評価用画像を作成する関数
 
     Args:
         ans_img (np.ndarray): 二値化画像
