@@ -14,7 +14,7 @@ ctypedef cnp.uint8_t DTYPE_t
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, ndim=2] img):
+cpdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, ndim=2] img):
     """画像の面積のリストを取得する関数
     
     Args:
@@ -88,6 +88,10 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
     """
+    cdef int ans_unique_len = len(np.unique(ans_img))
+    if ans_unique_len != 2 and ans_unique_len != 1:
+        warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
+        ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
     cdef tuple contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     cdef float standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
     cdef list red, green

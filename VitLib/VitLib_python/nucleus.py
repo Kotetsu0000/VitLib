@@ -67,6 +67,11 @@ def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, 
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
     """
+    ans_unique_len = len(np.unique(ans_img))
+    if ans_unique_len != 2 and ans_unique_len != 1:
+        warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
+        ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
+
     contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
@@ -97,6 +102,42 @@ def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, 
     return_dict["green_img"] = green_img
     return return_dict
 
-def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="centroid"):
+def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
+
+    Args:
+        pred_img (np.ndarray): 予測画像
+        ans_img (np.ndarray): 正解画像
+        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        threshold (int): 二値化の閾値
+        del_area (int): 除外する面積
+        eval_mode (str): 評価方法
+            - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
+            - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
+
+    Returns:
+        dict: 評価結果の辞書
+            - precision (float): 適合率
+            - recall (float): 再現率
+            - fmeasure (float): F値
+            - threshold (int): 二値化の閾値
     """
+    ans_unique_len = len(np.unique(ans_img))
+    if ans_unique_len != 2 and ans_unique_len != 1:
+        warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
+        ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
+    
+    dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
+    eval_images = make_eval_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    care_img = eval_images["green_img"]
+    no_care_img = eval_images["red_img"]
+
+    pred_img = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
+    care_img = cv2.threshold(care_img, 127, 255, cv2.THRESH_BINARY)[1]
+    no_care_img = cv2.threshold(no_care_img, 127, 255, cv2.THRESH_BINARY)[1]
+
+    cv2.connectedComponentsWithStats(pred_img)
+    
