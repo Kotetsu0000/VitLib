@@ -225,11 +225,9 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
         for i in range(1, pred_num):
             min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
             min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
-            print(min_care_distance)
             if min_care_distance < distance:
                 correct_list.append(min_care_index+1)
             elif min_no_care_distance < distance:
-                print('No care')
                 ext_no_care_num += 1
     else:
         raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
