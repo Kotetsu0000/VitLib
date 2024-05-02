@@ -180,6 +180,7 @@ cpdef dict evaluate_cell_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.n
             - recall (float): 再現率
             - fmeasure (float): F値
             - threshold (int): 二値化の閾値
+            - del_area (int): 除外する面積
     """
     cdef int ans_unique_len = len(np.unique(ans_img))
     cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
@@ -251,5 +252,5 @@ cpdef dict evaluate_cell_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.n
     #F値
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
     
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold}
+    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area}
 ###

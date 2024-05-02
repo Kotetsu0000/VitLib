@@ -146,6 +146,7 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
             - recall (float): 再現率
             - fmeasure (float): F値
             - threshold (int): 二値化の閾値
+            - del_area (int): 除外する面積
     """
     ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -166,12 +167,6 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
     # 推論画像の小領域削除
     pred_img_th_del = smallAreaReduction(pred_img_th, del_area)
 
-    '''
-    num : int
-    labels : np.ndarray (dim=2, dtype=np.int32)
-    stats : np.ndarray (dim=2, dtype=np.int32)
-    centroids : np.ndarray (dim=2, dtype=np.float64)
-    '''
     # ラベル処理
     pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(pred_img_th_del)
     care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(care_img_th)
@@ -214,4 +209,4 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
     #F値
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
     
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold}
+    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area}
