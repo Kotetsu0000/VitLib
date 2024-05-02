@@ -102,6 +102,23 @@ def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, 
     return_dict["green_img"] = green_img
     return return_dict
 
+def euclidean_distance(ext_centroid, ans_centroids):
+    """重心の距離の最小値とそのインデックスを返す関数
+
+    Args:
+        ext_centroid (tuple): 抽出された核の重心
+        ans_centroids (list): 正解核の重心リスト
+    """
+    min_distance = 2**31 - 1
+    min_index = -1
+    for i in range(len(ans_centroids)):
+        ans_centroid = ans_centroids[i]
+        distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
+        if distance < min_distance:
+            min_distance = distance
+            min_index = i
+    return min_distance, min_index
+
 def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
 
@@ -167,7 +184,13 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
             elif no_care:
                 ext_no_care_num += 1
     elif eval_mode == "proximity":
-        raise NotImplementedError("proximity mode is not implemented yet.")
+        for i in range(1, pred_num):
+            min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
+            min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+            if min_care_distance < distance:
+                correct_list.append(min_care_index+1)
+            elif min_no_care_distance < distance:
+                ext_no_care_num += 1
     else:
         raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
     
