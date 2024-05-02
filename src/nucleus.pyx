@@ -157,7 +157,7 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
             min_index = i
     return (min_index, min_distance)
 
-def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
+cpdef dict evaluate_cell_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int threshold=127, int del_area=10, str eval_mode="inclusion", int distance=10):
     """細胞核画像の評価を行う関数.
 
     Args:
@@ -180,7 +180,15 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
             - fmeasure (float): F値
             - threshold (int): 二値化の閾値
     """
-    ans_unique_len = len(np.unique(ans_img))
+    cdef int ans_unique_len = len(np.unique(ans_img))
+    cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
+    cdef dict eval_images
+    cdef int pred_num, care_num, no_care_num, ext_no_care_num, i, care, no_care, conformity_bottom
+    cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
+    cdef cnp.ndarray[cnp.uint32_t, ndim=2] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
+    cdef cnp.ndarray[cnp.float64_t, ndim=2] pred_centroids, care_centroids, no_care_centroids
+    cdef float precision, recall, fmeasure
+    cdef list correct_list
     if ans_unique_len != 2 and ans_unique_len != 1:
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
@@ -199,12 +207,6 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
     # 推論画像の小領域削除
     pred_img_th_del = smallAreaReduction(pred_img_th, del_area)
 
-    '''
-    num : int
-    labels : np.ndarray (dim=2, dtype=np.int32)
-    stats : np.ndarray (dim=2, dtype=np.int32)
-    centroids : np.ndarray (dim=2, dtype=np.float64)
-    '''
     # ラベル処理
     pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(pred_img_th_del)
     care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(care_img_th)
