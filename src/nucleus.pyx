@@ -7,6 +7,9 @@ import numpy as np
 cimport numpy as cnp
 cimport cython
 
+cdef extern from "<float.h>":
+    const float FLT_MAX
+
 from .common import smallAreaReduction
 
 DTYPE = np.uint8
@@ -145,7 +148,7 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
     #cdef int len_ans_centroids = len(ans_centroids)
     len_ans_centroids = len(ans_centroids)
     #cdef cnp.ndarray[cnp.float64_t, ndim=1] ans_centroid
-    min_distance = 10
+    min_distance = FLT_MAX
     min_index = -1
     for i in range(len_ans_centroids):
         ans_centroid = ans_centroids[i]
