@@ -177,10 +177,10 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
     ext_no_care_num = 0 #抽出されたが考慮しない核の数
     if eval_mode == "inclusion":
         for i in range(1, pred_num):
-            care = care_labels[pred_centroids[i][1], pred_centroids[i][0]] != 0
-            no_care = no_care_labels[pred_centroids[i][1], pred_centroids[i][0]] != 0
+            care = care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
+            no_care = no_care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
             if care:
-                correct_list.append(care_labels[pred_centroids[i][1], pred_centroids[i][0]])
+                correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
             elif no_care:
                 ext_no_care_num += 1
     elif eval_mode == "proximity":
