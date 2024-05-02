@@ -108,6 +108,11 @@ def euclidean_distance(ext_centroid, ans_centroids):
     Args:
         ext_centroid (tuple): 抽出された核の重心
         ans_centroids (list): 正解核の重心リスト
+
+    Returns:
+        tuple: 最小距離のインデックスとその距離
+            - 最小距離のインデックス(int)
+            - 最小距離(float)
     """
     min_distance = 2**31 - 1
     min_index = -1

@@ -7,6 +7,9 @@ import numpy as np
 cimport numpy as cnp
 cimport cython
 
+cdef extern from "limits.h":
+    cdef float FLT_MAX
+
 from .common import smallAreaReduction
 
 DTYPE = np.uint8
@@ -128,22 +131,31 @@ cpdef dict make_eval_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DT
     return return_dict
 ###
 
-def euclidean_distance(ext_centroid, ans_centroids):
+cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, cnp.ndarray[cnp.float64_t, ndim=2] ans_centroids):
     """重心の距離の最小値とそのインデックスを返す関数
 
     Args:
         ext_centroid (tuple): 抽出された核の重心
         ans_centroids (list): 正解核の重心リスト
+
+    Returns:
+        tuple: 最小距離のインデックスとその距離
+            - 最小距離のインデックス(int)
+            - 最小距離(float)
     """
-    min_distance = 2**31 - 1
+    cdef float min_distance, distance
+    cdef int min_index, i
+    cdef int len_ans_centroids = len(ans_centroids)
+    cdef cnp.ndarray[cnp.float64_t, ndim=1] ans_centroid
+    min_distance = FLT_MAX
     min_index = -1
-    for i in range(len(ans_centroids)):
+    for i in range(len_ans_centroids):
         ans_centroid = ans_centroids[i]
         distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
         if distance < min_distance:
             min_distance = distance
             min_index = i
-    return min_distance, min_index
+    return (min_distance, min_index)
 
 def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
