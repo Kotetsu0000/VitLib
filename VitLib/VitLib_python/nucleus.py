@@ -130,14 +130,60 @@ def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
     
+    # 正解画像の準備
     dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
     eval_images = make_eval_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
     care_img = eval_images["green_img"]
     no_care_img = eval_images["red_img"]
 
-    pred_img = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
-    care_img = cv2.threshold(care_img, 127, 255, cv2.THRESH_BINARY)[1]
-    no_care_img = cv2.threshold(no_care_img, 127, 255, cv2.THRESH_BINARY)[1]
+    # 画像の二値化
+    pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
+    care_img_th = cv2.threshold(care_img, 127, 255, cv2.THRESH_BINARY)[1]
+    no_care_img_th = cv2.threshold(no_care_img, 127, 255, cv2.THRESH_BINARY)[1]
 
-    cv2.connectedComponentsWithStats(pred_img)
+    # 推論画像の小領域削除
+    pred_img_th_del = smallAreaReduction(pred_img_th, del_area)
+
+    '''
+    num : int
+    labels : np.ndarray (dim=2, dtype=np.int32)
+    stats : np.ndarray (dim=2, dtype=np.int32)
+    centroids : np.ndarray (dim=2, dtype=np.float64)
+    '''
+    # ラベル処理
+    pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(pred_img_th_del)
+    care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(care_img_th)
+    no_care_num, no_care_labels, no_care_stats, no_care_centroids = cv2.connectedComponentsWithStats(no_care_img_th)
+
+    # 抽出判定
+    correct_list = [] #抽出された正解核のラベル番号リスト(後に重複削除する)
+    ext_no_care_num = 0 #抽出されたが考慮しない核の数
+    if eval_mode == "inclusion":
+        for i in range(1, pred_num):
+            care = care_labels[pred_centroids[i][1], pred_centroids[i][0]] != 0
+            no_care = no_care_labels[pred_centroids[i][1], pred_centroids[i][0]] != 0
+            if care:
+                correct_list.append(care_labels[pred_centroids[i][1], pred_centroids[i][0]])
+            elif no_care:
+                ext_no_care_num += 1
+    elif eval_mode == "proximity":
+        raise NotImplementedError("proximity mode is not implemented yet.")
+    else:
+        raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
     
+    #重複削除
+    correct_list = list(set(correct_list))
+
+    #抽出された数(適合率計算用), -1は背景の分
+    conformity_bottom = pred_num - 1 - ext_no_care_num
+
+    #適合率
+    precision = len(correct_list) / conformity_bottom if conformity_bottom != 0 else 0
+
+    #再現率
+    recall = len(correct_list) / (care_num-1) if care_num-1 != 0 else 0
+
+    #F値
+    fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
+    
+    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold}
