@@ -4,3 +4,4 @@ VitLib.egg-info
 build
 main.py
 src/*.html
+.DS_Store
