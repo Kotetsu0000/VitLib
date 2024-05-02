@@ -15,10 +15,20 @@ if use_Cython:
     ext_modules = cythonize(
         [
             Extension(
-                "VitLib.VitLib_cython",
-                ["src/VitLib_cython.pyx"],
+                "VitLib.VitLib_cython.common",
+                ["src/common.pyx"],
                 language="c++",
-            )
+            ),
+            Extension(
+                "VitLib.VitLib_cython.membrane",
+                ["src/membrane.pyx"],
+                language="c++",
+            ),
+            Extension(
+                "VitLib.VitLib_cython.nucleus",
+                ["src/nucleus.pyx"],
+                language="c++",
+            ),
         ],
         compiler_directives={
             'language_level' : "3",
@@ -28,16 +38,26 @@ if use_Cython:
 else:
     ext_modules = [
         Extension(
-            "VitLib.VitLib_cython",
-            ["src/VitLib_cython.cpp"],
+            "VitLib.VitLib_cython.common",
+            ["src/common.cpp"],
             language="c++",
-        )
+        ),
+        Extension(
+            "VitLib.VitLib_cython.membrane",
+            ["src/membrane.cpp"],
+            language="c++",
+        ),
+        Extension(
+            "VitLib.VitLib_cython.nucleus",
+            ["src/nucleus.cpp"],
+            language="c++",
+        ),
     ]
 
 try:
     setup_kwargs = {
         "name": "VitLib",
-        "version": "1.1.0",
+        "version": "2.2.0",
         "description": "A fast NWG Library",
         "author": "Kotetsu0000",
         'ext_modules': ext_modules,
