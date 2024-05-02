@@ -183,7 +183,8 @@ cpdef dict evaluate_cell_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.n
     cdef int ans_unique_len = len(np.unique(ans_img))
     cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
     cdef dict eval_images
-    cdef int pred_num, care_num, no_care_num, ext_no_care_num, i, care, no_care, conformity_bottom
+    cdef cnp.uint32_t pred_num, care_num, no_care_num, ext_no_care_num
+    cdef int i, care, no_care, conformity_bottom
     cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
     cdef cnp.ndarray[cnp.uint32_t, ndim=2] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
     cdef cnp.ndarray[cnp.float64_t, ndim=2] pred_centroids, care_centroids, no_care_centroids
