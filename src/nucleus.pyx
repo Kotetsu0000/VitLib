@@ -143,11 +143,10 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
             - 最小距離のインデックス(int)
             - 最小距離(float)
     """
-    #cdef float min_distance, distance
-    #cdef int min_index, i
-    #cdef int len_ans_centroids = len(ans_centroids)
-    len_ans_centroids = len(ans_centroids)
-    #cdef cnp.ndarray[cnp.float64_t, ndim=1] ans_centroid
+    cdef float min_distance, distance
+    cdef int min_index, i
+    cdef int len_ans_centroids = len(ans_centroids)
+    cdef cnp.ndarray[cnp.float64_t, ndim=1] ans_centroid
     min_distance = FLT_MAX
     min_index = -1
     for i in range(len_ans_centroids):
@@ -156,7 +155,7 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
         if distance < min_distance:
             min_distance = distance
             min_index = i
-    return (min_distance, min_index)
+    return (min_index, min_distance)
 
 def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
