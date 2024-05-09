@@ -131,6 +131,17 @@ def random_cut_image(img_list:list, size:tuple) -> list:
     top_left = (np.random.randint(0, img_size[0]-size[0]), np.random.randint(0, img_size[1]-size[1]))
     return [cut_image(img, top_left, size) for img in img_list]
 
+def select_cut_image(img_list:list, top_left:tuple, size:tuple) -> list:
+    """
+    画像リスト内の各画像を指定した位置とサイズで切り取ります。
+
+    Args:
+        img_list (list): 画像リスト
+        top_left (tuple): 切り取りの左上の座標
+        size (tuple): 切り取りのサイズ
+    """
+    return [cut_image(img, top_left, size) for img in img_list]
+
 def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
     """
     画像を回転します。(1回転につき90度)
