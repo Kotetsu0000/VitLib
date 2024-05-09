@@ -124,7 +124,7 @@ def euclidean_distance(ext_centroid, ans_centroids):
             min_index = i
     return min_distance, min_index
 
-def evaluate_cell_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
+def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
 
     Args:
