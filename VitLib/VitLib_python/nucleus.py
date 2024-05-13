@@ -51,7 +51,7 @@ def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher
     sorted_area_size = sorted(area_size)[out_lower_num:len(area_size)-out_heigher_num]
     return np.mean(sorted_area_size)
 
-def make_eval_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0):
+def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0):
     """評価用画像を作成する関数
 
     Args:
@@ -155,7 +155,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     
     # 正解画像の準備
     dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
-    eval_images = make_eval_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
     care_img = eval_images["green_img"]
     no_care_img = eval_images["red_img"]
 
