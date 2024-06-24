@@ -1,4 +1,6 @@
+from VitLib import *
 from VitLib.image_processing import *
+from VitLib.file_utils import *
 try:
     from VitLib.VitLib_cython import *
     from VitLib.VitLib_cython.membrane import *
