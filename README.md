@@ -1,6 +1,6 @@
 # VitLib
 
-VitLib is a Python library for image processing, designed specifically for tasks like nuclear and membrane segmentation. It provides efficient implementations of algorithms like Narrowing With Guidance (NWG) for thinning and small area reduction, along with evaluation metrics for segmentation results. The library offers both Cython and pure Python implementations for flexibility and performance.
+VitLib is a Python library that supports image processing for evaluating cell nuclei and cell membranes, as well as data augmentation and other functions to assist experiments. It provides efficient implementations of algorithms such as Narrowing With Guidance (NWG) for thinning, along with evaluation metrics for segmentation results. The library offers implementations in both Cython and pure Python for flexibility.
 
 ## Installation
 
