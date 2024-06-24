@@ -1,0 +1,43 @@
+name: Build and Deploy Sphinx Docs
+
+on:
+  push:
+    branches:
+      - main  # 変更を監視するブランチを指定
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # リポジトリをチェックアウト
+
+    - name: Set up Python
+      uses: actions/setup-python@v4  # Pythonをセットアップ
+      with:
+        python-version: '3.11'  # Python 3.11を使用
+
+    - name: Upgrade pip
+      run: python -m pip install --upgrade pip  # pipをアップグレード
+
+    - name: Install dependencies
+      run: pip install -U sphinx sphinx-rtd-theme sphinx_fontawesome myst_parser opencv-python numpy  # 依存関係をインストール
+
+    - name: Build Python extensions
+      run: python setup.py build_ext --inplace  # Python拡張機能をビルド
+
+    - name: Build Sphinx documentation
+      run: sphinx-build -b html ./docs/script ./docs  # Sphinxドキュメントをビルド
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        if [ "$(git diff --shortstat)" != "" ]; then
+          git add .
+          git commit -m "GitHub Actions: Build and deploy Sphinx docs"
+          git push origin HEAD:${GITHUB_REF}
+        fi
