@@ -22,7 +22,7 @@ jobs:
       run: python -m pip install --upgrade pip  # pipをアップグレード
 
     - name: Install dependencies
-      run: pip install -U sphinx sphinx-rtd-theme sphinx_fontawesome myst_parser opencv-python numpy  # 依存関係をインストール
+      run: pip install -U sphinx sphinx-rtd-theme sphinx_fontawesome myst_parser opencv-python numpy cython # 依存関係をインストール
 
     - name: Build Python extensions
       run: python setup.py build_ext --inplace  # Python拡張機能をビルド
