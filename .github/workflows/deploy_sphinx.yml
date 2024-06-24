@@ -12,6 +12,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3  # リポジトリをチェックアウト
+      with:
+        fetch-depth: 0 
+        token: ${{ secrets.GH_TOKEN }}
+
 
     - name: Set up Python
       uses: actions/setup-python@v4  # Pythonをセットアップ
@@ -32,8 +36,6 @@ jobs:
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
