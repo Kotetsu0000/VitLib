@@ -20,3 +20,11 @@ VitLib.image\_processing module
    :members:
    :undoc-members:
    :show-inheritance:
+
+VitLib.image\_file_utils
+-------------------------------
+
+.. automodule:: VitLib.file_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
