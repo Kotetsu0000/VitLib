@@ -71,6 +71,16 @@
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.select_cut_image"><code class="docutils literal notranslate"><span class="pre">select_cut_image()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#module-VitLib.file_utils">VitLib.image_file_utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.create_directory"><code class="docutils literal notranslate"><span class="pre">create_directory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.delete_directory"><code class="docutils literal notranslate"><span class="pre">delete_directory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.delete_file"><code class="docutils literal notranslate"><span class="pre">delete_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.file_exists"><code class="docutils literal notranslate"><span class="pre">file_exists()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_names"><code class="docutils literal notranslate"><span class="pre">get_file_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_paths"><code class="docutils literal notranslate"><span class="pre">get_file_paths()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_stems"><code class="docutils literal notranslate"><span class="pre">get_file_stems()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="VitLib.VitLib_python.html">VitLib.VitLib_python package</a></li>
@@ -492,6 +502,110 @@
 <li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取りの左上の座標</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-VitLib.file_utils">
+<span id="vitlib-image-file-utils"></span><h2>VitLib.image_file_utils<a class="headerlink" href="#module-VitLib.file_utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.create_directory">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">create_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.create_directory" title="Link to this definition">¶</a></dt>
+<dd><p>ディレクトリを作成する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 作成するディレクトリのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.delete_directory">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">delete_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.delete_directory" title="Link to this definition">¶</a></dt>
+<dd><p>ディレクトリを削除する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 削除するディレクトリのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.delete_file">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">delete_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.delete_file" title="Link to this definition">¶</a></dt>
+<dd><p>ファイルを削除する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 削除するファイルのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.file_exists">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">file_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#VitLib.file_utils.file_exists" title="Link to this definition">¶</a></dt>
+<dd><p>ファイルが存在するかどうかを返す関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – ファイルのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ファイルが存在する場合はTrue、そうでない場合はFalse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_names">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_names" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイル名をすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイル名のリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_paths">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_paths" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイルとフォルダのパスをすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイルとフォルダのパスリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_stems">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_stems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_stems" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイル名（拡張子なし）をすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイル名（拡張子なし）のリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
 </dd>
 </dl>
 </dd></dl>
