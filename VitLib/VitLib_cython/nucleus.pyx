@@ -87,6 +87,7 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
 
     Returns:
         dict: 評価用画像の辞書
+
             - "eval_img": 評価用画像
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
@@ -140,6 +141,7 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
 
     Returns:
         tuple: 最小距離のインデックスとその距離
+
             - 最小距離のインデックス(int)
             - 最小距離(float)
     """
@@ -170,12 +172,15 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
         threshold (int): 二値化の閾値
         del_area (int): 除外する面積
         eval_mode (str): 評価方法
+
             - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
 
     Returns:
         dict: 評価結果の辞書
+        
             - precision (float): 適合率
             - recall (float): 再現率
             - fmeasure (float): F値

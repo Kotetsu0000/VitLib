@@ -11,6 +11,7 @@ ctypedef cnp.uint8_t DTYPE_t
 
 def NWG_nofix(img):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
+    
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
@@ -100,6 +101,7 @@ def NWG_nofix(img):
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
+    
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
@@ -196,6 +198,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
+    
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
