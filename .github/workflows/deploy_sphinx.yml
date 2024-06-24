@@ -10,19 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check if triggered by GitHub Actions bot
-      run: |
-        if [ "${{ github.actor }}" = "github-actions[bot]" ]; then
-          echo "This run was triggered by the GitHub Actions bot, exiting."
-          exit 1
-        fi
-
     - name: Checkout repository
       uses: actions/checkout@v3  # リポジトリをチェックアウト
-      with:
-        fetch-depth: 0 
-        token: ${{ secrets.GH_TOKEN }}
-
 
     - name: Set up Python
       uses: actions/setup-python@v4  # Pythonをセットアップ
@@ -48,7 +37,7 @@ jobs:
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         if [ "$(git diff --shortstat)" != "" ]; then
-          git add .
+          git add docs/.
           git commit -m "GitHub Actions: Build and deploy Sphinx docs"
           git push origin HEAD:${GITHUB_REF}
         fi
