@@ -3,5 +3,6 @@ VitLib.egg-info
 .python-version
 build
 main.py
-src/*.html
+VitLib/VitLib_cython/*.html
 .DS_Store
+*.so
