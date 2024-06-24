@@ -42,8 +42,3 @@ cleaned_image = smallAreaReduction(binary_image, area_th=50)
 evaluation_metrics = evaluate_nuclear_prediction(predicted_image, ground_truth_image)
 print(evaluation_metrics) 
 ```
-
-# Document
-
-[VitLib Document](https://kotetsu0000.github.io/VitLib/ "VitLib Document")
-
