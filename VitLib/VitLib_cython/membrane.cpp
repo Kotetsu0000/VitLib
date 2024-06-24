@@ -1572,7 +1572,11 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":770
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":770
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1581,7 +1585,11 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":771
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":771
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1590,7 +1598,11 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":772
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":772
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1599,7 +1611,11 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":773
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":773
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1608,7 +1624,11 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":777
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":777
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1617,7 +1637,11 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":778
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":778
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1626,7 +1650,11 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":779
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":779
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1635,7 +1663,11 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":780
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":780
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1644,7 +1676,11 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":784
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":784
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1653,7 +1689,11 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":785
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":785
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1662,7 +1702,11 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":792
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":792
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef double complex complex128_t
  * 
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1671,7 +1715,11 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":793
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":793
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_longlong   longlong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1680,7 +1728,11 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":795
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":795
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1689,7 +1741,11 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":796
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":796
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1698,7 +1754,11 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":798
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":798
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1707,7 +1767,11 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":799
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":799
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1716,7 +1780,11 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":800
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":800
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1774,7 +1842,11 @@ static CYTHON_INLINE __pyx_t_long_double_complex __pyx_t_long_double_complex_fro
 
 /*--- Type declarations ---*/
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1096
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1096
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * # Iterator API added in v1.6
  * ctypedef int (*NpyIter_IterNextFunc)(NpyIter* it) noexcept nogil             # <<<<<<<<<<<<<<
@@ -1783,7 +1855,11 @@ static CYTHON_INLINE __pyx_t_long_double_complex __pyx_t_long_double_complex_fro
  */
 typedef int (*__pyx_t_5numpy_NpyIter_IterNextFunc)(NpyIter *);
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1097
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1097
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Iterator API added in v1.6
  * ctypedef int (*NpyIter_IterNextFunc)(NpyIter* it) noexcept nogil
  * ctypedef void (*NpyIter_GetMultiIndexFunc)(NpyIter* it, npy_intp* outcoords) noexcept nogil             # <<<<<<<<<<<<<<
@@ -1796,7 +1872,11 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth;
 struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction;
 struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_prediction_nwg;
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":199
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":197
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -1808,7 +1888,11 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_NWG {
   int symmetric;
 };
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":308
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":305
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -1820,7 +1904,11 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_modifyLineWidth {
   int radius;
 };
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":332
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":329
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -1836,7 +1924,11 @@ struct __pyx_opt_args_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_predic
   int otsu;
 };
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":396
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":393
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -2877,7 +2969,11 @@ static const char __pyx_k_class_getitem[] = "__class_getitem__";
 static const char __pyx_k_ans_img_th_nwg[] = "ans_img_th_nwg";
 static const char __pyx_k_modifyLineWidth[] = "modifyLineWidth";
 static const char __pyx_k_pred_img_th_nwg[] = "pred_img_th_nwg";
+<<<<<<< HEAD
 static const char __pyx_k_NWG_old_line_102[] = "NWG_old (line 102)";
+=======
+static const char __pyx_k_NWG_old_line_101[] = "NWG_old (line 101)";
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static const char __pyx_k_NWG_nofix_line_12[] = "NWG_nofix (line 12)";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -2885,13 +2981,22 @@ static const char __pyx_k_smallAreaReduction[] = "smallAreaReduction";
 static const char __pyx_k_evaluate_membrane_prediction[] = "evaluate_membrane_prediction";
 static const char __pyx_k_VitLib_VitLib_cython_membrane[] = "VitLib.VitLib_cython.membrane";
 static const char __pyx_k_File_VitLib_VitLib_cython_membra[] = "File: VitLib/VitLib_cython/membrane.pyx (starting at line 1)";
+<<<<<<< HEAD
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],""\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
+=======
+static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n       ""        [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static const char __pyx_k_VitLib_VitLib_cython_membrane_py[] = "VitLib/VitLib_cython/membrane.pyx";
 static const char __pyx_k_evaluate_membrane_prediction_nwg[] = "evaluate_membrane_prediction_nwg";
 static const char __pyx_k_numpy__core_multiarray_failed_to[] = "numpy._core.multiarray failed to import";
 static const char __pyx_k_numpy__core_umath_failed_to_impo[] = "numpy._core.umath failed to import";
+<<<<<<< HEAD
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_2[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,  "" 0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
 static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_3[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n             ""  [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n            using cython.\n    ";
+=======
+static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_2[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   ""0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ";
+static const char __pyx_k_NWG_0_255_2_cv22_https_www_scien_3[] = "NWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0"",   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n            using cython.\n    ";
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 /* #### Code section: decls ### */
 static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img); /* proto */
 static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_2NWG_old(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_img); /* proto */
@@ -3602,7 +3707,11 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__21 __pyx_mstate_global->__pyx_codeobj__21
 /* #### Code section: module_code ### */
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":286
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":286
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp itemsize(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3613,7 +3722,11 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_8itemsize_itemsize(PyArray_Descr *__pyx_v_self) {
   npy_intp __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":287
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":287
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         @property
  *         cdef inline npy_intp itemsize(self) noexcept nogil:
  *             return PyDataType_ELSIZE(self)             # <<<<<<<<<<<<<<
@@ -3623,7 +3736,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_8itemsize_itemsize(PyArray_D
   __pyx_r = PyDataType_ELSIZE(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":286
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":286
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp itemsize(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3636,7 +3753,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_8itemsize_itemsize(PyArray_D
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":290
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":290
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp alignment(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3647,7 +3768,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_8itemsize_itemsize(PyArray_D
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_9alignment_alignment(PyArray_Descr *__pyx_v_self) {
   npy_intp __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":291
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":291
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         @property
  *         cdef inline npy_intp alignment(self) noexcept nogil:
  *             return PyDataType_ALIGNMENT(self)             # <<<<<<<<<<<<<<
@@ -3657,7 +3782,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_9alignment_alignment(PyArray
   __pyx_r = PyDataType_ALIGNMENT(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":290
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":290
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp alignment(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3670,7 +3799,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_5dtype_9alignment_alignment(PyArray
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":296
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":296
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # for this using PyDataType_HASFIELDS.
  *         @property
  *         cdef inline object fields(self):             # <<<<<<<<<<<<<<
@@ -3684,7 +3817,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_6fields_fields(PyArray_Desc
   PyObject *__pyx_t_1;
   __Pyx_RefNannySetupContext("fields", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":297
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":297
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         @property
  *         cdef inline object fields(self):
  *             return <object>PyDataType_FIELDS(self)             # <<<<<<<<<<<<<<
@@ -3697,7 +3834,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_6fields_fields(PyArray_Desc
   __pyx_r = ((PyObject *)__pyx_t_1);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":296
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":296
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # for this using PyDataType_HASFIELDS.
  *         @property
  *         cdef inline object fields(self):             # <<<<<<<<<<<<<<
@@ -3712,7 +3853,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_6fields_fields(PyArray_Desc
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":300
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":300
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline tuple names(self):             # <<<<<<<<<<<<<<
@@ -3726,7 +3871,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_5names_names(PyArray_Descr 
   PyObject *__pyx_t_1;
   __Pyx_RefNannySetupContext("names", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":301
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":301
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         @property
  *         cdef inline tuple names(self):
  *             return <tuple>PyDataType_NAMES(self)             # <<<<<<<<<<<<<<
@@ -3739,7 +3888,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_5names_names(PyArray_Descr 
   __pyx_r = ((PyObject*)__pyx_t_1);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":300
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":300
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline tuple names(self):             # <<<<<<<<<<<<<<
@@ -3754,7 +3907,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_5names_names(PyArray_Descr 
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":307
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":307
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # this field via the inline helper method PyDataType_SHAPE.
  *         @property
  *         cdef inline PyArray_ArrayDescr* subarray(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3765,7 +3922,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_5dtype_5names_names(PyArray_Descr 
 static CYTHON_INLINE PyArray_ArrayDescr *__pyx_f_5numpy_5dtype_8subarray_subarray(PyArray_Descr *__pyx_v_self) {
   PyArray_ArrayDescr *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":308
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":308
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         @property
  *         cdef inline PyArray_ArrayDescr* subarray(self) noexcept nogil:
  *             return PyDataType_SUBARRAY(self)             # <<<<<<<<<<<<<<
@@ -3775,7 +3936,11 @@ static CYTHON_INLINE PyArray_ArrayDescr *__pyx_f_5numpy_5dtype_8subarray_subarra
   __pyx_r = PyDataType_SUBARRAY(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":307
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":307
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # this field via the inline helper method PyDataType_SHAPE.
  *         @property
  *         cdef inline PyArray_ArrayDescr* subarray(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3788,7 +3953,11 @@ static CYTHON_INLINE PyArray_ArrayDescr *__pyx_f_5numpy_5dtype_8subarray_subarra
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":311
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":311
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_uint64 flags(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3799,7 +3968,11 @@ static CYTHON_INLINE PyArray_ArrayDescr *__pyx_f_5numpy_5dtype_8subarray_subarra
 static CYTHON_INLINE npy_uint64 __pyx_f_5numpy_5dtype_5flags_flags(PyArray_Descr *__pyx_v_self) {
   npy_uint64 __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":313
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":313
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline npy_uint64 flags(self) noexcept nogil:
  *             """The data types flags."""
  *             return PyDataType_FLAGS(self)             # <<<<<<<<<<<<<<
@@ -3809,7 +3982,11 @@ static CYTHON_INLINE npy_uint64 __pyx_f_5numpy_5dtype_5flags_flags(PyArray_Descr
   __pyx_r = PyDataType_FLAGS(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":311
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":311
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_uint64 flags(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3822,7 +3999,11 @@ static CYTHON_INLINE npy_uint64 __pyx_f_5numpy_5dtype_5flags_flags(PyArray_Descr
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":323
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":323
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int numiter(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3833,7 +4014,11 @@ static CYTHON_INLINE npy_uint64 __pyx_f_5numpy_5dtype_5flags_flags(PyArray_Descr
 static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_7numiter_numiter(PyArrayMultiIterObject *__pyx_v_self) {
   int __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":325
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":325
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline int numiter(self) noexcept nogil:
  *             """The number of arrays that need to be broadcast to the same shape."""
  *             return PyArray_MultiIter_NUMITER(self)             # <<<<<<<<<<<<<<
@@ -3843,7 +4028,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_7numiter_numiter(PyArrayMulti
   __pyx_r = PyArray_MultiIter_NUMITER(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":323
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":323
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int numiter(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3856,7 +4045,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_7numiter_numiter(PyArrayMulti
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":328
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":328
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp size(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3867,7 +4060,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_7numiter_numiter(PyArrayMulti
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_4size_size(PyArrayMultiIterObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":330
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":330
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline npy_intp size(self) noexcept nogil:
  *             """The total broadcasted size."""
  *             return PyArray_MultiIter_SIZE(self)             # <<<<<<<<<<<<<<
@@ -3877,7 +4074,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_4size_size(PyArrayMultiI
   __pyx_r = PyArray_MultiIter_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":328
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":328
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp size(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3890,7 +4091,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_4size_size(PyArrayMultiI
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":333
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":333
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp index(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3901,7 +4106,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_4size_size(PyArrayMultiI
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_5index_index(PyArrayMultiIterObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":335
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":335
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline npy_intp index(self) noexcept nogil:
  *             """The current (1-d) index into the broadcasted result."""
  *             return PyArray_MultiIter_INDEX(self)             # <<<<<<<<<<<<<<
@@ -3911,7 +4120,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_5index_index(PyArrayMult
   __pyx_r = PyArray_MultiIter_INDEX(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":333
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":333
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp index(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3924,7 +4137,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_5index_index(PyArrayMult
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":338
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":338
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int nd(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3935,7 +4152,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_9broadcast_5index_index(PyArrayMult
 static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_2nd_nd(PyArrayMultiIterObject *__pyx_v_self) {
   int __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":340
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":340
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline int nd(self) noexcept nogil:
  *             """The number of dimensions in the broadcasted result."""
  *             return PyArray_MultiIter_NDIM(self)             # <<<<<<<<<<<<<<
@@ -3945,7 +4166,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_2nd_nd(PyArrayMultiIterObject
   __pyx_r = PyArray_MultiIter_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":338
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":338
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int nd(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3958,7 +4183,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_2nd_nd(PyArrayMultiIterObject
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":343
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":343
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp* dimensions(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3969,7 +4198,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_9broadcast_2nd_nd(PyArrayMultiIterObject
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_9broadcast_10dimensions_dimensions(PyArrayMultiIterObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":345
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":345
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cdef inline npy_intp* dimensions(self) noexcept nogil:
  *             """The shape of the broadcasted result."""
  *             return PyArray_MultiIter_DIMS(self)             # <<<<<<<<<<<<<<
@@ -3979,7 +4212,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_9broadcast_10dimensions_dimensions
   __pyx_r = PyArray_MultiIter_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":343
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":343
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp* dimensions(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -3992,7 +4229,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_9broadcast_10dimensions_dimensions
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":348
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":348
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline void** iters(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4003,7 +4244,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_9broadcast_10dimensions_dimensions
 static CYTHON_INLINE void **__pyx_f_5numpy_9broadcast_5iters_iters(PyArrayMultiIterObject *__pyx_v_self) {
   void **__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":351
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":351
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             """An array of iterator objects that holds the iterators for the arrays to be broadcast together.
  *             On return, the iterators are adjusted for broadcasting."""
  *             return PyArray_MultiIter_ITERS(self)             # <<<<<<<<<<<<<<
@@ -4013,7 +4258,11 @@ static CYTHON_INLINE void **__pyx_f_5numpy_9broadcast_5iters_iters(PyArrayMultiI
   __pyx_r = PyArray_MultiIter_ITERS(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":348
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":348
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline void** iters(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4026,7 +4275,11 @@ static CYTHON_INLINE void **__pyx_f_5numpy_9broadcast_5iters_iters(PyArrayMultiI
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":366
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":366
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline PyObject* base(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4037,7 +4290,11 @@ static CYTHON_INLINE void **__pyx_f_5numpy_9broadcast_5iters_iters(PyArrayMultiI
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":369
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":369
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -4047,7 +4304,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":366
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":366
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline PyObject* base(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4060,7 +4321,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":372
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":372
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -4074,7 +4339,11 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":375
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":375
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -4087,7 +4356,11 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":372
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":372
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -4102,7 +4375,11 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":378
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":378
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int ndim(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4113,7 +4390,11 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":381
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":381
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -4123,7 +4404,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":378
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":378
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline int ndim(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4136,7 +4421,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":384
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":384
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4147,7 +4436,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":389
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":389
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -4157,7 +4450,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":384
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":384
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4170,7 +4467,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":392
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":392
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4181,7 +4482,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":396
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":396
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -4191,7 +4496,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":392
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":392
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4204,7 +4513,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":399
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":399
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp size(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4215,7 +4528,11 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":402
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":402
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -4225,7 +4542,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":399
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":399
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline npy_intp size(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4238,7 +4559,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":405
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":405
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline char* data(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4249,7 +4574,11 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":411
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":411
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -4259,7 +4588,11 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":405
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":405
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         @property
  *         cdef inline char* data(self) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -4272,7 +4605,11 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":807
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":807
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef long double complex clongdouble_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4289,7 +4626,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":808
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":808
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -4303,7 +4644,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":807
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":807
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * ctypedef long double complex clongdouble_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4322,7 +4667,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":810
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":810
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4339,7 +4688,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":811
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":811
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -4353,7 +4706,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":810
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":810
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4372,7 +4729,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":813
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":813
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4389,7 +4750,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":814
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":814
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -4403,7 +4768,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":813
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":813
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4422,7 +4791,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":816
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":816
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4439,7 +4812,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":817
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":817
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -4453,7 +4830,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":816
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":816
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4472,7 +4853,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":819
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":819
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4489,7 +4874,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":820
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":820
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -4503,7 +4892,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":819
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":819
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4522,7 +4915,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":822
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":822
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4537,7 +4934,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   PyObject *__pyx_t_2;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":823
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":823
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4547,7 +4948,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":824
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":824
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -4560,7 +4965,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_t_2);
     goto __pyx_L0;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":823
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":823
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4569,7 +4978,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":826
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":826
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -4583,7 +4996,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":822
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":822
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4598,7 +5015,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1010
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1010
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base) except *:             # <<<<<<<<<<<<<<
@@ -4612,7 +5033,11 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1011
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1011
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline void set_array_base(ndarray arr, object base) except *:
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -4621,7 +5046,11 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1012
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1012
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline void set_array_base(ndarray arr, object base) except *:
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -4630,7 +5059,11 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_t_1 = PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 1012, __pyx_L1_error)
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1010
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1010
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base) except *:             # <<<<<<<<<<<<<<
@@ -4645,7 +5078,11 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_L0:;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1014
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4660,7 +5097,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1015
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1015
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -4669,7 +5110,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1016
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1016
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4679,7 +5124,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1017
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1017
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -4690,7 +5139,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1016
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1016
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4699,7 +5152,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1018
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1018
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -4711,7 +5168,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1014
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1014
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4726,7 +5187,11 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1022
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1022
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4750,7 +5215,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1023
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1023
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4766,7 +5235,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1024
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1024
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4775,7 +5248,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1024, __pyx_L3_error)
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1023
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1023
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4789,7 +5266,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1025
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1025
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4804,7 +5285,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1026
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1026
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy._core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4819,7 +5304,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1023
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1023
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4835,7 +5324,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1022
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1022
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4858,7 +5351,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1028
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1028
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         raise ImportError("numpy._core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4882,7 +5379,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1029
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4898,7 +5399,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1030
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1030
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4907,7 +5412,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1030, __pyx_L3_error)
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1029
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4921,7 +5430,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1031
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1031
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4936,7 +5449,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1032
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1032
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy._core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4951,7 +5468,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1029
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1029
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4967,7 +5488,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1028
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1028
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         raise ImportError("numpy._core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4990,7 +5515,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1034
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1034
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         raise ImportError("numpy._core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -5014,7 +5543,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1035
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1035
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5030,7 +5563,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1036
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1036
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -5039,7 +5576,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1036, __pyx_L3_error)
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1035
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1035
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5053,7 +5594,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1037
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1037
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -5068,7 +5613,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
+<<<<<<< HEAD
       /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1038
+=======
+      /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1038
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy._core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -5083,7 +5632,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
+<<<<<<< HEAD
     /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1035
+=======
+    /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1035
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5099,7 +5652,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1034
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1034
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         raise ImportError("numpy._core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -5122,7 +5679,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1041
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1041
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj) noexcept:             # <<<<<<<<<<<<<<
@@ -5133,7 +5694,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1053
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1053
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -5143,7 +5708,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1041
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1041
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj) noexcept:             # <<<<<<<<<<<<<<
@@ -5156,7 +5725,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1056
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1056
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj) noexcept:             # <<<<<<<<<<<<<<
@@ -5167,7 +5740,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1068
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1068
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -5177,7 +5754,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1056
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1056
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj) noexcept:             # <<<<<<<<<<<<<<
@@ -5190,7 +5771,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1071
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1071
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5201,7 +5786,11 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1078
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1078
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -5211,7 +5800,11 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1071
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1071
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5224,7 +5817,11 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1081
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1081
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5235,7 +5832,11 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1085
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1085
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -5245,7 +5846,11 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1081
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1081
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5258,7 +5863,11 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1088
+=======
+/* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1088
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5269,7 +5878,11 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1092
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1092
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -5279,7 +5892,11 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1088
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1088
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) noexcept nogil:             # <<<<<<<<<<<<<<
@@ -5308,7 +5925,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_NWG_nofix, "NWG_nofix(img)\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 12)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   ""0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_NWG_nofix, "NWG_nofix(img)\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 12)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_nofix\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_nofix(img, symmetric=False)\n        array([[  0,   0,   0,   0,   0,   0"",   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_1NWG_nofix = {"NWG_nofix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_1NWG_nofix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_NWG_nofix};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_1NWG_nofix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -5438,7 +6059,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("NWG_nofix", 1);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":49
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":48
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cv2
  *     '''
  *     src = np.copy(img)//255             # <<<<<<<<<<<<<<
@@ -5478,7 +6103,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   __pyx_v_src = __pyx_t_3;
   __pyx_t_3 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":52
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":51
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     # zero padding
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2             # <<<<<<<<<<<<<<
@@ -5506,7 +6135,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   __pyx_v_COLUMN = __pyx_t_1;
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":53
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":52
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     # zero padding
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2
  *     pad = np.zeros((ROW, COLUMN))             # <<<<<<<<<<<<<<
@@ -5552,7 +6185,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   __pyx_v_pad = __pyx_t_1;
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":54
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":53
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     ROW, COLUMN = src.shape[0]+2, src.shape[1]+2
  *     pad = np.zeros((ROW, COLUMN))
  *     pad[1:ROW-1, 1:COLUMN-1] = src             # <<<<<<<<<<<<<<
@@ -5580,7 +6217,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   if (unlikely((PyObject_SetItem(__pyx_v_pad, __pyx_t_1, __pyx_v_src) < 0))) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":55
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":54
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     pad = np.zeros((ROW, COLUMN))
  *     pad[1:ROW-1, 1:COLUMN-1] = src
  *     src = pad             # <<<<<<<<<<<<<<
@@ -5590,7 +6231,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   __Pyx_INCREF(__pyx_v_pad);
   __Pyx_DECREF_SET(__pyx_v_src, __pyx_v_pad);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":57
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":56
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     src = pad
  * 
  *     switch = True             # <<<<<<<<<<<<<<
@@ -5599,7 +6244,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
  */
   __pyx_v_switch = 1;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":58
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":57
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     switch = True
  *     while True:             # <<<<<<<<<<<<<<
@@ -5608,7 +6257,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
  */
   while (1) {
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":59
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":58
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     switch = True
  *     while True:
  *         r, c = src.nonzero()             # <<<<<<<<<<<<<<
@@ -5690,7 +6343,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_2);
     __pyx_t_2 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":60
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":59
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -5744,7 +6401,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":61
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":60
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],             # <<<<<<<<<<<<<<
@@ -5795,7 +6456,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":62
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":61
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))             # <<<<<<<<<<<<<<
@@ -5831,7 +6496,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":60
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":59
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
@@ -5890,7 +6559,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_nei, __pyx_t_1);
     __pyx_t_1 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":65
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":64
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0)             # <<<<<<<<<<<<<<
@@ -5918,7 +6591,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_nei_sum, __pyx_t_13);
     __pyx_t_13 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":66
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":65
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0)
  *         cond1 = np.logical_and(2 <= nei_sum, nei_sum <= 6)             # <<<<<<<<<<<<<<
@@ -5959,7 +6636,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_cond1, __pyx_t_13);
     __pyx_t_13 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":69
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":68
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)             # <<<<<<<<<<<<<<
@@ -6030,7 +6711,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_12);
     __pyx_t_12 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":70
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":69
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -6069,7 +6754,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_cond2, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":71
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":70
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -6082,7 +6771,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
       __pyx_t_3 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":72
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":71
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -6095,7 +6788,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":73
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":72
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -6145,7 +6842,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       }
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":72
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":71
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -6158,7 +6859,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error);
       __pyx_t_3 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":73
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":72
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -6175,7 +6880,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":72
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":71
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=np.uint8)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -6194,7 +6903,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       __pyx_t_3 = 0;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":74
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":73
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1             # <<<<<<<<<<<<<<
@@ -6206,7 +6919,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_DECREF_SET(__pyx_v_cond2, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":75
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":74
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -6218,7 +6935,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":78
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":77
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
@@ -6231,7 +6952,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":79
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":78
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 3
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -6299,7 +7024,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_c3a, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":80
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":79
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
@@ -6312,7 +7041,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":81
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":80
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)             # <<<<<<<<<<<<<<
@@ -6380,7 +7113,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_c3b, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":82
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":81
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)             # <<<<<<<<<<<<<<
@@ -6417,7 +7154,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_cond3, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":85
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":84
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -6426,7 +7167,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
  */
     if (__pyx_v_switch) {
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":86
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":85
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 4
  *         if switch:
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0             # <<<<<<<<<<<<<<
@@ -6459,7 +7204,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       __Pyx_XDECREF_SET(__pyx_v_cond4, __pyx_t_14);
       __pyx_t_14 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":85
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":84
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -6469,7 +7218,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       goto __pyx_L9;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":88
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":87
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0
  *         else:
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0             # <<<<<<<<<<<<<<
@@ -6505,7 +7258,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     }
     __pyx_L9:;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":90
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":89
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))             # <<<<<<<<<<<<<<
@@ -6570,7 +7327,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_cond, __pyx_t_12);
     __pyx_t_12 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":91
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":90
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)             # <<<<<<<<<<<<<<
@@ -6607,7 +7368,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __Pyx_DECREF_SET(__pyx_v_cond, __pyx_t_12);
     __pyx_t_12 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":92
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":91
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -6617,7 +7382,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     __pyx_t_16 = (__Pyx_PySequence_ContainsTF(Py_True, __pyx_v_cond, Py_EQ)); if (unlikely((__pyx_t_16 < 0))) __PYX_ERR(0, 92, __pyx_L1_error)
     if (__pyx_t_16) {
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":93
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":92
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:
  *             switch = not switch             # <<<<<<<<<<<<<<
@@ -6626,7 +7395,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
  */
       __pyx_v_switch = (!__pyx_v_switch);
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":92
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":91
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -6636,7 +7409,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
       goto __pyx_L10;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":95
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":94
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             switch = not switch
  *         else:
  *             return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -6675,7 +7452,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
     }
     __pyx_L10:;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":97
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":96
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             return src[1:ROW-1, 1:COLUMN-1]*255
  * 
  *         src[r[cond], c[cond]] = 0             # <<<<<<<<<<<<<<
@@ -6746,7 +7527,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_NWG_nofix(CYTHON_UNU
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":102
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":101
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -6893,7 +7678,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":139
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":137
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cv2
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255             # <<<<<<<<<<<<<<
@@ -6944,7 +7733,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   __pyx_v_src = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":140
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":138
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255
  *     cdef int ROW = src.shape[0]+2             # <<<<<<<<<<<<<<
@@ -6953,7 +7746,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
   __pyx_v_ROW = ((__pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src))[0]) + 2);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":141
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":139
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img) // 255
  *     cdef int ROW = src.shape[0]+2
  *     cdef int COLUMN = src.shape[1]+2             # <<<<<<<<<<<<<<
@@ -6962,7 +7759,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
   __pyx_v_COLUMN = ((__pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src))[1]) + 2);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":143
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":141
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef int COLUMN = src.shape[1]+2
  * 
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] pad = np.zeros((ROW, COLUMN), dtype=DTYPE)             # <<<<<<<<<<<<<<
@@ -6978,17 +7779,27 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_COLUMN); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
+<<<<<<< HEAD
   __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_3);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error);
+=======
+  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_3);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error);
+  __Pyx_GIVEREF(__pyx_t_2);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error);
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __pyx_t_3 = 0;
   __pyx_t_2 = 0;
   __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_6);
+<<<<<<< HEAD
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6)) __PYX_ERR(0, 143, __pyx_L1_error);
   __pyx_t_6 = 0;
   __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 143, __pyx_L1_error)
@@ -6998,11 +7809,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+=======
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6)) __PYX_ERR(0, 141, __pyx_L1_error);
+  __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DTYPE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+<<<<<<< HEAD
   if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 143, __pyx_L1_error)
+=======
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 141, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7016,7 +7842,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   __pyx_v_pad = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":150
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":148
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef cnp.ndarray[cnp.uint8_t, ndim=1] nei_sum
  *     cdef cnp.ndarray[DTYPE_t, ndim=1] cond1, cond2, c3a, c3b, cond3, cond4, cond
  *     cdef DTYPE_t switch = True             # <<<<<<<<<<<<<<
@@ -7025,7 +7855,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
   __pyx_v_switch = 1;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":152
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":150
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef DTYPE_t switch = True
  * 
  *     pad[1:ROW-1, 1:COLUMN-1] = src             # <<<<<<<<<<<<<<
@@ -7034,7 +7868,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
   __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_ROW - 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
+<<<<<<< HEAD
   __pyx_t_6 = PySlice_New(__pyx_int_1, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 152, __pyx_L1_error)
+=======
+  __pyx_t_6 = PySlice_New(__pyx_int_1, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 150, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_COLUMN - 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
@@ -7045,15 +7883,25 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_6);
+<<<<<<< HEAD
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6)) __PYX_ERR(0, 152, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_2);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 152, __pyx_L1_error);
+=======
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6)) __PYX_ERR(0, 150, __pyx_L1_error);
+  __Pyx_GIVEREF(__pyx_t_2);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error);
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __pyx_t_6 = 0;
   __pyx_t_2 = 0;
   if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_pad), __pyx_t_3, ((PyObject *)__pyx_v_src)) < 0))) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":153
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":151
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     pad[1:ROW-1, 1:COLUMN-1] = src
  *     src = pad             # <<<<<<<<<<<<<<
@@ -7080,7 +7928,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   __Pyx_INCREF((PyObject *)__pyx_v_pad);
   __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_v_pad));
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":155
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":153
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     src = pad
  * 
  *     while True:             # <<<<<<<<<<<<<<
@@ -7089,7 +7941,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
   while (1) {
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":156
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":154
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     while True:
  *         r, c = src.nonzero()             # <<<<<<<<<<<<<<
@@ -7116,7 +7972,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       PyObject *__pyx_callargs[2] = {__pyx_t_6, NULL};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
@@ -7141,7 +8001,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       #else
       __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
+<<<<<<< HEAD
       __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+=======
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 154, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7155,7 +8019,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_6 = __pyx_t_11(__pyx_t_1); if (unlikely(!__pyx_t_6)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
+<<<<<<< HEAD
       if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_1), 2) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
+=======
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_11(__pyx_t_1), 2) < 0) __PYX_ERR(0, 154, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __pyx_t_11 = NULL;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L6_unpacking_done;
@@ -7166,8 +8034,13 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __PYX_ERR(0, 156, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 156, __pyx_L1_error)
     if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 156, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 154, __pyx_L1_error)
+    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 154, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_12 = ((PyArrayObject *)__pyx_t_2);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7211,13 +8084,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_c, ((PyArrayObject *)__pyx_t_6));
     __pyx_t_6 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":157
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":155
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
@@ -7234,10 +8112,29 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_c))) __PYX_ERR(0, 157, __pyx_L1_error);
     __pyx_t_6 = 0;
     __pyx_t_6 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = PyNumber_Subtract(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_6);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_INCREF((PyObject *)__pyx_v_c);
+    __Pyx_GIVEREF((PyObject *)__pyx_v_c);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_c))) __PYX_ERR(0, 155, __pyx_L1_error);
+    __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = PyNumber_Subtract(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
+<<<<<<< HEAD
     __pyx_t_13 = PyNumber_Add(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_14 = PyTuple_New(2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 157, __pyx_L1_error)
@@ -7266,6 +8163,36 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "VitLib/VitLib_cython/membrane.pyx":158
+=======
+    __pyx_t_13 = PyNumber_Add(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __pyx_t_14 = PyTuple_New(2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __Pyx_GIVEREF(__pyx_t_1);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_13);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_14, 1, __pyx_t_13)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __pyx_t_1 = 0;
+    __pyx_t_13 = 0;
+    __pyx_t_13 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+    __pyx_t_14 = PyNumber_Add(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_INCREF((PyObject *)__pyx_v_r);
+    __Pyx_GIVEREF((PyObject *)__pyx_v_r);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_r))) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_14);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __pyx_t_14 = 0;
+    __pyx_t_14 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "VitLib/VitLib_cython/membrane.pyx":156
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],             # <<<<<<<<<<<<<<
@@ -7274,6 +8201,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
     __pyx_t_1 = PyNumber_Add(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
+<<<<<<< HEAD
     __pyx_t_15 = PyNumber_Add(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 158, __pyx_L1_error)
@@ -7298,10 +8226,37 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_c))) __PYX_ERR(0, 158, __pyx_L1_error);
     __pyx_t_16 = 0;
     __pyx_t_16 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 158, __pyx_L1_error)
+=======
+    __pyx_t_15 = PyNumber_Add(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_15);
+    __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_16);
+    __Pyx_GIVEREF(__pyx_t_1);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_15);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_15)) __PYX_ERR(0, 156, __pyx_L1_error);
+    __pyx_t_1 = 0;
+    __pyx_t_15 = 0;
+    __pyx_t_15 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_15);
+    __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+    __pyx_t_16 = PyNumber_Add(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_16);
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_16);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_16)) __PYX_ERR(0, 156, __pyx_L1_error);
+    __Pyx_INCREF((PyObject *)__pyx_v_c);
+    __Pyx_GIVEREF((PyObject *)__pyx_v_c);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_c))) __PYX_ERR(0, 156, __pyx_L1_error);
+    __pyx_t_16 = 0;
+    __pyx_t_16 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 156, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_16);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = PyNumber_Add(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
+<<<<<<< HEAD
     __pyx_t_17 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
     __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 158, __pyx_L1_error)
@@ -7317,12 +8272,30 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
     /* "VitLib/VitLib_cython/membrane.pyx":159
+=======
+    __pyx_t_17 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __Pyx_GIVEREF(__pyx_t_1);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_17);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_17)) __PYX_ERR(0, 156, __pyx_L1_error);
+    __pyx_t_1 = 0;
+    __pyx_t_17 = 0;
+    __pyx_t_17 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_18); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+
+    /* "VitLib/VitLib_cython/membrane.pyx":157
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))             # <<<<<<<<<<<<<<
  * 
  *         # condition 1
  */
+<<<<<<< HEAD
     __pyx_t_18 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
@@ -7334,10 +8307,24 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_18)) __PYX_ERR(0, 159, __pyx_L1_error);
     __pyx_t_18 = 0;
     __pyx_t_18 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 159, __pyx_L1_error)
+=======
+    __pyx_t_18 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_INCREF((PyObject *)__pyx_v_r);
+    __Pyx_GIVEREF((PyObject *)__pyx_v_r);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_r))) __PYX_ERR(0, 157, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_18);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_18)) __PYX_ERR(0, 157, __pyx_L1_error);
+    __pyx_t_18 = 0;
+    __pyx_t_18 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 157, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_18);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = PyNumber_Subtract(((PyObject *)__pyx_v_r), __pyx_int_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
+<<<<<<< HEAD
     __pyx_t_19 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 159, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 159, __pyx_L1_error)
@@ -7353,12 +8340,30 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
     /* "VitLib/VitLib_cython/membrane.pyx":157
+=======
+    __pyx_t_19 = PyNumber_Subtract(((PyObject *)__pyx_v_c), __pyx_int_1); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_GIVEREF(__pyx_t_1);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_19);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_19)) __PYX_ERR(0, 157, __pyx_L1_error);
+    __pyx_t_1 = 0;
+    __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_20); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 157, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+
+    /* "VitLib/VitLib_cython/membrane.pyx":155
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     while True:
  *         r, c = src.nonzero()
  *         nei = np.array((src[r-1, c], src[r-1, c+1], src[r, c+1],             # <<<<<<<<<<<<<<
  *                         src[r+1, c+1], src[r+1, c], src[r+1, c-1],
  *                         src[r, c-1], src[r-1, c-1]))
  */
+<<<<<<< HEAD
     __pyx_t_20 = PyTuple_New(8); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __Pyx_GIVEREF(__pyx_t_6);
@@ -7377,6 +8382,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 6, __pyx_t_18)) __PYX_ERR(0, 157, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_19);
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 7, __pyx_t_19)) __PYX_ERR(0, 157, __pyx_L1_error);
+=======
+    __pyx_t_20 = PyTuple_New(8); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 155, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_GIVEREF(__pyx_t_6);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_13);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_13)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_14);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 2, __pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_15);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 3, __pyx_t_15)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_16);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 4, __pyx_t_16)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_17);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 5, __pyx_t_17)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_18);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 6, __pyx_t_18)) __PYX_ERR(0, 155, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_19);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 7, __pyx_t_19)) __PYX_ERR(0, 155, __pyx_L1_error);
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_6 = 0;
     __pyx_t_13 = 0;
     __pyx_t_14 = 0;
@@ -7404,14 +8429,22 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":162
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":160
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0, dtype=DTYPE)             # <<<<<<<<<<<<<<
@@ -7427,6 +8460,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_v_nei);
     __Pyx_GIVEREF(__pyx_v_nei);
+<<<<<<< HEAD
     if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_nei)) __PYX_ERR(0, 162, __pyx_L1_error);
     __pyx_t_20 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
@@ -7436,11 +8470,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (PyDict_SetItem(__pyx_t_20, __pyx_n_s_dtype, __pyx_t_19) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_20); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 162, __pyx_L1_error)
+=======
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_nei)) __PYX_ERR(0, 160, __pyx_L1_error);
+    __pyx_t_20 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    if (PyDict_SetItem(__pyx_t_20, __pyx_n_s_axis, __pyx_int_0) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_DTYPE); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    if (PyDict_SetItem(__pyx_t_20, __pyx_n_s_dtype, __pyx_t_19) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_20); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 160, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_19) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_19, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 162, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_19) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_19, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 160, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_21 = ((PyArrayObject *)__pyx_t_19);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7463,13 +8512,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_nei_sum, ((PyArrayObject *)__pyx_t_19));
     __pyx_t_19 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":163
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":161
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 1
  *         nei_sum = np.sum(nei, axis=0, dtype=DTYPE)
  *         cond1 = np.logical_and(2 <= nei_sum, nei_sum <= 6)             # <<<<<<<<<<<<<<
  * 
  *         # condition 2
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 163, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
@@ -7477,6 +8531,15 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __pyx_t_20 = PyObject_RichCompare(__pyx_int_2, ((PyObject *)__pyx_v_nei_sum), Py_LE); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 163, __pyx_L1_error)
     __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_nei_sum), __pyx_int_6, Py_LE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    __pyx_t_20 = PyObject_RichCompare(__pyx_int_2, ((PyObject *)__pyx_v_nei_sum), Py_LE); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_nei_sum), __pyx_int_6, Py_LE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_18 = NULL;
     __pyx_t_4 = 0;
     #if CYTHON_UNPACK_METHODS
@@ -7497,11 +8560,19 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_XDECREF(__pyx_t_18); __pyx_t_18 = 0;
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 163, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     if (!(likely(((__pyx_t_19) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_19, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 163, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 161, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_19);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    }
+    if (!(likely(((__pyx_t_19) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_19, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 161, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_19);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7524,13 +8595,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_cond1, ((PyArrayObject *)__pyx_t_19));
     __pyx_t_19 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":166
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":164
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)             # <<<<<<<<<<<<<<
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_np); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_19, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
@@ -7547,6 +8623,24 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_GOTREF(__pyx_t_18);
     __Pyx_GIVEREF(__pyx_t_2);
     if (__Pyx_PyList_SET_ITEM(__pyx_t_18, 0, __pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error);
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_np); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_19, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_array); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_18 = PyList_New(1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __Pyx_GIVEREF(__pyx_t_2);
+    if (__Pyx_PyList_SET_ITEM(__pyx_t_18, 0, __pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error);
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
@@ -7567,6 +8661,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_19 = __Pyx_PyObject_FastCall(__pyx_t_20, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 166, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
@@ -7588,6 +8683,29 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_GOTREF(__pyx_t_20);
     if (PyDict_SetItem(__pyx_t_20, __pyx_n_s_axis, __pyx_int_0) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
     __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_19, __pyx_t_20); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 166, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 164, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_19);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    }
+    __pyx_t_20 = PyList_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_INCREF(__pyx_v_nei);
+    __Pyx_GIVEREF(__pyx_v_nei);
+    if (__Pyx_PyList_SET_ITEM(__pyx_t_20, 0, __pyx_v_nei)) __PYX_ERR(0, 164, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_19);
+    if (__Pyx_PyList_SET_ITEM(__pyx_t_20, 1, __pyx_t_19)) __PYX_ERR(0, 164, __pyx_L1_error);
+    __pyx_t_19 = 0;
+    __pyx_t_19 = PyTuple_New(1); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __Pyx_GIVEREF(__pyx_t_20);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_t_20)) __PYX_ERR(0, 164, __pyx_L1_error);
+    __pyx_t_20 = 0;
+    __pyx_t_20 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    if (PyDict_SetItem(__pyx_t_20, __pyx_n_s_axis, __pyx_int_0) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_19, __pyx_t_20); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 164, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_18);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
@@ -7595,13 +8713,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_18);
     __pyx_t_18 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":167
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":165
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 2
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)             # <<<<<<<<<<<<<<
  *         for i in range(1, 9):
  *             cond2 += np.array(
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 167, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_zeros); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 167, __pyx_L1_error)
@@ -7624,11 +8747,39 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     if (PyDict_SetItem(__pyx_t_19, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_20, __pyx_t_18, __pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_zeros); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_v_nei, __pyx_n_s_shape); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_t_18, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __pyx_t_18 = PyTuple_New(1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __Pyx_GIVEREF(__pyx_t_19);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_t_19)) __PYX_ERR(0, 165, __pyx_L1_error);
+    __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DTYPE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (PyDict_SetItem(__pyx_t_19, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_20, __pyx_t_18, __pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 167, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 165, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7651,7 +8802,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_cond2, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":168
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":166
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         nei = np.concatenate([nei, np.array([nei[0]])], axis=0)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -7659,12 +8814,20 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  */
     for (__pyx_t_23 = 1; __pyx_t_23 < 9; __pyx_t_23+=1) {
+<<<<<<< HEAD
       __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_t_23); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+=======
+      __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_t_23); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
       __pyx_t_3 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":169
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":167
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
@@ -7673,17 +8836,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
+<<<<<<< HEAD
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "VitLib/VitLib_cython/membrane.pyx":170
+=======
+      __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_19);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "VitLib/VitLib_cython/membrane.pyx":168
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]
  */
+<<<<<<< HEAD
       __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_18);
       __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 170, __pyx_L1_error)
@@ -7700,6 +8872,24 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_nei, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_17 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 170, __pyx_L1_error)
+=======
+      __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_PyInt_SubtractObjC(__pyx_v_i, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_nei, __pyx_t_18); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_nei, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_17 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 168, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -7722,18 +8912,27 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+<<<<<<< HEAD
         if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+=======
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
       }
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":169
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":167
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  */
+<<<<<<< HEAD
       __pyx_t_20 = PyTuple_New(1); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_20);
       __Pyx_GIVEREF(__pyx_t_3);
@@ -7741,6 +8940,15 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_3 = 0;
 
       /* "VitLib/VitLib_cython/membrane.pyx":170
+=======
+      __pyx_t_20 = PyTuple_New(1); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_GIVEREF(__pyx_t_3);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error);
+      __pyx_t_3 = 0;
+
+      /* "VitLib/VitLib_cython/membrane.pyx":168
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for i in range(1, 9):
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)             # <<<<<<<<<<<<<<
@@ -7749,6 +8957,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
       __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
+<<<<<<< HEAD
       __Pyx_GetModuleGlobalName(__pyx_t_17, __pyx_n_s_np); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_17);
       __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_17, __pyx_n_s_uint8); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 170, __pyx_L1_error)
@@ -7758,21 +8967,43 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
       /* "VitLib/VitLib_cython/membrane.pyx":169
+=======
+      __Pyx_GetModuleGlobalName(__pyx_t_17, __pyx_n_s_np); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
+      __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_17, __pyx_n_s_uint8); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_18) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+
+      /* "VitLib/VitLib_cython/membrane.pyx":167
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond2 = np.zeros(nei.shape[1], dtype=DTYPE)
  *         for i in range(1, 9):
  *             cond2 += np.array(             # <<<<<<<<<<<<<<
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  */
+<<<<<<< HEAD
       __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_19, __pyx_t_20, __pyx_t_3); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 169, __pyx_L1_error)
+=======
+      __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_19, __pyx_t_20, __pyx_t_3); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 167, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_18);
       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+<<<<<<< HEAD
       __pyx_t_3 = PyNumber_InPlaceAdd(((PyObject *)__pyx_v_cond2), __pyx_t_18); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
       if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 169, __pyx_L1_error)
+=======
+      __pyx_t_3 = PyNumber_InPlaceAdd(((PyObject *)__pyx_v_cond2), __pyx_t_18); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 167, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7796,15 +9027,24 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_3 = 0;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":171
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":169
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond2 += np.array(
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1             # <<<<<<<<<<<<<<
  *         nei = nei[0:8]
  * 
  */
+<<<<<<< HEAD
     __pyx_t_3 = PyObject_RichCompare(((PyObject *)__pyx_v_cond2), __pyx_int_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
     if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 171, __pyx_L1_error)
+=======
+    __pyx_t_3 = PyObject_RichCompare(((PyObject *)__pyx_v_cond2), __pyx_int_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 169, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7827,7 +9067,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF_SET(__pyx_v_cond2, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":172
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":170
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -7839,13 +9083,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF_SET(__pyx_v_nei, __pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":175
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":173
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 175, __pyx_L1_error)
@@ -7853,12 +9102,22 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
     /* "VitLib/VitLib_cython/membrane.pyx":176
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+
+    /* "VitLib/VitLib_cython/membrane.pyx":174
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 3
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)             # <<<<<<<<<<<<<<
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  */
+<<<<<<< HEAD
     __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 176, __pyx_L1_error)
@@ -7891,6 +9150,40 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     __pyx_t_18 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 176, __pyx_L1_error)
+=======
+    __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_17 = PyNumber_Add(__pyx_t_18, __pyx_t_19); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_18 = PyNumber_Add(__pyx_t_17, __pyx_t_19); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 5, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_17 = PyNumber_Add(__pyx_t_18, __pyx_t_19); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyInt_EqObjC(__pyx_t_17, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    __pyx_t_17 = __Pyx_GetItemInt(__pyx_v_nei, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_2 = PyNumber_Add(__pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __pyx_t_18 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 174, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_18);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -7913,19 +9206,31 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":175
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":173
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 3
  *         c3a = np.logical_and(             # <<<<<<<<<<<<<<
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  */
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 175, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 173, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -7948,13 +9253,18 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_c3a, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":177
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":175
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 177, __pyx_L1_error)
@@ -7962,12 +9272,22 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
     /* "VitLib/VitLib_cython/membrane.pyx":178
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+
+    /* "VitLib/VitLib_cython/membrane.pyx":176
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)             # <<<<<<<<<<<<<<
  *         cond3 = np.logical_or(c3a, c3b)
  * 
  */
+<<<<<<< HEAD
     __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 178, __pyx_L1_error)
@@ -7980,12 +9300,37 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_t_20 = PyNumber_Add(__pyx_t_2, __pyx_t_19); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
+=======
+    __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_2 = PyNumber_Add(__pyx_t_20, __pyx_t_19); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_20 = PyNumber_Add(__pyx_t_2, __pyx_t_19); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 7, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_2 = PyNumber_Add(__pyx_t_20, __pyx_t_19); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     __pyx_t_19 = __Pyx_GetItemInt(__pyx_v_nei, 7, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_t_2 = PyNumber_Add(__pyx_t_20, __pyx_t_19); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
+<<<<<<< HEAD
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     __pyx_t_19 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 178, __pyx_L1_error)
@@ -8000,6 +9345,15 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __pyx_t_20 = __Pyx_PyInt_EqObjC(__pyx_t_17, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 178, __pyx_L1_error)
+=======
+    __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_17 = PyNumber_Add(__pyx_t_2, __pyx_t_20); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    __pyx_t_20 = __Pyx_PyInt_EqObjC(__pyx_t_17, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 176, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_20);
     __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     __pyx_t_17 = NULL;
@@ -8022,19 +9376,31 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":177
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":175
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         c3a = np.logical_and(
  *             nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
  *         c3b = np.logical_and(             # <<<<<<<<<<<<<<
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)
  */
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 177, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 175, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8057,16 +9423,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_c3b, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":179
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":177
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         c3b = np.logical_and(
  *             nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
  *         cond3 = np.logical_or(c3a, c3b)             # <<<<<<<<<<<<<<
  * 
  *         # condition 4
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 179, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_or); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 179, __pyx_L1_error)
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_18, __pyx_n_s_np); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_18, __pyx_n_s_logical_or); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 177, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_20);
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     __pyx_t_18 = NULL;
@@ -8087,11 +9463,19 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       PyObject *__pyx_callargs[3] = {__pyx_t_18, ((PyObject *)__pyx_v_c3a), ((PyObject *)__pyx_v_c3b)};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_20, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_18); __pyx_t_18 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     }
     if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 179, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    }
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 177, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8114,7 +9498,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_cond3, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":182
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":180
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -8124,7 +9512,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __pyx_t_24 = (__pyx_v_switch != 0);
     if (__pyx_t_24) {
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":183
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":181
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         # condition 4
  *         if switch:
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0             # <<<<<<<<<<<<<<
@@ -8133,6 +9525,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
       __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_nei, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
+<<<<<<< HEAD
       __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 183, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_20);
       __pyx_t_18 = PyNumber_Add(__pyx_t_3, __pyx_t_20); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 183, __pyx_L1_error)
@@ -8155,6 +9548,30 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_GOTREF(__pyx_t_20);
       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
       if (!(likely(((__pyx_t_20) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_20, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 183, __pyx_L1_error)
+=======
+      __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __pyx_t_18 = PyNumber_Add(__pyx_t_3, __pyx_t_20); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __pyx_t_3 = PyNumber_Multiply(__pyx_t_18, __pyx_t_20); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __pyx_t_18 = PyNumber_Multiply(__pyx_t_3, __pyx_t_20); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      __pyx_t_20 = __Pyx_PyInt_EqObjC(__pyx_t_18, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      if (!(likely(((__pyx_t_20) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_20, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 181, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __pyx_t_22 = ((PyArrayObject *)__pyx_t_20);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8177,7 +9594,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_XDECREF_SET(__pyx_v_cond4, ((PyArrayObject *)__pyx_t_20));
       __pyx_t_20 = 0;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":182
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":180
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         # condition 4
  *         if switch:             # <<<<<<<<<<<<<<
@@ -8187,7 +9608,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       goto __pyx_L9;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":185
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":183
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond4 = (nei[2]+nei[4])*nei[0]*nei[6] == 0
  *         else:
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0             # <<<<<<<<<<<<<<
@@ -8195,6 +9620,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  */
     /*else*/ {
+<<<<<<< HEAD
       __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 185, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_20);
       __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 185, __pyx_L1_error)
@@ -8219,6 +9645,32 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_GOTREF(__pyx_t_18);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 185, __pyx_L1_error)
+=======
+      __pyx_t_20 = __Pyx_GetItemInt(__pyx_v_nei, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 6, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_3 = PyNumber_Add(__pyx_t_20, __pyx_t_18); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_20 = PyNumber_Multiply(__pyx_t_3, __pyx_t_18); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_GetItemInt(__pyx_v_nei, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_3 = PyNumber_Multiply(__pyx_t_20, __pyx_t_18); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_PyInt_EqObjC(__pyx_t_3, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 183, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 183, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __pyx_t_22 = ((PyArrayObject *)__pyx_t_18);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8243,7 +9695,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     }
     __pyx_L9:;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":187
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":185
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             cond4 = (nei[0]+nei[6])*nei[2]*nei[4] == 0
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)             # <<<<<<<<<<<<<<
@@ -8252,12 +9708,21 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
+<<<<<<< HEAD
     __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_np); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_19, __pyx_n_s_logical_or); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 187, __pyx_L1_error)
+=======
+    __pyx_t_20 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 185, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_np); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 185, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_19, __pyx_n_s_logical_or); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 185, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_17);
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     __pyx_t_19 = NULL;
@@ -8278,7 +9743,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       PyObject *__pyx_callargs[3] = {__pyx_t_19, ((PyObject *)__pyx_v_cond2), ((PyObject *)__pyx_v_cond3)};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_17, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_19); __pyx_t_19 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     }
@@ -8301,11 +9770,19 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __pyx_t_18 = __Pyx_PyObject_FastCall(__pyx_t_20, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 187, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_18);
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     }
     if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 187, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 185, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+    }
+    if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 185, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_18);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8328,16 +9805,26 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_XDECREF_SET(__pyx_v_cond, ((PyArrayObject *)__pyx_t_18));
     __pyx_t_18 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":188
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":186
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)             # <<<<<<<<<<<<<<
  *         if True in cond:
  *             switch = not switch
  */
+<<<<<<< HEAD
     __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 188, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+=======
+    __Pyx_GetModuleGlobalName(__pyx_t_20, __pyx_n_s_np); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_20, __pyx_n_s_logical_and); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 186, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
     __pyx_t_20 = NULL;
@@ -8358,11 +9845,19 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       PyObject *__pyx_callargs[3] = {__pyx_t_20, ((PyObject *)__pyx_v_cond), ((PyObject *)__pyx_v_cond4)};
       __pyx_t_18 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_20); __pyx_t_20 = 0;
+<<<<<<< HEAD
       if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 188, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_18);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 188, __pyx_L1_error)
+=======
+      if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 186, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    }
+    if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 186, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_22 = ((PyArrayObject *)__pyx_t_18);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8385,17 +9880,28 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
     __Pyx_DECREF_SET(__pyx_v_cond, ((PyArrayObject *)__pyx_t_18));
     __pyx_t_18 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":189
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":187
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
  *             switch = not switch
  *         else:
  */
+<<<<<<< HEAD
     __pyx_t_24 = (__Pyx_PySequence_ContainsTF(Py_True, ((PyObject *)__pyx_v_cond), Py_EQ)); if (unlikely((__pyx_t_24 < 0))) __PYX_ERR(0, 189, __pyx_L1_error)
     if (__pyx_t_24) {
 
       /* "VitLib/VitLib_cython/membrane.pyx":190
+=======
+    __pyx_t_24 = (__Pyx_PySequence_ContainsTF(Py_True, ((PyObject *)__pyx_v_cond), Py_EQ)); if (unlikely((__pyx_t_24 < 0))) __PYX_ERR(0, 187, __pyx_L1_error)
+    if (__pyx_t_24) {
+
+      /* "VitLib/VitLib_cython/membrane.pyx":188
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:
  *             switch = not switch             # <<<<<<<<<<<<<<
@@ -8404,7 +9910,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
       __pyx_v_switch = (!(__pyx_v_switch != 0));
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":189
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":187
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         cond = np.logical_and(cond1, np.logical_or(cond2, cond3))#1<b<7 and (a==1 or c==1)
  *         cond = np.logical_and(cond, cond4)
  *         if True in cond:             # <<<<<<<<<<<<<<
@@ -8414,7 +9924,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       goto __pyx_L10;
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":192
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":190
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             switch = not switch
  *         else:
  *             return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -8423,6 +9937,7 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
  */
     /*else*/ {
       __Pyx_XDECREF((PyObject *)__pyx_r);
+<<<<<<< HEAD
       __pyx_t_18 = __Pyx_PyInt_From_long((__pyx_v_ROW - 1)); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 192, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_18);
       __pyx_t_3 = PySlice_New(__pyx_int_1, __pyx_t_18, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
@@ -8448,19 +9963,51 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
       __Pyx_GOTREF(__pyx_t_18);
       __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
       if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 192, __pyx_L1_error)
+=======
+      __pyx_t_18 = __Pyx_PyInt_From_long((__pyx_v_ROW - 1)); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_3 = PySlice_New(__pyx_int_1, __pyx_t_18, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_PyInt_From_long((__pyx_v_COLUMN - 1)); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __pyx_t_20 = PySlice_New(__pyx_int_1, __pyx_t_18, Py_None); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_GIVEREF(__pyx_t_3);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error);
+      __Pyx_GIVEREF(__pyx_t_20);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_20)) __PYX_ERR(0, 190, __pyx_L1_error);
+      __pyx_t_3 = 0;
+      __pyx_t_20 = 0;
+      __pyx_t_20 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_src), __pyx_t_18); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_20);
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+      __pyx_t_18 = __Pyx_PyInt_MultiplyObjC(__pyx_t_20, __pyx_int_255, 0xFF, 0, 0); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_18);
+      __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
+      if (!(likely(((__pyx_t_18) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_18, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 190, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
       __pyx_r = ((PyArrayObject *)__pyx_t_18);
       __pyx_t_18 = 0;
       goto __pyx_L0;
     }
     __pyx_L10:;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":194
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":192
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             return src[1:ROW-1, 1:COLUMN-1]*255
  * 
  *         src[r[cond], c[cond]] = 0             # <<<<<<<<<<<<<<
  * ###
  * 
  */
+<<<<<<< HEAD
     __pyx_t_18 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_r), ((PyObject *)__pyx_v_cond)); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
     __pyx_t_20 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_c), ((PyObject *)__pyx_v_cond)); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 194, __pyx_L1_error)
@@ -8478,6 +10025,25 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG_old(PyArrayO
   }
 
   /* "VitLib/VitLib_cython/membrane.pyx":102
+=======
+    __pyx_t_18 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_r), ((PyObject *)__pyx_v_cond)); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_20 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_c), ((PyObject *)__pyx_v_cond)); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_20);
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_18);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_18)) __PYX_ERR(0, 192, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_20);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_20)) __PYX_ERR(0, 192, __pyx_L1_error);
+    __pyx_t_18 = 0;
+    __pyx_t_20 = 0;
+    if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_src), __pyx_t_3, __pyx_int_0) < 0))) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  }
+
+  /* "VitLib/VitLib_cython/membrane.pyx":101
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -8564,7 +10130,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_2NWG_old, "NWG_old(ndarray img) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 102)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0, ""  0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_2NWG_old, "NWG_old(ndarray img) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 101)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG_old\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG_old(img)\n        array([[  0,   0,   0,   0,   0,   0,  "" 0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_3NWG_old = {"NWG_old", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_2NWG_old};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_3NWG_old(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -8704,7 +10274,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_2NWG_old(CYTHON_UNUS
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":199
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":197
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -8800,7 +10374,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":237
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":234
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             using cython.
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')             # <<<<<<<<<<<<<<
@@ -8879,7 +10457,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
   __pyx_v_src = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":239
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":236
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] Q
  *     cdef int ROW = src.shape[0]             # <<<<<<<<<<<<<<
@@ -8888,7 +10470,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
   __pyx_v_ROW = (__pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src))[0]);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":240
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":237
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] Q
  *     cdef int ROW = src.shape[0]
  *     cdef int COLUMN = src.shape[1]             # <<<<<<<<<<<<<<
@@ -8897,7 +10483,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
   __pyx_v_COLUMN = (__pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_src))[1]);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":248
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":245
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     #
  *     g = 1             # <<<<<<<<<<<<<<
@@ -8906,7 +10496,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
   __pyx_v_g = 1;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":249
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":246
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     #
  *     g = 1
  *     h = 1             # <<<<<<<<<<<<<<
@@ -8915,7 +10509,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
   __pyx_v_h = 1;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":250
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":247
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     g = 1
  *     h = 1
  *     while h==1:             # <<<<<<<<<<<<<<
@@ -8926,7 +10524,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
     __pyx_t_8 = (__pyx_v_h == 1);
     if (!__pyx_t_8) break;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":251
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":248
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     h = 1
  *     while h==1:
  *         Q = np.zeros_like(src)             # <<<<<<<<<<<<<<
@@ -8960,7 +10562,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
+<<<<<<< HEAD
     if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 251, __pyx_L1_error)
+=======
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 248, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
     __pyx_t_9 = ((PyArrayObject *)__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8983,7 +10589,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
     __Pyx_XDECREF_SET(__pyx_v_Q, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":252
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":249
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     while h==1:
  *         Q = np.zeros_like(src)
  *         g = 1 - g             # <<<<<<<<<<<<<<
@@ -8992,7 +10602,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
     __pyx_v_g = (1 - __pyx_v_g);
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":253
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":250
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         Q = np.zeros_like(src)
  *         g = 1 - g
  *         h = 0             # <<<<<<<<<<<<<<
@@ -9001,7 +10615,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
     __pyx_v_h = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":255
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":252
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         h = 0
  * 
  *         for x in range(1,COLUMN-1):             # <<<<<<<<<<<<<<
@@ -9013,7 +10631,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
     for (__pyx_t_6 = 1; __pyx_t_6 < __pyx_t_14; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
+<<<<<<< HEAD
       /* "VitLib/VitLib_cython/membrane.pyx":256
+=======
+      /* "VitLib/VitLib_cython/membrane.pyx":253
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):             # <<<<<<<<<<<<<<
@@ -9025,7 +10647,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
       for (__pyx_t_17 = 1; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
         __pyx_v_y = __pyx_t_17;
 
+<<<<<<< HEAD
         /* "VitLib/VitLib_cython/membrane.pyx":257
+=======
+        /* "VitLib/VitLib_cython/membrane.pyx":254
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:             # <<<<<<<<<<<<<<
@@ -9037,7 +10663,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
         __pyx_t_8 = ((*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides)) == 1);
         if (__pyx_t_8) {
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":258
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":255
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:
  *                     p[0] = src[y-1, x]             # <<<<<<<<<<<<<<
@@ -9048,7 +10678,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_18 = __pyx_v_x;
           (__pyx_v_p[0]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":259
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":256
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                 if src[y,x]==1:
  *                     p[0] = src[y-1, x]
  *                     p[1] = src[y-1, x+1]             # <<<<<<<<<<<<<<
@@ -9059,7 +10693,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_19 = (__pyx_v_x + 1);
           (__pyx_v_p[1]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":260
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":257
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[0] = src[y-1, x]
  *                     p[1] = src[y-1, x+1]
  *                     p[2] = src[y, x+1]             # <<<<<<<<<<<<<<
@@ -9070,7 +10708,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_18 = (__pyx_v_x + 1);
           (__pyx_v_p[2]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":261
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":258
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[1] = src[y-1, x+1]
  *                     p[2] = src[y, x+1]
  *                     p[3] = src[y+1, x+1]             # <<<<<<<<<<<<<<
@@ -9081,7 +10723,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_19 = (__pyx_v_x + 1);
           (__pyx_v_p[3]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":262
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":259
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[2] = src[y, x+1]
  *                     p[3] = src[y+1, x+1]
  *                     p[4] = src[y+1, x]             # <<<<<<<<<<<<<<
@@ -9092,7 +10738,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_18 = __pyx_v_x;
           (__pyx_v_p[4]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":263
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":260
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[3] = src[y+1, x+1]
  *                     p[4] = src[y+1, x]
  *                     p[5] = src[y+1, x-1]             # <<<<<<<<<<<<<<
@@ -9103,7 +10753,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_19 = (__pyx_v_x - 1);
           (__pyx_v_p[5]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":264
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":261
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[4] = src[y+1, x]
  *                     p[5] = src[y+1, x-1]
  *                     p[6] = src[y, x-1]             # <<<<<<<<<<<<<<
@@ -9114,7 +10768,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_18 = (__pyx_v_x - 1);
           (__pyx_v_p[6]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":265
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":262
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[5] = src[y+1, x-1]
  *                     p[6] = src[y, x-1]
  *                     p[7] = src[y-1, x-1]             # <<<<<<<<<<<<<<
@@ -9125,7 +10783,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_19 = (__pyx_v_x - 1);
           (__pyx_v_p[7]) = (*__Pyx_BufPtrStrided2d(__pyx_t_6VitLib_13VitLib_cython_8membrane_DTYPE_t *, __pyx_pybuffernd_src.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_src.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_src.diminfo[1].strides));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":266
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":263
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     p[6] = src[y, x-1]
  *                     p[7] = src[y-1, x-1]
  *                     p[8] = p[0]             # <<<<<<<<<<<<<<
@@ -9134,7 +10796,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
           (__pyx_v_p[8]) = (__pyx_v_p[0]);
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":269
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":266
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     # condition 1
  *                     p_sum = p[0]+p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]             # <<<<<<<<<<<<<<
@@ -9143,7 +10809,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
           __pyx_v_p_sum = ((((((((__pyx_v_p[0]) + (__pyx_v_p[1])) + (__pyx_v_p[2])) + (__pyx_v_p[3])) + (__pyx_v_p[4])) + (__pyx_v_p[5])) + (__pyx_v_p[6])) + (__pyx_v_p[7]));
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":270
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":267
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     # condition 1
  *                     p_sum = p[0]+p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]
  *                     cond1 = 1<p_sum and p_sum<7             # <<<<<<<<<<<<<<
@@ -9161,7 +10831,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_L10_bool_binop_done:;
           __pyx_v_cond1 = __pyx_t_20;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":273
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":270
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     # condition 2
  *                     a=0             # <<<<<<<<<<<<<<
@@ -9171,7 +10845,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __Pyx_INCREF(__pyx_int_0);
           __Pyx_XDECREF_SET(__pyx_v_a, __pyx_int_0);
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":274
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":271
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     # condition 2
  *                     a=0
  *                     for i in range(1, 9):             # <<<<<<<<<<<<<<
@@ -9181,7 +10859,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           for (__pyx_t_20 = 1; __pyx_t_20 < 9; __pyx_t_20+=1) {
             __pyx_v_i = __pyx_t_20;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":275
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":272
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     a=0
  *                     for i in range(1, 9):
  *                         a += 1 if p[i-1]==0 and p[i]==1 else 0             # <<<<<<<<<<<<<<
@@ -9211,7 +10893,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             __pyx_t_5 = 0;
           }
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":276
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":273
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     for i in range(1, 9):
  *                         a += 1 if p[i-1]==0 and p[i]==1 else 0
  *                     cond2 = a==1             # <<<<<<<<<<<<<<
@@ -9220,11 +10906,19 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
           __pyx_t_5 = __Pyx_PyInt_EqObjC(__pyx_v_a, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 276, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
+<<<<<<< HEAD
           __pyx_t_20 = __Pyx_PyInt_As_int(__pyx_t_5); if (unlikely((__pyx_t_20 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 276, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __pyx_v_cond2 = __pyx_t_20;
 
           /* "VitLib/VitLib_cython/membrane.pyx":279
+=======
+          __pyx_t_20 = __Pyx_PyInt_As_int(__pyx_t_5); if (unlikely((__pyx_t_20 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 273, __pyx_L1_error)
+          __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+          __pyx_v_cond2 = __pyx_t_20;
+
+          /* "VitLib/VitLib_cython/membrane.pyx":276
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     # condition 3
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2             # <<<<<<<<<<<<<<
@@ -9242,7 +10936,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_L16_bool_binop_done:;
           __pyx_v_cond3a = __pyx_t_20;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":280
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":277
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     # condition 3
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2             # <<<<<<<<<<<<<<
@@ -9260,7 +10958,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_L18_bool_binop_done:;
           __pyx_v_cond3b = __pyx_t_20;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":281
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":278
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:             # <<<<<<<<<<<<<<
@@ -9270,7 +10972,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_8 = (__pyx_v_symmetric != 0);
           if (__pyx_t_8) {
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":282
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":279
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2             # <<<<<<<<<<<<<<
@@ -9288,7 +10994,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             __pyx_L21_bool_binop_done:;
             __pyx_v_cond3c = __pyx_t_20;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":283
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":280
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     if symmetric:
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2             # <<<<<<<<<<<<<<
@@ -9306,7 +11016,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             __pyx_L23_bool_binop_done:;
             __pyx_v_cond3d = __pyx_t_20;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":284
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":281
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2
  *                         c = cond3a or cond3b             # <<<<<<<<<<<<<<
@@ -9322,7 +11036,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             __pyx_L25_bool_binop_done:;
             __pyx_v_c = __pyx_t_20;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":285
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":282
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2
  *                         c = cond3a or cond3b
  *                         d = cond3c or cond3d             # <<<<<<<<<<<<<<
@@ -9338,7 +11056,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             __pyx_L27_bool_binop_done:;
             __pyx_v_d = __pyx_t_20;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":286
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":283
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         c = cond3a or cond3b
  *                         d = cond3c or cond3d
  *                         cond3 = (1 - g)*c + g*d == 1             # <<<<<<<<<<<<<<
@@ -9347,7 +11069,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
             __pyx_v_cond3 = ((((1 - __pyx_v_g) * __pyx_v_c) + (__pyx_v_g * __pyx_v_d)) == 1);
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":281
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":278
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
  *                     cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
  *                     if symmetric:             # <<<<<<<<<<<<<<
@@ -9357,7 +11083,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             goto __pyx_L20;
           }
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":288
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":285
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         cond3 = (1 - g)*c + g*d == 1
  *                     else:
  *                         cond3 = cond3a or cond3b             # <<<<<<<<<<<<<<
@@ -9376,7 +11106,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           }
           __pyx_L20:;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":292
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":289
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     # condition 4
  *                     if g==0:             # <<<<<<<<<<<<<<
@@ -9386,7 +11120,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_8 = (__pyx_v_g == 0);
           if (__pyx_t_8) {
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":293
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":290
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     # condition 4
  *                     if g==0:
  *                         cond4 = (p[2]+p[4])*p[0]*p[6] == 0             # <<<<<<<<<<<<<<
@@ -9395,7 +11133,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
             __pyx_v_cond4 = (((((__pyx_v_p[2]) + (__pyx_v_p[4])) * (__pyx_v_p[0])) * (__pyx_v_p[6])) == 0);
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":292
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":289
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     # condition 4
  *                     if g==0:             # <<<<<<<<<<<<<<
@@ -9405,7 +11147,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             goto __pyx_L31;
           }
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":295
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":292
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         cond4 = (p[2]+p[4])*p[0]*p[6] == 0
  *                     else:
  *                         cond4 = (p[0]+p[6])*p[2]*p[4] == 0             # <<<<<<<<<<<<<<
@@ -9417,7 +11163,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           }
           __pyx_L31:;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":296
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":293
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     else:
  *                         cond4 = (p[0]+p[6])*p[2]*p[4] == 0
  *                     cond = cond1 and (cond2 or cond3) and cond4             # <<<<<<<<<<<<<<
@@ -9443,7 +11193,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_L32_bool_binop_done:;
           __pyx_v_cond = __pyx_t_20;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":298
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":295
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     cond = cond1 and (cond2 or cond3) and cond4
  * 
  *                     if cond:             # <<<<<<<<<<<<<<
@@ -9453,7 +11207,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           __pyx_t_8 = (__pyx_v_cond != 0);
           if (__pyx_t_8) {
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":299
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":296
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *                     if cond:
  *                         h=1             # <<<<<<<<<<<<<<
@@ -9462,7 +11220,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
  */
             __pyx_v_h = 1;
 
+<<<<<<< HEAD
             /* "VitLib/VitLib_cython/membrane.pyx":298
+=======
+            /* "VitLib/VitLib_cython/membrane.pyx":295
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     cond = cond1 and (cond2 or cond3) and cond4
  * 
  *                     if cond:             # <<<<<<<<<<<<<<
@@ -9472,7 +11234,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
             goto __pyx_L36;
           }
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":301
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":298
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         h=1
  *                     else:
  *                         Q[y,x]=1             # <<<<<<<<<<<<<<
@@ -9486,7 +11252,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
           }
           __pyx_L36:;
 
+<<<<<<< HEAD
           /* "VitLib/VitLib_cython/membrane.pyx":257
+=======
+          /* "VitLib/VitLib_cython/membrane.pyx":254
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         for x in range(1,COLUMN-1):
  *             for y in range(1,ROW-1):
  *                 if src[y,x]==1:             # <<<<<<<<<<<<<<
@@ -9497,7 +11267,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
       }
     }
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":302
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":299
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                     else:
  *                         Q[y,x]=1
  *         src = Q             # <<<<<<<<<<<<<<
@@ -9525,7 +11299,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
     __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_v_Q));
   }
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":303
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":300
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                         Q[y,x]=1
  *         src = Q
  *     return src[1:ROW-1, 1:COLUMN-1]*255             # <<<<<<<<<<<<<<
@@ -9562,7 +11340,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_NWG(PyArrayObjec
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":199
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":197
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -9609,7 +11391,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_4NWG, "NWG(ndarray img, int symmetric=False) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 199)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([""[  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n            using cython.\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_4NWG, "NWG(ndarray img, int symmetric=False) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 197)\nNWG\347\264\260\347\267\232\345\214\226\343\202\222\350\241\214\343\201\206. \346\270\241\343\201\231\347\224\273\345\203\217\343\201\257\351\273\222\350\203\214\346\231\257(0)\343\201\253\347\231\275(255)\343\201\247\346\217\217\347\224\273\343\201\225\343\202\214\343\201\246\343\201\204\343\202\2132\345\200\244\347\224\273\345\203\217\343\201\247\343\201\202\343\202\213\345\277\205\350\246\201\343\201\214\343\201\202\343\202\213(cv2\343\201\2562\345\200\244\345\214\226\345\207\246\347\220\206\345\207\246\347\220\206\343\201\227\343\201\237\347\224\273\345\203\217).\n    \345\217\202\350\200\203\346\226\207\347\214\256 : https://www.sciencedirect.com/science/article/pii/016786559500121V\n\n    Args:\n        img (cnp.ndarray): 2\346\254\241\345\205\203\343\201\2562\345\200\244\347\224\273\345\203\217\n        symmetric (bool): \345\257\276\347\247\260\347\232\204\343\201\252\347\264\260\347\267\232\345\214\226\345\207\246\347\220\206\343\202\222\350\241\214\343\201\206\343\201\213\343\201\250\343\202\231\343\201\206\343\201\213\n\n    Returns:\n        cnp.ndarray: \347\264\260\347\267\232\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\n\n    Example:\n        >>> import numpy as np\n        >>> from nwg_cython import NWG\n        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0, 255, 255, 255,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],\n        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])\n        >>> NWG(img, symmetric=False)\n        array([[  0, ""  0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0, 255,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0],\n               [  0,   0,   0,   0,   0,   0,   0,   0]])        \n\n        Note:\n            img\343\201\2572\345\200\244\347\224\273\345\203\217\343\202\222\346\203\263\345\256\232\343\201\227\343\201\246\343\201\212\343\202\212\343\200\201[0, 255]\343\201\256\351\205\215\345\210\227\343\201\246\343\202\231\343\201\202\343\202\213\345\277\205\350\246\201\343\201\213\343\202\231\343\201\202\343\202\213\343\200\202\n            cv2\343\201\247\344\272\214\345\200\244\345\214\226\343\201\227\343\201\237\347\224\273\345\203\217\343\202\222\345\205\245\343\202\214\343\202\213\343\201\223\343\201\250\343\201\247\346\255\243\345\270\270\343\201\253\345\213\225\344\275\234\343\201\231\343\202\213\343\200\202\n            using cython.\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_5NWG = {"NWG", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_4NWG};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_5NWG(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -9771,7 +11557,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_4NWG(CYTHON_UNUSED P
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":308
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":305
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -9836,7 +11626,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
   }
   __pyx_pybuffernd_img.diminfo[0].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_img.diminfo[0].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_img.diminfo[1].strides = __pyx_pybuffernd_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_img.diminfo[1].shape = __pyx_pybuffernd_img.rcbuffer->pybuffer.shape[1];
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":321
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":318
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         using cython.
  *     """
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)             # <<<<<<<<<<<<<<
@@ -9884,7 +11678,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
   __pyx_v_src = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":324
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":321
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef r_list, c_list
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)             # <<<<<<<<<<<<<<
@@ -9969,7 +11767,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
   __pyx_v_c_list = __pyx_t_3;
   __pyx_t_3 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":325
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":322
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):             # <<<<<<<<<<<<<<
@@ -10093,7 +11895,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
     __pyx_v_r = __pyx_t_4;
     __pyx_v_c = __pyx_t_11;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":326
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":323
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):
  *         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)             # <<<<<<<<<<<<<<
@@ -10164,7 +11970,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
     __Pyx_DECREF_SET(__pyx_v_src, ((PyArrayObject *)__pyx_t_10));
     __pyx_t_10 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":325
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":322
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef int r, c
  *     r_list, c_list = np.nonzero(src)
  *     for r, c in zip(r_list, c_list):             # <<<<<<<<<<<<<<
@@ -10174,7 +11984,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":327
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":324
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     for r, c in zip(r_list, c_list):
  *         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)
  *     return src             # <<<<<<<<<<<<<<
@@ -10186,7 +12000,11 @@ static PyArrayObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_modifyLineWidth(
   __pyx_r = ((PyArrayObject *)__pyx_v_src);
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":308
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":305
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -10231,7 +12049,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_6modifyLineWidth, "modifyLineWidth(ndarray img, int radius=1) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 308)\n\347\264\260\347\267\232\345\214\226\343\201\225\343\202\214\343\201\237\347\224\273\345\203\217\343\201\256\347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\231\343\202\213. \n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        radius (int): \347\267\232\343\201\256\345\244\252\343\201\225.\n\n    Returns:\n        np.ndarray: \347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\227\343\201\237\347\224\273\345\203\217.\n\n    Note:\n        using cython.\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_6modifyLineWidth, "modifyLineWidth(ndarray img, int radius=1) -> ndarray\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 305)\n\347\264\260\347\267\232\345\214\226\343\201\225\343\202\214\343\201\237\347\224\273\345\203\217\343\201\256\347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\231\343\202\213. \n\n    Args:\n        img (np.ndarray): 2\345\200\244\347\224\273\345\203\217.\n        radius (int): \347\267\232\343\201\256\345\244\252\343\201\225.\n\n    Returns:\n        np.ndarray: \347\267\232\343\201\256\345\244\252\343\201\225\343\202\222\345\244\211\346\233\264\343\201\227\343\201\237\347\224\273\345\203\217.\n\n    Note:\n        using cython.\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_7modifyLineWidth = {"modifyLineWidth", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_7modifyLineWidth, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_6modifyLineWidth};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_7modifyLineWidth(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -10393,7 +12215,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_6modifyLineWidth(CYT
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":332
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":329
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -10536,7 +12362,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_pybuffernd_ans_img.diminfo[0].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img.diminfo[0].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img.diminfo[1].strides = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img.diminfo[1].shape = __pyx_pybuffernd_ans_img.rcbuffer->pybuffer.shape[1];
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":355
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":352
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef dict return_dict
  *     #
  *     if otsu:             # <<<<<<<<<<<<<<
@@ -10546,7 +12376,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_t_1 = (__pyx_v_otsu != 0);
   if (__pyx_t_1) {
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":356
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":353
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     #
  *     if otsu:
  *         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)             # <<<<<<<<<<<<<<
@@ -10667,7 +12501,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
     __pyx_v_pred_img_th = ((PyArrayObject *)__pyx_t_3);
     __pyx_t_3 = 0;
 
+<<<<<<< HEAD
     /* "VitLib/VitLib_cython/membrane.pyx":355
+=======
+    /* "VitLib/VitLib_cython/membrane.pyx":352
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     cdef dict return_dict
  *     #
  *     if otsu:             # <<<<<<<<<<<<<<
@@ -10677,7 +12515,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
     goto __pyx_L3;
   }
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":358
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":355
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
  *     else:
  *         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]             # <<<<<<<<<<<<<<
@@ -10749,7 +12591,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_L3:;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":359
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":356
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     else:
  *         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
  *     ans_img_th = cv2.threshold(ans_img, threshold, 255, cv2.THRESH_BINARY)[1]             # <<<<<<<<<<<<<<
@@ -10818,7 +12664,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_ans_img_th = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":362
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":359
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     # NWG
  *     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)             # <<<<<<<<<<<<<<
@@ -10849,7 +12699,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_pred_img_th_nwg = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":363
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":360
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     # NWG
  *     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)
  *     ans_img_th_nwg = NWG(ans_img_th, symmetric=symmetric)             # <<<<<<<<<<<<<<
@@ -10880,7 +12734,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_ans_img_th_nwg = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":366
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":363
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -10940,7 +12798,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF_SET(__pyx_v_pred_img_th_nwg, ((PyArrayObject *)__pyx_t_5));
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":367
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":364
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)
  *     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -11000,7 +12862,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF_SET(__pyx_v_ans_img_th_nwg, ((PyArrayObject *)__pyx_t_5));
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":370
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":367
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     #
  *     pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)             # <<<<<<<<<<<<<<
@@ -11057,7 +12923,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_pred_img_th_nwg_del = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":374
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":371
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     #
  *     ##
  *     membrane_length = np.sum(ans_img_th_nwg)             # <<<<<<<<<<<<<<
@@ -11095,7 +12965,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_membrane_length = __pyx_t_7;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":377
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":374
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)             # <<<<<<<<<<<<<<
@@ -11126,7 +13000,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_pred_img_th_fattened = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":378
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":375
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
  *     ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)             # <<<<<<<<<<<<<<
@@ -11157,7 +13035,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_ans_img_th_fattened = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":381
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":378
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ## (target in predicted)
  *     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))             # <<<<<<<<<<<<<<
@@ -11227,7 +13109,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_tip_length = __pyx_t_7;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":384
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":381
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ##
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))             # <<<<<<<<<<<<<<
@@ -11297,7 +13183,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_miss_length = __pyx_t_7;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":386
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":383
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)             # <<<<<<<<<<<<<<
@@ -11317,7 +13207,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_precision = __pyx_t_17;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":387
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":384
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length             # <<<<<<<<<<<<<<
@@ -11336,7 +13230,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_recall = __pyx_t_17;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":388
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":385
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)             # <<<<<<<<<<<<<<
@@ -11357,7 +13255,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_fmeasure = __pyx_t_18;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":390
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":387
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}             # <<<<<<<<<<<<<<
@@ -11389,7 +13291,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_return_dict = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":391
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":388
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
  *     return return_dict             # <<<<<<<<<<<<<<
@@ -11401,7 +13307,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_r = __pyx_v_return_dict;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":332
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":329
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -11467,7 +13377,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_8evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -> dict\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 332)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n\n    Note:\n        using cython.\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_8evaluate_membrane_prediction, "evaluate_membrane_prediction(ndarray pred_img, ndarray ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False) -> dict\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 329)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217.\n        ans_img (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244. otus=True\343\201\256\345\240\264\345\220\210\343\201\257\347\204\241\350\246\226\343\201\225\343\202\214\343\202\213.\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        symmetric (bool): NWG\347\264\260\347\267\232\345\214\226\343\201\256\345\257\276\347\247\260\346\200\247.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n        otsu (bool): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244\343\202\222\350\207\252\345\213\225\343\201\247\350\250\255\345\256\232\343\201\231\343\202\213\343\201\213\343\201\251\343\201\206\343\201\213.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n\n    Note:\n        using cython.\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_9evaluate_membrane_prediction = {"evaluate_membrane_prediction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_9evaluate_membrane_prediction, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_8evaluate_membrane_prediction};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_9evaluate_membrane_prediction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -11730,7 +13644,11 @@ static PyObject *__pyx_pf_6VitLib_13VitLib_cython_8membrane_8evaluate_membrane_p
   return __pyx_r;
 }
 
+<<<<<<< HEAD
 /* "VitLib/VitLib_cython/membrane.pyx":396
+=======
+/* "VitLib/VitLib_cython/membrane.pyx":393
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -11839,7 +13757,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[0].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].strides = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ans_img_th_nwg.diminfo[1].shape = __pyx_pybuffernd_ans_img_th_nwg.rcbuffer->pybuffer.shape[1];
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":418
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":415
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -11899,7 +13821,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF_SET(__pyx_v_pred_img_th_nwg, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":419
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":416
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     # [0,1]
  *     pred_img_th_nwg = (pred_img_th_nwg/255).astype(DTYPE)
  *     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)             # <<<<<<<<<<<<<<
@@ -11959,7 +13885,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF_SET(__pyx_v_ans_img_th_nwg, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":422
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":419
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     #
  *     pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)             # <<<<<<<<<<<<<<
@@ -12016,7 +13946,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_pred_img_th_nwg_del = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":426
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":423
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     #
  *     ##
  *     membrane_length = np.sum(ans_img_th_nwg)             # <<<<<<<<<<<<<<
@@ -12054,7 +13988,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_membrane_length = __pyx_t_5;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":429
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":426
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)             # <<<<<<<<<<<<<<
@@ -12085,7 +14023,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_pred_img_th_fattened = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":430
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":427
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     ##
  *     pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
  *     ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)             # <<<<<<<<<<<<<<
@@ -12116,7 +14058,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_ans_img_th_fattened = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":433
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":430
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ## (target in predicted)
  *     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))             # <<<<<<<<<<<<<<
@@ -12186,7 +14132,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_tip_length = __pyx_t_5;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":436
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":433
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     ##
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))             # <<<<<<<<<<<<<<
@@ -12256,7 +14206,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_miss_length = __pyx_t_5;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":438
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":435
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     miss_length = np.sum(np.logical_and(pred_img_th_nwg_del == 1, ans_img_th_fattened != 1))
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)             # <<<<<<<<<<<<<<
@@ -12276,7 +14230,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_precision = __pyx_t_16;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":439
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":436
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length             # <<<<<<<<<<<<<<
@@ -12295,7 +14253,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_recall = __pyx_t_16;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":440
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":437
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     precision = 0 if tip_length + miss_length==0 else tip_length / (tip_length + miss_length)
  *     recall = 0 if membrane_length==0 else tip_length / membrane_length
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)             # <<<<<<<<<<<<<<
@@ -12316,7 +14278,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   }
   __pyx_v_fmeasure = __pyx_t_18;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":442
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":439
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}             # <<<<<<<<<<<<<<
@@ -12348,7 +14314,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_v_return_dict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":443
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":440
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * 
  *     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
  *     return return_dict             # <<<<<<<<<<<<<<
@@ -12359,7 +14329,11 @@ static PyObject *__pyx_f_6VitLib_13VitLib_cython_8membrane_evaluate_membrane_pre
   __pyx_r = __pyx_v_return_dict;
   goto __pyx_L0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":396
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":393
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -12415,7 +14389,11 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
+<<<<<<< HEAD
 PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_10evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3) -> dict\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 396)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n\n    Note:\n        using cython.\n    ");
+=======
+PyDoc_STRVAR(__pyx_doc_6VitLib_13VitLib_cython_8membrane_10evaluate_membrane_prediction_nwg, "evaluate_membrane_prediction_nwg(ndarray pred_img_th_nwg, ndarray ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3) -> dict\nFile: VitLib/VitLib_cython/membrane.pyx (starting at line 393)\n\347\264\260\350\203\236\350\206\234\347\224\273\345\203\217\343\201\256\350\251\225\344\276\241\343\202\222\350\241\214\343\201\206\351\226\242\346\225\260.\n\n    Args:\n        pred_img_th_nwg (np.ndarray): \344\272\210\346\270\254\347\224\273\345\203\217. \344\272\214\345\200\244\345\214\226, NWG\347\264\260\347\267\232\345\214\226\346\270\210\343\201\277.\n        ans_img_th_nwg (np.ndarray): \346\255\243\350\247\243\347\224\273\345\203\217.\n        threshold (int): \344\272\214\345\200\244\345\214\226\343\201\256\351\226\276\345\200\244(\350\277\224\345\215\264\347\224\250).\n        del_area (int): \345\260\217\351\240\230\345\237\237\345\211\212\351\231\244\343\201\256\351\226\276\345\200\244.\n        radius (int): \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\250\210\347\256\227\343\201\253\344\275\277\347\224\250\343\201\231\343\202\213\345\215\212\345\276\204.\n\n    Returns:\n        dict: \350\251\225\344\276\241\346\214\207\346\250\231\343\201\256\350\276\236\346\233\270. precision, recall, fmeasure, threshold, del_area\343\202\222\343\202\255\343\203\274\343\201\250\343\201\231\343\202\213.\n\n    Note:\n        using cython.\n    ");
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
 static PyMethodDef __pyx_mdef_6VitLib_13VitLib_cython_8membrane_11evaluate_membrane_prediction_nwg = {"evaluate_membrane_prediction_nwg", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6VitLib_13VitLib_cython_8membrane_11evaluate_membrane_prediction_nwg, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_6VitLib_13VitLib_cython_8membrane_10evaluate_membrane_prediction_nwg};
 static PyObject *__pyx_pw_6VitLib_13VitLib_cython_8membrane_11evaluate_membrane_prediction_nwg(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -12753,8 +14731,13 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
+<<<<<<< HEAD
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 71, __pyx_L1_error)
   __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 325, __pyx_L1_error)
+=======
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 322, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 1026, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -12766,7 +14749,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1026
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1026
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy._core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -12777,7 +14764,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
+<<<<<<< HEAD
   /* "../../../../../private/var/folders/cm/4rxq_7cs5398zvgqtz8bh0_c0000gn/T/pip-build-env-7r5aux27/overlay/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd":1032
+=======
+  /* "../../../../../opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1032
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy._core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -12788,7 +14779,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":75
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":74
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *                 np.logical_and(nei[i-1] == 0, nei[i] == 1), dtype=np.uint8)
  *         cond2 = cond2 == 1
  *         nei = nei[0:8]             # <<<<<<<<<<<<<<
@@ -12799,7 +14794,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":237
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":234
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  *             using cython.
  *     '''
  *     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')             # <<<<<<<<<<<<<<
@@ -12822,7 +14821,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_NWG_nofix, 12, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 12, __pyx_L1_error)
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":102
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":101
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -12832,9 +14835,15 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_img); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
+<<<<<<< HEAD
   __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_NWG_old, 102, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 102, __pyx_L1_error)
 
   /* "VitLib/VitLib_cython/membrane.pyx":199
+=======
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_NWG_old, 101, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 101, __pyx_L1_error)
+
+  /* "VitLib/VitLib_cython/membrane.pyx":197
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -12844,12 +14853,21 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(2, __pyx_n_s_img, __pyx_n_s_symmetric); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
+<<<<<<< HEAD
   __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_NWG, 199, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 199, __pyx_L1_error)
   __pyx_tuple__13 = PyTuple_Pack(1, Py_False); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
   /* "VitLib/VitLib_cython/membrane.pyx":308
+=======
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_NWG, 197, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, Py_False); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
+
+  /* "VitLib/VitLib_cython/membrane.pyx":305
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -12859,12 +14877,21 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_img, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
+<<<<<<< HEAD
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_modifyLineWidth, 308, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 308, __pyx_L1_error)
   __pyx_tuple__16 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
   /* "VitLib/VitLib_cython/membrane.pyx":332
+=======
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_modifyLineWidth, 305, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__16);
+  __Pyx_GIVEREF(__pyx_tuple__16);
+
+  /* "VitLib/VitLib_cython/membrane.pyx":329
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -12874,12 +14901,21 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(7, __pyx_n_s_pred_img, __pyx_n_s_ans_img, __pyx_n_s_threshold, __pyx_n_s_del_area, __pyx_n_s_symmetric, __pyx_n_s_radius, __pyx_n_s_otsu); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
+<<<<<<< HEAD
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_evaluate_membrane_prediction, 332, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 332, __pyx_L1_error)
   __pyx_tuple__19 = PyTuple_Pack(5, __pyx_int_127, __pyx_int_100, Py_False, __pyx_int_3, Py_False); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
   /* "VitLib/VitLib_cython/membrane.pyx":396
+=======
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_evaluate_membrane_prediction, 329, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(5, __pyx_int_127, __pyx_int_100, Py_False, __pyx_int_3, Py_False); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__19);
+  __Pyx_GIVEREF(__pyx_tuple__19);
+
+  /* "VitLib/VitLib_cython/membrane.pyx":393
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
@@ -12889,8 +14925,13 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__20 = PyTuple_Pack(5, __pyx_n_s_pred_img_th_nwg, __pyx_n_s_ans_img_th_nwg, __pyx_n_s_threshold, __pyx_n_s_del_area, __pyx_n_s_radius); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
+<<<<<<< HEAD
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_evaluate_membrane_prediction_nwg, 396, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 396, __pyx_L1_error)
   __pyx_tuple__22 = PyTuple_Pack(3, __pyx_int_127, __pyx_int_100, __pyx_int_3); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 396, __pyx_L1_error)
+=======
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VitLib_VitLib_cython_membrane_py, __pyx_n_s_evaluate_membrane_prediction_nwg, 393, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 393, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(3, __pyx_int_127, __pyx_int_100, __pyx_int_3); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 393, __pyx_L1_error)
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
   __Pyx_RefNannyFinishContext();
@@ -13397,7 +15438,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG_nofix, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":102
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":101
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):             # <<<<<<<<<<<<<<
@@ -13409,7 +15454,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG_old, __pyx_t_2) < 0) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":199
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":197
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):             # <<<<<<<<<<<<<<
@@ -13422,7 +15471,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NWG, __pyx_t_2) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":308
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":305
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):             # <<<<<<<<<<<<<<
@@ -13435,7 +15488,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_modifyLineWidth, __pyx_t_2) < 0) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":332
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":329
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False):             # <<<<<<<<<<<<<<
@@ -13448,7 +15505,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_evaluate_membrane_prediction, __pyx_t_2) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
+<<<<<<< HEAD
   /* "VitLib/VitLib_cython/membrane.pyx":396
+=======
+  /* "VitLib/VitLib_cython/membrane.pyx":393
+>>>>>>> 27f7cdf (GitHub Actions: Build and deploy Sphinx docs)
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_img_th_nwg, cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg, int threshold=127, int del_area=100, int radius=3):             # <<<<<<<<<<<<<<
