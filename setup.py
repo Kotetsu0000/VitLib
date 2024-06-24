@@ -16,17 +16,17 @@ if use_Cython:
         [
             Extension(
                 "VitLib.VitLib_cython.common",
-                ["src/common.pyx"],
+                ["VitLib/VitLib_cython/common.pyx"],
                 language="c++",
             ),
             Extension(
                 "VitLib.VitLib_cython.membrane",
-                ["src/membrane.pyx"],
+                ["VitLib/VitLib_cython/membrane.pyx"],
                 language="c++",
             ),
             Extension(
                 "VitLib.VitLib_cython.nucleus",
-                ["src/nucleus.pyx"],
+                ["VitLib/VitLib_cython/nucleus.pyx"],
                 language="c++",
             ),
         ],
@@ -39,17 +39,17 @@ else:
     ext_modules = [
         Extension(
             "VitLib.VitLib_cython.common",
-            ["src/common.cpp"],
+            ["VitLib/VitLib_cython/common.cpp"],
             language="c++",
         ),
         Extension(
             "VitLib.VitLib_cython.membrane",
-            ["src/membrane.cpp"],
+            ["VitLib/VitLib_cython/membrane.cpp"],
             language="c++",
         ),
         Extension(
             "VitLib.VitLib_cython.nucleus",
-            ["src/nucleus.cpp"],
+            ["VitLib/VitLib_cython/nucleus.cpp"],
             language="c++",
         ),
     ]
