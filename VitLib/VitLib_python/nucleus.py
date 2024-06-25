@@ -197,7 +197,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     #重複削除
     correct_list = list(set(correct_list))
 
-    #正解の数
+    #正しく抽出された数
     correct_num = len(correct_list)
 
     #抽出された数(適合率計算用), -1は背景の分
