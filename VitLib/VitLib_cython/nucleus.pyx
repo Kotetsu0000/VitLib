@@ -191,7 +191,7 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
     cdef dict eval_images
     cdef int pred_num, care_num, no_care_num, ext_no_care_num
-    cdef int i, care, no_care, conformity_bottom
+    cdef int i, care, no_care, conformity_bottom, correct_num
     cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
     cdef cnp.ndarray[cnp.int32_t, ndim=2] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
     cdef cnp.ndarray[cnp.float64_t, ndim=2] pred_centroids, care_centroids, no_care_centroids
@@ -244,6 +244,9 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     
     #重複削除
     correct_list = list(set(correct_list))
+
+    #正解の数
+    correct_num = len(correct_list)
 
     #抽出された数(適合率計算用), -1は背景の分
     conformity_bottom = pred_num - 1 - ext_no_care_num
