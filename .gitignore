@@ -6,3 +6,4 @@ main.py
 VitLib/VitLib_cython/*.html
 .DS_Store
 *.so
+**/__pycache__/
