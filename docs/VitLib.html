@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitLib package &mdash; VitLib 2.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=c3c8ae58"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="VitLib.VitLib_cython package" href="VitLib.VitLib_cython.html" />
+    <link rel="prev" title="Welcome to VitLib’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            VitLib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VitLib package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html">VitLib.VitLib_cython package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html">VitLib.VitLib_python package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-VitLib.image_processing">VitLib.image_processing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.change_contrast"><code class="docutils literal notranslate"><span class="pre">change_contrast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.change_hue"><code class="docutils literal notranslate"><span class="pre">change_hue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.change_saturation"><code class="docutils literal notranslate"><span class="pre">change_saturation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.change_value"><code class="docutils literal notranslate"><span class="pre">change_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.cut_image"><code class="docutils literal notranslate"><span class="pre">cut_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.flip_image"><code class="docutils literal notranslate"><span class="pre">flip_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.gamma_correction"><code class="docutils literal notranslate"><span class="pre">gamma_correction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.img_show"><code class="docutils literal notranslate"><span class="pre">img_show()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_contrast"><code class="docutils literal notranslate"><span class="pre">random_contrast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_cut_image"><code class="docutils literal notranslate"><span class="pre">random_cut_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_flip_image"><code class="docutils literal notranslate"><span class="pre">random_flip_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_hue"><code class="docutils literal notranslate"><span class="pre">random_hue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_rotate_image"><code class="docutils literal notranslate"><span class="pre">random_rotate_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_saturation"><code class="docutils literal notranslate"><span class="pre">random_saturation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.random_value"><code class="docutils literal notranslate"><span class="pre">random_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.rotate_image"><code class="docutils literal notranslate"><span class="pre">rotate_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.image_processing.select_cut_image"><code class="docutils literal notranslate"><span class="pre">select_cut_image()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-VitLib.file_utils">VitLib.image_file_utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.create_directory"><code class="docutils literal notranslate"><span class="pre">create_directory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.delete_directory"><code class="docutils literal notranslate"><span class="pre">delete_directory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.delete_file"><code class="docutils literal notranslate"><span class="pre">delete_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.file_exists"><code class="docutils literal notranslate"><span class="pre">file_exists()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_names"><code class="docutils literal notranslate"><span class="pre">get_file_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_paths"><code class="docutils literal notranslate"><span class="pre">get_file_paths()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.file_utils.get_file_stems"><code class="docutils literal notranslate"><span class="pre">get_file_stems()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VitLib.VitLib_python.html">VitLib.VitLib_python package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VitLib.VitLib_cython.html">VitLib.VitLib_cython package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VitLib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">VitLib package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vitlib-package">
+<h1>VitLib package<a class="headerlink" href="#vitlib-package" title="Link to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="VitLib.VitLib_cython.html">VitLib.VitLib_cython package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_cython.html#module-VitLib.VitLib_cython.common">VitLib.VitLib_cython.common module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.common.detect_deleted_area_candidates"><code class="docutils literal notranslate"><span class="pre">detect_deleted_area_candidates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.common.extract_threshold_values"><code class="docutils literal notranslate"><span class="pre">extract_threshold_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.common.smallAreaReduction"><code class="docutils literal notranslate"><span class="pre">smallAreaReduction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.common.smallAreaReduction_nofix"><code class="docutils literal notranslate"><span class="pre">smallAreaReduction_nofix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.common.smallAreaReduction_nofix_old"><code class="docutils literal notranslate"><span class="pre">smallAreaReduction_nofix_old()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_cython.html#module-VitLib.VitLib_cython.membrane">VitLib.VitLib_cython.membrane module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.NWG"><code class="docutils literal notranslate"><span class="pre">NWG()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.NWG_nofix"><code class="docutils literal notranslate"><span class="pre">NWG_nofix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.NWG_old"><code class="docutils literal notranslate"><span class="pre">NWG_old()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_nwg()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.membrane.modifyLineWidth"><code class="docutils literal notranslate"><span class="pre">modifyLineWidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_cython.html#module-VitLib.VitLib_cython.nucleus">VitLib.VitLib_cython.nucleus module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.nucleus.calc_contour_areas"><code class="docutils literal notranslate"><span class="pre">calc_contour_areas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area"><code class="docutils literal notranslate"><span class="pre">calc_standard_nuclear_area()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.nucleus.euclidean_distance"><code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_cython.html#VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images"><code class="docutils literal notranslate"><span class="pre">make_nuclear_evaluate_images()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VitLib.VitLib_python.html">VitLib.VitLib_python package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_python.html#module-VitLib.VitLib_python.common">VitLib.VitLib_python.common module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.common.smallAreaReduction"><code class="docutils literal notranslate"><span class="pre">smallAreaReduction()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_python.html#module-VitLib.VitLib_python.membrane">VitLib.VitLib_python.membrane module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.NWG"><code class="docutils literal notranslate"><span class="pre">NWG()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.detect_deleted_area_candidates"><code class="docutils literal notranslate"><span class="pre">detect_deleted_area_candidates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.evaluate_membrane_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_nwg"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_nwg()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.extract_threshold_values"><code class="docutils literal notranslate"><span class="pre">extract_threshold_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.membrane.modifyLineWidth"><code class="docutils literal notranslate"><span class="pre">modifyLineWidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VitLib.VitLib_python.html#module-VitLib.VitLib_python.nucleus">VitLib.VitLib_python.nucleus module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.nucleus.calc_contour_areas"><code class="docutils literal notranslate"><span class="pre">calc_contour_areas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.nucleus.calc_standard_nuclear_area"><code class="docutils literal notranslate"><span class="pre">calc_standard_nuclear_area()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.nucleus.euclidean_distance"><code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.nucleus.evaluate_nuclear_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VitLib.VitLib_python.html#VitLib.VitLib_python.nucleus.make_nuclear_evaluate_images"><code class="docutils literal notranslate"><span class="pre">make_nuclear_evaluate_images()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-VitLib.image_processing">
+<span id="vitlib-image-processing-module"></span><h2>VitLib.image_processing module<a class="headerlink" href="#module-VitLib.image_processing" title="Link to this heading">¶</a></h2>
+<p>画像の処理系をまとめたモジュール</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.change_contrast">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_contrast" title="Link to this definition">¶</a></dt>
+<dd><p>画像のコントラストを変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>contrast_ratio</strong> (<em>float</em>) – コントラストの変更量(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>コントラストが変更された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.change_hue">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue_degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_hue" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像の色相を変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>hue_degree</strong> (<em>int</em>) – 色相の変更量(0~180)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>色相が変更された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.change_saturation">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_saturation" title="Link to this definition">¶</a></dt>
+<dd><p>画像の彩度を変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>saturation_ratio</strong> (<em>float</em>) – 彩度の変更量(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>彩度が変更された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.change_value">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_value" title="Link to this definition">¶</a></dt>
+<dd><p>画像の明度を変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>value_ratio</strong> (<em>float</em>) – 明度の変更量(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>明度が変更された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.cut_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">cut_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.cut_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像を切り取ります。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取りの左上の座標</p></li>
+<li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>切り取られた画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.flip_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">flip_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.flip_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像を反転します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>flip_code</strong> (<em>int</em>) – 反転コード
+- 0: 上下反転
+- 1: 左右反転
+- -1: 上下左右反転</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>反転された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.gamma_correction">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">gamma_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.gamma_correction" title="Link to this definition">¶</a></dt>
+<dd><p>ガンマ補正を行う関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 入力画像, 画素値は[0, 255]閉区間の整数値</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – ガンマ値</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ガンマ補正された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.img_show">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">img_show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VitLib.image_processing.img_show" title="Link to this definition">¶</a></dt>
+<dd><p>画像を表示します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_contrast">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_contrast" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像のコントラストをランダムに変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>contrast_ratio_range</strong> (<em>tuple</em>) – コントラストの変更範囲(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>コントラストが変更された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_cut_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_cut_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_cut_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像をランダムに切り取ります。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>top_left_range</strong> (<em>tuple</em>) – 切り取りの左上の座標の範囲</p></li>
+<li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_flip_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_flip_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_flip_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像をランダムに反転します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>flip_code_range</strong> (<em>tuple</em>) – 反転コードの範囲
+- 0: 上下反転
+- 1: 左右反転
+- -1: 上下左右反転
+- 2: なし</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>反転された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_hue">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue_degree_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_hue" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像の色相をランダムに変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>hue_degree_range</strong> (<em>tuple</em>) – 色相の変更範囲(0~180)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>色相が変更された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_rotate_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_rotate_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_rotate_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像をランダムに回転します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>rotate_times_range</strong> (<em>tuple</em>) – 回転回数の範囲(1回転につき90度)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>回転された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_saturation">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_saturation" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像の彩度をランダムに変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>saturation_ratio_range</strong> (<em>tuple</em>) – 彩度の変更範囲(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>彩度が変更された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.random_value">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_value" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像の明度をランダムに変更します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>value_ratio_range</strong> (<em>tuple</em>) – 明度の変更範囲(0~1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>明度が変更された画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.rotate_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">rotate_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate_times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.rotate_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像を回転します。(1回転につき90度)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>rotate_times</strong> (<em>int</em>) – 回転回数(1回につき90度)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>回転された画像</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.image_processing.select_cut_image">
+<span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">select_cut_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.select_cut_image" title="Link to this definition">¶</a></dt>
+<dd><p>画像リスト内の各画像を指定した位置とサイズで切り取ります。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取りの左上の座標</p></li>
+<li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-VitLib.file_utils">
+<span id="vitlib-image-file-utils"></span><h2>VitLib.image_file_utils<a class="headerlink" href="#module-VitLib.file_utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.create_directory">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">create_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.create_directory" title="Link to this definition">¶</a></dt>
+<dd><p>ディレクトリを作成する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 作成するディレクトリのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.delete_directory">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">delete_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.delete_directory" title="Link to this definition">¶</a></dt>
+<dd><p>ディレクトリを削除する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 削除するディレクトリのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.delete_file">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">delete_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#VitLib.file_utils.delete_file" title="Link to this definition">¶</a></dt>
+<dd><p>ファイルを削除する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – 削除するファイルのパス</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.file_exists">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">file_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#VitLib.file_utils.file_exists" title="Link to this definition">¶</a></dt>
+<dd><p>ファイルが存在するかどうかを返す関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – ファイルのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ファイルが存在する場合はTrue、そうでない場合はFalse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_names">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_names" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイル名をすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイル名のリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_paths">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_paths" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイルとフォルダのパスをすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイルとフォルダのパスリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.file_utils.get_file_stems">
+<span class="sig-prename descclassname"><span class="pre">VitLib.file_utils.</span></span><span class="sig-name descname"><span class="pre">get_file_stems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#VitLib.file_utils.get_file_stems" title="Link to this definition">¶</a></dt>
+<dd><p>フォルダ内のファイル名（拡張子なし）をすべて取得する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – フォルダのパス</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>フォルダ内のすべてのファイル名（拡張子なし）のリスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to VitLib’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="VitLib.VitLib_cython.html" class="btn btn-neutral float-right" title="VitLib.VitLib_cython package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kotetsu0000.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
