@@ -9,7 +9,7 @@ from .common import smallAreaReduction
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
-def NWG_nofix(img):
+def NWG_nofix(img, symmetric:bool=False):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
     
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
@@ -75,11 +75,25 @@ def NWG_nofix(img):
         nei = nei[0:8]
 
         # condition 3
-        c3a = np.logical_and(
-            nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
-        c3b = np.logical_and(
-            nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
-        cond3 = np.logical_or(c3a, c3b)
+        if symmetric:
+            if switch:
+                c3a = np.logical_and(
+                    nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
+                c3b = np.logical_and(
+                    nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
+                cond3 = np.logical_or(c3a, c3b)
+            else:
+                c3c = np.logical_and(
+                    nei[1]+nei[4]+nei[5]+nei[6] == 0, nei[0]+nei[2] == 2)
+                c3d = np.logical_and(
+                    nei[0]+nei[3]+nei[6]+nei[7] == 0, nei[2]+nei[4] == 2)
+                cond3 = np.logical_or(c3c, c3d)
+        else:
+            c3a = np.logical_and(
+                nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
+            c3b = np.logical_and(
+                nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
+            cond3 = np.logical_or(c3a, c3b)
 
         # condition 4
         if switch:
@@ -99,7 +113,7 @@ def NWG_nofix(img):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
     
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
@@ -146,7 +160,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):
     cdef tuple temp
     cdef cnp.ndarray[cnp.int64_t, ndim=1] r, c
     cdef cnp.ndarray[cnp.uint8_t, ndim=1] nei_sum
-    cdef cnp.ndarray[DTYPE_t, ndim=1] cond1, cond2, c3a, c3b, cond3, cond4, cond
+    cdef cnp.ndarray[DTYPE_t, ndim=1] cond1, cond2, c3a, c3b, c3c, c3d, cond3, cond4, cond
     cdef DTYPE_t switch = True
 
     pad[1:ROW-1, 1:COLUMN-1] = src
@@ -172,11 +186,25 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img):
         nei = nei[0:8]
 
         # condition 3
-        c3a = np.logical_and(
-            nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
-        c3b = np.logical_and(
-            nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
-        cond3 = np.logical_or(c3a, c3b)
+        if symmetric:
+            if switch:
+                c3a = np.logical_and(
+                    nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
+                c3b = np.logical_and(
+                    nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
+                cond3 = np.logical_or(c3a, c3b)
+            else:
+                c3c = np.logical_and(
+                    nei[1]+nei[4]+nei[5]+nei[6] == 0, nei[0]+nei[2] == 2)
+                c3d = np.logical_and(
+                    nei[0]+nei[3]+nei[6]+nei[7] == 0, nei[2]+nei[4] == 2)
+                cond3 = np.logical_or(c3c, c3d)
+        else:
+            c3a = np.logical_and(
+                nei[0]+nei[1]+nei[2]+nei[5] == 0, nei[4]+nei[6] == 2)
+            c3b = np.logical_and(
+                nei[2]+nei[3]+nei[4]+nei[7] == 0, nei[0]+nei[6] == 2)
+            cond3 = np.logical_or(c3a, c3b)
 
         # condition 4
         if switch:
