@@ -156,7 +156,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img, int
 
     cdef cnp.ndarray[DTYPE_t, ndim=2] pad = np.zeros((ROW, COLUMN), dtype=DTYPE)
 
-    #cdef cnp.ndarray[DTYPE_t, ndim=2] nei
+    cdef cnp.ndarray[DTYPE_t, ndim=2] nei
     cdef tuple temp
     cdef cnp.ndarray[cnp.int64_t, ndim=1] r, c
     cdef cnp.ndarray[cnp.uint8_t, ndim=1] nei_sum
