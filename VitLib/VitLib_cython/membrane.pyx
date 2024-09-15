@@ -333,7 +333,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int sym
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] modifyLineWidth(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
     """細線化された画像の線の太さを変更する. 
 
     Args:
@@ -402,8 +402,8 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     membrane_length = np.sum(ans_img_th_nwg)
 
     ## 推定画像と正解画像の線幅を変更
-    pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
-    ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)
+    pred_img_th_fattened = modify_line_width(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modify_line_width(ans_img_th_nwg, radius)
 
     ## 膨張した推定結果の内部に含まれる細線化した正解の長さ(target in predicted)
     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))
@@ -454,8 +454,8 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     membrane_length = np.sum(ans_img_th_nwg)
 
     ## 推定画像と正解画像の線幅を変更
-    pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
-    ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)
+    pred_img_th_fattened = modify_line_width(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modify_line_width(ans_img_th_nwg, radius)
 
     ## 膨張した推定結果の内部に含まれる細線化した正解の長さ(target in predicted)
     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))
