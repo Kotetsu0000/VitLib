@@ -4,7 +4,7 @@ import numpy as np
 cimport numpy as cnp
 cimport cython
 
-from .common import smallAreaReduction
+from .common import small_area_reduction
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
@@ -395,7 +395,7 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ
@@ -447,7 +447,7 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(DTYPE)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ

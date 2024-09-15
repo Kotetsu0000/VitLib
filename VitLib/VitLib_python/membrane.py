@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from .common import smallAreaReduction
+from .common import small_area_reduction
 
 def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
@@ -155,7 +155,7 @@ def extract_threshold_values(img:np.ndarray) -> np.ndarray:
     img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
     return img_unique
 
-def modifyLineWidth(img:np.ndarray, radius:int=1) -> np.ndarray:
+def modify_line_width(img:np.ndarray, radius:int=1) -> np.ndarray:
     """細線化された画像の線の太さを変更する. 
 
     Args:
@@ -202,15 +202,15 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(np.uint8)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ
     membrane_length = np.sum(ans_img_th_nwg)
 
     ## 推定画像と正解画像の線幅を変更
-    pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
-    ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)
+    pred_img_th_fattened = modify_line_width(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modify_line_width(ans_img_th_nwg, radius)
 
     ## 膨張した推定結果の内部に含まれる細線化した正解の長さ(target in predicted)
     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))
@@ -242,15 +242,15 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(np.uint8)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ
     membrane_length = np.sum(ans_img_th_nwg)
 
     ## 推定画像と正解画像の線幅を変更
-    pred_img_th_fattened = modifyLineWidth(pred_img_th_nwg_del, radius)
-    ans_img_th_fattened = modifyLineWidth(ans_img_th_nwg, radius)
+    pred_img_th_fattened = modify_line_width(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modify_line_width(ans_img_th_nwg, radius)
 
     ## 膨張した推定結果の内部に含まれる細線化した正解の長さ(target in predicted)
     tip_length = np.sum(np.logical_and(pred_img_th_fattened == 1, ans_img_th_nwg == 1))

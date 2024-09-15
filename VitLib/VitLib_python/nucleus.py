@@ -3,7 +3,7 @@ import warnings
 import cv2
 import numpy as np
 
-from .common import smallAreaReduction
+from .common import small_area_reduction
 
 def calc_contour_areas(img:np.ndarray) -> np.ndarray:
     """画像の面積のリストを取得する関数
@@ -165,7 +165,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     no_care_img_th = cv2.threshold(no_care_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     # 推論画像の小領域削除
-    pred_img_th_del = smallAreaReduction(pred_img_th, del_area)
+    pred_img_th_del = small_area_reduction(pred_img_th, del_area)
 
     # ラベル処理
     pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(pred_img_th_del)

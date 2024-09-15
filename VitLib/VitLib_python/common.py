@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-def smallAreaReduction(img:np.ndarray, area_th:int=100):
+def small_area_reduction(img:np.ndarray, area_th:int=100):
     """2値画像の小領域削除を行う.
 
     Args:
@@ -14,7 +14,7 @@ def smallAreaReduction(img:np.ndarray, area_th:int=100):
 
     Example:
         >>> import numpy as np
-        >>> from VitLib import smallAreaReduction
+        >>> from VitLib import small_area_reduction
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -23,7 +23,7 @@ def smallAreaReduction(img:np.ndarray, area_th:int=100):
         ...                 [0, 0, 0, 1, 1, 1, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
-        >>> smallAreaReduction(img, area_th=100)
+        >>> small_area_reduction(img, area_th=100)
         array([[0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],

@@ -7,7 +7,7 @@ cimport cython
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
-def smallAreaReduction_nofix_old(img, area_th=100):
+def small_area_reduction_nofix_old(img, area_th=100):
     """2値画像の小領域削除を行う.
 
     Args:
@@ -19,7 +19,7 @@ def smallAreaReduction_nofix_old(img, area_th=100):
 
     Example:
         >>> import numpy as np
-        >>> from nwg_cython import smallAreaReduction_nofix_old
+        >>> from nwg_cython import small_area_reduction_nofix_old
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -28,7 +28,7 @@ def smallAreaReduction_nofix_old(img, area_th=100):
         ...                 [0, 0, 0, 1, 1, 1, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
-        >>> smallAreaReduction_nofix_old(img, area_th=100)
+        >>> small_area_reduction_nofix_old(img, area_th=100)
         array([[0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
@@ -54,7 +54,7 @@ def smallAreaReduction_nofix_old(img, area_th=100):
     return np.array(np.expand_dims(labeled_img, -1), dtype=np.uint8)
 ###
 
-def smallAreaReduction_nofix(img, area_th=100):
+def small_area_reduction_nofix(img, area_th=100):
     """2値画像の小領域削除を行う.
 
     Args:
@@ -66,7 +66,7 @@ def smallAreaReduction_nofix(img, area_th=100):
 
     Example:
         >>> import numpy as np
-        >>> from nwg_cython import smallAreaReduction_nofix
+        >>> from nwg_cython import small_area_reduction_nofix
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -75,7 +75,7 @@ def smallAreaReduction_nofix(img, area_th=100):
         ...                 [0, 0, 0, 1, 1, 1, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
-        >>> smallAreaReduction_nofix(img, area_th=100)
+        >>> small_area_reduction_nofix(img, area_th=100)
         array([[0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
@@ -100,7 +100,7 @@ def smallAreaReduction_nofix(img, area_th=100):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
     """2値画像の小領域削除を行う.
 
     Args:
@@ -112,7 +112,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=
         
     Example:
         >>> import numpy as np
-        >>> from nwg_cython import smallAreaReduction
+        >>> from nwg_cython import small_area_reduction
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -121,7 +121,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] smallAreaReduction(cnp.ndarray[DTYPE_t, ndim=
         ...                 [0, 0, 0, 1, 1, 1, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
-        >>> smallAreaReduction(img, area_th=100)
+        >>> small_area_reduction(img, area_th=100)
         array([[0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
                [0, 0, 0, 0, 0, 0, 0, 0],
