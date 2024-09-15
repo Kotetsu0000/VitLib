@@ -10,7 +10,7 @@ cimport cython
 cdef extern from "<float.h>":
     const float FLT_MAX
 
-from .common import smallAreaReduction
+from .common import small_area_reduction
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
@@ -213,7 +213,7 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     no_care_img_th = cv2.threshold(no_care_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     # 推論画像の小領域削除
-    pred_img_th_del = smallAreaReduction(pred_img_th, del_area)
+    pred_img_th_del = small_area_reduction(pred_img_th, del_area)
 
     # ラベル処理
     pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(pred_img_th_del)

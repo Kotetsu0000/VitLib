@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from .common import smallAreaReduction
+from .common import small_area_reduction
 
 def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
@@ -202,7 +202,7 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(np.uint8)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ
@@ -242,7 +242,7 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
     ans_img_th_nwg = (ans_img_th_nwg//255).astype(np.uint8)
 
     # 小領域削除
-    pred_img_th_nwg_del = smallAreaReduction(pred_img_th_nwg, del_area)
+    pred_img_th_nwg_del = small_area_reduction(pred_img_th_nwg, del_area)
 
     # 評価指標の計算
     ## 正解の細胞膜の長さ
