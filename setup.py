@@ -72,7 +72,7 @@ def get_ext_module(use_openmp:bool):
 def get_setup_kwargs(use_openmp:bool):
     setup_kwargs = {
         "name": "VitLib",
-        "version": "3.0.0",
+        "version": "3.0.1",
         "description": "A fast and accurate image processing library for cell image analysis.",
         "author": "Kotetsu0000",
         'ext_modules': get_ext_module(use_openmp),
@@ -81,6 +81,12 @@ def get_setup_kwargs(use_openmp:bool):
             'numpy',
             'opencv_python',
         ],
+        'extras_require': {
+            'dev': [
+                'pytest',
+                'Cython',
+            ]
+        },
         'packages': find_packages(),
     }
     return setup_kwargs
