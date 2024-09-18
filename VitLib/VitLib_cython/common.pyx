@@ -140,7 +140,7 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarr
     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)
     cdef int num_of_labels = labeling_result[0]
     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
-    cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.ones(num_of_labels, dtype=np.uint64)
+    cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.zeros(num_of_labels, dtype=np.uint64)
     cdef int ROW = img.shape[0]
     cdef int COLUMN = img.shape[1]
     cdef int row, column, label, length

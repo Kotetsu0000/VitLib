@@ -69,7 +69,7 @@ def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
         array([0, 3])
     """
     num_of_labels, labeled_img, _, _ = cv2.connectedComponentsWithStats(img)
-    contours = np.ones(num_of_labels, dtype=np.uint64)
+    contours = np.zeros(num_of_labels, dtype=np.uint64)
     ROW, COLUMN = img.shape
     for row in range(ROW):
         for column in range(COLUMN):
