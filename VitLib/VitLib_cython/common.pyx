@@ -156,7 +156,7 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarr
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=1]  extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):
+cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):
     """画像から閾値を抽出する.
     
     Args:
