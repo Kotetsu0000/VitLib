@@ -1,8 +1,14 @@
 # membrane.pyx
+# distutils: language=c++
+# distutils: extra_compile_args = ["-O3"]
+# cython: language_level=3, boundscheck=False, wraparound=False
+# cython: cdivision=True
+
 import cv2
 import numpy as np
 cimport numpy as cnp
 cimport cython
+from cython.parallel import prange
 
 from .common import small_area_reduction
 
@@ -113,7 +119,7 @@ def NWG_nofix(img, symmetric:bool=False):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v0(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
     
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
@@ -224,7 +230,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old(cnp.ndarray[DTYPE_t, ndim=2] img, int
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v1(cnp.ndarray[DTYPE_t, ndim=2] img, int symmetric=False):
     '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
     
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
@@ -329,6 +335,120 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(cnp.ndarray[DTYPE_t, ndim=2] img, int sym
                         Q[y,x]=1
         src = Q    
     return src[1:ROW-1, 1:COLUMN-1]*255
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef DTYPE_t[:, :] NWG_(DTYPE_t[:, :] img, int symmetric=False, int multithread=True) noexcept nogil:
+    cdef int ROW = img.shape[0]+2
+    cdef int COLUMN = img.shape[1]+2
+    cdef DTYPE_t[:, :] src, Q
+    cdef int x, y
+
+    with gil:
+        src = np.ascontiguousarray(np.pad(np.copy(img) // 255, (1, 1), 'constant'))
+        Q = np.zeros((ROW+2, COLUMN+2), dtype=np.uint8)
+
+    # 初期化
+    cdef int g = 1
+    cdef int h = 1
+    
+    while h>=1:
+        g = 1 - g
+        h = 0
+
+        if multithread:
+            for x in prange(1,COLUMN-1, nogil=True):
+                for y in range(1,ROW-1):
+                    if src[y,x]==1:
+                        if NWG_single(src, x, y, g, symmetric):
+                            h+=1
+                            Q[y,x]=0
+                        else:
+                            Q[y,x]=1
+        else:
+            for x in range(1,COLUMN-1):
+                for y in range(1,ROW-1):
+                    if src[y,x]==1:
+                        if NWG_single(src, x, y, g, symmetric):
+                            h+=1
+                            Q[y,x]=0
+                        else:
+                            Q[y,x]=1
+        with gil:
+            src = np.copy(Q)
+    if multithread:
+        for x in prange(1,COLUMN-1, nogil=True):
+            for y in range(1,ROW-1):
+                if src[y,x]==1:
+                    src[y,x] = 255
+    else:
+        for x in range(1,COLUMN-1):
+            for y in range(1,ROW-1):
+                if src[y,x]==1:
+                    src[y,x] = 255
+    return src[1:ROW-1, 1:COLUMN-1]
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef int NWG_single(DTYPE_t[:, :] src, int x, int y, int g, int symmetric) noexcept nogil:
+    cdef int p_sum, a, c, d, i
+    cdef int cond, cond1, cond2, cond3, cond3a, cond3b, cond3c, cond3d, cond4
+    cdef int[9] p
+    p[0] = src[y-1, x]
+    p[1] = src[y-1, x+1]
+    p[2] = src[y, x+1]
+    p[3] = src[y+1, x+1]
+    p[4] = src[y+1, x]
+    p[5] = src[y+1, x-1]
+    p[6] = src[y, x-1]
+    p[7] = src[y-1, x-1]
+    p[8] = p[0]
+
+    # condition 1
+    p_sum = p[0]+p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]
+    cond1 = 1<p_sum and p_sum<7
+    if not cond1:
+        return 0
+
+    # condition 2
+    a=0
+    for i in range(1, 9):
+        a += 1 if p[i-1]==0 and p[i]==1 else 0
+    cond2 = a==1
+
+    # condition 3
+    cond3a = p[0]+p[1]+p[2]+p[5]==0 and p[4]+p[6]==2
+    cond3b = p[2]+p[3]+p[4]+p[7]==0 and p[0]+p[6]==2
+    if symmetric:
+        cond3c = p[1]+p[4]+p[5]+p[6]==0 and p[0]+p[2]==2
+        cond3d = p[0]+p[3]+p[6]+p[7]==0 and p[2]+p[4]==2
+        c = cond3a or cond3b
+        d = cond3c or cond3d
+        cond3 = (1 - g)*c + g*d == 1
+    else:
+        cond3 = cond3a or cond3b
+
+    if not (cond2 or cond3):
+        return 0
+
+    # condition 4
+    if g==0:
+        cond4 = (p[2]+p[4])*p[0]*p[6] == 0
+    else:
+        cond4 = (p[0]+p[6])*p[2]*p[4] == 0
+    
+    if cond4:
+        return 1
+    else:
+        return 0
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(DTYPE_t[:, :] img, int symmetric=False, int multithread=True):
+    return np.asarray(NWG_(img, symmetric, multithread))
 ###
 
 @cython.boundscheck(False)
