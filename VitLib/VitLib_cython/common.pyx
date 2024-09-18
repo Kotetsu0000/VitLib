@@ -7,53 +7,6 @@ cimport cython
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
-def small_area_reduction_nofix_old(img, area_th=100):
-    """2値画像の小領域削除を行う.
-
-    Args:
-        img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.
-
-    Returns:
-        np.ndarray: 小領域削除後の2値画像.
-
-    Example:
-        >>> import numpy as np
-        >>> from nwg_cython import small_area_reduction_nofix_old
-        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
-        >>> small_area_reduction_nofix_old(img, area_th=100)
-        array([[0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0]])
-    """
-    src = np.copy(img)
-    labeling_result = cv2.connectedComponentsWithStats(src)
-    num_of_labels, labeled_img, contours, centroids = labeling_result
-
-    for label in range(1, num_of_labels):
-        labeled_src = np.copy(labeled_img)
-        labeled_src[labeled_src != label] = 0
-        labeled_src[labeled_src == label] = 1
-
-        if np.sum(labeled_src) < area_th:
-            labeled_img[labeled_img == label] = 0
-
-    labeled_img[labeled_img > 0] = 1
-    return np.array(np.expand_dims(labeled_img, -1), dtype=np.uint8)
-###
-
 def small_area_reduction_nofix(img, area_th=100):
     """2値画像の小領域削除を行う.
 
@@ -91,7 +44,7 @@ def small_area_reduction_nofix(img, area_th=100):
 
     for label in range(1, num_of_labels):
         label_sum = np.sum(labeled_img == label)
-        if label_sum < area_th:
+        if label_sum <= area_th:
             labeled_img[labeled_img == label] = 0
     
     labeled_img[labeled_img > 0] = 1
@@ -105,7 +58,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
 
     Args:
         img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.
+        area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)
 
     Returns:
         np.ndarray: 小領域削除後の2値画像.
@@ -150,7 +103,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
             contours[label] += 1
 
     for label in range(1, num_of_labels):
-        if contours[label] >= area_th:
+        if contours[label] > area_th:
             return_img[labeled_img == label] = 1
 
     return return_img
@@ -187,7 +140,7 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates(cnp.ndarr
     cdef tuple labeling_result = cv2.connectedComponentsWithStats(img)
     cdef int num_of_labels = labeling_result[0]
     cdef cnp.ndarray[cnp.uint64_t, ndim=2] labeled_img = labeling_result[1].astype(np.uint64)
-    cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.ones(num_of_labels, dtype=np.uint64)
+    cdef cnp.ndarray[cnp.uint64_t, ndim=1] contours = np.zeros(num_of_labels, dtype=np.uint64)
     cdef int ROW = img.shape[0]
     cdef int COLUMN = img.shape[1]
     cdef int row, column, label, length
