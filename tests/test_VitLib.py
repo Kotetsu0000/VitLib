@@ -21,11 +21,8 @@ def test_common():
                     [0, 1, 1, 1, 0, 0, 0, 0]], dtype=np.uint8)
     ddac = common_py.detect_deleted_area_candidates(img)
     assert np.all(ddac == common_cy.detect_deleted_area_candidates(img))
-    print(ddac)
     for d in ddac:
         base = common_py.small_area_reduction(img, area_th=d)
-        print(d)
-        print(base)
         assert np.all(base == common_cy.small_area_reduction_nofix(img, area_th=d))
         assert np.all(base == common_cy.small_area_reduction(img, area_th=d))
 
