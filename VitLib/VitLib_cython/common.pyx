@@ -105,7 +105,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
 
     Args:
         img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.
+        area_th (int): 面積の閾値.(area_th未満の面積の領域が削除される。)
 
     Returns:
         np.ndarray: 小領域削除後の2値画像.
