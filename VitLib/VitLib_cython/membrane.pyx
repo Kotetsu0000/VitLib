@@ -504,7 +504,7 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     else:
         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
-    ans_img_th = cv2.threshold(ans_img, threshold, 255, cv2.THRESH_BINARY)[1]
+    ans_img_th = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     # NWG細線化
     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)
@@ -535,7 +535,7 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
+    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':int(membrane_length), 'tip_length':int(tip_length), 'miss_length':int(miss_length)}
     return return_dict
 ###
 
@@ -587,6 +587,6 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
+    return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':int(membrane_length), 'tip_length':int(tip_length), 'miss_length':int(miss_length)}
     return return_dict
 ###

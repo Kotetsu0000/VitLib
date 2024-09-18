@@ -103,58 +103,6 @@ def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
 
         src[r[cond], c[cond]] = 0
 
-def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
-    """2値画像の小領域の削除面積のリストを作成する関数.
-
-    Args:
-        img (np.ndarray): 2値画像.
-
-    Returns:
-        np.ndarray: 小領域の面積のリスト.
-
-    Example:
-        >>> import numpy as np
-        >>> from nwg_cython import detect_deleted_area_candidates
-        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
-        ...                 [0, 0, 0, 0, 0, 1, 1, 1]])
-        >>> detect_deleted_area_candidates(img)
-        array([0, 3])
-    """
-    labeling_result = cv2.connectedComponentsWithStats(img)
-    num_of_labels, labeled_img, contours, centroids = labeling_result
-    contours = np.zeros(num_of_labels, dtype=np.uint64)
-    for label in range(1, num_of_labels):
-        contours[label] = np.sum(labeled_img == label) + 1
-    contours = np.unique(contours)
-    contours.sort()
-    return contours
-
-def extract_threshold_values(img:np.ndarray) -> np.ndarray:
-    """画像から閾値を抽出する.
-    
-    Args:
-        img (np.ndarray): 2値画像.
-
-    Returns:
-        np.ndarray: 画像から抽出した閾値のリスト.
-
-    Examples:
-        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
-        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
-        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
-        >>> extract_threshold_values(a)
-        array([126, 254], dtype=uint8)
-    """
-    img_flatten = np.ravel(img)
-    img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
-    return img_unique
-
 def modify_line_width(img:np.ndarray, radius:int=1) -> np.ndarray:
     """細線化された画像の線の太さを変更する. 
 
@@ -191,7 +139,7 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
         threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     else:
         pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
-    ans_img_th = cv2.threshold(ans_img, threshold, 255, cv2.THRESH_BINARY)[1]
+    ans_img_th = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     # NWG細線化
     pred_img_th_nwg = NWG(pred_img_th, symmetric=symmetric)
@@ -222,7 +170,7 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
+    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':membrane_length, 'tip_length':tip_length, 'miss_length':miss_length}
 
 def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:np.ndarray, threshold:int=127, del_area:int=100, radius:int=3):
     """細胞膜画像の評価を行う関数.
@@ -262,4 +210,4 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
     recall = 0 if membrane_length==0 else tip_length / membrane_length
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
-    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area}
+    return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':membrane_length, 'tip_length':tip_length, 'miss_length':miss_length}
