@@ -30,14 +30,6 @@ def test_common():
     assert np.all(etv == common_cy.extract_threshold_values(np.arange(256, dtype=np.uint8).reshape(16, 16)))
 
 def test_membrane():
-    img = np.array([[   0,   0,   0,   0,   0,   0,   0,   0],
-                    [   0, 127, 200, 127,   0, 127, 127,   0],
-                    [   0, 255, 255, 255,   0, 255, 255,   0],
-                    [   0,   0,   0,   0,   0,   0,   0,   0],
-                    [   0,   0, 255, 255, 255,   0,   0,   0],
-                    [   0,   0, 255, 255, 255,   0,   0,   0],
-                    [   0,   0, 255, 255, 255,   0,   0,   0],
-                    [   0,   0, 255,   0,   0,   0,   0,   0]], dtype=np.uint8)
     img = cv2.imread('tests/img.png', cv2.IMREAD_GRAYSCALE)
     prod = cv2.imread('tests/prod.png', cv2.IMREAD_GRAYSCALE)
     etv = common_cy.extract_threshold_values(img)
