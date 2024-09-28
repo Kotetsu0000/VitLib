@@ -496,7 +496,7 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
         using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] pred_img_th, ans_img_th, pred_img_th_nwg, ans_img_th_nwg, pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
-    cdef int membrane_length, tip_length, miss_length
+    cdef float membrane_length, tip_length, miss_length
     cdef float precision, recall, fmeasure
     cdef dict return_dict
     # 画像の二値化
