@@ -250,7 +250,7 @@ cpdef cnp.ndarray[cnp.int32_t, ndim=1] detect_deleted_area_candidates(cnp.ndarra
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img):
+cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYPE_t, ndim=2] img):
     """画像から閾値を抽出する.
     
     Args:
@@ -272,4 +272,29 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t,
     cdef cnp.ndarray[DTYPE_t, ndim=1] img_flatten = np.ravel(img)
     cdef cnp.ndarray[DTYPE_t, ndim=1] img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
     return img_unique
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img, int min_th=0, int max_th=255):
+    """画像から閾値を抽出する.
+    
+    Args:
+        img (np.ndarray): 2値画像.
+
+    Returns:
+        np.ndarray: 画像から抽出した閾値のリスト.
+
+    Examples:
+        >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
+        ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
+        ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
+        >>> extract_threshold_values(a)
+        array([126, 254], dtype=uint8)
+
+    Note:
+        using cython.
+    """
+    cdef cnp.ndarray[DTYPE_t, ndim=1] th_list = np.unique(img[img!=0]) - 1
+    return th_list[np.logical_and(th_list>=min_th, th_list<=max_th)]
 ###
