@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 cimport numpy as cnp
 cimport cython
+from cython.parallel import prange
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
@@ -53,7 +54,7 @@ def small_area_reduction_nofix(img, area_th=100):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction_old(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
     """2値画像の小領域削除を行う.
 
     Args:
@@ -106,6 +107,62 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
         if contours[label] > area_th:
             return_img[labeled_img == label] = 1
 
+    return return_img
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
+    """2値画像の小領域削除を行う.
+
+    Args:
+        img (np.ndarray): 2値画像.
+        area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)
+
+    Returns:
+        np.ndarray: 小領域削除後の2値画像.
+        
+    Example:
+        >>> import numpy as np
+        >>> from nwg_cython import small_area_reduction
+        >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 1, 1, 1, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0],
+        ...                 [0, 0, 0, 0, 0, 0, 0, 0]])
+        >>> small_area_reduction(img, area_th=100)
+        array([[0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0]])
+        
+    Note:
+        using cython.
+    """
+    cdef int retval
+    cdef cnp.int32_t[:, :] labeled_img, stats
+    cdef cnp.float64_t[:, :] centroids
+    cdef int ROW = img.shape[0]
+    cdef int COLUMN = img.shape[1]
+    cdef cnp.ndarray[DTYPE_t, ndim=2] return_img = np.zeros((ROW, COLUMN), dtype=np.uint8)
+    cdef int row, column, label, i
+    retval, labeled_img, stats, centroids = cv2.connectedComponentsWithStats(img)
+    for row in prange(ROW, nogil=True):
+        for column in range(COLUMN):
+            label = labeled_img[row, column]
+            if label == 0:
+                continue
+            elif stats[label, 4] > area_th:
+                return_img[row, column] = 1
+            else:
+                return_img[row, column] = 0
     return return_img
 ###
 
