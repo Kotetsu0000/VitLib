@@ -10,7 +10,7 @@ cimport numpy as cnp
 cimport cython
 from cython.parallel import prange
 
-from .common import small_area_reduction
+from .common import small_area_reduction, detect_deleted_area_candidates, extract_threshold_values
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
@@ -634,4 +634,126 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
 
     return_dict = {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':int(membrane_length), 'tip_length':int(tip_length), 'miss_length':int(miss_length)}
     return return_dict
+###
+
+cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, DTYPE_t[:, :] ans_img_th_nwg, DTYPE_t[:, :] pred_img_th_fattened, DTYPE_t[:, :] ans_img_th_fattened) nogil:
+    cdef float membrane_length, tip_length, miss_length, precision, recall, fmeasure
+    cdef int ROW = pred_img_th_nwg_del.shape[0]
+    cdef int COLUMN = pred_img_th_nwg_del.shape[1]
+    cdef int y, x
+    cdef cnp.float64_t[:] result
+    membrane_length = 0
+    tip_length = 0
+    miss_length = 0
+    for y in range(ROW):
+        for x in range(COLUMN):
+            membrane_length += ans_img_th_nwg[y, x]
+            if pred_img_th_fattened[y, x] == 1 and ans_img_th_nwg[y, x] == 1:
+                tip_length += 1
+            if pred_img_th_nwg_del[y, x] == 1 and ans_img_th_fattened[y, x] != 1:
+                miss_length += 1
+
+    if tip_length + miss_length==0:
+        precision = 0
+    else:
+        precision = tip_length / (tip_length + miss_length)
+
+    if membrane_length==0:
+        recall = 0
+    else:
+        recall = tip_length / membrane_length
+
+    if precision + recall == 0:
+        fmeasure = 0
+    else:
+        fmeasure = 2 * (precision * recall) / (precision + recall)
+    
+    with gil:
+        #print(f'unique pred_img_th_nwg_del: {np.unique(np.asarray(pred_img_th_nwg_del))}, unique ans_img_th_fattened: {np.unique(np.asarray(ans_img_th_fattened))}')
+        #print(f'membrane_length: {membrane_length}, tip_length: {tip_length}, miss_length: {miss_length}, {np.sum(np.logical_and(np.asarray(pred_img_th_nwg_del) == 1, np.asarray(ans_img_th_fattened) != 1))}')
+        result = np.empty(6, dtype=np.float64)
+        result[0] = precision
+        result[1] = recall
+        result[2] = fmeasure
+        result[3] = membrane_length
+        result[4] = tip_length
+        result[5] = miss_length
+    return result
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.float64_t[:, :] evaluate_membrane_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int radius=3, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, int symmetric=False, int otsu=False, int verbose=False):
+    cdef int ROW = pred_img.shape[0]
+    cdef int COLUMN = pred_img.shape[1]
+    
+    cdef DTYPE_t[:] threshold_list
+    cdef int threshold_list_length
+
+    cdef DTYPE_t[:, :, :] pred_img_th
+    cdef list pred_img_th_list = []
+
+    cdef DTYPE_t[:, :, :] pred_img_th_nwg
+
+    cdef cnp.ndarray[DTYPE_t, ndim=2] ans_img_th_nwg_ = np.asarray(NWG_(cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]))
+    cdef DTYPE_t[:, :] ans_img_th_nwg = ans_img_th_nwg_
+    cdef DTYPE_t[:, :] ans_img_th_nwg_fattened = modify_line_width_(ans_img_th_nwg_, radius)
+    cdef int th, th_index, search_size, search_index
+
+    cdef DTYPE_t[:, :, :] pred_img_th_nwg_del
+    cdef cnp.ndarray[DTYPE_t, ndim=3] pred_img_th_nwg_del_
+    cdef list pred_img_th_nwg_del_list = []
+    cdef cnp.int32_t[:] del_area_list
+    cdef int del_area_list_length
+
+    cdef DTYPE_t[:, :, :] pred_img_th_nwg_del_fattened
+    cdef cnp.ndarray[DTYPE_t, ndim=3] pred_img_th_nwg_del_fattened_
+
+    cdef cnp.float64_t[:, :] result
+
+    if otsu:
+        threshold_list = np.array([cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)[0]], dtype=DTYPE)
+        threshold_list_length = 1
+    else:
+        threshold_list = extract_threshold_values(pred_img, min_th=min_th, max_th=max_th)[::step_th]
+        threshold_list_length = threshold_list.shape[0]
+    pred_img_th_nwg = np.empty((threshold_list_length, ROW, COLUMN), dtype=DTYPE)
+
+    for th_index in range(threshold_list_length):
+        if verbose:print(f'\rThreshold: {threshold_list[th_index]}', end=' '*10)
+        pred_img_th_list.append(cv2.threshold(pred_img, threshold_list[th_index], 255, cv2.THRESH_BINARY)[1])
+    pred_img_th = np.stack(pred_img_th_list)
+
+    if verbose:print(f'\nNWG Start', end='')
+    for th_index in prange(threshold_list_length, nogil=True):
+        pred_img_th_nwg[th_index] = NWG_(pred_img_th[th_index], symmetric=symmetric)
+    
+    search_size = 0
+    for th_index in range(threshold_list_length):
+        if verbose:print(f'\rSearch size: {search_size}', end=' '*10)
+        search_size += detect_deleted_area_candidates(np.asarray(pred_img_th_nwg[th_index]), min_area, max_area)[::step_area].shape[0]
+    if verbose:print(f'\rSearch size: {search_size}')
+    result = np.empty((search_size, 8), dtype=np.float64)
+    pred_img_th_nwg_del_ = np.empty((search_size, ROW, COLUMN), dtype=np.uint8)
+    search_index = 0
+    for th_index in range(threshold_list_length):
+        del_area_list = detect_deleted_area_candidates(np.asarray(pred_img_th_nwg[th_index, :, :]), min_area, max_area)[::step_area]
+        del_area_list_length = del_area_list.shape[0]
+        for del_area_index in range(del_area_list_length):
+            if verbose:print(f'\rThreshold: {threshold_list[th_index]}, Del area: {del_area_list[del_area_index]}', end=' '*10)
+            pred_img_th_nwg_del_[search_index] = small_area_reduction(np.asarray(pred_img_th_nwg[th_index]), del_area_list[del_area_index])
+            result[search_index, 0] = threshold_list[th_index]
+            result[search_index, 1] = del_area_list[del_area_index]
+            search_index += 1
+    pred_img_th_nwg_del = pred_img_th_nwg_del_
+    if verbose:print(f'\nmax pred_img_th_nwg_del: {np.max(np.asarray(pred_img_th_nwg_del))}, min pred_img_th_nwg_del: {np.min(np.asarray(pred_img_th_nwg_del))}')
+
+    pred_img_th_nwg_del_fattened = np.empty((search_size, ROW, COLUMN), dtype=np.uint8)
+    for search_index in range(search_size):
+        if verbose:print(f'\rDilate line... Now index: {search_index+1}', end=' '*10)
+        pred_img_th_nwg_del_fattened[search_index] = modify_line_width_(pred_img_th_nwg_del[search_index], radius)
+    if verbose:print()
+    for search_index in prange(search_size, nogil=True):
+        result[search_index, 2:8] = thred_eval(pred_img_th_nwg_del[search_index], ans_img_th_nwg, pred_img_th_nwg_del_fattened[search_index], ans_img_th_nwg_fattened)
+    return result
 ###
