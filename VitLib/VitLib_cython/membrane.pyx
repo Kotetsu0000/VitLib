@@ -377,16 +377,6 @@ cdef DTYPE_t[:, :] NWG_(DTYPE_t[:, :] img, int symmetric=False, int multithread=
                             Q[y,x]=1
         with gil:
             src = np.copy(Q)
-    if multithread:
-        for x in prange(1,COLUMN-1, nogil=True):
-            for y in range(1,ROW-1):
-                if src[y,x]==1:
-                    src[y,x] = 255
-    else:
-        for x in range(1,COLUMN-1):
-            for y in range(1,ROW-1):
-                if src[y,x]==1:
-                    src[y,x] = 255
     return src[1:ROW-1, 1:COLUMN-1]
 ###
 
@@ -448,7 +438,7 @@ cdef int NWG_single(DTYPE_t[:, :] src, int x, int y, int g, int symmetric) noexc
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(DTYPE_t[:, :] img, int symmetric=False, int multithread=True):
-    return np.asarray(NWG_(img, symmetric, multithread))
+    return np.asarray(NWG_(img, symmetric, multithread)) * 255
 ###
 
 @cython.boundscheck(False)
