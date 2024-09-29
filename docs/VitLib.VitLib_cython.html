@@ -49,9 +49,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">VitLib.VitLib_cython package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-VitLib.VitLib_cython.common">VitLib.VitLib_cython.common module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates"><code class="docutils literal notranslate"><span class="pre">detect_deleted_area_candidates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates_old"><code class="docutils literal notranslate"><span class="pre">detect_deleted_area_candidates_old()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.extract_threshold_values"><code class="docutils literal notranslate"><span class="pre">extract_threshold_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.extract_threshold_values_old"><code class="docutils literal notranslate"><span class="pre">extract_threshold_values_old()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.small_area_reduction"><code class="docutils literal notranslate"><span class="pre">small_area_reduction()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.small_area_reduction_nofix"><code class="docutils literal notranslate"><span class="pre">small_area_reduction_nofix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.common.small_area_reduction_old"><code class="docutils literal notranslate"><span class="pre">small_area_reduction_old()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-VitLib.VitLib_cython.membrane">VitLib.VitLib_cython.membrane module</a><ul>
@@ -62,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_nwg()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.modify_line_width"><code class="docutils literal notranslate"><span class="pre">modify_line_width()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.modify_line_width_old"><code class="docutils literal notranslate"><span class="pre">modify_line_width_old()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-VitLib.VitLib_cython.nucleus">VitLib.VitLib_cython.nucleus module</a><ul>
@@ -107,8 +111,40 @@
 <p>File: VitLib/VitLib_cython/common.pyx (starting at line 1)</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.detect_deleted_area_candidates">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">detect_deleted_area_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 114)
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">detect_deleted_area_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 216)
+2値画像の小領域の削除面積のリストを作成する関数.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 小領域の面積のリスト.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nwg_cython</span> <span class="kn">import</span> <span class="n">detect_deleted_area_candidates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">detect_deleted_area_candidates</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="go">array([0, 3])</span>
+</pre></div>
+</div>
+</dd>
+<dt>Note:</dt><dd><p>using cython.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.common.detect_deleted_area_candidates_old">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">detect_deleted_area_candidates_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates_old" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 171)
 2値画像の小領域の削除面積のリストを作成する関数.</p>
 <blockquote>
 <div><dl>
@@ -139,8 +175,33 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.extract_threshold_values">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">extract_threshold_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.extract_threshold_values" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 159)
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">extract_threshold_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.extract_threshold_values" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 279)
+画像から閾値を抽出する.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 画像から抽出した閾値のリスト.</p>
+</dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>             <span class="p">[</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">],</span>
+<span class="gp">... </span>             <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">extract_threshold_values</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">array([126, 254], dtype=uint8)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Note:</dt><dd><p>using cython.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.common.extract_threshold_values_old">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">extract_threshold_values_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.extract_threshold_values_old" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 253)
 画像から閾値を抽出する.</p>
 <blockquote>
 <div><dl>
@@ -165,7 +226,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.small_area_reduction">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">small_area_reduction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">area_th=100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.small_area_reduction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 56)
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 115)
 2値画像の小領域削除を行う.</p>
 <blockquote>
 <div><dl>
@@ -205,7 +266,7 @@ area_th (int): 面積の閾値.(area_th以下の面積の領域が削除され�
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.small_area_reduction_nofix">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">small_area_reduction_nofix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_th</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VitLib.VitLib_cython.common.small_area_reduction_nofix" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 10)
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 11)
 2値画像の小領域削除を行う.</p>
 <blockquote>
 <div><dl>
@@ -240,6 +301,46 @@ area_th (int): 面積の閾値.</p>
 </div></blockquote>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.common.small_area_reduction_old">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">small_area_reduction_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">area_th=100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.small_area_reduction_old" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 57)
+2値画像の小領域削除を行う.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.
+area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 小領域削除後の2値画像.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nwg_cython</span> <span class="kn">import</span> <span class="n">small_area_reduction</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">small_area_reduction</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">area_th</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">array([[0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
+<span class="go">       [0, 0, 0, 0, 0, 0, 0, 0]])</span>
+</pre></div>
+</div>
+</dd>
+<dt>Note:</dt><dd><p>using cython.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
 </section>
 <section id="module-VitLib.VitLib_cython.membrane">
 <span id="vitlib-vitlib-cython-membrane-module"></span><h2>VitLib.VitLib_cython.membrane module<a class="headerlink" href="#module-VitLib.VitLib_cython.membrane" title="Link to this heading">¶</a></h2>
@@ -247,7 +348,7 @@ area_th (int): 面積の閾値.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">multithread=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 450)</p>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 440)</p>
 </dd></dl>
 
 <dl class="py function">
@@ -386,7 +487,7 @@ using cython.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 480)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 525)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
 <div><dl class="simple">
@@ -409,7 +510,7 @@ otsu (bool): 二値化の閾値を自動で設定するかどうか.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_nwg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 544)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 589)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
 <div><dl class="simple">
@@ -429,8 +530,26 @@ radius (int): 評価指標の計算に使用する半径.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 456)
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 507)
+細線化された画像の線の太さを変更する.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.
+radius (int): 線の太さ.</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 線の太さを変更した画像.</p>
+</dd>
+<dt>Note:</dt><dd><p>using cython.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width_old">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width_old" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 446)
 細線化された画像の線の太さを変更する.</p>
 <blockquote>
 <div><dl class="simple">
