@@ -505,6 +505,18 @@ cdef DTYPE_t[:, :] modify_line_width_(DTYPE_t[:, :] img, int radius=1) nogil:
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(DTYPE_t[:, :] img, int radius=1):
+    """細線化された画像の線の太さを変更する. 
+
+    Args:
+        img (np.ndarray): 2値画像.
+        radius (int): 線の太さ.
+
+    Returns:
+        np.ndarray: 線の太さを変更した画像.
+
+    Note:
+        using cython.
+    """
     return np.asarray(modify_line_width_(img, radius))
 ###
 
