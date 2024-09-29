@@ -377,16 +377,6 @@ cdef DTYPE_t[:, :] NWG_(DTYPE_t[:, :] img, int symmetric=False, int multithread=
                             Q[y,x]=1
         with gil:
             src = np.copy(Q)
-    if multithread:
-        for x in prange(1,COLUMN-1, nogil=True):
-            for y in range(1,ROW-1):
-                if src[y,x]==1:
-                    src[y,x] = 255
-    else:
-        for x in range(1,COLUMN-1):
-            for y in range(1,ROW-1):
-                if src[y,x]==1:
-                    src[y,x] = 255
     return src[1:ROW-1, 1:COLUMN-1]
 ###
 
@@ -448,12 +438,12 @@ cdef int NWG_single(DTYPE_t[:, :] src, int x, int y, int g, int symmetric) noexc
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(DTYPE_t[:, :] img, int symmetric=False, int multithread=True):
-    return np.asarray(NWG_(img, symmetric, multithread))
+    return np.asarray(NWG_(img, symmetric, multithread)) * 255
 ###
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
+cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width_old(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
     """細線化された画像の線の太さを変更する. 
 
     Args:
@@ -473,6 +463,61 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(cnp.ndarray[DTYPE_t, ndim=2
     for r, c in zip(r_list, c_list):
         src = cv2.circle(src, (c, r), radius, 1, thickness=-1)
     return src
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef DTYPE_t[:, :] modify_line_width_(DTYPE_t[:, :] img, int radius=1) nogil:
+    """細線化された画像の線の太さを変更する. 
+
+    Args:
+        img (np.ndarray): 2値画像.
+        radius (int): 線の太さ.
+
+    Returns:
+        np.ndarray: 線の太さを変更した画像.
+
+    Note:
+        using cython.
+    """
+    cdef int height = img.shape[0]
+    cdef int width = img.shape[1]
+    cdef DTYPE_t[:, :] output_image
+    cdef int x, y, u, v
+    with gil:
+        output_image = np.zeros((height, width), dtype=DTYPE)
+
+    for y in prange(height, nogil=True):
+        for x in range(width):
+            if img[y, x] == 1:
+                output_image[y, x] = 1
+                continue
+            for v in range(max(0, y - radius), min(height, y + radius + 1)):
+                for u in range(max(0, x - radius), min(width, x + radius + 1)):
+                    if (u - x) * (u - x) + (v - y) * (v - y) <= ((radius) * (radius)) and img[v, u] == 1:
+                        output_image[y, x] = 1
+                        break
+                if output_image[y, x] == 1:
+                    break
+    return output_image 
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(DTYPE_t[:, :] img, int radius=1):
+    """細線化された画像の線の太さを変更する. 
+
+    Args:
+        img (np.ndarray): 2値画像.
+        radius (int): 線の太さ.
+
+    Returns:
+        np.ndarray: 線の太さを変更した画像.
+
+    Note:
+        using cython.
+    """
+    return np.asarray(modify_line_width_(img, radius))
 ###
 
 @cython.boundscheck(False)
