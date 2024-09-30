@@ -535,7 +535,7 @@ radius (int): 評価指標の計算に使用する半径.</p>
 <dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 686)
 複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.</p>
 <blockquote>
-<div><dl class="simple">
+<div><dl>
 <dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像.
 ans_img (np.ndarray): 正解画像.
 radius (int): 評価指標の計算に使用する半径.
@@ -549,8 +549,9 @@ symmetric (bool): NWG細線化の対称性.
 otsu (bool): 二値化の閾値を自動で設定するかどうか.
 verbose (bool): 進捗表示を行うかどうか.</p>
 </dd>
-<dt>Returns:</dt><dd><dl class="simple">
-<dt>np.ndarray: 評価指標の配列.</dt><dd><ul class="simple">
+<dt>Returns:</dt><dd><p>np.ndarray: 評価指標の配列.</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>0: threshold</p></li>
 <li><p>1: del_area</p></li>
 <li><p>2: precision</p></li>
@@ -560,8 +561,7 @@ verbose (bool): 進捗表示を行うかどうか.</p>
 <li><p>6: tip_length</p></li>
 <li><p>7: miss_length</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </dd>
 </dl>
 </div></blockquote>
