@@ -125,8 +125,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v0(cnp.ndarray[DTYPE_t, ndim=2] img, 
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (cnp.ndarray): 2次元の2値画像
-        symmetric (bool): 対称的な細線化処理を行うかどうか
+        img (cnp.ndarray): 2次元の2値画像  
+        symmetric (bool): 対称的な細線化処理を行うかどうか  
 
     Returns:
         cnp.ndarray: 細線化した画像
@@ -236,7 +236,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v1(cnp.ndarray[DTYPE_t, ndim=2] img, 
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (cnp.ndarray): 2次元の2値画像
+        img (cnp.ndarray): 2次元の2値画像  
         symmetric (bool): 対称的な細線化処理を行うかどうか
 
     Returns:
@@ -264,8 +264,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v1(cnp.ndarray[DTYPE_t, ndim=2] img, 
                [  0,   0,   0,   0,   0,   0,   0,   0]])        
 
         Note:
-            imgは2値画像を想定しており、[0, 255]の配列である必要がある。
-            cv2で二値化した画像を入れることで正常に動作する。
+            imgは2値画像を想定しており、[0, 255]の配列である必要がある。  
+            cv2で二値化した画像を入れることで正常に動作する。  
             using cython.
     '''
     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.pad(np.copy(img) // 255, (1, 1), 'constant')
@@ -447,8 +447,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width_old(cnp.ndarray[DTYPE_t, nd
     """細線化された画像の線の太さを変更する. 
 
     Args:
-        img (np.ndarray): 2値画像.
-        radius (int): 線の太さ.
+        img (np.ndarray): 2値画像.  
+        radius (int): 線の太さ.  
 
     Returns:
         np.ndarray: 線の太さを変更した画像.
@@ -471,8 +471,8 @@ cdef DTYPE_t[:, :] modify_line_width_(DTYPE_t[:, :] img, int radius=1) nogil:
     """細線化された画像の線の太さを変更する. 
 
     Args:
-        img (np.ndarray): 2値画像.
-        radius (int): 線の太さ.
+        img (np.ndarray): 2値画像.  
+        radius (int): 線の太さ.  
 
     Returns:
         np.ndarray: 線の太さを変更した画像.
@@ -508,8 +508,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(DTYPE_t[:, :] img, int radi
     """細線化された画像の線の太さを変更する. 
 
     Args:
-        img (np.ndarray): 2値画像.
-        radius (int): 線の太さ.
+        img (np.ndarray): 2値画像.  
+        radius (int): 線の太さ.  
 
     Returns:
         np.ndarray: 線の太さを変更した画像.
@@ -526,13 +526,13 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     """細胞膜画像の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像.
-        ans_img (np.ndarray): 正解画像.
-        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.
-        del_area (int): 小領域削除の閾値.
-        symmetric (bool): NWG細線化の対称性.
-        radius (int): 評価指標の計算に使用する半径.
-        otsu (bool): 二値化の閾値を自動で設定するかどうか.
+        pred_img (np.ndarray): 予測画像.  
+        ans_img (np.ndarray): 正解画像.  
+        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.  
+        del_area (int): 小領域削除の閾値.  
+        symmetric (bool): NWG細線化の対称性.  
+        radius (int): 評価指標の計算に使用する半径.  
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
 
     Returns:
         dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
@@ -590,11 +590,11 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     """細胞膜画像の評価を行う関数.
 
     Args:
-        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.
-        ans_img_th_nwg (np.ndarray): 正解画像.
-        threshold (int): 二値化の閾値(返却用).
-        del_area (int): 小領域削除の閾値.
-        radius (int): 評価指標の計算に使用する半径.
+        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.  
+        ans_img_th_nwg (np.ndarray): 正解画像.  
+        threshold (int): 二値化の閾値(返却用).  
+        del_area (int): 小領域削除の閾値.  
+        radius (int): 評価指標の計算に使用する半径.  
 
     Returns:
         dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
@@ -687,21 +687,22 @@ cpdef cnp.float64_t[:, :] evaluate_membrane_prediction_range(cnp.ndarray[DTYPE_t
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像.
-        ans_img (np.ndarray): 正解画像.
-        radius (int): 評価指標の計算に使用する半径.
-        min_th (int): 二値化の最小閾値.
-        max_th (int): 二値化の最大閾値.
-        step_th (int): 二値化の閾値のステップ.
-        min_area (int): 小領域削除の最小面積.
-        max_area (int): 小領域削除の最大面積.
-        step_area (int): 小領域削除の面積のステップ.
-        symmetric (bool): NWG細線化の対称性.
-        otsu (bool): 二値化の閾値を自動で設定するかどうか.
-        verbose (bool): 進捗表示を行うかどうか.
+        pred_img (np.ndarray): 予測画像.  
+        ans_img (np.ndarray): 正解画像.  
+        radius (int): 評価指標の計算に使用する半径.  
+        min_th (int): 二値化の最小閾値.  
+        max_th (int): 二値化の最大閾値.  
+        step_th (int): 二値化の閾値のステップ.  
+        min_area (int): 小領域削除の最小面積.  
+        max_area (int): 小領域削除の最大面積.  
+        step_area (int): 小領域削除の面積のステップ.  
+        symmetric (bool): NWG細線化の対称性.  
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
+        verbose (bool): 進捗表示を行うかどうか.  
 
     Returns:
         np.ndarray: 評価指標の配列. 
+        
             - 0: threshold
             - 1: del_area
             - 2: precision
