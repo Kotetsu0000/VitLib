@@ -684,6 +684,33 @@ cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, DTYPE_t[:, :
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.float64_t[:, :] evaluate_membrane_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int radius=3, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, int symmetric=False, int otsu=False, int verbose=False):
+    """複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.
+
+    Args:
+        pred_img (np.ndarray): 予測画像.
+        ans_img (np.ndarray): 正解画像.
+        radius (int): 評価指標の計算に使用する半径.
+        min_th (int): 二値化の最小閾値.
+        max_th (int): 二値化の最大閾値.
+        step_th (int): 二値化の閾値のステップ.
+        min_area (int): 小領域削除の最小面積.
+        max_area (int): 小領域削除の最大面積.
+        step_area (int): 小領域削除の面積のステップ.
+        symmetric (bool): NWG細線化の対称性.
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.
+        verbose (bool): 進捗表示を行うかどうか.
+
+    Returns:
+        np.ndarray: 評価指標の配列. 
+            - 0: threshold
+            - 1: del_area
+            - 2: precision
+            - 3: recall
+            - 4: fmeasure
+            - 5: membrane_length
+            - 6: tip_length
+            - 7: miss_length
+    """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]
     
