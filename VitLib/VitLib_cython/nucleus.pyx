@@ -44,9 +44,9 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     """標準的核面積を計算する
 
     Args:
-        ans_img (np.ndarray): 二値化画像
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        ans_img (np.ndarray): 二値化画像  
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
 
     Returns:
         float: 標準的核面積
@@ -79,11 +79,11 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
     """評価用画像を作成する関数
 
     Args:
-        ans_img (np.ndarray): 二値化画像
-        bf_img (np.ndarray): 明視野画像
-        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        ans_img (np.ndarray): 二値化画像  
+        bf_img (np.ndarray): 明視野画像  
+        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
 
     Returns:
         dict: 評価用画像の辞書
@@ -136,8 +136,8 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
     """重心の距離の最小値とそのインデックスを返す関数
 
     Args:
-        ext_centroid (tuple): 抽出された核の重心
-        ans_centroids (list): 正解核の重心リスト
+        ext_centroid (tuple): 抽出された核の重心  
+        ans_centroids (list): 正解核の重心リスト  
 
     Returns:
         tuple: 最小距離のインデックスとその距離
@@ -164,19 +164,19 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     """細胞核画像の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像
-        ans_img (np.ndarray): 正解画像
-        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
-        threshold (int): 二値化の閾値
-        del_area (int): 除外する面積
-        eval_mode (str): 評価方法
+        pred_img (np.ndarray): 予測画像  
+        ans_img (np.ndarray): 正解画像  
+        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        threshold (int): 二値化の閾値  
+        del_area (int): 除外する面積  
+        eval_mode (str): 評価方法  
 
             - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
 
-        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
+        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)  
 
     Returns:
         dict: 評価結果の辞書

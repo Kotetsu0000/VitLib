@@ -58,7 +58,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction_old(cnp.ndarray[DTYPE_t,
     """2値画像の小領域削除を行う.
 
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像.  
         area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)
 
     Returns:
@@ -116,8 +116,8 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
     """2値画像の小領域削除を行う.
 
     Args:
-        img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)
+        img (np.ndarray): 2値画像.  
+        area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)  
 
     Returns:
         np.ndarray: 小領域削除後の2値画像.
@@ -172,7 +172,7 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates_old(cnp.n
     """2値画像の小領域の削除面積のリストを作成する関数.
 
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像.  
 
     Returns:
         np.ndarray: 小領域の面積のリスト.
@@ -217,7 +217,7 @@ cpdef cnp.ndarray[cnp.int32_t, ndim=1] detect_deleted_area_candidates(cnp.ndarra
     """2値画像の小領域の削除面積のリストを作成する関数.
 
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像.  
 
     Returns:
         np.ndarray: 小領域の面積のリスト.
@@ -254,7 +254,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYP
     """画像から閾値を抽出する.
     
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像.  
 
     Returns:
         np.ndarray: 画像から抽出した閾値のリスト.
@@ -280,7 +280,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t,
     """画像から閾値を抽出する.
     
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像.  
 
     Returns:
         np.ndarray: 画像から抽出した閾値のリスト.
