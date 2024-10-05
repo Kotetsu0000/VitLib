@@ -717,6 +717,7 @@ cpdef cnp.float64_t[:, :] evaluate_membrane_prediction_range(cnp.ndarray[DTYPE_t
     
     cdef DTYPE_t[:] threshold_list
     cdef int threshold_list_length
+    cdef list temp_threshold_list
 
     cdef DTYPE_t[:, :, :] pred_img_th
     cdef list pred_img_th_list = []
@@ -745,6 +746,11 @@ cpdef cnp.float64_t[:, :] evaluate_membrane_prediction_range(cnp.ndarray[DTYPE_t
     else:
         threshold_list = extract_threshold_values(pred_img, min_th=min_th, max_th=max_th)[::step_th]
         threshold_list_length = threshold_list.shape[0]
+        if threshold_list_length == 0:
+            temp_threshold_list = [min_th, max_th]
+            temp_threshold_list = list(set(temp_threshold_list))
+            threshold_list = np.array(temp_threshold_list, dtype=DTYPE)
+            threshold_list_length = threshold_list.shape[0]
     pred_img_th_nwg = np.empty((threshold_list_length, ROW, COLUMN), dtype=DTYPE)
 
     for th_index in range(threshold_list_length):
