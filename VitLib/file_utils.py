@@ -31,7 +31,7 @@ def get_file_paths(path: str) -> list[str]:
     """
     folder_path = pathlib.Path(path)
     file_paths = list(folder_path.glob('*'))
-    return [str(path) for path in file_paths]
+    return [str(path).replace('\\', '/') for path in file_paths]
 
 def get_file_names(path: str) -> list[str]:
     """フォルダ内のファイル名をすべて取得する関数
