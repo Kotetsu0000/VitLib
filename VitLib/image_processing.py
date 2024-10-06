@@ -25,9 +25,10 @@ def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
     Returns:
         numpy.ndarray: 色相が変更された画像
     """
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    img[:,:,0] = (img[:,:,0]+hue_degree)%180
-    img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+    if len(img.shape)==3:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        img[:,:,0] = (img[:,:,0]+hue_degree)%180
+        img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
 def random_hue(img_list:list, hue_degree_range:tuple) -> list:
@@ -55,9 +56,10 @@ def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
     Returns:
         numpy.ndarray: 彩度が変更された画像
     """
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    img[:,:,1] = np.clip(img[:,:,1]*saturation_ratio, 0, 255).astype(np.uint8)
-    img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+    if len(img.shape)==3:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        img[:,:,1] = np.clip(img[:,:,1]*saturation_ratio, 0, 255).astype(np.uint8)
+        img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
 def random_saturation(img_list:list, saturation_ratio_range:tuple) -> list:
@@ -85,9 +87,10 @@ def change_value(img:np.ndarray, value_ratio:float) -> np.ndarray:
     Returns:
         numpy.ndarray: 明度が変更された画像
     """
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    img[:,:,2] = np.clip(img[:,:,2]*value_ratio, 0, 255).astype(np.uint8)
-    img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+    if len(img.shape)==3:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        img[:,:,2] = np.clip(img[:,:,2]*value_ratio, 0, 255).astype(np.uint8)
+        img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
     return img
 
 def random_value(img_list:list, value_ratio_range:tuple) -> list:
