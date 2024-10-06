@@ -23,7 +23,7 @@ def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
         hue_degree (int): 色相の変更量(0~180)
 
     Returns:
-        list: 色相が変更された画像リスト
+        numpy.ndarray: 色相が変更された画像
     """
     img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     img[:,:,0] = (img[:,:,0]+hue_degree)%180
@@ -151,8 +151,10 @@ def random_cut_image(img_list:list, size:tuple) -> list:
     
     Args:
         img_list (list): 画像リスト
-        top_left_range (tuple): 切り取りの左上の座標の範囲
         size (tuple): 切り取りのサイズ
+    
+    Returns:
+        list: 切り取られた画像リスト
     """
     img_size = img_list[0].shape
     top_left = (np.random.randint(0, img_size[0]-size[0]), np.random.randint(0, img_size[1]-size[1]))
@@ -166,6 +168,9 @@ def select_cut_image(img_list:list, top_left:tuple, size:tuple) -> list:
         img_list (list): 画像リスト
         top_left (tuple): 切り取りの左上の座標
         size (tuple): 切り取りのサイズ
+    
+    Returns:
+        list: 切り取られた画像リスト
     """
     return [cut_image(img, top_left, size) for img in img_list]
 
@@ -196,7 +201,6 @@ def random_rotate_image(img_list:list) -> list:
 
     Args:
         img_list (list): 画像リスト
-        rotate_times_range (tuple): 回転回数の範囲(1回転につき90度)
 
     Returns:
         list: 回転された画像リスト
