@@ -214,10 +214,10 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>色相が変更された画像リスト</p>
+<dd class="field-even"><p>色相が変更された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
+<dd class="field-odd"><p>numpy.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -365,9 +365,14 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
-<li><p><strong>top_left_range</strong> (<em>tuple</em>) – 切り取りの左上の座標の範囲</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>切り取られた画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -422,10 +427,7 @@
 <dd><p>画像リスト内の各画像をランダムに回転します。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
-<li><p><strong>rotate_times_range</strong> (<em>tuple</em>) – 回転回数の範囲(1回転につき90度)</p></li>
-</ul>
+<dd class="field-odd"><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>回転された画像リスト</p>
@@ -507,6 +509,12 @@
 <li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取りの左上の座標</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>切り取られた画像リスト</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
