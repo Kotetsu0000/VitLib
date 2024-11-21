@@ -45,7 +45,7 @@ def small_area_reduction(img:np.ndarray, area_th:int=100) -> np.ndarray:
     labeled_img[labeled_img > 0] = 1
     return labeled_img.astype(np.uint8)
 
-def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
+def detect_deleted_area_candidates(img:np.ndarray, min_area:int=0, max_area:int=None) -> np.ndarray:
     """2値画像の小領域の削除面積のリストを作成する関数.
 
     Args:
@@ -68,19 +68,14 @@ def detect_deleted_area_candidates(img:np.ndarray) -> np.ndarray:
         >>> detect_deleted_area_candidates(img)
         array([0, 3])
     """
-    num_of_labels, labeled_img, _, _ = cv2.connectedComponentsWithStats(img)
-    contours = np.zeros(num_of_labels, dtype=np.uint64)
-    ROW, COLUMN = img.shape
-    for row in range(ROW):
-        for column in range(COLUMN):
-            label = labeled_img[row, column]
-            contours[label] += 1
-    contours[0] = 0
-    contours = np.unique(contours)
-    contours.sort()
-    return contours
+    stats = cv2.connectedComponentsWithStats(img)[2][:, 4]
+    stats[0] = 0
+    if max_area is not None:
+        stats = stats[stats<max_area]
+    stats = stats[stats>=min_area]
+    return np.unique(stats)
 
-def extract_threshold_values(img:np.ndarray) -> np.ndarray:
+def extract_threshold_values(img:np.ndarray, min_th:int=0, max_th:int=255) -> np.ndarray:
     """画像から閾値を抽出する.
     
     Args:
@@ -96,6 +91,5 @@ def extract_threshold_values(img:np.ndarray) -> np.ndarray:
         >>> extract_threshold_values(a)
         array([126, 254], dtype=uint8)
     """
-    img_flatten = np.ravel(img)
-    img_unique = np.unique(img_flatten[img_flatten!=0]) - 1
-    return img_unique
+    th_list = np.unique(img[img!=0]) - 1
+    return th_list[np.logical_and(th_list>=min_th, th_list<max_th)]
