@@ -243,7 +243,7 @@ cpdef cnp.ndarray[cnp.int32_t, ndim=1] detect_deleted_area_candidates(cnp.ndarra
     stats = cv2.connectedComponentsWithStats(img)[2][:, 4]
     stats[0] = 0
     if max_area is not None:
-        stats = stats[stats<=max_area]
+        stats = stats[stats<max_area]
     stats = stats[stats>=min_area]
     return np.unique(stats)
 ###
@@ -296,5 +296,5 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t,
         using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=1] th_list = np.unique(img[img!=0]) - 1
-    return th_list[np.logical_and(th_list>=min_th, th_list<=max_th)]
+    return th_list[np.logical_and(th_list>=min_th, th_list<max_th)]
 ###
