@@ -118,7 +118,10 @@ def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
     Returns:
         numpy.ndarray: コントラストが変更された画像
     """
-    return cv2.convertScaleAbs(img, alpha=contrast_ratio)
+    if len(img.shape)==3:
+        return cv2.convertScaleAbs(img, alpha=contrast_ratio)
+    else:
+        return img
 
 def random_contrast(img_list:list, contrast_ratio_range:tuple) -> list:
     """
