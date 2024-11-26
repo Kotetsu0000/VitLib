@@ -117,12 +117,13 @@ def euclidean_distance(ext_centroid, ans_centroids):
     min_distance = 2**31 - 1
     min_index = -1
     for i in range(len(ans_centroids)):
-        ans_centroid = ans_centroids[i]
-        distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
+        #ans_centroid = ans_centroids[i]
+        #distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
+        distance = (ext_centroid[0] - ans_centroids[i, 0])**2 + (ext_centroid[1] - ans_centroids[i, 1])**2
         if distance < min_distance:
             min_distance = distance
             min_index = i
-    return min_distance, min_index
+    return min_index, np.sqrt(min_distance)
 
 def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
@@ -136,8 +137,10 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
         threshold (int): 二値化の閾値
         del_area (int): 除外する面積
         eval_mode (str): 評価方法
+
             - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
 
     Returns:
@@ -197,16 +200,18 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     #重複削除
     correct_list = list(set(correct_list))
 
+    correct_num = len(correct_list)
+
     #抽出された数(適合率計算用), -1は背景の分
     conformity_bottom = pred_num - 1 - ext_no_care_num
 
     #適合率
-    precision = len(correct_list) / conformity_bottom if conformity_bottom != 0 else 0
+    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
 
     #再現率
-    recall = len(correct_list) / (care_num-1) if care_num-1 != 0 else 0
+    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
 
     #F値
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
     
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area}
+    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}

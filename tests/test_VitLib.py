@@ -30,8 +30,8 @@ def test_common():
     assert np.all(etv == common_cy.extract_threshold_values(np.arange(256, dtype=np.uint8).reshape(16, 16)))
 
 def test_membrane():
-    img = cv2.imread('tests/img.png', cv2.IMREAD_GRAYSCALE)
-    prod = cv2.imread('tests/prod.png', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('tests/img_mem.png', cv2.IMREAD_GRAYSCALE)
+    prod = cv2.imread('tests/prod_mem.png', cv2.IMREAD_GRAYSCALE)
     etv = common_cy.extract_threshold_values(img)
     for th in etv[etv>127]:
         img_th = cv2.threshold(img, th, 255, cv2.THRESH_BINARY)[1]
@@ -83,5 +83,31 @@ def test_membrane():
 
                 print(f'threshold: {th}, del_area: {del_area}, radius: {radius}, Complete!')
 
+def test_nucleus():
+    img = cv2.imread('tests/img_nuc.png', cv2.IMREAD_GRAYSCALE)
+    img_th = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)[1]
+    prod = cv2.imread('tests/prod_nuc.png', cv2.IMREAD_GRAYSCALE)
+    etv = common_cy.extract_threshold_values(prod)
+    for th in etv[etv>127]:
+        prod_th = cv2.threshold(prod, th, 255, cv2.THRESH_BINARY)[1]
+        ddac = common_cy.detect_deleted_area_candidates(prod_th)
+        for del_area in ddac[::len(ddac)//3]:
+            base_result = nucleus_py.evaluate_nuclear_prediction(prod, img_th, threshold=th, del_area=del_area, eval_mode='inclusion')
+            cython_result = nucleus_cy.evaluate_nuclear_prediction(prod, img_th, threshold=th, del_area=del_area, eval_mode='inclusion')
+
+            assert base_result['correct_num'] == cython_result['correct_num'], f'base: {base_result["correct_num"]}, cython: {cython_result["correct_num"]}'
+            assert base_result['conformity_bottom'] == cython_result['conformity_bottom'], f'base: {base_result["conformity_bottom"]}, cython: {cython_result["conformity_bottom"]}'
+            assert base_result['care_num'] == cython_result['care_num'], f'base: {base_result["care_num"]}, cython: {cython_result["care_num"]}'
+
+            #proximity
+            base_result = nucleus_py.evaluate_nuclear_prediction(prod, img_th, threshold=th, del_area=del_area, eval_mode='proximity')
+            cython_result = nucleus_cy.evaluate_nuclear_prediction(prod, img_th, threshold=th, del_area=del_area, eval_mode='proximity')
+
+            assert base_result['correct_num'] == cython_result['correct_num'], f'base: {base_result["correct_num"]}, cython: {cython_result["correct_num"]}'
+            assert base_result['conformity_bottom'] == cython_result['conformity_bottom'], f'base: {base_result["conformity_bottom"]}, cython: {cython_result["conformity_bottom"]}'
+            assert base_result['care_num'] == cython_result['care_num'], f'base: {base_result["care_num"]}, cython: {cython_result["care_num"]}'
+
+            print(f'threshold: {th}, del_area: {del_area}, Complete!')
+
 if __name__ == "__main__":
-    test_common()
+    test_nucleus()
