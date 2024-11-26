@@ -132,6 +132,8 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
     return return_dict
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, cnp.ndarray[cnp.float64_t, ndim=2] ans_centroids):
     """重心の距離の最小値とそのインデックスを返す関数
 
@@ -160,6 +162,8 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
     return (min_index, min_distance)
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int threshold=127, int del_area=0, str eval_mode="inclusion", int distance=10):
     """細胞核画像の評価を行う関数.
 
