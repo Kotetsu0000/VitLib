@@ -6,11 +6,13 @@ import cv2
 import numpy as np
 cimport numpy as cnp
 cimport cython
+from cython.parallel import prange
+from libcpp.set cimport set as cpp_set
 
 cdef extern from "<float.h>":
     const float FLT_MAX
 
-from .common import small_area_reduction
+from .common import small_area_reduction, detect_deleted_area_candidates, extract_threshold_values
 
 DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
@@ -132,7 +134,9 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
     return return_dict
 ###
 
-cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, cnp.ndarray[cnp.float64_t, ndim=2] ans_centroids):
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.float64_t[:] euclidean_distance(cnp.float64_t[:] ext_centroid, cnp.float64_t[:, :] ans_centroids) nogil:
     """重心の距離の最小値とそのインデックスを返す関数
 
     Args:
@@ -147,20 +151,25 @@ cpdef tuple euclidean_distance(cnp.ndarray[cnp.float64_t, ndim=1] ext_centroid, 
     """
     cdef float min_distance, distance
     cdef int min_index, i
-    cdef int len_ans_centroids = len(ans_centroids)
-    cdef cnp.ndarray[cnp.float64_t, ndim=1] ans_centroid
+    cdef int len_ans_centroids
+    cdef cnp.float64_t[:, :] ans_centroid
+    with gil:
+        len_ans_centroids = len(ans_centroids)
     min_distance = FLT_MAX
     min_index = -1
     for i in range(len_ans_centroids):
-        ans_centroid = ans_centroids[i]
-        distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
+        #distance = np.linalg.norm(np.array(ext_centroid) - np.array(ans_centroid))
+        distance = (ext_centroid[0] - ans_centroids[i, 0])**2 + (ext_centroid[1] - ans_centroids[i, 1])**2
         if distance < min_distance:
             min_distance = distance
             min_index = i
-    return (min_index, min_distance)
+    with gil:
+        return np.array([min_index, np.sqrt(min_distance)], dtype=np.float64)
 ###
 
-cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int threshold=127, int del_area=0, str eval_mode="inclusion", int distance=10):
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int threshold=127, int del_area=0, str eval_mode="inclusion", int distance=5):
     """細胞核画像の評価を行う関数.
 
     Args:
@@ -190,13 +199,16 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     cdef int ans_unique_len = len(np.unique(ans_img))
     cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
     cdef dict eval_images
-    cdef int pred_num, care_num, no_care_num, ext_no_care_num
+    cdef int pred_num, care_num, no_care_num, ext_no_care_num, correct_num
     cdef int i, care, no_care, conformity_bottom
     cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
     cdef cnp.ndarray[cnp.int32_t, ndim=2] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
     cdef cnp.ndarray[cnp.float64_t, ndim=2] pred_centroids, care_centroids, no_care_centroids
     cdef float precision, recall, fmeasure
     cdef list correct_list
+    cdef cnp.float64_t[:] min_care_data, min_no_care_data
+    cdef float min_care_distance, min_no_care_distance
+
     if ans_unique_len != 2 and ans_unique_len != 1:
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
@@ -225,16 +237,22 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     ext_no_care_num = 0 #抽出されたが考慮しない核の数
     if eval_mode == "inclusion":
         for i in range(1, pred_num):
-            care = care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
-            no_care = no_care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
+            care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+            no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
             if care:
                 correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
             elif no_care:
                 ext_no_care_num += 1
     elif eval_mode == "proximity":
         for i in range(1, pred_num):
-            min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
-            min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+            #min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
+            min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
+            min_care_index = int(min_care_data[0])
+            min_care_distance = min_care_data[1]
+            #min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+            min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+            min_no_care_index = int(min_no_care_data[0])
+            min_no_care_distance = min_no_care_data[1]
             if min_care_distance < distance:
                 correct_list.append(min_care_index+1)
             elif min_no_care_distance < distance:
@@ -245,17 +263,213 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     #重複削除
     correct_list = list(set(correct_list))
 
+    correct_num = len(correct_list)
+
     #抽出された数(適合率計算用), -1は背景の分
     conformity_bottom = pred_num - 1 - ext_no_care_num
 
     #適合率
-    precision = len(correct_list) / conformity_bottom if conformity_bottom != 0 else 0
+    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
 
     #再現率
-    recall = len(correct_list) / (care_num-1) if care_num-1 != 0 else 0
+    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
 
     #F値
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
     
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area}
+    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
+###
+
+cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mode, int distance, int care_num, cnp.int32_t[:, :] care_labels, cnp.int32_t[:, :] no_care_labels, cnp.float64_t[:, :] care_centroids, cnp.float64_t[:, :] no_care_centroids) nogil:
+    cdef int i, pred_num, ext_no_care_num, care, no_care, min_care_index, min_no_care_index
+    cdef cnp.int32_t[:, :] pred_labels, pred_stats
+    cdef cnp.float64_t[:, :] pred_centroids
+    cdef cnp.float64_t[:] min_care_data, min_no_care_data, result
+    cdef float min_care_distance, min_no_care_distance
+
+    cdef float correct_num, conformity_bottom, precision, recall, fmeasure, return_care_num
+
+    cdef cpp_set[int] correct_set
+
+    with gil:
+        pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(np.asarray(pred_img_th_nwg_del))
+        result = np.zeros(6, dtype=np.float64)
+        return_care_num = float(care_num-1)
+
+    ext_no_care_num = 0
+    if eval_mode == "inclusion":
+        for i in range(1, pred_num):
+            care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+            no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+            if care:
+                correct_set.insert(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
+            elif no_care:
+                ext_no_care_num += 1
+    elif eval_mode == "proximity":
+        for i in range(1, pred_num):
+            min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
+            min_care_index = int(min_care_data[0])
+            min_care_distance = min_care_data[1]
+            min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+            min_no_care_index = int(min_no_care_data[0])
+            min_no_care_distance = min_no_care_data[1]
+            if min_care_distance < distance:
+                correct_set.insert(min_care_index+1)
+            elif min_no_care_distance < distance:
+                ext_no_care_num += 1
+    else:
+        raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
+
+    # 合計数
+    correct_num = correct_set.size()
+
+    # 抽出された数(適合率計算用), -1は背景の分
+    conformity_bottom = pred_num - 1 - ext_no_care_num
+
+    # 適合率
+    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+
+    #適合率
+    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+
+    #再現率
+    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
+
+    #F値
+    fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0
+
+    result[0] = precision
+    result[1] = recall
+    result[2] = fmeasure
+    result[3] = correct_num
+    result[4] = conformity_bottom
+    result[5] = return_care_num
+
+    return result
+
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int min_th=0, object max_th=None, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
+    """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
+
+    Args:
+        pred_img (np.ndarray): 予測画像  
+        ans_img (np.ndarray): 正解画像  
+        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        th_min (int): 二値化の閾値の最小値  
+        max_th (int): 二値化の閾値の最大値  
+        step_th (int): 二値化の閾値のステップ  
+        min_area (int): 除外する面積の最小値  
+        max_area (int): 除外する面積の最大値  
+        step_area (int): 除外する面積のステップ  
+        eval_mode (str): 評価方法  
+
+            - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
+            - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+
+        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
+        otsu (bool): Otsuの二値化を行うかどうか
+        verbose (bool): 進捗表示を行うかどうか
+
+    Returns:
+        np.ndarray: 評価指標の配列. 
+        
+            - 0: threshold
+            - 1: del_area
+            - 2: precision
+            - 3: recall
+            - 4: fmeasure
+            - 5: correct_num
+            - 6: conformity_bottom
+            - 7: care_num
+    """
+    cdef int ROW = pred_img.shape[0]
+    cdef int COLUMN = pred_img.shape[1]
+    cdef cnp.float64_t[:, :] result
+
+    cdef int ans_unique_len = len(np.unique(ans_img))
+    cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
+    cdef dict eval_images
+    cdef DTYPE_t[:, :] care_img, no_care_img
+    
+    cdef DTYPE_t[:, :, :] pred_img_th
+    cdef list pred_img_th_list = []
+    
+    cdef DTYPE_t[:] threshold_list
+    cdef cnp.int32_t[:] del_area_list
+    cdef int threshold_list_length, del_area_list_length, th_index
+    cdef list temp_threshold_list
+
+    cdef DTYPE_t[:, :, :] pred_img_th_del
+    cdef cnp.ndarray[DTYPE_t, ndim=3] pred_img_th_del_
+
+    cdef int pred_num, care_num, no_care_num, search_index, search_size
+    cdef cnp.int32_t[:, :] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
+    cdef cnp.float64_t[:, :] pred_centroids, care_centroids, no_care_centroids
+
+    cdef cnp.ndarray[cnp.int32_t, ndim=1] pred_num_list
+    cdef cnp.ndarray[cnp.int32_t, ndim=3] pred_labels_list, pred_stats_list
+    cdef cnp.ndarray[cnp.float64_t, ndim=3] pred_centroids_list
+
+    if ans_unique_len != 2 and ans_unique_len != 1:
+        warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
+        ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
+
+    # 正解画像の準備
+    dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
+    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    care_img = eval_images["green_img"]
+    no_care_img = eval_images["red_img"]
+
+    care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(np.asarray(care_img))
+    no_care_num, no_care_labels, no_care_stats, no_care_centroids = cv2.connectedComponentsWithStats(np.asarray(no_care_img))
+
+    # 二値化の閾値リスト
+    if otsu:
+        threshold_list = np.array([cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)[0]], dtype=DTYPE)
+        threshold_list_length = 1
+    else:
+        threshold_list = extract_threshold_values(pred_img, min_th=min_th, max_th=max_th)[::step_th]
+        threshold_list_length = threshold_list.shape[0]
+        if threshold_list_length == 0:
+            temp_threshold_list = [min_th, max_th]
+            temp_threshold_list = list(set(temp_threshold_list))
+            threshold_list = np.array(temp_threshold_list, dtype=DTYPE)
+            threshold_list_length = threshold_list.shape[0]
+    pred_img_th = np.empty((threshold_list_length, ROW, COLUMN), dtype=DTYPE)
+
+    # まとめて二値化処理
+    for th_index in range(threshold_list_length):
+        if verbose:print(f'\rThreshold: {threshold_list[th_index]}', end=' '*10)
+        pred_img_th_list.append(cv2.threshold(pred_img, threshold_list[th_index], 255, cv2.THRESH_BINARY)[1])
+    pred_img_th = np.stack(pred_img_th_list)
+
+    # 除外する面積リスト(resultのサイズの決定)
+    search_size = 0
+    for th_index in range(threshold_list_length):
+        if verbose:print(f'\rSearch size: {search_size}', end=' '*10)
+        search_size += detect_deleted_area_candidates(np.asarray(pred_img_th[th_index]), min_area, max_area)[::step_area].shape[0]
+    if verbose:print(f'\rSearch size: {search_size}')
+    result = np.empty((search_size, 8), dtype=np.float64)
+    pred_img_th_del_ = np.empty((search_size, ROW, COLUMN), dtype=np.uint8)
+
+    # 小領域削除画像の作成
+    search_index = 0
+    for th_index in range(threshold_list_length):
+        del_area_list = detect_deleted_area_candidates(np.asarray(pred_img_th[th_index]), min_area, max_area)[::step_area]
+        del_area_list_length = del_area_list.shape[0]
+        for del_area_index in range(del_area_list_length):
+            if verbose:print(f'\rThreshold: {threshold_list[th_index]}, Del area: {del_area_list[del_area_index]}', end=' '*10)
+            pred_img_th_del_[search_index] = small_area_reduction(np.asarray(pred_img_th[th_index]), del_area_list[del_area_index])
+            result[search_index, 0] = threshold_list[th_index]
+            result[search_index, 1] = del_area_list[del_area_index]
+            search_index += 1
+    pred_img_th_del = pred_img_th_del_
+
+    for search_index in prange(search_size, nogil=True):
+        result[search_index, 2:8] = thred_eval(pred_img_th_del[search_index], eval_mode, distance, care_num, care_labels, no_care_labels, care_centroids, no_care_centroids)
+    return np.asarray(result)
 ###
