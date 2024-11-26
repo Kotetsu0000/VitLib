@@ -72,6 +72,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area"><code class="docutils literal notranslate"><span class="pre">calc_standard_nuclear_area()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.nucleus.euclidean_distance"><code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction_range"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction_range()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images"><code class="docutils literal notranslate"><span class="pre">make_nuclear_evaluate_images()</span></code></a></li>
 </ul>
 </li>
@@ -529,7 +530,7 @@ radius (int): 評価指標の計算に使用する半径.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float64_t[:,</span> <span class="pre">:]</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range" title="Link to this definition">¶</a></dt>
 <dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 686)
 複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.</p>
 <blockquote>
@@ -608,7 +609,7 @@ radius (int): 線の太さ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.calc_contour_areas">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">calc_contour_areas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.calc_contour_areas" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 20)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 22)
 画像の面積のリストを取得する関数</p>
 <blockquote>
 <div><dl class="simple">
@@ -623,7 +624,7 @@ radius (int): 線の太さ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">calc_standard_nuclear_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">heigher_ratio=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 43)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 45)
 標準的核面積を計算する</p>
 <blockquote>
 <div><dl class="simple">
@@ -642,8 +643,8 @@ use_cython</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.euclidean_distance">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">euclidean_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ext_centroid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_centroids</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.euclidean_distance" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 135)
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">euclidean_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">float64_t[:]</span> <span class="pre">ext_centroid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float64_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">ans_centroids</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float64_t[:]</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.euclidean_distance" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 139)
 重心の距離の最小値とそのインデックスを返す関数</p>
 <blockquote>
 <div><dl>
@@ -664,8 +665,8 @@ ans_centroids (list): 正解核の重心リスト</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">heigher_ratio=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">eval_mode=u'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">distance=10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 163)
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">heigher_ratio=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">eval_mode=u'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">distance=5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 172)
 細胞核画像の評価を行う関数.</p>
 <blockquote>
 <div><dl>
@@ -701,9 +702,56 @@ eval_mode (str): 評価方法</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction_range">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">heigher_ratio=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_th=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">eval_mode=u'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">distance=5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction_range" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 353)
+複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像
+ans_img (np.ndarray): 正解画像
+care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
+lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
+heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+th_min (int): 二値化の閾値の最小値
+max_th (int): 二値化の閾値の最大値
+step_th (int): 二値化の閾値のステップ
+min_area (int): 除外する面積の最小値
+max_area (int): 除外する面積の最大値
+step_area (int): 除外する面積のステップ
+eval_mode (str): 評価方法</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード</p></li>
+<li><p>“proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+</ul>
+</div></blockquote>
+<p>distance (int): 評価モードが”proximity”の場合の距離(ピクセル)
+otsu (bool): Otsuの二値化を行うかどうか
+verbose (bool): 進捗表示を行うかどうか</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 評価指標の配列.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: threshold</p></li>
+<li><p>1: del_area</p></li>
+<li><p>2: precision</p></li>
+<li><p>3: recall</p></li>
+<li><p>4: fmeasure</p></li>
+<li><p>5: correct_num</p></li>
+<li><p>6: conformity_bottom</p></li>
+<li><p>7: care_num</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">make_nuclear_evaluate_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">bf_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">heigher_ratio=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 78)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 80)
 評価用画像を作成する関数</p>
 <blockquote>
 <div><dl>

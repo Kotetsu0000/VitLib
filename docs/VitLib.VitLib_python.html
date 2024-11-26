@@ -402,9 +402,12 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <li><p><strong>heigher_ratio</strong> (<em>float</em>) – 除外する面積の上位割合(%) (0-100の範囲)</p></li>
 <li><p><strong>threshold</strong> (<em>int</em>) – 二値化の閾値</p></li>
 <li><p><strong>del_area</strong> (<em>int</em>) – 除外する面積</p></li>
-<li><p><strong>eval_mode</strong> (<em>str</em>) – 評価方法
-- “inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
-- “proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+<li><p><strong>eval_mode</strong> (<em>str</em>) – <p>評価方法</p>
+<ul>
+<li><p>”inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード</p></li>
+<li><p>”proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+</ul>
+</p></li>
 <li><p><strong>distance</strong> (<em>int</em>) – 評価モードが”proximity”の場合の距離(ピクセル)</p></li>
 </ul>
 </dd>
