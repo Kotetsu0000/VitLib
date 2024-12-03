@@ -14,9 +14,9 @@ except:
     use_Cython = False
 
 if platform.system() == 'Windows':
-    extra_args = ['/openmp']
+    extra_args = ['/openmp', "/O2"]
 else:
-    extra_args = ['-fopenmp']
+    extra_args = ['-fopenmp', "-O3"]
 
 def get_ext_module(use_openmp:bool):
     if use_Cython:
@@ -26,6 +26,8 @@ def get_ext_module(use_openmp:bool):
                     "VitLib.VitLib_cython.common",
                     ["VitLib/VitLib_cython/common.pyx"],
                     language="c++",
+                    extra_compile_args=extra_args if use_openmp else None,
+                    extra_link_args=extra_args if use_openmp else None,
                 ),
                 Extension(
                     "VitLib.VitLib_cython.membrane",
@@ -39,11 +41,17 @@ def get_ext_module(use_openmp:bool):
                     "VitLib.VitLib_cython.nucleus",
                     ["VitLib/VitLib_cython/nucleus.pyx"],
                     language="c++",
+                    extra_compile_args=extra_args if use_openmp else None,
+                    extra_link_args=extra_args if use_openmp else None,
                 ),
             ],
             compiler_directives={
                 'language_level' : "3",
-                'embedsignature': True
+                'embedsignature': True,
+                'boundscheck': False,
+                'wraparound': False,
+                'initializedcheck': False,
+                'cdivision': True,
             }
         )
     else:
@@ -72,7 +80,7 @@ def get_ext_module(use_openmp:bool):
 def get_setup_kwargs(use_openmp:bool):
     setup_kwargs = {
         "name": "VitLib",
-        "version": "3.3.0",
+        "version": "3.3.1",
         "description": "A fast and accurate image processing library for cell image analysis.",
         "author": "Kotetsu0000",
         'ext_modules': get_ext_module(use_openmp),
