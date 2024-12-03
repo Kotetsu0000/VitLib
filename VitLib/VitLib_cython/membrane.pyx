@@ -1,9 +1,4 @@
 # membrane.pyx
-# distutils: language=c++
-# distutils: extra_compile_args = ["-O3"]
-# cython: language_level=3, boundscheck=False, wraparound=False
-# cython: cdivision=True
-
 import cv2
 import numpy as np
 cimport numpy as cnp
