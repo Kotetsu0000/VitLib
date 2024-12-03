@@ -89,7 +89,6 @@ def test_nucleus():
     prod = cv2.imread('tests/prod_nuc.png', cv2.IMREAD_GRAYSCALE)
     etv = common_cy.extract_threshold_values(prod)
     for th in etv[etv>127]:
-        break
         prod_th = cv2.threshold(prod, th, 255, cv2.THRESH_BINARY)[1]
         ddac = common_cy.detect_deleted_area_candidates(prod_th)
         for del_area in ddac[::len(ddac)//3]:
