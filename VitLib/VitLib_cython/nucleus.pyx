@@ -350,7 +350,7 @@ cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mod
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int min_th=0, object max_th=None, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
+cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
 
     Args:
