@@ -269,10 +269,10 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     conformity_bottom = pred_num - 1 - ext_no_care_num
 
     #適合率
-    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+    precision = float(correct_num) / float(conformity_bottom) if conformity_bottom != 0 else 0
 
     #再現率
-    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
+    recall = float(correct_num) / float(care_num-1) if care_num-1 != 0 else 0
 
     #F値
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
