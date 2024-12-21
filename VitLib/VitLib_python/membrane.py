@@ -211,3 +211,39 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
     fmeasure = 0 if precision + recall == 0 else 2 * (precision * recall) / (precision + recall)
 
     return {'precision':precision, 'recall':recall, 'fmeasure':fmeasure, 'threshold':threshold, 'del_area':del_area, 'radius':radius, 'membrane_length':membrane_length, 'tip_length':tip_length, 'miss_length':miss_length}
+
+def evaluate_membrane_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, radius:int=3, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, symmetric:bool=False, otsu:bool=False, verbose:bool=False) -> np.ndarray:
+    """複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.
+
+    Args:
+        pred_img (np.ndarray): 予測画像.  
+        ans_img (np.ndarray): 正解画像.  
+        radius (int): 評価指標の計算に使用する半径.  
+        min_th (int): 二値化の最小閾値.  
+        max_th (int): 二値化の最大閾値.  
+        step_th (int): 二値化の閾値のステップ.  
+        min_area (int): 小領域削除の最小面積.  
+        max_area (int): 小領域削除の最大面積.  
+        step_area (int): 小領域削除の面積のステップ.  
+        symmetric (bool): NWG細線化の対称性.  
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
+        verbose (bool): 進捗表示を行うかどうか.  
+
+    Returns:
+        np.ndarray: 評価指標の配列. 
+        
+            - 0: threshold
+            - 1: del_area
+            - 2: precision
+            - 3: recall
+            - 4: fmeasure
+            - 5: membrane_length
+            - 6: tip_length
+            - 7: miss_length
+    
+    Note:
+        This function is only available in Cython.
+    """
+
+    ## Cythonでしか実行できない関数なのでエラーを出す。
+    raise NotImplementedError("This function can only be executed in Cython.")

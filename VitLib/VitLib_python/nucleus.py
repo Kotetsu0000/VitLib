@@ -216,7 +216,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     
     return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
 
-def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False):
+def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False) -> np.ndarray:
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
 
     Args:
