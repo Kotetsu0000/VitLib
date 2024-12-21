@@ -215,3 +215,46 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
     
     return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
+
+def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False):
+    """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
+
+    Args:
+        pred_img (np.ndarray): 予測画像  
+        ans_img (np.ndarray): 正解画像  
+        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
+        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        th_min (int): 二値化の閾値の最小値  
+        max_th (int): 二値化の閾値の最大値  
+        step_th (int): 二値化の閾値のステップ  
+        min_area (int): 除外する面積の最小値  
+        max_area (int): 除外する面積の最大値  
+        step_area (int): 除外する面積のステップ  
+        eval_mode (str): 評価方法  
+
+            - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
+            - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+
+        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
+        otsu (bool): Otsuの二値化を行うかどうか
+        verbose (bool): 進捗表示を行うかどうか
+
+    Returns:
+        np.ndarray: 評価指標の配列. 
+        
+            - 0: threshold
+            - 1: del_area
+            - 2: precision
+            - 3: recall
+            - 4: fmeasure
+            - 5: correct_num
+            - 6: conformity_bottom
+            - 7: care_num
+
+    Note:
+        This function is only available in Cython.
+    """
+
+    ## Cythonでしか実行できない関数なのでエラーを出す。
+    raise NotImplementedError("This function can only be executed in Cython.")
