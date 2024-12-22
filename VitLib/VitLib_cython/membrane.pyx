@@ -3,7 +3,8 @@ import cv2
 import numpy as np
 cimport numpy as cnp
 cimport cython
-from cython.parallel import prange
+from cython.parallel import prange, threadid
+cimport openmp
 
 from .common import small_area_reduction, detect_deleted_area_candidates, extract_threshold_values
 
@@ -631,6 +632,8 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     return return_dict
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, DTYPE_t[:, :] ans_img_th_nwg, DTYPE_t[:, :] pred_img_th_fattened, DTYPE_t[:, :] ans_img_th_fattened) nogil:
     cdef float membrane_length, tip_length, miss_length, precision, recall, fmeasure
     cdef int ROW = pred_img_th_nwg_del.shape[0]
@@ -785,4 +788,87 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_range(cnp.
     for search_index in prange(search_size, nogil=True):
         result[search_index, 2:8] = thred_eval(pred_img_th_nwg_del[search_index], ans_img_th_nwg, pred_img_th_nwg_del_fattened[search_index], ans_img_th_nwg_fattened)
     return np.asarray(result)
+###
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_map(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, int threshold=127, int del_area=100, int symmetric=False, int radius=3, int otsu=False, int eval_size=256, int map_step=1):
+    """細胞膜の精度マップを作成する関数
+
+    Args:
+        pred_img (np.ndarray): 予測画像.  
+        ans_img (np.ndarray): 正解画像.  
+        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.  
+        del_area (int): 小領域削除の閾値.  
+        symmetric (bool): NWG細線化の対称性.  
+        radius (int): 評価指標の計算に使用する半径.  
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
+        eval_size (int): 評価画像のサイズ.
+        map_step (int): 評価画像のステップ.
+
+    Returns:
+        np.ndarray: F値のマップ.
+    """
+    cdef int ROW = pred_img.shape[0]
+    cdef int COLUMN = pred_img.shape[1]
+    assert ROW >= eval_size and COLUMN >= eval_size, 'The size of the evaluation image must be smaller than the original image'
+
+    cdef DTYPE_t[:, :] pred_img_th, ans_img_th, pred_img_th_nwg, ans_img_th_nwg, pred_img_th_nwg_del, pred_img_th_fattened, ans_img_th_fattened
+
+    cdef int temp_map_x = (COLUMN - eval_size + map_step - 1) // map_step + 1
+    cdef int temp_map_y = (ROW    - eval_size + map_step - 1) // map_step + 1
+
+    cdef cnp.float64_t[:, :, :] temp_map = np.zeros((temp_map_y, temp_map_x, 6), dtype=np.float64)
+
+    cdef cnp.ndarray[cnp.float64_t, ndim=2] fmeasure_map = np.zeros((ROW, COLUMN), dtype=np.float64)
+    cdef cnp.ndarray[cnp.float64_t, ndim=2] calc_num_map = np.zeros((ROW, COLUMN), dtype=np.float64)
+    cdef int x, y, map_x, map_y, thread_num
+
+    cdef int num_thread = openmp.omp_get_max_threads()
+    cdef cnp.float64_t[:, :, :] fmeasure_map_thread = np.zeros((ROW, COLUMN, num_thread), dtype=np.float64)
+    cdef cnp.float64_t[:, :, :] calc_num_map_thread = np.zeros((ROW, COLUMN, num_thread), dtype=np.float64)
+
+    print(f'ROW: {ROW}, COLUMN: {COLUMN}, temp_map_x: {temp_map_x}, temp_map_y: {temp_map_y}, thread: {openmp.omp_get_max_threads()}')
+
+    # 画像の二値化
+    if otsu:
+        threshold, pred_img_th = cv2.threshold(pred_img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    else:
+        pred_img_th = cv2.threshold(pred_img, threshold, 255, cv2.THRESH_BINARY)[1]
+    ans_img_th = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
+
+    # NWG細線化 + 正解画像と推論画像を[0,1]に変換
+    pred_img_th_nwg = NWG_(pred_img_th, symmetric=symmetric)
+    ans_img_th_nwg = NWG_(ans_img_th, symmetric=symmetric)
+
+    # 小領域削除
+    pred_img_th_nwg_del = small_area_reduction(np.asarray(pred_img_th_nwg), del_area)
+
+    ## 推定画像と正解画像の線幅を変更
+    pred_img_th_fattened = modify_line_width(pred_img_th_nwg_del, radius)
+    ans_img_th_fattened = modify_line_width(ans_img_th_nwg, radius)
+
+    print('Start evaluation')
+    for y in prange(temp_map_y, nogil=True):
+        for x in range(temp_map_x):
+            if x*map_step + eval_size < COLUMN:
+                if y*map_step + eval_size < ROW:
+                    temp_map[y, x] = thred_eval(pred_img_th_nwg_del[y*map_step:y*map_step+eval_size, x*map_step:x*map_step+eval_size], ans_img_th_nwg[y*map_step:y*map_step+eval_size, x*map_step:x*map_step+eval_size], pred_img_th_fattened[y*map_step:y*map_step+eval_size, x*map_step:x*map_step+eval_size], ans_img_th_fattened[y*map_step:y*map_step+eval_size, x*map_step:x*map_step+eval_size])
+                else:
+                    temp_map[y, x] = thred_eval(pred_img_th_nwg_del[ROW-eval_size:ROW, x*map_step:x*map_step+eval_size], ans_img_th_nwg[ROW-eval_size:ROW, x*map_step:x*map_step+eval_size], pred_img_th_fattened[ROW-eval_size:ROW, x*map_step:x*map_step+eval_size], ans_img_th_fattened[ROW-eval_size:ROW, x*map_step:x*map_step+eval_size])
+            elif y*map_step + eval_size < ROW:
+                temp_map[y, x] = thred_eval(pred_img_th_nwg_del[y*map_step:y*map_step+eval_size, COLUMN-eval_size:COLUMN], ans_img_th_nwg[y*map_step:y*map_step+eval_size, COLUMN-eval_size:COLUMN], pred_img_th_fattened[y*map_step:y*map_step+eval_size, COLUMN-eval_size:COLUMN], ans_img_th_fattened[y*map_step:y*map_step+eval_size, COLUMN-eval_size:COLUMN])
+            else:
+                temp_map[y, x] = thred_eval(pred_img_th_nwg_del[ROW-eval_size:ROW, COLUMN-eval_size:COLUMN], ans_img_th_nwg[ROW-eval_size:ROW, COLUMN-eval_size:COLUMN], pred_img_th_fattened[ROW-eval_size:ROW, COLUMN-eval_size:COLUMN], ans_img_th_fattened[ROW-eval_size:ROW, COLUMN-eval_size:COLUMN])
+
+    print('Start making map')
+    for y in range(temp_map_y):
+        for x in range(temp_map_x):
+            print(f'\rNow index: {y*temp_map_x+x+1}/{temp_map_y*temp_map_x}, {float(y*temp_map_x+x+1)/float(temp_map_y*temp_map_x)*100:.2f}%', end=' '*10)
+            map_x = x*map_step + eval_size if x*map_step + eval_size < COLUMN else COLUMN
+            map_y = y*map_step + eval_size if y*map_step + eval_size < ROW else ROW
+            fmeasure_map[map_y - eval_size:map_y, map_x - eval_size:map_x] += temp_map[y, x, 2]
+            calc_num_map[map_y - eval_size:map_y, map_x - eval_size:map_x] += 1
+                
+    return fmeasure_map / calc_num_map
 ###
