@@ -632,6 +632,8 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
     return return_dict
 ###
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, DTYPE_t[:, :] ans_img_th_nwg, DTYPE_t[:, :] pred_img_th_fattened, DTYPE_t[:, :] ans_img_th_fattened) nogil:
     cdef float membrane_length, tip_length, miss_length, precision, recall, fmeasure
     cdef int ROW = pred_img_th_nwg_del.shape[0]

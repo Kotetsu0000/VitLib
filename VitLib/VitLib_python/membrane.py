@@ -271,3 +271,27 @@ def evaluate_membrane_prediction_map(pred_img:np.ndarray, ans_img:np.ndarray, th
 
     ## Cythonでしか実行できない関数なのでエラーを出す。
     raise NotImplementedError("This function can only be executed in Cython.")
+
+def evaluate_membrane_prediction_map(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=127, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False, eval_size:int=256, map_step:int=1) -> np.ndarray:
+    """細胞膜の精度マップを作成する関数
+
+    Args:
+        pred_img (np.ndarray): 予測画像.  
+        ans_img (np.ndarray): 正解画像.  
+        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.  
+        del_area (int): 小領域削除の閾値.  
+        symmetric (bool): NWG細線化の対称性.  
+        radius (int): 評価指標の計算に使用する半径.  
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
+        eval_size (int): 評価画像のサイズ.
+        map_step (int): 評価画像のステップ.
+
+    Returns:
+        np.ndarray: F値のマップ.
+
+    Note:
+        This function is only available in Cython.
+    """
+
+    ## Cythonでしか実行できない関数なのでエラーを出す。
+    raise NotImplementedError("This function can only be executed in Cython.")
