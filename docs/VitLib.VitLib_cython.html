@@ -61,6 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.NWG_old_v0"><code class="docutils literal notranslate"><span class="pre">NWG_old_v0()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.NWG_old_v1"><code class="docutils literal notranslate"><span class="pre">NWG_old_v1()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_map()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_nwg()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_range()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_cython.membrane.modify_line_width"><code class="docutils literal notranslate"><span class="pre">modify_line_width()</span></code></a></li>
@@ -348,13 +349,13 @@ area_th (int): 面積の閾値.(area_th以下の面積の領域が削除され�
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">multithread=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 435)</p>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 436)</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG_nofix">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG_nofix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG_nofix" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 13)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 14)
 NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).</p>
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
@@ -398,7 +399,7 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG_old_v0">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG_old_v0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG_old_v0" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 117)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 118)
 NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).</p>
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
@@ -442,7 +443,7 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG_old_v1">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG_old_v1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG_old_v1" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 228)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 229)
 NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).</p>
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
@@ -487,7 +488,7 @@ using cython.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 520)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 521)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
 <div><dl class="simple">
@@ -508,9 +509,32 @@ otsu (bool): 二値化の閾値を自動で設定するかどうか.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">eval_size=256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">map_step=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map" title="Link to this definition">¶</a></dt>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 795)
+細胞膜の精度マップを作成する関数</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像.
+ans_img (np.ndarray): 正解画像.
+threshold (int): 二値化の閾値. otus=Trueの場合は無視される.
+del_area (int): 小領域削除の閾値.
+symmetric (bool): NWG細線化の対称性.
+radius (int): 評価指標の計算に使用する半径.
+otsu (bool): 二値化の閾値を自動で設定するかどうか.
+eval_size (int): 評価画像のサイズ.
+map_step (int): 評価画像のステップ.</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: F値のマップ.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_nwg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 584)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 585)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
 <div><dl class="simple">
@@ -531,7 +555,7 @@ radius (int): 評価指標の計算に使用する半径.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 681)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 684)
 複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.</p>
 <blockquote>
 <div><dl>
@@ -569,7 +593,7 @@ verbose (bool): 進捗表示を行うかどうか.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 502)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 503)
 細線化された画像の線の太さを変更する.</p>
 <blockquote>
 <div><dl class="simple">
@@ -587,7 +611,7 @@ radius (int): 線の太さ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width_old">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width_old" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 441)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 442)
 細線化された画像の線の太さを変更する.</p>
 <blockquote>
 <div><dl class="simple">

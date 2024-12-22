@@ -52,7 +52,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-VitLib.VitLib_python.membrane">VitLib.VitLib_python.membrane module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.NWG"><code class="docutils literal notranslate"><span class="pre">NWG()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_map"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_map()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_nwg"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_nwg()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_range"><code class="docutils literal notranslate"><span class="pre">evaluate_membrane_prediction_range()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.membrane.modify_line_width"><code class="docutils literal notranslate"><span class="pre">modify_line_width()</span></code></a></li>
 </ul>
 </li>
@@ -61,6 +63,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.nucleus.calc_standard_nuclear_area"><code class="docutils literal notranslate"><span class="pre">calc_standard_nuclear_area()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.nucleus.euclidean_distance"><code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.nucleus.evaluate_nuclear_prediction"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.nucleus.evaluate_nuclear_prediction_range"><code class="docutils literal notranslate"><span class="pre">evaluate_nuclear_prediction_range()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#VitLib.VitLib_python.nucleus.make_nuclear_evaluate_images"><code class="docutils literal notranslate"><span class="pre">make_nuclear_evaluate_images()</span></code></a></li>
 </ul>
 </li>
@@ -274,8 +277,39 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_python.membrane.evaluate_membrane_prediction_map">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_python.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ans_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">del_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">otsu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_map" title="Link to this definition">¶</a></dt>
+<dd><p>細胞膜の精度マップを作成する関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred_img</strong> (<em>np.ndarray</em>) – 予測画像.</p></li>
+<li><p><strong>ans_img</strong> (<em>np.ndarray</em>) – 正解画像.</p></li>
+<li><p><strong>threshold</strong> (<em>int</em>) – 二値化の閾値. otus=Trueの場合は無視される.</p></li>
+<li><p><strong>del_area</strong> (<em>int</em>) – 小領域削除の閾値.</p></li>
+<li><p><strong>symmetric</strong> (<em>bool</em>) – NWG細線化の対称性.</p></li>
+<li><p><strong>radius</strong> (<em>int</em>) – 評価指標の計算に使用する半径.</p></li>
+<li><p><strong>otsu</strong> (<em>bool</em>) – 二値化の閾値を自動で設定するかどうか.</p></li>
+<li><p><strong>eval_size</strong> (<em>int</em>) – 評価画像のサイズ.</p></li>
+<li><p><strong>map_step</strong> (<em>int</em>) – 評価画像のステップ.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F値のマップ.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is only available in Cython.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_python.membrane.evaluate_membrane_prediction_nwg">
-<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_python.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_nwg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_img_th_nwg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ans_img_th_nwg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">del_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_nwg" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_python.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_nwg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_img_th_nwg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ans_img_th_nwg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">del_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_nwg" title="Link to this definition">¶</a></dt>
 <dd><p>細胞膜画像の評価を行う関数.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -294,6 +328,53 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_python.membrane.evaluate_membrane_prediction_range">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_python.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ans_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">otsu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_python.membrane.evaluate_membrane_prediction_range" title="Link to this definition">¶</a></dt>
+<dd><p>複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred_img</strong> (<em>np.ndarray</em>) – 予測画像.</p></li>
+<li><p><strong>ans_img</strong> (<em>np.ndarray</em>) – 正解画像.</p></li>
+<li><p><strong>radius</strong> (<em>int</em>) – 評価指標の計算に使用する半径.</p></li>
+<li><p><strong>min_th</strong> (<em>int</em>) – 二値化の最小閾値.</p></li>
+<li><p><strong>max_th</strong> (<em>int</em>) – 二値化の最大閾値.</p></li>
+<li><p><strong>step_th</strong> (<em>int</em>) – 二値化の閾値のステップ.</p></li>
+<li><p><strong>min_area</strong> (<em>int</em>) – 小領域削除の最小面積.</p></li>
+<li><p><strong>max_area</strong> (<em>int</em>) – 小領域削除の最大面積.</p></li>
+<li><p><strong>step_area</strong> (<em>int</em>) – 小領域削除の面積のステップ.</p></li>
+<li><p><strong>symmetric</strong> (<em>bool</em>) – NWG細線化の対称性.</p></li>
+<li><p><strong>otsu</strong> (<em>bool</em>) – 二値化の閾値を自動で設定するかどうか.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – 進捗表示を行うかどうか.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>評価指標の配列.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: threshold</p></li>
+<li><p>1: del_area</p></li>
+<li><p>2: precision</p></li>
+<li><p>3: recall</p></li>
+<li><p>4: fmeasure</p></li>
+<li><p>5: membrane_length</p></li>
+<li><p>6: tip_length</p></li>
+<li><p>7: miss_length</p></li>
+</ul>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is only available in Cython.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -428,6 +509,61 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="VitLib.VitLib_python.nucleus.evaluate_nuclear_prediction_range">
+<span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_python.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ans_img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">care_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heigher_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_th</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">otsu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_python.nucleus.evaluate_nuclear_prediction_range" title="Link to this definition">¶</a></dt>
+<dd><p>複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred_img</strong> (<em>np.ndarray</em>) – 予測画像</p></li>
+<li><p><strong>ans_img</strong> (<em>np.ndarray</em>) – 正解画像</p></li>
+<li><p><strong>care_rate</strong> (<em>float</em>) – 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)</p></li>
+<li><p><strong>lower_ratio</strong> (<em>float</em>) – 除外する面積の下位割合(%) (0-100の範囲)</p></li>
+<li><p><strong>heigher_ratio</strong> (<em>float</em>) – 除外する面積の上位割合(%) (0-100の範囲)</p></li>
+<li><p><strong>th_min</strong> (<em>int</em>) – 二値化の閾値の最小値</p></li>
+<li><p><strong>max_th</strong> (<em>int</em>) – 二値化の閾値の最大値</p></li>
+<li><p><strong>step_th</strong> (<em>int</em>) – 二値化の閾値のステップ</p></li>
+<li><p><strong>min_area</strong> (<em>int</em>) – 除外する面積の最小値</p></li>
+<li><p><strong>max_area</strong> (<em>int</em>) – 除外する面積の最大値</p></li>
+<li><p><strong>step_area</strong> (<em>int</em>) – 除外する面積のステップ</p></li>
+<li><p><strong>eval_mode</strong> (<em>str</em>) – <p>評価方法</p>
+<ul>
+<li><p>”inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード</p></li>
+<li><p>”proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+</ul>
+</p></li>
+<li><p><strong>distance</strong> (<em>int</em>) – 評価モードが”proximity”の場合の距離(ピクセル)</p></li>
+<li><p><strong>otsu</strong> (<em>bool</em>) – Otsuの二値化を行うかどうか</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – 進捗表示を行うかどうか</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>評価指標の配列.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0: threshold</p></li>
+<li><p>1: del_area</p></li>
+<li><p>2: precision</p></li>
+<li><p>3: recall</p></li>
+<li><p>4: fmeasure</p></li>
+<li><p>5: correct_num</p></li>
+<li><p>6: conformity_bottom</p></li>
+<li><p>7: care_num</p></li>
+</ul>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is only available in Cython.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
