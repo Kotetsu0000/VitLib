@@ -42,25 +42,25 @@ cpdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t,
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=17, float heigher_ratio=0):
+cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, float lower_ratio=17, float higher_ratio=0):
     """標準的核面積を計算する
 
     Args:
         ans_img (np.ndarray): 二値化画像  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
 
     Returns:
         float: 標準的核面積
     
     Note:
-        例としてlower_ratio=0.1, heigher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
+        例としてlower_ratio=0.1, higher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
         use_cython
     """
     cdef int ans_unique_len, out_lower_num, out_heigher_num, contours_len, i
     cdef cnp.ndarray[cnp.float32_t, ndim=1] area_size, sorted_area_size
-    if lower_ratio + heigher_ratio < 0 or lower_ratio + heigher_ratio > 100:
-        raise ValueError("lower_ratio + heigher_ratio must be in the range of 0-100")
+    if lower_ratio + higher_ratio < 0 or lower_ratio + higher_ratio > 100:
+        raise ValueError("lower_ratio + higher_ratio must be in the range of 0-100")
 
     ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -70,14 +70,14 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     area_size = calc_contour_areas(ans_img)
     contours_len = len(area_size)
     out_lower_num = int(contours_len*lower_ratio/100)
-    out_heigher_num = int(contours_len*heigher_ratio/100)
+    out_heigher_num = int(contours_len*higher_ratio/100)
     sorted_area_size = np.sort(area_size)[out_lower_num:contours_len-out_heigher_num]
     return np.mean(sorted_area_size)
 ###
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=3] bf_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0):
+cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cnp.ndarray[DTYPE_t, ndim=3] bf_img, float care_rate=75, float lower_ratio=17, float higher_ratio=0):
     """評価用画像を作成する関数
 
     Args:
@@ -85,7 +85,7 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
         bf_img (np.ndarray): 明視野画像  
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
 
     Returns:
         dict: 評価用画像の辞書
@@ -99,7 +99,7 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
     cdef tuple contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
-    cdef float standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
+    cdef float standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, higher_ratio)
     cdef list red, green
     cdef int red_len, green_len, contours_len, i
     cdef cnp.ndarray[DTYPE_t, ndim=2] red_img, green_img
@@ -169,7 +169,7 @@ cpdef cnp.float64_t[:] euclidean_distance(cnp.float64_t[:] ext_centroid, cnp.flo
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int threshold=127, int del_area=0, str eval_mode="inclusion", int distance=5):
+cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float higher_ratio=0, int threshold=127, int del_area=0, str eval_mode="inclusion", int distance=5):
     """細胞核画像の評価を行う関数.
 
     Args:
@@ -177,7 +177,7 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
         ans_img (np.ndarray): 正解画像  
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
         threshold (int): 二値化の閾値  
         del_area (int): 除外する面積  
         eval_mode (str): 評価方法  
@@ -215,7 +215,7 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     
     # 正解画像の準備
     dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
-    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, higher_ratio)
     care_img = eval_images["green_img"]
     no_care_img = eval_images["red_img"]
 
@@ -350,7 +350,7 @@ cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mod
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float heigher_ratio=0, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
+cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float higher_ratio=0, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
 
     Args:
@@ -358,7 +358,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
         ans_img (np.ndarray): 正解画像  
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
         th_min (int): 二値化の閾値の最小値  
         max_th (int): 二値化の閾値の最大値  
         step_th (int): 二値化の閾値のステップ  
@@ -420,7 +420,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
 
     # 正解画像の準備
     dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
-    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, higher_ratio)
     care_img = eval_images["green_img"]
     no_care_img = eval_images["red_img"]
 
