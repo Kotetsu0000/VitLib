@@ -22,22 +22,22 @@ def calc_contour_areas(img:np.ndarray) -> np.ndarray:
         area_size[i] = cv2.contourArea(contour)
     return area_size
 
-def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher_ratio:float=0):
+def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, higher_ratio:float=0):
     """標準的核面積を計算する
 
     Args:
         ans_img (np.ndarray): 二値化画像
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
 
     Returns:
         float: 標準的核面積
     
     Note:
-        例としてlower_ratio=0.1, heigher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
+        例としてlower_ratio=0.1, higher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
     """
-    if lower_ratio + heigher_ratio < 0 or lower_ratio + heigher_ratio > 100:
-        raise ValueError("lower_ratio + heigher_ratio must be in the range of 0-100")
+    if lower_ratio + higher_ratio < 0 or lower_ratio + higher_ratio > 100:
+        raise ValueError("lower_ratio + higher_ratio must be in the range of 0-100")
 
     ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -47,11 +47,11 @@ def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, heigher
     contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     area_size = [cv2.contourArea(contour) for contour in contours]
     out_lower_num = int(len(area_size)*lower_ratio/100)
-    out_heigher_num = int(len(area_size)*heigher_ratio/100)
+    out_heigher_num = int(len(area_size)*higher_ratio/100)
     sorted_area_size = sorted(area_size)[out_lower_num:len(area_size)-out_heigher_num]
     return np.mean(sorted_area_size)
 
-def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0):
+def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0):
     """評価用画像を作成する関数
 
     Args:
@@ -59,7 +59,7 @@ def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rat
         bf_img (np.ndarray): 明視野画像
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
 
     Returns:
         dict: 評価用画像の辞書
@@ -73,7 +73,7 @@ def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rat
         ans_img = cv2.threshold(ans_img, 127, 255, cv2.THRESH_BINARY)[1]
 
     contours = cv2.findContours(ans_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
-    standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, heigher_ratio)
+    standard_nuclear_area = calc_standard_nuclear_area(ans_img, lower_ratio, higher_ratio)
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
     return_dict = {}
 
@@ -125,7 +125,7 @@ def euclidean_distance(ext_centroid, ans_centroids):
             min_index = i
     return min_index, np.sqrt(min_distance)
 
-def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
+def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
     """細胞核画像の評価を行う関数.
 
     Args:
@@ -133,7 +133,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
         ans_img (np.ndarray): 正解画像
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
         threshold (int): 二値化の閾値
         del_area (int): 除外する面積
         eval_mode (str): 評価方法
@@ -158,7 +158,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     
     # 正解画像の準備
     dummy_bf_img = np.zeros((ans_img.shape[0], ans_img.shape[1], 3), dtype=np.uint8)
-    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, heigher_ratio)
+    eval_images = make_nuclear_evaluate_images(ans_img, dummy_bf_img, care_rate, lower_ratio, higher_ratio)
     care_img = eval_images["green_img"]
     no_care_img = eval_images["red_img"]
 
@@ -216,7 +216,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     
     return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
 
-def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, heigher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False) -> np.ndarray:
+def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False) -> np.ndarray:
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
 
     Args:
@@ -224,7 +224,7 @@ def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, c
         ans_img (np.ndarray): 正解画像  
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        heigher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
         th_min (int): 二値化の閾値の最小値  
         max_th (int): 二値化の閾値の最大値  
         step_th (int): 二値化の閾値のステップ  
