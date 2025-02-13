@@ -574,8 +574,8 @@ otsu (bool): 二値化の閾値を自動で設定するかどうか</p>
 …                     [  0,   0,   0, 255, 255, 255,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-&gt;&gt;&gt;evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
-{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
+&gt;&gt;&gt;result = evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, symmetric=False, radius=3, otsu=False)
+&gt;&gt;&gt;print(result) # {‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 0, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd>
 <dt>Note:</dt><dd><p>using cython.</p>
 </dd>
@@ -586,13 +586,13 @@ otsu (bool): 二値化の閾値を自動で設定するかどうか</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">eval_size=256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">map_step=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 930)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 940)
 細胞膜の精度マップを作成する関数</p>
 <blockquote>
-<div><dl class="simple">
+<div><dl>
 <dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
 ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
-threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+threshold (int): 二値化の閾値(otsu=Trueの場合は無視される)
 del_area (int): 小領域削除の閾値
 symmetric (bool): NWG細線化の対称性
 radius (int): 評価指標の計算に使用する半径
@@ -601,6 +601,16 @@ eval_size (int): 評価画像のサイズ
 map_step (int): 評価画像のステップ</p>
 </dd>
 <dt>Returns:</dt><dd><p>np.ndarray: F値のマップ</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib.VitLib_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">membrane</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 予測画像と正解画像をグレースケールで読み込む</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;tests/pred_img.png&#39;</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;tests/ans_img.png&#39;</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f_map</span> <span class="o">=</span> <span class="n">membrane</span><span class="o">.</span><span class="n">evaluate_membrane_prediction_map</span><span class="p">(</span><span class="n">pred_img</span><span class="p">,</span> <span class="n">ans_img</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">127</span><span class="p">,</span> <span class="n">del_area</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">otsu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">eval_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">map_step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">f_map</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 </div></blockquote>
@@ -652,8 +662,8 @@ radius (int): 評価指標の計算に使用する半径</p>
 …                     [  0,   0,   0, 255, 255, 255,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-&gt;&gt;&gt;evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
-{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
+&gt;&gt;&gt;result = evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=0, radius=3)
+&gt;&gt;&gt;print(result) # {‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 0, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd>
 <dt>Note:</dt><dd><p>using cython.</p>
 </dd>
@@ -694,6 +704,17 @@ verbose (bool): 進捗表示を行うかどうか.</p>
 <li><p>7: miss_length</p></li>
 </ul>
 </div></blockquote>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib.VitLib_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">membrane</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 例としてランダムな予測画像と正解画像を生成</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 関数を実行して評価指標を取得</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">membrane</span><span class="o">.</span><span class="n">evaluate_membrane_prediction_range</span><span class="p">(</span><span class="n">pred_img</span><span class="p">,</span> <span class="n">ans_img</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 </div></blockquote>

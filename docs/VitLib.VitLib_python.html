@@ -306,8 +306,8 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 …                     [  0,   0,   0, 255, 255, 255,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-&gt;&gt;&gt;evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
-{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
+&gt;&gt;&gt;result = evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, radius=3)
+&gt;&gt;&gt;print(result) # {‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 0, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd></dl>
 
 <dl class="py function">
@@ -317,19 +317,19 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pred_img</strong> (<em>np.ndarray</em>) – 予測画像(画素値 : [0, 255])</p></li>
-<li><p><strong>ans_img</strong> (<em>np.ndarray</em>) – 正解画像(画素値 : [0, 255])</p></li>
-<li><p><strong>threshold</strong> (<em>int</em>) – 二値化の閾値(otus=Trueの場合は無視される)</p></li>
-<li><p><strong>del_area</strong> (<em>int</em>) – 小領域削除の閾値</p></li>
-<li><p><strong>symmetric</strong> (<em>bool</em>) – NWG細線化の対称性</p></li>
-<li><p><strong>radius</strong> (<em>int</em>) – 評価指標の計算に使用する半径</p></li>
-<li><p><strong>otsu</strong> (<em>bool</em>) – 二値化の閾値を自動で設定するかどうか</p></li>
-<li><p><strong>eval_size</strong> (<em>int</em>) – 評価画像のサイズ</p></li>
-<li><p><strong>map_step</strong> (<em>int</em>) – 評価画像のステップ</p></li>
+<li><p><strong>pred_img</strong> (<em>np.ndarray</em>) – 予測画像.</p></li>
+<li><p><strong>ans_img</strong> (<em>np.ndarray</em>) – 正解画像.</p></li>
+<li><p><strong>threshold</strong> (<em>int</em>) – 二値化の閾値. otus=Trueの場合は無視される.</p></li>
+<li><p><strong>del_area</strong> (<em>int</em>) – 小領域削除の閾値.</p></li>
+<li><p><strong>symmetric</strong> (<em>bool</em>) – NWG細線化の対称性.</p></li>
+<li><p><strong>radius</strong> (<em>int</em>) – 評価指標の計算に使用する半径.</p></li>
+<li><p><strong>otsu</strong> (<em>bool</em>) – 二値化の閾値を自動で設定するかどうか.</p></li>
+<li><p><strong>eval_size</strong> (<em>int</em>) – 評価画像のサイズ.</p></li>
+<li><p><strong>map_step</strong> (<em>int</em>) – 評価画像のステップ.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>F値のマップ</p>
+<dd class="field-even"><p>F値のマップ.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>np.ndarray</p>
@@ -395,8 +395,8 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 …                     [  0,   0,   0, 255, 255, 255,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0],
 …                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-&gt;&gt;&gt;evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
-{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
+&gt;&gt;&gt;result = evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, radius=3)
+&gt;&gt;&gt;print(result) # {‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd></dl>
 
 <dl class="py function">
