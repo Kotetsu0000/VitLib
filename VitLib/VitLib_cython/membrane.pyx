@@ -633,8 +633,8 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
-        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        >>>result = evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, symmetric=False, radius=3, otsu=False)
+        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 0, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
 
     Note:
         using cython.
@@ -727,9 +727,9 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
-        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
-
+        >>>result = evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=0, radius=3)
+        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 0, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        
     Note:
         using cython.
     """
@@ -820,18 +820,18 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_range(cnp.
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像.  
-        ans_img (np.ndarray): 正解画像.  
-        radius (int): 評価指標の計算に使用する半径.  
-        min_th (int): 二値化の最小閾値.  
-        max_th (int): 二値化の最大閾値.  
-        step_th (int): 二値化の閾値のステップ.  
-        min_area (int): 小領域削除の最小面積.  
-        max_area (int): 小領域削除の最大面積.  
-        step_area (int): 小領域削除の面積のステップ.  
-        symmetric (bool): NWG細線化の対称性.  
-        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
-        verbose (bool): 進捗表示を行うかどうか.  
+        pred_img (np.ndarray): 予測画像.
+        ans_img (np.ndarray): 正解画像.
+        radius (int): 評価指標の計算に使用する半径.
+        min_th (int): 二値化の最小閾値.
+        max_th (int): 二値化の最大閾値.
+        step_th (int): 二値化の閾値のステップ.
+        min_area (int): 小領域削除の最小面積.
+        max_area (int): 小領域削除の最大面積.
+        step_area (int): 小領域削除の面積のステップ.
+        symmetric (bool): NWG細線化の対称性.
+        otsu (bool): 二値化の閾値を自動で設定するかどうか.
+        verbose (bool): 進捗表示を行うかどうか.
 
     Returns:
         np.ndarray: 評価指標の配列. 
@@ -844,6 +844,16 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_range(cnp.
             - 5: membrane_length
             - 6: tip_length
             - 7: miss_length
+
+    Example:
+        >>> import numpy as np
+        >>> from VitLib.VitLib_cython import membrane
+        >>> # 例としてランダムな予測画像と正解画像を生成
+        >>> pred_img = np.random.randint(0, 256, (256, 256), dtype=np.uint8)
+        >>> ans_img = (np.random.rand(256, 256) > 0.5).astype(np.uint8) * 255
+        >>> # 関数を実行して評価指標を取得
+        >>> result = membrane.evaluate_membrane_prediction_range(pred_img, ans_img, verbose=True)
+        >>> print(result)
     """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]
@@ -933,7 +943,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_map(cnp.nd
     Args:
         pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
         ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
-        threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+        threshold (int): 二値化の閾値(otsu=Trueの場合は無視される)
         del_area (int): 小領域削除の閾値
         symmetric (bool): NWG細線化の対称性
         radius (int): 評価指標の計算に使用する半径
@@ -943,6 +953,15 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_map(cnp.nd
 
     Returns:
         np.ndarray: F値のマップ
+
+    Example:
+        >>> import cv2
+        >>> from VitLib.VitLib_cython import membrane
+        >>> # 予測画像と正解画像をグレースケールで読み込む
+        >>> pred_img = cv2.imread('tests/pred_img.png', cv2.IMREAD_GRAYSCALE)
+        >>> ans_img = cv2.imread('tests/ans_img.png', cv2.IMREAD_GRAYSCALE)
+        >>> f_map = membrane.evaluate_membrane_prediction_map(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False, eval_size=256, map_step=1)
+        >>> print(f_map)
     """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]
