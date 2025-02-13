@@ -117,12 +117,12 @@
 2値画像の小領域の削除面積のリストを作成する関数.</p>
 <blockquote>
 <div><dl>
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.</p>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像(画素値 : {0, any})</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 小領域の面積のリスト.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 小領域の面積のリスト</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">detect_deleted_area_candidates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">detect_deleted_area_candidates</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -154,7 +154,7 @@
 <dt>Returns:</dt><dd><p>np.ndarray: 小領域の面積のリスト.</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">detect_deleted_area_candidates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">detect_deleted_area_candidates</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -181,9 +181,9 @@
 画像から閾値を抽出する.</p>
 <blockquote>
 <div><dl>
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.</p>
+<dt>Args:</dt><dd><p>img (np.ndarray): グレースケール画像</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 画像から抽出した閾値のリスト.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 画像から抽出した閾値のリスト</p>
 </dd>
 <dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>             <span class="p">[</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">],</span>
@@ -231,13 +231,13 @@
 2値画像の小領域削除を行う.</p>
 <blockquote>
 <div><dl>
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.
-area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)</p>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像
+area_th (int): 面積の閾値(area_th以下の面積の領域が削除される。)</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 小領域削除後の2値画像.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 小領域削除後の2値画像</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -277,7 +277,7 @@ area_th (int): 面積の閾値.</p>
 <dt>Returns:</dt><dd><p>np.ndarray: 小領域削除後の2値画像.</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction_nofix</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction_nofix</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -315,7 +315,7 @@ area_th (int): 面積の閾値.(area_th以下の面積の領域が削除され�
 <dt>Returns:</dt><dd><p>np.ndarray: 小領域削除後の2値画像.</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">small_area_reduction_old</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -324,7 +324,7 @@ area_th (int): 面積の閾値.(area_th以下の面積の領域が削除され�
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">small_area_reduction</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">area_th</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">small_area_reduction_old</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">area_th</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="go">array([[0, 0, 0, 0, 0, 0, 0, 0],</span>
 <span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
 <span class="go">       [0, 0, 0, 0, 0, 0, 0, 0],</span>
@@ -349,7 +349,47 @@ area_th (int): 面積の閾値.(area_th以下の面積の領域が削除され�
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">multithread=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 436)</p>
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 437)
+NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).</p>
+<blockquote>
+<div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
+<dl>
+<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
+symmetric (bool): 対称的な細線化処理を行うかどうか
+multithread (bool): マルチスレッド処理を行うかどうか</p>
+</dd>
+<dt>Returns:</dt><dd><p>np.ndarray: 細線化した画像(画素値 : {0, 255})</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NWG</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">array([[  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0, 255,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
+<span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0]])</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><p>imgは2値画像を想定しており、[0, 255]の配列である必要がある。
+cv2で二値化した画像を入れることで正常に動作する。
+using cython.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="py function">
@@ -360,13 +400,13 @@ NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されて�
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
 <dl>
-<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像
+<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
 symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 </dd>
-<dt>Returns:</dt><dd><p>cnp.ndarray: 細線化した画像</p>
+<dt>Returns:</dt><dd><p>cnp.ndarray: 細線化した画像(画素値 : {0, 255})</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG_nofix</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG_nofix</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
@@ -404,13 +444,13 @@ NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されて�
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
 <dl>
-<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像
+<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
 symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 </dd>
-<dt>Returns:</dt><dd><p>cnp.ndarray: 細線化した画像</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 細線化した画像(画素値 : {0, 255})</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG_old</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG_old_v0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
@@ -419,7 +459,7 @@ symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">NWG_old</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NWG_old_v0</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="go">array([[  0,   0,   0,   0,   0,   0,   0,   0],</span>
 <span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
 <span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
@@ -432,7 +472,8 @@ symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 </div>
 <dl class="simple">
 <dt>Note:</dt><dd><p>imgは2値画像を想定しており、[0, 255]の配列である必要がある。
-cv2で二値化した画像を入れることで正常に動作する。</p>
+cv2で二値化した画像を入れることで正常に動作する。
+using cython.</p>
 </dd>
 </dl>
 </dd>
@@ -443,18 +484,18 @@ cv2で二値化した画像を入れることで正常に動作する。</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.NWG_old_v1">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">NWG_old_v1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.NWG_old_v1" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 229)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 230)
 NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).</p>
 <blockquote>
 <div><p>参考文献 : <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/016786559500121V">https://www.sciencedirect.com/science/article/pii/016786559500121V</a></p>
 <dl>
-<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像
+<dt>Args:</dt><dd><p>img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
 symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 </dd>
-<dt>Returns:</dt><dd><p>cnp.ndarray: 細線化した画像</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 細線化した画像(画素値 : {0, 255})</p>
 </dd>
 <dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">nwg_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib</span><span class="w"> </span><span class="kn">import</span> <span class="n">NWG_old_v1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
@@ -463,7 +504,7 @@ symmetric (bool): 対称的な細線化処理を行うかどうか</p>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                <span class="p">[</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">NWG</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NWG__old_v1</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="go">array([[  0,   0,   0,   0,   0,   0,   0,   0],</span>
 <span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
 <span class="go">       [  0,   0,   0,   0,   0,   0,   0,   0],</span>
@@ -488,19 +529,53 @@ using cython.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 521)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 592)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像.
-ans_img (np.ndarray): 正解画像.
-threshold (int): 二値化の閾値. otus=Trueの場合は無視される.
-del_area (int): 小領域削除の閾値.
-symmetric (bool): NWG細線化の対称性.
-radius (int): 評価指標の計算に使用する半径.
-otsu (bool): 二値化の閾値を自動で設定するかどうか.</p>
+<div><dl>
+<dt>Args:</dt><dd><p>pred_img (np.ndarray): 推論画像(画素値 : [0, 255])
+ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
+threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+del_area (int): 小領域削除の閾値
+symmetric (bool): NWG細線化の対称性
+radius (int): 評価指標の計算に使用する半径
+otsu (bool): 二値化の閾値を自動で設定するかどうか</p>
 </dd>
-<dt>Returns:</dt><dd><p>dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.</p>
+<dt>Returns:</dt><dd><p>dict: 評価指標、閾値、小領域削除の閾値、半径を含む辞書</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>precision : 適合率</p></li>
+<li><p>recall : 再現率</p></li>
+<li><p>fmeasure : F値</p></li>
+<li><p>threshold : 二値化の閾値</p></li>
+<li><p>del_area : 小領域削除の閾値</p></li>
+<li><p>radius : 評価指標の計算に使用する半径</p></li>
+<li><p>membrane_length : 正解の細胞膜の長さ</p></li>
+<li><p>tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ</p></li>
+<li><p>miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>Example:</dt><dd><p>&gt;&gt;&gt;import numpy as np
+&gt;&gt;&gt;from VitLib import evaluate_membrane_prediction
+&gt;&gt;&gt;pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
+{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd>
 <dt>Note:</dt><dd><p>using cython.</p>
 </dd>
@@ -511,21 +586,21 @@ otsu (bool): 二値化の閾値を自動で設定するかどうか.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">eval_size=256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">map_step=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_map" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 795)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 930)
 細胞膜の精度マップを作成する関数</p>
 <blockquote>
 <div><dl class="simple">
-<dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像.
-ans_img (np.ndarray): 正解画像.
-threshold (int): 二値化の閾値. otus=Trueの場合は無視される.
-del_area (int): 小領域削除の閾値.
-symmetric (bool): NWG細線化の対称性.
-radius (int): 評価指標の計算に使用する半径.
-otsu (bool): 二値化の閾値を自動で設定するかどうか.
-eval_size (int): 評価画像のサイズ.
-map_step (int): 評価画像のステップ.</p>
+<dt>Args:</dt><dd><p>pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
+ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
+threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+del_area (int): 小領域削除の閾値
+symmetric (bool): NWG細線化の対称性
+radius (int): 評価指標の計算に使用する半径
+otsu (bool): 二値化の閾値を自動で設定するかどうか
+eval_size (int): 評価画像のサイズ
+map_step (int): 評価画像のステップ</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: F値のマップ.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: F値のマップ</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -534,17 +609,51 @@ map_step (int): 評価画像のステップ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_nwg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img_th_nwg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_nwg" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 585)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 688)
 細胞膜画像の評価を行う関数.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.
-ans_img_th_nwg (np.ndarray): 正解画像.
-threshold (int): 二値化の閾値(返却用).
-del_area (int): 小領域削除の閾値.
-radius (int): 評価指標の計算に使用する半径.</p>
+<div><dl>
+<dt>Args:</dt><dd><p>pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み(画素値 : {0, 255}).
+ans_img_th_nwg (np.ndarray): 正解画像. 二値化, NWG細線化済み(画素値 : {0, 255}).
+threshold (int): 二値化の閾値(返却用)
+del_area (int): 小領域削除の閾値
+radius (int): 評価指標の計算に使用する半径</p>
 </dd>
-<dt>Returns:</dt><dd><p>dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.</p>
+<dt>Returns:</dt><dd><p>dict: 評価指標、閾値、小領域削除の閾値、半径を含む辞書</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>precision : 適合率</p></li>
+<li><p>recall : 再現率</p></li>
+<li><p>fmeasure : F値</p></li>
+<li><p>threshold : 二値化の閾値</p></li>
+<li><p>del_area : 小領域削除の閾値</p></li>
+<li><p>radius : 評価指標の計算に使用する半径</p></li>
+<li><p>membrane_length : 正解の細胞膜の長さ</p></li>
+<li><p>tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ</p></li>
+<li><p>miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>Example:</dt><dd><p>&gt;&gt;&gt;import numpy as np
+&gt;&gt;&gt;from VitLib import evaluate_membrane_prediction_nwg
+&gt;&gt;&gt;pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0, 255, 255, 255,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0],
+…                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
+{‘precision’: 1.0, ‘recall’: 1.0, ‘fmeasure’: 1.0, ‘threshold’: 127, ‘del_area’: 100, ‘radius’: 3, ‘membrane_length’: 1, ‘tip_length’: 1, ‘miss_length’: 0}</p>
 </dd>
 <dt>Note:</dt><dd><p>using cython.</p>
 </dd>
@@ -555,7 +664,7 @@ radius (int): 評価指標の計算に使用する半径.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">evaluate_membrane_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">symmetric=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.evaluate_membrane_prediction_range" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 684)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 819)
 複数の条件(二値化閾値、小領域削除面積)を変えて細胞膜の評価を行う関数.</p>
 <blockquote>
 <div><dl>
@@ -593,16 +702,39 @@ verbose (bool): 進捗表示を行うかどうか.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DTYPE_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 503)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 552)
 細線化された画像の線の太さを変更する.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像(画素値 : {0, 1}).
 radius (int): 線の太さ.</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 線の太さを変更した画像.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 線の太さを変更した画像(画素値 : {0, 1}).</p>
 </dd>
-<dt>Note:</dt><dd><p>using cython.</p>
+<dt>Example:</dt><dd><p>&gt;&gt;&gt;import numpy as np
+&gt;&gt;&gt;from VitLib import modify_line_width
+&gt;&gt;&gt;img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;modify_line_width(img, radius=1)
+array([[  0,   0,   0,   0,   0,   0,   0,   0],</p>
+<blockquote>
+<div><p>[  0,   0,   0,   0,   0,   0,   0,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   0,   0,   0,   0,   0,   0]])</p>
+</div></blockquote>
+</dd>
+<dt>Note:</dt><dd><p>入力画像は2値画像である必要があり、[0, 1]の配列である必要がある。
+using cython.</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -611,16 +743,39 @@ radius (int): 線の太さ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.membrane.modify_line_width_old">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.membrane.</span></span><span class="sig-name descname"><span class="pre">modify_line_width_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">radius=1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.membrane.modify_line_width_old" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 442)
+<dd><p>File: VitLib/VitLib_cython/membrane.pyx (starting at line 481)
 細線化された画像の線の太さを変更する.</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像.
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像(画素値 : {0, any}).
 radius (int): 線の太さ.</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 線の太さを変更した画像.</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 線の太さを変更した画像(画素値 : {0, 1}).</p>
 </dd>
-<dt>Note:</dt><dd><p>using cython.</p>
+<dt>Example:</dt><dd><p>&gt;&gt;&gt;import numpy as np
+&gt;&gt;&gt;from VitLib import modify_line_width_old
+&gt;&gt;&gt;img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   1,   1,   1,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0],
+…                [  0,   0,   0,   0,   0,   0,   0,   0]])
+&gt;&gt;&gt;modify_line_width_old(img, radius=1)
+array([[  0,   0,   0,   0,   0,   0,   0,   0],</p>
+<blockquote>
+<div><p>[  0,   0,   0,   0,   0,   0,   0,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   1,   1,   1,   1,   1,   0],
+[  0,   0,   0,   0,   0,   0,   0,   0]])</p>
+</div></blockquote>
+</dd>
+<dt>Note:</dt><dd><p>入力画像は2値画像を想定している。
+using cython.</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -634,12 +789,20 @@ radius (int): 線の太さ.</p>
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.calc_contour_areas">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">calc_contour_areas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.calc_contour_areas" title="Link to this definition">¶</a></dt>
 <dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 22)
-画像の面積のリストを取得する関数</p>
+与えられた二値化画像から全ての輪郭を検出し、各輪郭の面積を算出して返す関数です。</p>
 <blockquote>
-<div><dl class="simple">
-<dt>Args:</dt><dd><p>img (np.ndarray): 二値化画像</p>
+<div><dl>
+<dt>Args:</dt><dd><p>img (np.ndarray): 0と255の値のみを持つ二値化画像。対象物は255、背景は0となっている必要があります。</p>
 </dd>
-<dt>Returns:</dt><dd><p>np.ndarray: 面積のリスト</p>
+<dt>Returns:</dt><dd><p>np.ndarray: 各検出された輪郭の面積（float32型）の1次元NumPy配列。</p>
+</dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cv2</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">areas</span> <span class="o">=</span> <span class="n">calc_contour_areas</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">areas</span><span class="p">)</span>  <span class="c1"># 検出された輪郭の面積が表示される</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 </div></blockquote>
@@ -648,15 +811,28 @@ radius (int): 線の太さ.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">calc_standard_nuclear_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">higher_ratio=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.calc_standard_nuclear_area" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 45)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 52)
 標準的核面積を計算する</p>
 <blockquote>
-<div><dl class="simple">
+<div><dl>
 <dt>Args:</dt><dd><p>ans_img (np.ndarray): 二値化画像
 lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
 higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)</p>
 </dd>
 <dt>Returns:</dt><dd><p>float: 標準的核面積</p>
+</dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib.VitLib_cython.nucleus</span><span class="w"> </span><span class="kn">import</span> <span class="n">calc_standard_nuclear_area</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 例: 2値化画像を作成（核は255、背景は0）</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 下位10%と上位10%を除外して標準的核面積を計算する</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">area</span> <span class="o">=</span> <span class="n">calc_standard_nuclear_area</span><span class="p">(</span><span class="n">ans_img</span><span class="p">,</span> <span class="n">lower_ratio</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">higher_ratio</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard nuclear area:&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd>
 <dt>Note:</dt><dd><p>例としてlower_ratio=0.1, higher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
 use_cython</p>
@@ -668,20 +844,30 @@ use_cython</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.euclidean_distance">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">euclidean_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">float64_t[:]</span> <span class="pre">ext_centroid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float64_t[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">:]</span> <span class="pre">ans_centroids</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float64_t[:]</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.euclidean_distance" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 139)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 174)
 重心の距離の最小値とそのインデックスを返す関数</p>
 <blockquote>
 <div><dl>
-<dt>Args:</dt><dd><p>ext_centroid (tuple): 抽出された核の重心
-ans_centroids (list): 正解核の重心リスト</p>
+<dt>Args:</dt><dd><p>ext_centroid (tuple of float): 抽出された核の重心 (例: (x, y))
+ans_centroids (list of tuple of float): 正解核の重心リスト (例: [(x1, y1), (x2, y2), …])</p>
 </dd>
-<dt>Returns:</dt><dd><p>tuple: 最小距離のインデックスとその距離</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>最小距離のインデックス(int)</p></li>
-<li><p>最小距離(float)</p></li>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>tuple: 最小距離のインデックスとその距離.</dt><dd><ul class="simple">
+<li><p>最小距離のインデックス (int)</p></li>
+<li><p>最小距離 (float)</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ext_centroid</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">150.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_centroids</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">90.0</span><span class="p">,</span> <span class="mf">145.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">120.0</span><span class="p">,</span> <span class="mf">170.0</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">index</span><span class="p">,</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">euclidean_distance</span><span class="p">(</span><span class="n">ext_centroid</span><span class="p">,</span> <span class="n">ans_centroids</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;最小距離のインデックス:&quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+<span class="go">最小距離のインデックス: 0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;最小距離:&quot;</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+<span class="go">最小距離: 11.18</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 </div></blockquote>
@@ -690,7 +876,7 @@ ans_centroids (list): 正解核の重心リスト</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">higher_ratio=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">threshold=127</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">del_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">eval_mode=u'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">distance=5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 172)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 215)
 細胞核画像の評価を行う関数.</p>
 <blockquote>
 <div><dl>
@@ -704,8 +890,8 @@ del_area (int): 除外する面積
 eval_mode (str): 評価方法</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>“inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード</p></li>
-<li><p>“proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+<li><p>“inclusion”: 抽出された領域の重心が正解領域内にあれば正解、それ以外は不正解とするモード</p></li>
+<li><p>“proximity”: 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード</p></li>
 </ul>
 </div></blockquote>
 <p>distance (int): 評価モードが”proximity”の場合の距離(ピクセル)</p>
@@ -721,6 +907,18 @@ eval_mode (str): 評価方法</p>
 </ul>
 </div></blockquote>
 </dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 例として、全て背景の画像を生成</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># evaluate_nuclear_prediction関数をinclusionモードで実行</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">evaluate_nuclear_prediction</span><span class="p">(</span><span class="n">pred_img</span><span class="p">,</span> <span class="n">ans_img</span><span class="p">,</span> <span class="n">care_rate</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span> <span class="n">lower_ratio</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">higher_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">127</span><span class="p">,</span> <span class="n">del_area</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">eval_mode</span><span class="o">=</span><span class="s2">&quot;inclusion&quot;</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precision:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;precision&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;recall&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F-measure:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;fmeasure&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 </div></blockquote>
 </dd></dl>
@@ -728,7 +926,7 @@ eval_mode (str): 評価方法</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction_range">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">evaluate_nuclear_prediction_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">pred_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">higher_ratio=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_th=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">step_area=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">eval_mode=u'inclusion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">distance=5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">otsu=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">verbose=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.evaluate_nuclear_prediction_range" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 353)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 407)
 複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.</p>
 <blockquote>
 <div><dl>
@@ -747,7 +945,7 @@ eval_mode (str): 評価方法</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>“inclusion”: 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード</p></li>
-<li><p>“proximity”: 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード</p></li>
+<li><p>“proximity”: 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード</p></li>
 </ul>
 </div></blockquote>
 <p>distance (int): 評価モードが”proximity”の場合の距離(ピクセル)
@@ -768,6 +966,16 @@ verbose (bool): 進捗表示を行うかどうか</p>
 </ul>
 </div></blockquote>
 </dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib.VitLib_cython</span><span class="w"> </span><span class="kn">import</span> <span class="n">nucleus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 予測画像と正解画像の例としてランダムな配列を作成</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">nucleus</span><span class="o">.</span><span class="n">evaluate_nuclear_prediction_range</span><span class="p">(</span><span class="n">pred_img</span><span class="p">,</span> <span class="n">ans_img</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 </div></blockquote>
 </dd></dl>
@@ -775,7 +983,7 @@ verbose (bool): 進捗表示を行うかどうか</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.nucleus.</span></span><span class="sig-name descname"><span class="pre">make_nuclear_evaluate_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">ans_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">bf_img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">care_rate=75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">lower_ratio=17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">higher_ratio=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.nucleus.make_nuclear_evaluate_images" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 80)
+<dd><p>File: VitLib/VitLib_cython/nucleus.pyx (starting at line 99)
 評価用画像を作成する関数</p>
 <blockquote>
 <div><dl>
@@ -785,7 +993,7 @@ care_rate (float): 除外する核の標準的核面積に対する面積割合(
 lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
 higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)</p>
 </dd>
-<dt>Returns:</dt><dd><p>dict: 評価用画像の辞書</p>
+<dt>Returns:</dt><dd><p>dict: 評価用画像の辞書。以下のキーを含む</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>“eval_img”: 評価用画像</p></li>
@@ -793,6 +1001,22 @@ higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)</p>
 <li><p>“green_img”: 正解領域画像</p></li>
 </ul>
 </div></blockquote>
+</dd>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">VitLib.VitLib_cython.nucleus</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_nuclear_evaluate_images</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 簡単な二値化画像と明視野画像の作成</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bf_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># care_rate=75, lower_ratio=17, higher_ratio=0 を使用して評価用画像を作成</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">make_nuclear_evaluate_images</span><span class="p">(</span><span class="n">ans_img</span><span class="p">,</span> <span class="n">bf_img</span><span class="p">,</span> <span class="n">care_rate</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span> <span class="n">lower_ratio</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">higher_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># dict_keys([&#39;eval_img&#39;, &#39;red_img&#39;, &#39;green_img&#39;])</span>
+</pre></div>
+</div>
+</dd>
+<dt>Note:</dt><dd><p>using cython</p>
 </dd>
 </dl>
 </div></blockquote>
