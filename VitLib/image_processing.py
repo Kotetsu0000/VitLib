@@ -11,6 +11,12 @@ def gamma_correction(img:np.ndarray, gamma:float=2.2) -> np.ndarray:
 
     Returns:
         numpy.ndarray: ガンマ補正された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import gamma_correction
+        >>> img = cv2.imread('example.jpg')
+        >>> gamma_correction(img, 2.2)
     """
     return (np.power(img/255, 1/gamma)*255).astype(np.uint8)
 
@@ -24,6 +30,12 @@ def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 色相が変更された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import change_hue
+        >>> img = cv2.imread('example.jpg')
+        >>> change_hue(img, 30)
     """
     if len(img.shape)==3:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -41,6 +53,12 @@ def random_hue(img_list:list, hue_degree_range:tuple) -> list:
 
     Returns:
         list: 色相が変更された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_hue
+        >>> img = cv2.imread('example.jpg')
+        >>> random_hue([img], (0, 180))
     """
     hue_degree = np.random.randint(hue_degree_range[0], hue_degree_range[1])
     return [change_hue(img, hue_degree) for img in img_list]
@@ -55,6 +73,12 @@ def change_saturation(img:np.ndarray, saturation_ratio:float) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 彩度が変更された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import change_saturation
+        >>> img = cv2.imread('example.jpg')
+        >>> change_saturation(img, 0.5)
     """
     if len(img.shape)==3:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -72,6 +96,12 @@ def random_saturation(img_list:list, saturation_ratio_range:tuple) -> list:
 
     Returns:
         list: 彩度が変更された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_saturation
+        >>> img = cv2.imread('example.jpg')
+        >>> random_saturation([img], (0, 1))
     """
     saturation_ratio = np.random.uniform(saturation_ratio_range[0], saturation_ratio_range[1])
     return [change_saturation(img, saturation_ratio) for img in img_list]
@@ -86,6 +116,12 @@ def change_value(img:np.ndarray, value_ratio:float) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 明度が変更された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import change_value
+        >>> img = cv2.imread('example.jpg')
+        >>> change_value(img, 0.5)
     """
     if len(img.shape)==3:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -103,6 +139,12 @@ def random_value(img_list:list, value_ratio_range:tuple) -> list:
 
     Returns:
         list: 明度が変更された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_value
+        >>> img = cv2.imread('example.jpg')
+        >>> random_value([img], (0, 1))
     """
     value_ratio = np.random.uniform(value_ratio_range[0], value_ratio_range[1])
     return [change_value(img, value_ratio) for img in img_list]
@@ -117,6 +159,12 @@ def change_contrast(img:np.ndarray, contrast_ratio:float) -> np.ndarray:
 
     Returns:
         numpy.ndarray: コントラストが変更された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import change_contrast
+        >>> img = cv2.imread('example.jpg')
+        >>> change_contrast(img, 0.5)
     """
     if len(img.shape)==3:
         return cv2.convertScaleAbs(img, alpha=contrast_ratio)
@@ -133,6 +181,12 @@ def random_contrast(img_list:list, contrast_ratio_range:tuple) -> list:
 
     Returns:
         list: コントラストが変更された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_contrast
+        >>> img = cv2.imread('example.jpg')
+        >>> random_contrast([img], (0, 1))
     """
     contrast_ratio = np.random.uniform(contrast_ratio_range[0], contrast_ratio_range[1])
     return [change_contrast(img, contrast_ratio) for img in img_list]
@@ -148,6 +202,12 @@ def cut_image(img:np.ndarray, top_left:tuple, size:tuple) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 切り取られた画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import cut_image
+        >>> img = cv2.imread('example.jpg')
+        >>> cut_image(img, (100, 100), (200, 200))
     """
     return img[top_left[0]:top_left[0]+size[0], top_left[1]:top_left[1]+size[1]]
 
@@ -161,6 +221,12 @@ def random_cut_image(img_list:list, size:tuple) -> list:
     
     Returns:
         list: 切り取られた画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_cut_image
+        >>> img = cv2.imread('example.jpg')
+        >>> random_cut_image([img], (200, 200))
     """
     img_size = img_list[0].shape
     top_left = (np.random.randint(0, img_size[0]-size[0]), np.random.randint(0, img_size[1]-size[1]))
@@ -177,6 +243,12 @@ def select_cut_image(img_list:list, top_left:tuple, size:tuple) -> list:
     
     Returns:
         list: 切り取られた画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import select_cut_image
+        >>> img = cv2.imread('example.jpg')
+        >>> select_cut_image([img], (100, 100), (200, 200))
     """
     return [cut_image(img, top_left, size) for img in img_list]
 
@@ -190,6 +262,12 @@ def rotate_image(img:np.ndarray, rotate_times:int) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 回転された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import rotate_image
+        >>> img = cv2.imread('example.jpg')
+        >>> rotate_image(img, 1)
     """
     if rotate_times%4==0:
         return img
@@ -210,6 +288,12 @@ def random_rotate_image(img_list:list) -> list:
 
     Returns:
         list: 回転された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_rotate_image
+        >>> img = cv2.imread('example.jpg')
+        >>> random_rotate_image([img])
     """
     rotate_times = np.random.randint(0, 3)
     return [rotate_image(img, rotate_times) for img in img_list]
@@ -227,6 +311,12 @@ def flip_image(img:np.ndarray, flip_code:int) -> np.ndarray:
 
     Returns:
         numpy.ndarray: 反転された画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import flip_image
+        >>> img = cv2.imread('example.jpg')
+        >>> flip_image(img, 1)
     """
     return cv2.flip(img, flip_code)
 
@@ -244,6 +334,12 @@ def random_flip_image(img_list:list) -> list:
 
     Returns:
         list: 反転された画像リスト
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import random_flip_image
+        >>> img = cv2.imread('example.jpg')
+        >>> random_flip_image([img])
     """
     flip_code = np.random.randint(-1, 2)
     if flip_code==2:
@@ -256,6 +352,12 @@ def img_show(img:np.ndarray):
 
     Args:
         img (numpy.ndarray): 画像
+
+    Example:
+        >>> import cv2
+        >>> from VitLib import img_show
+        >>> img = cv2.imread('example.jpg')
+        >>> img_show(img)
     """
     cv2.imshow('image', img)
     cv2.waitKey(0)
