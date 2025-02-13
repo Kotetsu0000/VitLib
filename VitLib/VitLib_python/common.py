@@ -1,4 +1,3 @@
-"""細胞膜と細胞核の共通関数をまとめたモジュール."""
 import cv2
 import numpy as np
 
@@ -6,11 +5,11 @@ def small_area_reduction(img:np.ndarray, area_th:int=100) -> np.ndarray:
     """2値画像の小領域削除を行う.
 
     Args:
-        img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.
+        img (np.ndarray): 2値画像
+        area_th (int): 面積の閾値(area_th以下の面積の領域が削除される。)  
 
     Returns:
-        np.ndarray: 小領域削除後の2値画像.
+        np.ndarray: 小領域削除後の2値画像
 
     Example:
         >>> import numpy as np
@@ -49,14 +48,14 @@ def detect_deleted_area_candidates(img:np.ndarray, min_area:int=0, max_area:int=
     """2値画像の小領域の削除面積のリストを作成する関数.
 
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): 2値画像(画素値 : {0, any})
 
     Returns:
-        np.ndarray: 小領域の面積のリスト.
+        np.ndarray: 小領域の面積のリスト
 
     Example:
         >>> import numpy as np
-        >>> from nwg_cython import detect_deleted_area_candidates
+        >>> from VitLib import detect_deleted_area_candidates
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -79,10 +78,10 @@ def extract_threshold_values(img:np.ndarray, min_th:int=0, max_th:int=255) -> np
     """画像から閾値を抽出する.
     
     Args:
-        img (np.ndarray): 2値画像.
+        img (np.ndarray): グレースケール画像
 
     Returns:
-        np.ndarray: 画像から抽出した閾値のリスト.
+        np.ndarray: 画像から抽出した閾値のリスト
 
     Examples:
         >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],

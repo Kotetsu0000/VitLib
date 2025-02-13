@@ -20,13 +20,20 @@ ctypedef cnp.uint8_t DTYPE_t
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t, ndim=2] img):
-    """画像の面積のリストを取得する関数
-    
+    """与えられた二値化画像から全ての輪郭を検出し、各輪郭の面積を算出して返す関数です。
+
     Args:
-        img (np.ndarray): 二値化画像
+        img (np.ndarray): 0と255の値のみを持つ二値化画像。対象物は255、背景は0となっている必要があります。
 
     Returns:
-        np.ndarray: 面積のリスト
+        np.ndarray: 各検出された輪郭の面積（float32型）の1次元NumPy配列。
+
+    Examples:
+        >>> import cv2, numpy as np
+        >>> img = np.zeros((200, 200), dtype=np.uint8)
+        >>> cv2.circle(img, (100, 100), 50, 255, -1)
+        >>> areas = calc_contour_areas(img)
+        >>> print(areas)  # 検出された輪郭の面積が表示される
     """
     cdef int contours_len, i
     cdef tuple contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
@@ -52,7 +59,19 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
 
     Returns:
         float: 標準的核面積
-    
+
+    Examples:
+        >>> import numpy as np
+        >>> from VitLib.VitLib_cython.nucleus import calc_standard_nuclear_area
+        >>> # 例: 2値化画像を作成（核は255、背景は0）
+        >>> ans_img = np.array([[0, 0, 0, 0],
+        ...                     [0, 255, 255, 0],
+        ...                     [0, 255, 255, 0],
+        ...                     [0, 0, 0, 0]], dtype=np.uint8)
+        >>> # 下位10%と上位10%を除外して標準的核面積を計算する
+        >>> area = calc_standard_nuclear_area(ans_img, lower_ratio=10, higher_ratio=10)
+        >>> print("Standard nuclear area:", area)
+
     Note:
         例としてlower_ratio=0.1, higher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
         use_cython
@@ -88,11 +107,27 @@ cpdef dict make_nuclear_evaluate_images(cnp.ndarray[DTYPE_t, ndim=2] ans_img, cn
         higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
 
     Returns:
-        dict: 評価用画像の辞書
+        dict: 評価用画像の辞書。以下のキーを含む
 
             - "eval_img": 評価用画像
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
+
+    Examples:
+        >>> import numpy as np
+        >>> from VitLib.VitLib_cython.nucleus import make_nuclear_evaluate_images
+        >>> # 簡単な二値化画像と明視野画像の作成
+        >>> ans_img = np.array([[0, 0, 0, 0],
+        ...                     [0, 255, 255, 0],
+        ...                     [0, 255, 255, 0],
+        ...                     [0, 0, 0, 0]], dtype=np.uint8)
+        >>> bf_img = np.zeros((4, 4, 3), dtype=np.uint8)
+        >>> # care_rate=75, lower_ratio=17, higher_ratio=0 を使用して評価用画像を作成
+        >>> result = make_nuclear_evaluate_images(ans_img, bf_img, care_rate=75, lower_ratio=17, higher_ratio=0)
+        >>> print(result.keys())  # dict_keys(['eval_img', 'red_img', 'green_img'])
+
+    Note:
+        using cython
     """
     cdef int ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -140,14 +175,22 @@ cpdef cnp.float64_t[:] euclidean_distance(cnp.float64_t[:] ext_centroid, cnp.flo
     """重心の距離の最小値とそのインデックスを返す関数
 
     Args:
-        ext_centroid (tuple): 抽出された核の重心  
-        ans_centroids (list): 正解核の重心リスト  
+        ext_centroid (tuple of float): 抽出された核の重心 (例: (x, y))
+        ans_centroids (list of tuple of float): 正解核の重心リスト (例: [(x1, y1), (x2, y2), ...])
 
     Returns:
-        tuple: 最小距離のインデックスとその距離
+        tuple: 最小距離のインデックスとその距離.
+            - 最小距離のインデックス (int)
+            - 最小距離 (float)
 
-            - 最小距離のインデックス(int)
-            - 最小距離(float)
+    Examples:
+        >>> ext_centroid = [100.0, 150.0]
+        >>> ans_centroids = [[90.0, 145.0], [120.0, 170.0]]
+        >>> index, distance = euclidean_distance(ext_centroid, ans_centroids)
+        >>> print("最小距離のインデックス:", index)
+        最小距離のインデックス: 0
+        >>> print("最小距離:", distance)
+        最小距離: 11.18
     """
     cdef float min_distance, distance
     cdef int min_index, i
@@ -182,8 +225,8 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
         del_area (int): 除外する面積  
         eval_mode (str): 評価方法  
 
-            - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
-            - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+            - "inclusion": 抽出された領域の重心が正解領域内にあれば正解、それ以外は不正解とするモード
+            - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
 
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)  
 
@@ -195,6 +238,17 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
             - fmeasure (float): F値
             - threshold (int): 二値化の閾値
             - del_area (int): 除外する面積
+
+    Examples:
+        >>> import numpy as np
+        >>> # 例として、全て背景の画像を生成
+        >>> pred_img = np.zeros((100, 100), dtype=np.uint8)
+        >>> ans_img = np.zeros((100, 100), dtype=np.uint8)
+        >>> # evaluate_nuclear_prediction関数をinclusionモードで実行
+        >>> result = evaluate_nuclear_prediction(pred_img, ans_img, care_rate=75, lower_ratio=17, higher_ratio=0, threshold=127, del_area=0, eval_mode="inclusion", distance=5)
+        >>> print("Precision:", result["precision"])
+        >>> print("Recall:", result["recall"])
+        >>> print("F-measure:", result["fmeasure"])
     """
     cdef int ans_unique_len = len(np.unique(ans_img))
     cdef cnp.ndarray[DTYPE_t, ndim=2] care_img, no_care_img, pred_img_th, care_img_th, no_care_img_th, pred_img_th_del
@@ -368,7 +422,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
         eval_mode (str): 評価方法  
 
             - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
-            - "proximity": 抽出された領域の重心と最も近い正解領域の重心が指定した距離以内である場合を正解、そうでない場合を不正解とするモード
+            - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
 
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
         otsu (bool): Otsuの二値化を行うかどうか
@@ -385,6 +439,15 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
             - 5: correct_num
             - 6: conformity_bottom
             - 7: care_num
+
+    Examples:
+        >>> import numpy as np
+        >>> from VitLib.VitLib_cython import nucleus
+        >>> # 予測画像と正解画像の例としてランダムな配列を作成
+        >>> pred_img = np.random.randint(0, 256, (256, 256), dtype=np.uint8)
+        >>> ans_img = (np.random.rand(256, 256) > 0.5).astype(np.uint8) * 255
+        >>> result = nucleus.evaluate_nuclear_prediction_range(pred_img, ans_img)
+        >>> print(result)
     """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]
