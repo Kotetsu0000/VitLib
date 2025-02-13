@@ -4,15 +4,16 @@ import numpy as np
 from .common import small_area_reduction
 
 def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
-    '''NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
+    """NWG細線化を行う. 渡す画像は黒背景(0)に白(255)で描画されている2値画像である必要がある(cv2の2値化処理処理した画像).
+    
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (np.ndarray): 2次元の2値画像
-        symmetric (bool): 対称的な細線化処理を行うかどうか
+        img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
+        symmetric (bool): 対称的な細線化処理を行うかどうか  
 
     Returns:
-        np.ndarray: 細線化した画像
+        np.ndarray: 細線化した画像(画素値 : {0, 255})
 
     Example:
         >>> import numpy as np
@@ -33,12 +34,12 @@ def NWG(img:np.ndarray, symmetric:bool=False) -> np.ndarray:
                [  0,   0,   0,   0, 255,   0,   0,   0],
                [  0,   0,   0,   0,   0,   0,   0,   0],
                [  0,   0,   0,   0,   0,   0,   0,   0],
-               [  0,   0,   0,   0,   0,   0,   0,   0]])        
+               [  0,   0,   0,   0,   0,   0,   0,   0]])
 
         Note:
             imgは2値画像を想定しており、[0, 255]の配列である必要がある。  
             cv2で二値化した画像を入れることで正常に動作する。
-    '''
+    """
     src = np.copy(img)//255
 
     # zero padding
@@ -107,11 +108,35 @@ def modify_line_width(img:np.ndarray, radius:int=1) -> np.ndarray:
     """細線化された画像の線の太さを変更する. 
 
     Args:
-        img (np.ndarray): 2値画像.
-        radius (int): 線の太さ.
+        img (np.ndarray): 2値画像(画素値 : {0, any}).
+        radius (int): 線の太さ.  
 
     Returns:
-        np.ndarray: 線の太さを変更した画像.
+        np.ndarray: 線の太さを変更した画像(画素値 : {0, 1}).
+
+    Example:
+        >>>import numpy as np
+        >>>from VitLib import modify_line_width
+        >>>img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>>modify_line_width(img, radius=1)
+        array([[  0,   0,   0,   0,   0,   0,   0,   0],
+               [  0,   0,   0,   0,   0,   0,   0,   0],
+               [  0,   0,   1,   1,   1,   1,   1,   0],
+               [  0,   0,   1,   1,   1,   1,   1,   0],
+               [  0,   0,   1,   1,   1,   1,   1,   0],
+               [  0,   0,   1,   1,   1,   1,   1,   0],
+               [  0,   0,   1,   1,   1,   1,   1,   0],
+               [  0,   0,   0,   0,   0,   0,   0,   0]])
+
+    Note:
+        入力画像は2値画像である必要があり、[0, 1]の配列である必要がある。
     """
     src = np.copy(img)
     r, c = np.nonzero(src)
@@ -123,16 +148,48 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
     """細胞膜画像の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像.
-        ans_img (np.ndarray): 正解画像.
-        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.
-        del_area (int): 小領域削除の閾値.
-        symmetric (bool): NWG細線化の対称性.
-        radius (int): 評価指標の計算に使用する半径.
-        otsu (bool): 二値化の閾値を自動で設定するかどうか.
+        pred_img (np.ndarray): 推論画像(画素値 : [0, 255])
+        ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
+        threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+        del_area (int): 小領域削除の閾値  
+        symmetric (bool): NWG細線化の対称性  
+        radius (int): 評価指標の計算に使用する半径
+        otsu (bool): 二値化の閾値を自動で設定するかどうか 
 
     Returns:
-        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
+        dict: 評価指標、閾値、小領域削除の閾値、半径を含む辞書
+
+            - precision : 適合率
+            - recall : 再現率
+            - fmeasure : F値
+            - threshold : 二値化の閾値
+            - del_area : 小領域削除の閾値
+            - radius : 評価指標の計算に使用する半径
+            - membrane_length : 正解の細胞膜の長さ
+            - tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ
+            - miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの
+
+    Example:
+        >>>import numpy as np
+        >>>from VitLib import evaluate_membrane_prediction
+        >>>pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>>ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>>evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
+        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
     """
     # 画像の二値化
     if otsu:
@@ -176,14 +233,46 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
     """細胞膜画像の評価を行う関数.
 
     Args:
-        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み.
-        ans_img_th_nwg (np.ndarray): 正解画像.
-        threshold (int): 二値化の閾値(返却用).
-        del_area (int): 小領域削除の閾値.
-        radius (int): 評価指標の計算に使用する半径.
+        pred_img_th_nwg (np.ndarray): 予測画像. 二値化, NWG細線化済み(画素値 : {0, 255}).
+        ans_img_th_nwg (np.ndarray): 正解画像. 二値化, NWG細線化済み(画素値 : {0, 255}).
+        threshold (int): 二値化の閾値(返却用)
+        del_area (int): 小領域削除の閾値
+        radius (int): 評価指標の計算に使用する半径
 
     Returns:
-        dict: 評価指標の辞書. precision, recall, fmeasure, threshold, del_areaをキーとする.
+        dict: 評価指標、閾値、小領域削除の閾値、半径を含む辞書
+
+            - precision : 適合率
+            - recall : 再現率
+            - fmeasure : F値
+            - threshold : 二値化の閾値
+            - del_area : 小領域削除の閾値
+            - radius : 評価指標の計算に使用する半径
+            - membrane_length : 正解の細胞膜の長さ
+            - tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ
+            - miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの
+
+    Example:
+        >>>import numpy as np
+        >>>from VitLib import evaluate_membrane_prediction_nwg
+        >>>pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>>ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>>evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
+        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
     """
     # 正解画像と推論画像を[0,1]に変換
     pred_img_th_nwg = (pred_img_th_nwg//255).astype(np.uint8)
@@ -276,18 +365,18 @@ def evaluate_membrane_prediction_map(pred_img:np.ndarray, ans_img:np.ndarray, th
     """細胞膜の精度マップを作成する関数
 
     Args:
-        pred_img (np.ndarray): 予測画像.  
-        ans_img (np.ndarray): 正解画像.  
-        threshold (int): 二値化の閾値. otus=Trueの場合は無視される.  
-        del_area (int): 小領域削除の閾値.  
-        symmetric (bool): NWG細線化の対称性.  
-        radius (int): 評価指標の計算に使用する半径.  
-        otsu (bool): 二値化の閾値を自動で設定するかどうか.  
-        eval_size (int): 評価画像のサイズ.
-        map_step (int): 評価画像のステップ.
+        pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
+        ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
+        threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
+        del_area (int): 小領域削除の閾値
+        symmetric (bool): NWG細線化の対称性
+        radius (int): 評価指標の計算に使用する半径
+        otsu (bool): 二値化の閾値を自動で設定するかどうか
+        eval_size (int): 評価画像のサイズ
+        map_step (int): 評価画像のステップ
 
     Returns:
-        np.ndarray: F値のマップ.
+        np.ndarray: F値のマップ
 
     Note:
         This function is only available in Cython.
