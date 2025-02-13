@@ -188,8 +188,8 @@ def evaluate_membrane_prediction(pred_img:np.ndarray, ans_img:np.ndarray, thresh
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False)
-        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        >>>result = evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, radius=3)
+        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 0, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
     """
     # 画像の二値化
     if otsu:
@@ -271,8 +271,8 @@ def evaluate_membrane_prediction_nwg(pred_img_th_nwg:np.ndarray, ans_img_th_nwg:
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3)
-        {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        >>>result = evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, radius=3)
+        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 100, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
     """
     # 正解画像と推論画像を[0,1]に変換
     pred_img_th_nwg = (pred_img_th_nwg//255).astype(np.uint8)
@@ -354,30 +354,6 @@ def evaluate_membrane_prediction_map(pred_img:np.ndarray, ans_img:np.ndarray, th
     Returns:
         np.ndarray: F値のマップ.
     
-    Note:
-        This function is only available in Cython.
-    """
-
-    ## Cythonでしか実行できない関数なのでエラーを出す。
-    raise NotImplementedError("This function can only be executed in Cython.")
-
-def evaluate_membrane_prediction_map(pred_img:np.ndarray, ans_img:np.ndarray, threshold:int=127, del_area:int=100, symmetric:bool=False, radius:int=3, otsu:bool=False, eval_size:int=256, map_step:int=1) -> np.ndarray:
-    """細胞膜の精度マップを作成する関数
-
-    Args:
-        pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
-        ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
-        threshold (int): 二値化の閾値(otus=Trueの場合は無視される)
-        del_area (int): 小領域削除の閾値
-        symmetric (bool): NWG細線化の対称性
-        radius (int): 評価指標の計算に使用する半径
-        otsu (bool): 二値化の閾値を自動で設定するかどうか
-        eval_size (int): 評価画像のサイズ
-        map_step (int): 評価画像のステップ
-
-    Returns:
-        np.ndarray: F値のマップ
-
     Note:
         This function is only available in Cython.
     """
