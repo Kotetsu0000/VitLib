@@ -7,6 +7,7 @@ import numpy as np
 cimport numpy as cnp
 cimport cython
 from cython.parallel import prange
+from libcpp.vector cimport vector as cpp_vector
 from libcpp.set cimport set as cpp_set
 
 cdef extern from "<float.h>":
@@ -227,6 +228,7 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
 
             - "inclusion": 抽出された領域の重心が正解領域内にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
+            - "iou": IoUの計算を行うモード(正解画像と重なっている抽出された細胞核についてのIoU平均値)
 
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)  
 
@@ -256,12 +258,19 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     cdef int pred_num, care_num, no_care_num, ext_no_care_num, correct_num
     cdef int i, care, no_care, conformity_bottom
     cdef cnp.ndarray[DTYPE_t, ndim=3] dummy_bf_img
-    cdef cnp.ndarray[cnp.int32_t, ndim=2] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
-    cdef cnp.ndarray[cnp.float64_t, ndim=2] pred_centroids, care_centroids, no_care_centroids
+    cdef cnp.int32_t[:, :] pred_labels, care_labels, no_care_labels, pred_stats, care_stats, no_care_stats
+    cdef cnp.float64_t[:, :] pred_centroids, care_centroids, no_care_centroids
     cdef float precision, recall, fmeasure
     cdef list correct_list
     cdef cnp.float64_t[:] min_care_data, min_no_care_data
     cdef float min_care_distance, min_no_care_distance
+
+    #cdef cnp.int64_t[:, :] care_num_cell
+    #cdef cnp.ndarray[cnp.int64_t, ndim=1] pred_cell_labels
+    cdef cnp.int64_t[:] overlap_area
+    cdef double sum_iou, ave_iou
+    cdef cpp_vector[cpp_set[int]] correct_set
+    cdef int x, y, j, ROW, COLUMN, or_area
 
     if ans_unique_len != 2 and ans_unique_len != 1:
         warnings.warn("ans_imgは二値画像ではありません。閾値127で二値化を行います。", UserWarning)
@@ -286,55 +295,78 @@ cpdef dict evaluate_nuclear_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cn
     care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(care_img_th)
     no_care_num, no_care_labels, no_care_stats, no_care_centroids = cv2.connectedComponentsWithStats(no_care_img_th)
 
-    # 抽出判定
-    correct_list = [] #抽出された正解核のラベル番号リスト(後に重複削除する)
-    ext_no_care_num = 0 #抽出されたが考慮しない核の数
-    if eval_mode == "inclusion":
-        for i in range(1, pred_num):
-            care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
-            no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
-            if care:
-                correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
-            elif no_care:
-                ext_no_care_num += 1
-    elif eval_mode == "proximity":
-        for i in range(1, pred_num):
-            #min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
-            min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
-            min_care_index = int(min_care_data[0])
-            min_care_distance = min_care_data[1]
-            #min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
-            min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
-            min_no_care_index = int(min_no_care_data[0])
-            min_no_care_distance = min_no_care_data[1]
-            if min_care_distance < distance:
-                correct_list.append(min_care_index+1)
-            elif min_no_care_distance < distance:
-                ext_no_care_num += 1
+    if eval_mode == "iou":
+        sum_iou = 0
+        correct_set = cpp_vector[cpp_set[int]](care_num)
+        overlap_area = np.zeros(care_num, dtype=np.int64)
+        ROW = pred_img_th_del.shape[0]
+        COLUMN = pred_img_th_del.shape[1]
+        for y in prange(ROW, nogil=True):
+            for x in range(COLUMN):
+                # 正解領域かつ抽出領域の場合
+                if care_labels[y, x] != 0 and pred_labels[y, x] != 0:
+                    correct_set[care_labels[y, x]].insert(pred_labels[y, x])
+                    overlap_area[care_labels[y, x]] += 1
+        for i in prange(1, care_num, nogil=True):
+            if correct_set[i].size() != 0:
+                or_area = care_stats[i, 4] - overlap_area[i]
+                for j in correct_set[i]:
+                    or_area += pred_stats[j, 4]
+                sum_iou += float(overlap_area[i]) / float(or_area)
+        ave_iou = sum_iou / (care_num-1) if care_num-1 != 0 else 0
+        return {"iou": ave_iou, "threshold": threshold, "del_area": del_area}
     else:
-        raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
-    
-    #重複削除
-    correct_list = list(set(correct_list))
+        # 抽出判定
+        correct_list = [] #抽出された正解核のラベル番号リスト(後に重複削除する)
+        ext_no_care_num = 0 #抽出されたが考慮しない核の数
+        if eval_mode == "inclusion":
+            for i in range(1, pred_num):
+                care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+                no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+                if care:
+                    correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
+                elif no_care:
+                    ext_no_care_num += 1
+        elif eval_mode == "proximity":
+            for i in range(1, pred_num):
+                #min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
+                min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
+                min_care_index = int(min_care_data[0])
+                min_care_distance = min_care_data[1]
+                #min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+                min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+                min_no_care_index = int(min_no_care_data[0])
+                min_no_care_distance = min_no_care_data[1]
+                if min_care_distance < distance:
+                    correct_list.append(min_care_index+1)
+                elif min_no_care_distance < distance:
+                    ext_no_care_num += 1
+        else:
+            raise ValueError("eval_mode must be 'inclusion', 'proximity' or 'iou'.")
+        
+        #重複削除
+        correct_list = list(set(correct_list))
 
-    correct_num = len(correct_list)
+        correct_num = len(correct_list)
 
-    #抽出された数(適合率計算用), -1は背景の分
-    conformity_bottom = pred_num - 1 - ext_no_care_num
+        #抽出された数(適合率計算用), -1は背景の分
+        conformity_bottom = pred_num - 1 - ext_no_care_num
 
-    #適合率
-    precision = float(correct_num) / float(conformity_bottom) if conformity_bottom != 0 else 0
+        #適合率
+        precision = float(correct_num) / float(conformity_bottom) if conformity_bottom != 0 else 0
 
-    #再現率
-    recall = float(correct_num) / float(care_num-1) if care_num-1 != 0 else 0
+        #再現率
+        recall = float(correct_num) / float(care_num-1) if care_num-1 != 0 else 0
 
-    #F値
-    fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
-    
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
+        #F値
+        fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
+        
+        return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
 ###
 
-cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mode, int distance, int care_num, cnp.int32_t[:, :] care_labels, cnp.int32_t[:, :] no_care_labels, cnp.float64_t[:, :] care_centroids, cnp.float64_t[:, :] no_care_centroids) nogil:
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mode, int distance, int care_num, cnp.int32_t[:, :] care_labels, cnp.int32_t[:, :] care_stats, cnp.int32_t[:, :] no_care_labels, cnp.float64_t[:, :] care_centroids, cnp.float64_t[:, :] no_care_centroids) nogil:
     cdef int i, pred_num, ext_no_care_num, care, no_care, min_care_index, min_no_care_index
     cdef cnp.int32_t[:, :] pred_labels, pred_stats
     cdef cnp.float64_t[:, :] pred_centroids
@@ -345,63 +377,91 @@ cdef cnp.float64_t[:] thred_eval(DTYPE_t[:, :] pred_img_th_nwg_del, str eval_mod
 
     cdef cpp_set[int] correct_set
 
+    #iou用
+    cdef cnp.int64_t[:] overlap_area
+    cdef double sum_iou, ave_iou
+    cdef cpp_vector[cpp_set[int]] correct_set_iou
+    cdef int x, y, j, ROW, COLUMN, or_area
+
     with gil:
         pred_num, pred_labels, pred_stats, pred_centroids = cv2.connectedComponentsWithStats(np.asarray(pred_img_th_nwg_del))
         result = np.zeros(6, dtype=np.float64)
         return_care_num = float(care_num-1)
 
-    ext_no_care_num = 0
-    if eval_mode == "inclusion":
-        for i in range(1, pred_num):
-            care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
-            no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
-            if care:
-                correct_set.insert(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
-            elif no_care:
-                ext_no_care_num += 1
-    elif eval_mode == "proximity":
-        for i in range(1, pred_num):
-            min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
-            min_care_index = int(min_care_data[0])
-            min_care_distance = min_care_data[1]
-            min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
-            min_no_care_index = int(min_no_care_data[0])
-            min_no_care_distance = min_no_care_data[1]
-            if min_care_distance < distance:
-                correct_set.insert(min_care_index+1)
-            elif min_no_care_distance < distance:
-                ext_no_care_num += 1
+    if eval_mode == "iou":
+        sum_iou = 0
+        correct_set_iou = cpp_vector[cpp_set[int]](care_num)
+        with gil:
+            ROW = pred_img_th_nwg_del.shape[0]
+            COLUMN = pred_img_th_nwg_del.shape[1]
+            overlap_area = np.zeros(care_num, dtype=np.int64)
+        
+        for y in range(ROW):
+            for x in range(COLUMN):
+                if care_labels[y, x] != 0 and pred_labels[y, x] != 0:
+                    correct_set_iou[care_labels[y, x]].insert(pred_labels[y, x])
+                    overlap_area[care_labels[y, x]] += 1
+        for i in range(1, care_num):
+            if correct_set_iou[i].size() != 0:
+                or_area = care_stats[i, 4] - overlap_area[i]
+                for j in correct_set_iou[i]:
+                    or_area += pred_stats[j, 4]
+                sum_iou += float(overlap_area[i]) / float(or_area)
+        ave_iou = sum_iou / return_care_num if return_care_num != 0 else 0
+        result[0] = ave_iou
     else:
-        raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
+        ext_no_care_num = 0
+        if eval_mode == "inclusion":
+            for i in range(1, pred_num):
+                care = care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+                no_care = no_care_labels[int(pred_centroids[i, 1]+0.5), int(pred_centroids[i, 0]+0.5)] != 0
+                if care:
+                    correct_set.insert(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
+                elif no_care:
+                    ext_no_care_num += 1
+        elif eval_mode == "proximity":
+            for i in range(1, pred_num):
+                min_care_data = euclidean_distance(pred_centroids[i], care_centroids[1:])
+                min_care_index = int(min_care_data[0])
+                min_care_distance = min_care_data[1]
+                min_no_care_data = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+                min_no_care_index = int(min_no_care_data[0])
+                min_no_care_distance = min_no_care_data[1]
+                if min_care_distance < distance:
+                    correct_set.insert(min_care_index+1)
+                elif min_no_care_distance < distance:
+                    ext_no_care_num += 1
+        else:
+            raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
 
-    # 合計数
-    correct_num = correct_set.size()
+        # 合計数
+        correct_num = correct_set.size()
 
-    # 抽出された数(適合率計算用), -1は背景の分
-    conformity_bottom = pred_num - 1 - ext_no_care_num
+        # 抽出された数(適合率計算用), -1は背景の分
+        conformity_bottom = pred_num - 1 - ext_no_care_num
 
-    # 適合率
-    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+        # 適合率
+        precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
 
-    #適合率
-    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+        #適合率
+        precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
 
-    #再現率
-    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
+        #再現率
+        recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
 
-    #F値
-    fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0
+        #F値
+        fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0
 
-    result[0] = precision
-    result[1] = recall
-    result[2] = fmeasure
-    result[3] = correct_num
-    result[4] = conformity_bottom
-    result[5] = return_care_num
+        result[0] = precision
+        result[1] = recall
+        result[2] = fmeasure
+        result[3] = correct_num
+        result[4] = conformity_bottom
+        result[5] = return_care_num
 
     return result
 
-
+###
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.ndarray[DTYPE_t, ndim=2] pred_img, cnp.ndarray[DTYPE_t, ndim=2] ans_img, float care_rate=75, float lower_ratio=17, float higher_ratio=0, int min_th=0, int max_th=255, int step_th=1, int min_area=0, object max_area=None, int step_area=1, str eval_mode="inclusion", int distance=5, int otsu=False, int verbose=False):
@@ -423,6 +483,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
 
             - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
+            - "iou": IoUの計算を行うモード(正解画像と重なっている抽出された細胞核についてのIoU平均値)
 
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
         otsu (bool): Otsuの二値化を行うかどうか
@@ -433,7 +494,7 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
         
             - 0: threshold
             - 1: del_area
-            - 2: precision
+            - 2: precision(eval_mode="iou"の場合はIoU)
             - 3: recall
             - 4: fmeasure
             - 5: correct_num
@@ -533,6 +594,6 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_nuclear_prediction_range(cnp.n
     pred_img_th_del = pred_img_th_del_
 
     for search_index in prange(search_size, nogil=True):
-        result[search_index, 2:8] = thred_eval(pred_img_th_del[search_index], eval_mode, distance, care_num, care_labels, no_care_labels, care_centroids, no_care_centroids)
+        result[search_index, 2:8] = thred_eval(pred_img_th_del[search_index], eval_mode, distance, care_num, care_labels, care_stats, no_care_labels, care_centroids, no_care_centroids)
     return np.asarray(result)
 ###

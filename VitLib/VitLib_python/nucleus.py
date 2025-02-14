@@ -182,6 +182,7 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
 
             - "inclusion": 抽出された領域の重心が正解領域内にあれば正解、それ以外は不正解とするモード
             - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
+            - "iou": IoUの計算を行うモード(正解画像と重なっている抽出された細胞核についてのIoU平均値)
 
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)  
 
@@ -229,46 +230,59 @@ def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_ra
     care_num, care_labels, care_stats, care_centroids = cv2.connectedComponentsWithStats(care_img_th)
     no_care_num, no_care_labels, no_care_stats, no_care_centroids = cv2.connectedComponentsWithStats(no_care_img_th)
 
-    # 抽出判定
-    correct_list = [] #抽出された正解核のラベル番号リスト(後に重複削除する)
-    ext_no_care_num = 0 #抽出されたが考慮しない核の数
-    if eval_mode == "inclusion":
-        for i in range(1, pred_num):
-            care = care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
-            no_care = no_care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
-            if care:
-                correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
-            elif no_care:
-                ext_no_care_num += 1
-    elif eval_mode == "proximity":
-        for i in range(1, pred_num):
-            min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
-            min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
-            if min_care_distance < distance:
-                correct_list.append(min_care_index+1)
-            elif min_no_care_distance < distance:
-                ext_no_care_num += 1
+    if eval_mode == "iou":
+        sum_iou = 0
+        for i in range(1, care_num):
+            care_num_cell = np.where(care_labels == i, 1, 0)
+            pred_label_list = np.unique(pred_labels * care_num_cell)[1:]
+            pred_cell = np.zeros_like(pred_labels)
+            for j in pred_label_list:
+                pred_cell += np.where(pred_labels == j, 1, 0)
+            iou = np.sum(np.logical_and(care_num_cell == 1, pred_cell == 1)) / np.sum(np.logical_or(care_num_cell == 1, pred_cell == 1))
+            sum_iou += iou
+        iou = sum_iou / (care_num-1) if care_num-1 != 0 else 0
+        return {"iou": iou, "threshold": threshold, "del_area": del_area}
     else:
-        raise ValueError("eval_mode must be 'inclusion' or 'proximity'")
-    
-    #重複削除
-    correct_list = list(set(correct_list))
+        # 抽出判定
+        correct_list = [] #抽出された正解核のラベル番号リスト(後に重複削除する)
+        ext_no_care_num = 0 #抽出されたが考慮しない核の数
+        if eval_mode == "inclusion":
+            for i in range(1, pred_num):
+                care = care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
+                no_care = no_care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)] != 0
+                if care:
+                    correct_list.append(care_labels[int(pred_centroids[i][1]+0.5), int(pred_centroids[i][0]+0.5)])
+                elif no_care:
+                    ext_no_care_num += 1
+        elif eval_mode == "proximity":
+            for i in range(1, pred_num):
+                min_care_index, min_care_distance = euclidean_distance(pred_centroids[i], care_centroids[1:])
+                min_no_care_index, min_no_care_distance = euclidean_distance(pred_centroids[i], no_care_centroids[1:])
+                if min_care_distance < distance:
+                    correct_list.append(min_care_index+1)
+                elif min_no_care_distance < distance:
+                    ext_no_care_num += 1
+        else:
+            raise ValueError("eval_mode must be 'inclusion', 'proximity' or 'iou'.")
+        
+        #重複削除
+        correct_list = list(set(correct_list))
 
-    correct_num = len(correct_list)
+        correct_num = len(correct_list)
 
-    #抽出された数(適合率計算用), -1は背景の分
-    conformity_bottom = pred_num - 1 - ext_no_care_num
+        #抽出された数(適合率計算用), -1は背景の分
+        conformity_bottom = pred_num - 1 - ext_no_care_num
 
-    #適合率
-    precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
+        #適合率
+        precision = correct_num / conformity_bottom if conformity_bottom != 0 else 0
 
-    #再現率
-    recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
+        #再現率
+        recall = correct_num / (care_num-1) if care_num-1 != 0 else 0
 
-    #F値
-    fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
-    
-    return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
+        #F値
+        fmeasure = (2*precision*recall) / (precision + recall) if precision + recall != 0 else 0    
+        
+        return {"precision": precision, "recall": recall, "fmeasure": fmeasure, "threshold": threshold, "del_area": del_area, 'correct_num': correct_num, 'conformity_bottom': conformity_bottom, 'care_num': care_num-1}
 
 def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0, min_th:int=0, max_th:int=255, step_th:int=1, min_area:int=0, max_area:int=None, step_area:int=1, eval_mode:str="inclusion", distance:int=5, otsu:bool=False, verbose:bool=False) -> np.ndarray:
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
