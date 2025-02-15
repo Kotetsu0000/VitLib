@@ -21,8 +21,8 @@ def NWG_nofix(img, symmetric:bool=False):
         symmetric (bool): 対称的な細線化処理を行うかどうか
 
     Returns:
-        cnp.ndarray: 細線化した画像(画素値 : {0, 255})
-
+        np.ndarray: 細線化された画像 (画素値: 0 または 255)
+    
     Example:
         >>> import numpy as np
         >>> from VitLib import NWG_nofix
@@ -121,11 +121,11 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v0(cnp.ndarray[DTYPE_t, ndim=2] img, 
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
-        symmetric (bool): 対称的な細線化処理を行うかどうか  
+        img (np.ndarray): 黒背景(0)に白(255)で描かれた2値画像
+        symmetric (bool): 対称的な細線化処理を行う場合はTrue
 
     Returns:
-        np.ndarray: 細線化した画像(画素値 : {0, 255})
+        np.ndarray: 細線化された画像 (画素値: 0 または 255)
 
     Example:
         >>> import numpy as np
@@ -233,11 +233,11 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG_old_v1(cnp.ndarray[DTYPE_t, ndim=2] img, 
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
-        symmetric (bool): 対称的な細線化処理を行うかどうか
+        img (np.ndarray): 黒背景(0)に白(255)で描かれた2値画像
+        symmetric (bool): 対称的な細線化処理を行う場合はTrue
 
     Returns:
-        np.ndarray: 細線化した画像(画素値 : {0, 255})
+        np.ndarray: 細線化された画像 (画素値: 0 または 255)
 
     Example:
         >>> import numpy as np
@@ -440,12 +440,12 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(DTYPE_t[:, :] img, int symmetric=False, i
     参考文献 : https://www.sciencedirect.com/science/article/pii/016786559500121V
 
     Args:
-        img (cnp.ndarray): 2次元の2値画像(画素値 : {0, 255})
-        symmetric (bool): 対称的な細線化処理を行うかどうか  
+        img (np.ndarray): 黒背景(0)に白(255)で描かれた2値画像
+        symmetric (bool): 対称的な細線化処理を行う場合はTrue
         multithread (bool): マルチスレッド処理を行うかどうか
 
     Returns:
-        np.ndarray: 細線化した画像(画素値 : {0, 255})
+        np.ndarray: 細線化された画像 (画素値: 0 または 255)
 
     Example:
         >>> import numpy as np
@@ -479,27 +479,27 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] NWG(DTYPE_t[:, :] img, int symmetric=False, i
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width_old(cnp.ndarray[DTYPE_t, ndim=2] img, int radius=1):
-    """細線化された画像の線の太さを変更する. 
+    """細線化された画像の線の太さを変更する関数
 
     Args:
-        img (np.ndarray): 2値画像(画素値 : {0, any}).
-        radius (int): 線の太さ.  
+        img (np.ndarray): 2値画像 (画素値: 0, 1)
+        radius (int): 線の太さを調整する半径
 
     Returns:
-        np.ndarray: 線の太さを変更した画像(画素値 : {0, 1}).
+        np.ndarray: 線の太さが変更された画像 (画素値: 0, 1)
 
     Example:
-        >>>import numpy as np
-        >>>from VitLib import modify_line_width_old
-        >>>img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>modify_line_width_old(img, radius=1)
+        >>> import numpy as np
+        >>> from VitLib import modify_line_width_old
+        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>> modify_line_width_old(img, radius=1)
         array([[  0,   0,   0,   0,   0,   0,   0,   0],
                [  0,   0,   0,   0,   0,   0,   0,   0],
                [  0,   0,   1,   1,   1,   1,   1,   0],
@@ -510,7 +510,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width_old(cnp.ndarray[DTYPE_t, nd
                [  0,   0,   0,   0,   0,   0,   0,   0]])
 
     Note:
-        入力画像は2値画像を想定している。
+        入力画像は必ず2値画像（0と1の値）である必要があります。
         using cython.
     """
     cdef cnp.ndarray[DTYPE_t, ndim=2] src = np.copy(img)
@@ -550,27 +550,27 @@ cdef DTYPE_t[:, :] modify_line_width_(DTYPE_t[:, :] img, int radius=1) nogil:
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(DTYPE_t[:, :] img, int radius=1):
-    """細線化された画像の線の太さを変更する. 
+    """細線化された画像の線の太さを変更する関数
 
     Args:
-        img (np.ndarray): 2値画像(画素値 : {0, 1}).
-        radius (int): 線の太さ.  
+        img (np.ndarray): 2値画像 (画素値: 0, 1)
+        radius (int): 線の太さを調整する半径
 
     Returns:
-        np.ndarray: 線の太さを変更した画像(画素値 : {0, 1}).
+        np.ndarray: 線の太さが変更された画像 (画素値: 0, 1)
 
     Example:
-        >>>import numpy as np
-        >>>from VitLib import modify_line_width
-        >>>img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   1,   1,   1,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>modify_line_width(img, radius=1)
+        >>> import numpy as np
+        >>> from VitLib import modify_line_width
+        >>> img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   1,   1,   1,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                 [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>> modify_line_width(img, radius=1)
         array([[  0,   0,   0,   0,   0,   0,   0,   0],
                [  0,   0,   0,   0,   0,   0,   0,   0],
                [  0,   0,   1,   1,   1,   1,   1,   0],
@@ -581,7 +581,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] modify_line_width(DTYPE_t[:, :] img, int radi
                [  0,   0,   0,   0,   0,   0,   0,   0]])
 
     Note:
-        入力画像は2値画像である必要があり、[0, 1]の配列である必要がある。
+        入力画像は必ず2値画像（0と1の値）である必要があります。
         using cython.
     """
     return np.asarray(modify_line_width_(img, radius))
@@ -604,37 +604,22 @@ cpdef dict evaluate_membrane_prediction(cnp.ndarray[DTYPE_t, ndim=2] pred_img, c
     Returns:
         dict: 評価指標、閾値、小領域削除の閾値、半径を含む辞書
 
-            - precision : 適合率
-            - recall : 再現率
-            - fmeasure : F値
-            - threshold : 二値化の閾値
-            - del_area : 小領域削除の閾値
-            - radius : 評価指標の計算に使用する半径
-            - membrane_length : 正解の細胞膜の長さ
-            - tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ
-            - miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの
+            - precision : 適合率(float)
+            - recall : 再現率(float)
+            - fmeasure : F値(float)
+            - threshold : 二値化の閾値(int)
+            - del_area : 小領域削除の閾値(int)
+            - radius : 評価指標の計算に使用する半径(int)
+            - membrane_length : 正解の細胞膜の長さ(int, デバッグ用)
+            - tip_length : 膨張した推定結果の内部に含まれる細線化した正解の長さ(int, デバッグ用)
+            - miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの(int, デバッグ用)
 
     Example:
-        >>>import numpy as np
-        >>>from VitLib import evaluate_membrane_prediction
-        >>>pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>result = evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, symmetric=False, radius=3, otsu=False)
-        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 0, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        >>> import numpy as np
+        >>> from VitLib import evaluate_membrane_prediction
+        >>> pred_img = np.array([[...]], dtype=np.uint8)
+        >>> ans_img = np.array([[...]], dtype=np.uint8)
+        >>> evaluate_membrane_prediction(pred_img, ans_img, threshold=127, del_area=0, radius=3)
 
     Note:
         using cython.
@@ -709,9 +694,17 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
             - miss_length : 正解の細胞膜の長さから膨張した推定結果の内部に含まれる細線化した正解の長さを引いたもの
 
     Example:
-        >>>import numpy as np
-        >>>from VitLib import evaluate_membrane_prediction_nwg
-        >>>pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        >>> import numpy as np
+        >>> from VitLib import evaluate_membrane_prediction_nwg
+        >>> pred_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                      [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                      [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                      [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                      [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                      [  0,   0,   0, 255, 255, 255,   0,   0],
+        ...                      [  0,   0,   0,   0,   0,   0,   0,   0],
+        ...                      [  0,   0,   0,   0,   0,   0,   0,   0]])
+        >>> ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
@@ -719,16 +712,7 @@ cpdef dict evaluate_membrane_prediction_nwg(cnp.ndarray[DTYPE_t, ndim=2] pred_im
         ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
         ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>ans_img = np.array([[  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0, 255, 255, 255,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0],
-        ...                     [  0,   0,   0,   0,   0,   0,   0,   0]])
-        >>>result = evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=0, radius=3)
-        >>>print(result) # {'precision': 1.0, 'recall': 1.0, 'fmeasure': 1.0, 'threshold': 127, 'del_area': 0, 'radius': 3, 'membrane_length': 1, 'tip_length': 1, 'miss_length': 0}
+        >>> evaluate_membrane_prediction_nwg(pred_img, ans_img, threshold=127, del_area=100, radius=3)
         
     Note:
         using cython.
@@ -836,24 +820,21 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_range(cnp.
     Returns:
         np.ndarray: 評価指標の配列. 
         
-            - 0: threshold
-            - 1: del_area
-            - 2: precision
-            - 3: recall
-            - 4: fmeasure
-            - 5: membrane_length
-            - 6: tip_length
-            - 7: miss_length
+            - 0: threshold(int)
+            - 1: del_area(int)
+            - 2: precision(float)
+            - 3: recall(float)
+            - 4: fmeasure(float)
+            - 5: membrane_length(int, デバッグ用)
+            - 6: tip_length(int, デバッグ用)
+            - 7: miss_length(int, デバッグ用)
 
     Example:
         >>> import numpy as np
         >>> from VitLib.VitLib_cython import membrane
-        >>> # 例としてランダムな予測画像と正解画像を生成
-        >>> pred_img = np.random.randint(0, 256, (256, 256), dtype=np.uint8)
-        >>> ans_img = (np.random.rand(256, 256) > 0.5).astype(np.uint8) * 255
-        >>> # 関数を実行して評価指標を取得
-        >>> result = membrane.evaluate_membrane_prediction_range(pred_img, ans_img, verbose=True)
-        >>> print(result)
+        >>> pred_img = np.array([[...]], dtype=np.uint8)
+        >>> ans_img = np.array([[...]], dtype=np.uint8)
+        >>> membrane.evaluate_membrane_prediction_range(pred_img, ans_img, verbose=True)
     """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]
@@ -941,8 +922,8 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_map(cnp.nd
     """細胞膜の精度マップを作成する関数
 
     Args:
-        pred_img (np.ndarray): 予測画像(画素値 : [0, 255])
-        ans_img (np.ndarray): 正解画像(画素値 : [0, 255])
+        pred_img (np.ndarray): 予測画像(画素値: 0 ~ 255)
+        ans_img (np.ndarray): 正解画像(画素値: 0 ~ 255)
         threshold (int): 二値化の閾値(otsu=Trueの場合は無視される)
         del_area (int): 小領域削除の閾値
         symmetric (bool): NWG細線化の対称性
@@ -957,11 +938,9 @@ cpdef cnp.ndarray[cnp.float64_t, ndim=2] evaluate_membrane_prediction_map(cnp.nd
     Example:
         >>> import cv2
         >>> from VitLib.VitLib_cython import membrane
-        >>> # 予測画像と正解画像をグレースケールで読み込む
-        >>> pred_img = cv2.imread('tests/pred_img.png', cv2.IMREAD_GRAYSCALE)
-        >>> ans_img = cv2.imread('tests/ans_img.png', cv2.IMREAD_GRAYSCALE)
-        >>> f_map = membrane.evaluate_membrane_prediction_map(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False, eval_size=256, map_step=1)
-        >>> print(f_map)
+        >>> pred_img = np.array([[...]], dtype=np.uint8)
+        >>> ans_img = np.array([[...]], dtype=np.uint8)
+        >>> membrane.evaluate_membrane_prediction_map(pred_img, ans_img, threshold=127, del_area=100, symmetric=False, radius=3, otsu=False, eval_size=256, map_step=1)
     """
     cdef int ROW = pred_img.shape[0]
     cdef int COLUMN = pred_img.shape[1]

@@ -6,20 +6,19 @@ import numpy as np
 from .common import small_area_reduction
 
 def calc_contour_areas(img:np.ndarray) -> np.ndarray:
-    """与えられた二値化画像から全ての輪郭を検出し、各輪郭の面積を算出して返す関数です。
+    """二値化画像から輪郭の面積を計算する関数
 
     Args:
-        img (np.ndarray): 0と255の値のみを持つ二値化画像。対象物は255、背景は0となっている必要があります。
+        img (np.ndarray): 二値化画像(画素値: 0, 255)
 
     Returns:
-        np.ndarray: 各検出された輪郭の面積（float32型）の1次元NumPy配列。
+        np.ndarray: 各検出された輪郭の面積（float32型）の1次元配列
 
-    Examples:
+    Example:
         >>> import cv2, numpy as np
         >>> img = np.zeros((200, 200), dtype=np.uint8)
         >>> cv2.circle(img, (100, 100), 50, 255, -1)
         >>> areas = calc_contour_areas(img)
-        >>> print(areas)  # 検出された輪郭の面積が表示される
     """
     contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
     contours_len = len(contours)
@@ -29,29 +28,26 @@ def calc_contour_areas(img:np.ndarray) -> np.ndarray:
         area_size[i] = cv2.contourArea(contour)
     return area_size
 
-def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, higher_ratio:float=0):
-    """標準的核面積を計算する
+def calc_standard_nuclear_area(ans_img: np.ndarray, lower_ratio: float = 17, higher_ratio: float = 0):
+    """標準的核面積を計算する関数
 
     Args:
-        ans_img (np.ndarray): 二値化画像  
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        ans_img (np.ndarray): 二値化された画像。
+        lower_ratio (float): 除外する面積の下位割合 (0-100)。
+        higher_ratio (float): 除外する面積の上位割合 (0-100)。
 
     Returns:
         float: 標準的核面積
 
-    Examples:
+    Example:
         >>> import numpy as np
-        >>> from VitLib.VitLib_cython.nucleus import calc_standard_nuclear_area
-        >>> # 例: 2値化画像を作成（核は255、背景は0）
+        >>> from VitLib.VitLib_python.nucleus import calc_standard_nuclear_area
         >>> ans_img = np.array([[0, 0, 0, 0],
         ...                     [0, 255, 255, 0],
         ...                     [0, 255, 255, 0],
         ...                     [0, 0, 0, 0]], dtype=np.uint8)
-        >>> # 下位10%と上位10%を除外して標準的核面積を計算する
-        >>> area = calc_standard_nuclear_area(ans_img, lower_ratio=10, higher_ratio=10)
-        >>> print("Standard nuclear area:", area)
-    
+        >>> calc_standard_nuclear_area(ans_img)
+
     Note:
         例としてlower_ratio=0.1, higher_ratio=0.1の場合、下位10%と上位10%の面積を除外した中間の80%の面積を使用して標準的核面積の計算を行う
     """
@@ -70,35 +66,32 @@ def calc_standard_nuclear_area(ans_img:np.ndarray, lower_ratio:float=17, higher_
     sorted_area_size = sorted(area_size)[out_lower_num:len(area_size)-out_heigher_num]
     return np.mean(sorted_area_size)
 
-def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0):
+def make_nuclear_evaluate_images(ans_img: np.ndarray, bf_img: np.ndarray, care_rate: float = 75, lower_ratio: float = 17, higher_ratio: float = 0):
     """評価用画像を作成する関数
 
     Args:
-        ans_img (np.ndarray): 二値化画像  
-        bf_img (np.ndarray): 明視野画像  
-        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
-        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
+        ans_img (np.ndarray): 二値化された画像。
+        bf_img (np.ndarray): 明視野画像。
+        care_rate (float): 除外する核の標準核面積に対する面積割合(%) (0-100)。
+        lower_ratio (float): 除外する面積の下位割合(%) (0-100)。
+        higher_ratio (float): 除外する面積の上位割合(%) (0-100)。
 
     Returns:
-        dict: 評価用画像の辞書。以下のキーを含む
+        dict: 評価用画像の辞書。
 
             - "eval_img": 評価用画像
             - "red_img": DontCare領域画像
             - "green_img": 正解領域画像
 
-    Examples:
+    Example:
         >>> import numpy as np
-        >>> from VitLib.VitLib_cython.nucleus import make_nuclear_evaluate_images
-        >>> # 簡単な二値化画像と明視野画像の作成
+        >>> from VitLib.VitLib_python.nucleus import make_nuclear_evaluate_images
         >>> ans_img = np.array([[0, 0, 0, 0],
         ...                     [0, 255, 255, 0],
         ...                     [0, 255, 255, 0],
         ...                     [0, 0, 0, 0]], dtype=np.uint8)
         >>> bf_img = np.zeros((4, 4, 3), dtype=np.uint8)
-        >>> # care_rate=75, lower_ratio=17, higher_ratio=0 を使用して評価用画像を作成
-        >>> result = make_nuclear_evaluate_images(ans_img, bf_img, care_rate=75, lower_ratio=17, higher_ratio=0)
-        >>> print(result.keys())  # dict_keys(['eval_img', 'red_img', 'green_img'])
+        >>> make_nuclear_evaluate_images(ans_img, bf_img)
     """
     ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -136,25 +129,19 @@ def make_nuclear_evaluate_images(ans_img:np.ndarray, bf_img:np.ndarray, care_rat
     return return_dict
 
 def euclidean_distance(ext_centroid, ans_centroids):
-    """重心の距離の最小値とそのインデックスを返す関数
+    """抽出された核と正解核の重心間の最小距離およびそのインデックスを算出する関数
 
     Args:
-        ext_centroid (tuple of float): 抽出された核の重心 (例: (x, y))
-        ans_centroids (list of tuple of float): 正解核の重心リスト (例: [(x1, y1), (x2, y2), ...])
+        ext_centroid (list[float]): 抽出された核の重心 (例: [x, y])
+        ans_centroids (list[list[float]]): 正解核の重心リスト (例: [[x1, y1], [x2, y2], ...])
 
     Returns:
-        tuple: 最小距離のインデックスとその距離.
-            - 最小距離のインデックス (int)
-            - 最小距離 (float)
+        tuple: (最小距離のインデックス (int), 最小距離 (float))
 
-    Examples:
+    Example:
         >>> ext_centroid = [100.0, 150.0]
         >>> ans_centroids = [[90.0, 145.0], [120.0, 170.0]]
         >>> index, distance = euclidean_distance(ext_centroid, ans_centroids)
-        >>> print("最小距離のインデックス:", index)
-        最小距離のインデックス: 0
-        >>> print("最小距離:", distance)
-        最小距離: 11.18
     """
     min_distance = 2**31 - 1
     min_index = -1
@@ -167,44 +154,38 @@ def euclidean_distance(ext_centroid, ans_centroids):
             min_index = i
     return min_index, np.sqrt(min_distance)
 
-def evaluate_nuclear_prediction(pred_img:np.ndarray, ans_img:np.ndarray, care_rate:float=75, lower_ratio:float=17, higher_ratio:float=0, threshold:int=127, del_area:int=0, eval_mode="inclusion", distance:int=5):
-    """細胞核画像の評価を行う関数.
+def evaluate_nuclear_prediction(pred_img: np.ndarray, ans_img: np.ndarray, care_rate: float = 75, lower_ratio: float = 17, higher_ratio: float = 0, threshold: int = 127, del_area: int = 0, eval_mode: str = "inclusion", distance: int = 5):
+    """細胞核画像の評価を行う関数
 
     Args:
-        pred_img (np.ndarray): 予測画像
-        ans_img (np.ndarray): 正解画像
-        care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)
-        lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)
-        higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)
+        pred_img (np.ndarray): 推論画像 (2値画像)
+        ans_img (np.ndarray): 正解画像 (2値画像)
+        care_rate (float): 除外比率 (0-100)
+        lower_ratio (float): 下位除外割合 (0-100)
+        higher_ratio (float): 上位除外割合 (0-100)
         threshold (int): 二値化の閾値
-        del_area (int): 除外する面積
-        eval_mode (str): 評価方法
-
-            - "inclusion": 抽出された領域の重心が正解領域内にあれば正解、それ以外は不正解とするモード
-            - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
-            - "iou": IoUの計算を行うモード(正解画像と重なっている抽出された細胞核についてのIoU平均値)
-
-        distance (int): 評価モードが"proximity"の場合の距離(ピクセル)  
+        del_area (int): 小領域削除の面積閾値
+        eval_mode (str): 評価モード ("inclusion", "proximity", "iou")
+        distance (int): 距離の閾値
 
     Returns:
-        dict: 評価結果の辞書
+        dict: 評価結果の辞書  
         
-            - precision (float): 適合率
-            - recall (float): 再現率
-            - fmeasure (float): F値
-            - threshold (int): 二値化の閾値
-            - del_area (int): 除外する面積
+              - "precision": 適合率(float)
+              - "recall": 再現率(float)
+              - "fmeasure": F値(float)
+              - "threshold": 使用した二値化の閾値(int)
+              - "del_area": 使用した小領域削除の閾値(int)
+              - "correct_num": 正解核数(int, デバッグ用)
+              - "conformity_bottom": 適合率計算用の核数(int, デバッグ用)
+              - "care_num": 注意対象核の数(int, デバッグ用)
 
-    Examples:
+    Example:
         >>> import numpy as np
-        >>> # 例として、全て背景の画像を生成
-        >>> pred_img = np.zeros((100, 100), dtype=np.uint8)
-        >>> ans_img = np.zeros((100, 100), dtype=np.uint8)
-        >>> # evaluate_nuclear_prediction関数をinclusionモードで実行
-        >>> result = evaluate_nuclear_prediction(pred_img, ans_img, care_rate=75, lower_ratio=17, higher_ratio=0, threshold=127, del_area=0, eval_mode="inclusion", distance=5)
-        >>> print("Precision:", result["precision"])
-        >>> print("Recall:", result["recall"])
-        >>> print("F-measure:", result["fmeasure"])
+        >>> from VitLib.VitLib_cython.nucleus import evaluate_nuclear_prediction
+        >>> pred_img = np.array([[...]], dtype=np.uint8)
+        >>> ans_img = np.array([[...]], dtype=np.uint8)
+        >>> evaluate_nuclear_prediction(pred_img, ans_img)
     """
     ans_unique_len = len(np.unique(ans_img))
     if ans_unique_len != 2 and ans_unique_len != 1:
@@ -288,8 +269,8 @@ def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, c
     """複数の条件(二値化閾値、小領域削除面積)を変えて細胞核の評価を行う関数.
 
     Args:
-        pred_img (np.ndarray): 予測画像  
-        ans_img (np.ndarray): 正解画像  
+        pred_img (np.ndarray): 推論画像 (2値画像)
+        ans_img (np.ndarray): 正解画像 (2値画像)
         care_rate (float): 除外する核の標準的核面積に対する面積割合(%) (0-100の範囲)  
         lower_ratio (float): 除外する面積の下位割合(%) (0-100の範囲)  
         higher_ratio (float): 除外する面積の上位割合(%) (0-100の範囲)  
@@ -299,11 +280,7 @@ def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, c
         min_area (int): 除外する面積の最小値  
         max_area (int): 除外する面積の最大値  
         step_area (int): 除外する面積のステップ  
-        eval_mode (str): 評価方法  
-
-            - "inclusion": 抽出された領域の重心が正解領域の中にあれば正解、それ以外は不正解とするモード
-            - "proximity": 抽出された領域の重心と最も近い正解領域の重心との距離が指定値以内であれば正解、そうでなければ不正解とするモード
-
+        eval_mode (str): 評価モード ("inclusion", "proximity", "iou")
         distance (int): 評価モードが"proximity"の場合の距離(ピクセル)
         otsu (bool): Otsuの二値化を行うかどうか
         verbose (bool): 進捗表示を行うかどうか
@@ -311,23 +288,21 @@ def evaluate_nuclear_prediction_range(pred_img:np.ndarray, ans_img:np.ndarray, c
     Returns:
         np.ndarray: 評価指標の配列. 
         
-            - 0: threshold
-            - 1: del_area
-            - 2: precision
-            - 3: recall
-            - 4: fmeasure
-            - 5: correct_num
-            - 6: conformity_bottom
-            - 7: care_num
+            - 0: threshold(int)
+            - 1: del_area(int)
+            - 2: iou(float, eval_mode="iou"のみ), precision(float, eval_mode="inclusion" or "proximity")
+            - 3: なし(eval_mode="iou"のみ), recall(float, eval_mode="inclusion" or "proximity")
+            - 4: なし(eval_mode="iou"のみ), fmeasure(float, eval_mode="inclusion" or "proximity")
+            - 5: なし(eval_mode="iou"のみ), correct_num(int, eval_mode="inclusion" or "proximity")
+            - 6: なし(eval_mode="iou"のみ), conformity_bottom(int, eval_mode="inclusion" or "proximity")
+            - 7: なし(eval_mode="iou"のみ), care_num(int, eval_mode="inclusion" or "proximity")
 
-    Examples:
+    Example:
         >>> import numpy as np
-        >>> from VitLib.VitLib_cython import nucleus
-        >>> # 予測画像と正解画像の例としてランダムな配列を作成
-        >>> pred_img = np.random.randint(0, 256, (256, 256), dtype=np.uint8)
-        >>> ans_img = (np.random.rand(256, 256) > 0.5).astype(np.uint8) * 255
-        >>> result = nucleus.evaluate_nuclear_prediction_range(pred_img, ans_img)
-        >>> print(result)
+        >>> from VitLib.VitLib_cython.nucleus import evaluate_nuclear_prediction_range
+        >>> pred_img = np.array([[...]], dtype=np.uint8)
+        >>> ans_img = np.array([[...]], dtype=np.uint8)
+        >>> evaluate_nuclear_prediction_range(pred_img, ans_img)
 
     Note:
         This function is only available in Cython.
