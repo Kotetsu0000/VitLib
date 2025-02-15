@@ -184,15 +184,14 @@
 </section>
 <section id="module-VitLib.image_processing">
 <span id="vitlib-image-processing-module"></span><h2>VitLib.image_processing module<a class="headerlink" href="#module-VitLib.image_processing" title="Link to this heading">¶</a></h2>
-<p>画像の処理系をまとめたモジュール</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.change_contrast">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_contrast" title="Link to this definition">¶</a></dt>
-<dd><p>画像のコントラストを変更します。</p>
+<dd><p>画像のコントラストを変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>contrast_ratio</strong> (<em>float</em>) – コントラストの変更量(0~1)</p></li>
 </ul>
 </dd>
@@ -200,7 +199,7 @@
 <dd class="field-even"><p>コントラストが変更された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
@@ -215,11 +214,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.change_hue">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue_degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_hue" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像の色相を変更します。</p>
+<dd><p>画像のリスト内の各画像の色相を変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>hue_degree</strong> (<em>int</em>) – 色相の変更量(0~180)</p></li>
 </ul>
 </dd>
@@ -227,7 +226,7 @@
 <dd class="field-even"><p>色相が変更された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
@@ -242,11 +241,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.change_saturation">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_saturation" title="Link to this definition">¶</a></dt>
-<dd><p>画像の彩度を変更します。</p>
+<dd><p>画像の彩度を変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>saturation_ratio</strong> (<em>float</em>) – 彩度の変更量(0~1)</p></li>
 </ul>
 </dd>
@@ -254,7 +253,7 @@
 <dd class="field-even"><p>彩度が変更された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
@@ -269,11 +268,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.change_value">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_value" title="Link to this definition">¶</a></dt>
-<dd><p>画像の明度を変更します。</p>
+<dd><p>画像の明度を変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>value_ratio</strong> (<em>float</em>) – 明度の変更量(0~1)</p></li>
 </ul>
 </dd>
@@ -281,7 +280,7 @@
 <dd class="field-even"><p>明度が変更された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
@@ -324,11 +323,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.flip_image">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">flip_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.flip_image" title="Link to this definition">¶</a></dt>
-<dd><p>画像を反転します。</p>
+<dd><p>画像を反転する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – 画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>flip_code</strong> (<em>int</em>) – <p>反転コード</p>
 <ul>
 <li><p>0: 上下反転</p></li>
@@ -342,7 +341,7 @@
 <dd class="field-even"><p>反転された画像</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
@@ -361,7 +360,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>np.ndarray</em>) – 入力画像 (画素値: 0〜255)</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – ガンマ値</p></li>
 </ul>
 </dd>
@@ -406,7 +405,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_contrast">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_contrast" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像のコントラストをランダムに変更する関数</p>
+<dd><p>画像のリスト内の各画像のコントラストをランダムに変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -415,7 +414,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>コントラストが変更された画像リスト</p>
+<dd class="field-even"><p>コントラストが変更された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -433,16 +432,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_cut_image">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_cut_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_cut_image" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像をランダムに切り取ります。</p>
+<dd><p>画像のリスト内の各画像をランダムに切り取る関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>切り取られた画像リスト</p>
+<dd class="field-even"><p>切り取られた画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -460,11 +459,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_flip_image">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_flip_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_flip_image" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像をランダムに反転します。</p>
+<dd><p>画像のリスト内の各画像をランダムに反転する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>flip_code_range</strong> (<em>tuple</em>) – <p>反転コードの範囲</p>
 <ul>
 <li><p>0: 上下反転</p></li>
@@ -476,7 +475,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>反転された画像リスト</p>
+<dd class="field-even"><p>反転された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -494,16 +493,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_hue">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue_degree_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_hue" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像の色相をランダムに変更します。</p>
+<dd><p>画像のリスト内の各画像の色相をランダムに変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>hue_degree_range</strong> (<em>tuple</em>) – 色相の変更範囲(0~180)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>色相が変更された画像リスト</p>
+<dd class="field-even"><p>色相が変更された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -521,13 +520,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_rotate_image">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_rotate_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_rotate_image" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像をランダムに回転します。</p>
+<dd><p>画像のリスト内の各画像をランダムに回転する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p>
+<dd class="field-odd"><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>回転された画像リスト</p>
+<dd class="field-even"><p>回転された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -545,7 +544,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_saturation">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saturation_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_saturation" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像の彩度をランダムに変更する関数</p>
+<dd><p>画像のリスト内の各画像の彩度をランダムに変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -554,7 +553,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>彩度が変更された画像リスト</p>
+<dd class="field-even"><p>彩度が変更された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -572,16 +571,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.random_value">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">random_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_ratio_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.random_value" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像の明度をランダムに変更します。</p>
+<dd><p>画像のリスト内の各画像の明度をランダムに変更します。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>value_ratio_range</strong> (<em>tuple</em>) – 明度の変更範囲(0~1)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>明度が変更された画像リスト</p>
+<dd class="field-even"><p>明度が変更された画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -626,17 +625,17 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.select_cut_image">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">select_cut_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#VitLib.image_processing.select_cut_image" title="Link to this definition">¶</a></dt>
-<dd><p>画像リスト内の各画像を指定した位置とサイズで切り取ります。</p>
+<dd><p>画像のリスト内の各画像を指定した位置とサイズで切り取る関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像リスト</p></li>
+<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
 <li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取りの左上の座標</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りのサイズ</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>切り取られた画像リスト</p>
+<dd class="field-even"><p>切り取られた画像のリスト</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
