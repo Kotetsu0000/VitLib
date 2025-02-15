@@ -16,8 +16,7 @@ def calc_contour_areas(img:np.ndarray) -> np.ndarray:
 
     Example:
         >>> import cv2, numpy as np
-        >>> img = np.zeros((200, 200), dtype=np.uint8)
-        >>> cv2.circle(img, (100, 100), 50, 255, -1)
+        >>> img = np.array([...], dtype=np.uint8)
         >>> areas = calc_contour_areas(img)
     """
     contours = cv2.findContours(img, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
@@ -42,10 +41,7 @@ def calc_standard_nuclear_area(ans_img: np.ndarray, lower_ratio: float = 17, hig
     Example:
         >>> import numpy as np
         >>> from VitLib.VitLib_python.nucleus import calc_standard_nuclear_area
-        >>> ans_img = np.array([[0, 0, 0, 0],
-        ...                     [0, 255, 255, 0],
-        ...                     [0, 255, 255, 0],
-        ...                     [0, 0, 0, 0]], dtype=np.uint8)
+        >>> ans_img = np.array([...], dtype=np.uint8)
         >>> calc_standard_nuclear_area(ans_img)
 
     Note:
