@@ -173,8 +173,6 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates_old(cnp.n
 
     Args:
         img (np.ndarray): 2値画像 (画素値: 0 またはその他)
-        min_area (int): 最小面積の閾値
-        max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)
 
     Returns:
         np.ndarray: 小領域の面積リスト
@@ -255,7 +253,7 @@ cpdef cnp.ndarray[cnp.int32_t, ndim=1] detect_deleted_area_candidates(cnp.ndarra
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYPE_t, ndim=2] img):
-    """画像から閾値を抽出する.
+    """グレースケール画像から閾値のリストを抽出する関数
     
     Args:
         img (np.ndarray): グレースケール画像
@@ -283,7 +281,7 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYP
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img, int min_th=0, int max_th=255):
-    """画像から閾値候補を抽出する関数
+    """グレースケール画像から閾値のリストを抽出する関数
 
     Args:
         img (np.ndarray): グレースケール画像

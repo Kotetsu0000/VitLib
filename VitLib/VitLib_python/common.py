@@ -77,7 +77,7 @@ def detect_deleted_area_candidates(img: np.ndarray, min_area: int = 0, max_area:
     return np.unique(stats)
 
 def extract_threshold_values(img: np.ndarray, min_th: int = 0, max_th: int = 255) -> np.ndarray:
-    """画像から閾値候補を抽出する関数
+    """グレースケール画像から閾値のリストを抽出する関数
 
     Args:
         img (np.ndarray): グレースケール画像
