@@ -5,7 +5,7 @@ def create_directory(path: str) -> None:
     """ディレクトリを作成する関数
 
     Args:
-        path: 作成するディレクトリのパス
+        path(str): 作成するディレクトリのパス
 
     Example:
         >>> from VitLib import create_directory
@@ -19,7 +19,7 @@ def delete_directory(path: str) -> None:
     """ディレクトリを削除する関数
 
     Args:
-        path: 削除するディレクトリのパス
+        path(str): 削除するディレクトリのパス
 
     Example:
         >>> from VitLib import delete_directory
@@ -32,7 +32,7 @@ def get_file_paths(path: str) -> list[str]:
     """フォルダ内のファイルとフォルダのパスをすべて取得する関数
 
     Args:
-        path: フォルダのパス
+        path(str): フォルダのパス
 
     Returns:
         list[str]: フォルダ内のすべてのファイルとフォルダのパスリスト
@@ -49,7 +49,7 @@ def get_file_names(path: str) -> list[str]:
     """フォルダ内のファイル名をすべて取得する関数
 
     Args:
-        path: フォルダのパス
+        path(str): フォルダのパス
 
     Returns:
         list[str]: フォルダ内のすべてのファイル名のリスト
@@ -66,7 +66,7 @@ def get_file_stems(path: str) -> list[str]:
     """フォルダ内のファイル名（拡張子なし）をすべて取得する関数
 
     Args:
-        path: フォルダのパス
+        path(str): フォルダのパス
 
     Returns:
         list[str]: フォルダ内のすべてのファイル名（拡張子なし）のリスト
@@ -83,7 +83,7 @@ def file_exists(path: str) -> bool:
     """ファイルが存在するかどうかを返す関数
 
     Args:
-        path: ファイルのパス
+        path(str): ファイルのパス
 
     Returns:
         bool: ファイルが存在する場合はTrue、そうでない場合はFalse
@@ -98,7 +98,7 @@ def delete_file(path: str) -> None:
     """ファイルを削除する関数
 
     Args:
-        path: 削除するファイルのパス
+        path(str): 削除するファイルのパス
 
     Example:
         >>> from VitLib import delete_file
