@@ -31,8 +31,7 @@ cpdef cnp.ndarray[cnp.float32_t, ndim=1] calc_contour_areas(cnp.ndarray[DTYPE_t,
 
     Example:
         >>> import cv2, numpy as np
-        >>> img = np.zeros((200, 200), dtype=np.uint8)
-        >>> cv2.circle(img, (100, 100), 50, 255, -1)
+        >>> img = np.array([...], dtype=np.uint8)
         >>> areas = calc_contour_areas(img)
     """
     cdef int contours_len, i
@@ -63,10 +62,7 @@ cpdef float calc_standard_nuclear_area(cnp.ndarray[DTYPE_t, ndim=2] ans_img, flo
     Example:
         >>> import numpy as np
         >>> from VitLib.VitLib_python.nucleus import calc_standard_nuclear_area
-        >>> ans_img = np.array([[0, 0, 0, 0],
-        ...                     [0, 255, 255, 0],
-        ...                     [0, 255, 255, 0],
-        ...                     [0, 0, 0, 0]], dtype=np.uint8)
+        >>> ans_img = np.array([...], dtype=np.uint8)
         >>> calc_standard_nuclear_area(ans_img)
 
     Note:
