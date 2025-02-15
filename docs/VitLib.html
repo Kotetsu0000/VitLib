@@ -214,11 +214,11 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.image_processing.change_hue">
 <span class="sig-prename descclassname"><span class="pre">VitLib.image_processing.</span></span><span class="sig-name descname"><span class="pre">change_hue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue_degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.image_processing.change_hue" title="Link to this definition">¶</a></dt>
-<dd><p>画像のリスト内の各画像の色相を変更する関数</p>
+<dd><p>画像の色相を変更する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>hue_degree</strong> (<em>int</em>) – 色相の変更量(0~180)</p></li>
 </ul>
 </dd>
@@ -299,7 +299,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>np.ndarray</em>) – 入力画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>top_left</strong> (<em>tuple</em>) – 切り取り開始位置 (x, y)</p></li>
 <li><p><strong>size</strong> (<em>tuple</em>) – 切り取りサイズ (幅, 高さ)</p></li>
 </ul>
@@ -328,13 +328,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
-<li><p><strong>flip_code</strong> (<em>int</em>) – <p>反転コード</p>
-<ul>
-<li><p>0: 上下反転</p></li>
-<li><p>1: 左右反転</p></li>
-<li><p>-1: 上下左右反転</p></li>
-</ul>
-</p></li>
+<li><p><strong>flip_code</strong> (<em>int</em>) – 反転コード(0: 上下反転, 1: 左右反転, -1: 上下左右反転)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -462,17 +456,7 @@
 <dd><p>画像のリスト内の各画像をランダムに反転する関数</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p></li>
-<li><p><strong>flip_code_range</strong> (<em>tuple</em>) – <p>反転コードの範囲</p>
-<ul>
-<li><p>0: 上下反転</p></li>
-<li><p>1: 左右反転</p></li>
-<li><p>-1: 上下左右反転</p></li>
-<li><p>2: なし</p></li>
-</ul>
-</p></li>
-</ul>
+<dd class="field-odd"><p><strong>img_list</strong> (<em>list</em>) – 画像のリスト</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>反転された画像のリスト</p>
@@ -602,7 +586,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>img</strong> (<em>np.ndarray</em>) – 入力画像</p></li>
+<li><p><strong>img</strong> (<em>np.ndarray</em>) – 画像 (画素値: 0〜255)</p></li>
 <li><p><strong>rotate_times</strong> (<em>int</em>) – 90度単位で回転する回数 (正なら時計回り、負なら反時計回り)</p></li>
 </ul>
 </dd>
