@@ -9,14 +9,14 @@ DTYPE = np.uint8
 ctypedef cnp.uint8_t DTYPE_t
 
 def small_area_reduction_nofix(img, area_th=100):
-    """2値画像の小領域削除を行う.
+    """2値画像の小領域削除を行う関数
 
     Args:
-        img (np.ndarray): 2値画像.
-        area_th (int): 面積の閾値.
+        img (np.ndarray): 2値画像
+        area_th (int): 面積閾値。これ以下の面積を持つ領域が削除される
 
     Returns:
-        np.ndarray: 小領域削除後の2値画像.
+        np.ndarray: 小領域削除後の2値画像
 
     Example:
         >>> import numpy as np
@@ -55,14 +55,14 @@ def small_area_reduction_nofix(img, area_th=100):
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction_old(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
-    """2値画像の小領域削除を行う.
+    """2値画像の小領域削除を行う関数
 
     Args:
-        img (np.ndarray): 2値画像.  
-        area_th (int): 面積の閾値.(area_th以下の面積の領域が削除される。)
+        img (np.ndarray): 2値画像
+        area_th (int): 面積閾値。これ以下の面積を持つ領域が削除される
 
     Returns:
-        np.ndarray: 小領域削除後の2値画像.
+        np.ndarray: 小領域削除後の2値画像
         
     Example:
         >>> import numpy as np
@@ -113,11 +113,11 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction_old(cnp.ndarray[DTYPE_t,
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndim=2] img, int area_th=100):
-    """2値画像の小領域削除を行う.
+    """2値画像の小領域削除を行う関数
 
     Args:
         img (np.ndarray): 2値画像
-        area_th (int): 面積の閾値(area_th以下の面積の領域が削除される。)  
+        area_th (int): 面積閾値。これ以下の面積を持つ領域が削除される
 
     Returns:
         np.ndarray: 小領域削除後の2値画像
@@ -169,17 +169,19 @@ cpdef cnp.ndarray[DTYPE_t, ndim=2] small_area_reduction(cnp.ndarray[DTYPE_t, ndi
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates_old(cnp.ndarray[DTYPE_t, ndim=2] img):
-    """2値画像の小領域の削除面積のリストを作成する関数.
+    """2値画像から小領域の削除候補となる面積リストを作成する関数
 
     Args:
-        img (np.ndarray): 2値画像.  
+        img (np.ndarray): 2値画像 (画素値: 0 またはその他)
+        min_area (int): 最小面積の閾値
+        max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)
 
     Returns:
-        np.ndarray: 小領域の面積のリスト.
+        np.ndarray: 小領域の面積リスト
 
     Example:
         >>> import numpy as np
-        >>> from VitLib import detect_deleted_area_candidates
+        >>> from VitLib import detect_deleted_area_candidates_old
         >>> img = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -188,7 +190,7 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates_old(cnp.n
         ...                 [0, 0, 0, 1, 1, 1, 0, 0],
         ...                 [0, 0, 0, 0, 0, 0, 0, 0],
         ...                 [0, 0, 0, 0, 0, 1, 1, 1]])
-        >>> detect_deleted_area_candidates(img)
+        >>> detect_deleted_area_candidates_old(img)
         array([0, 3])
 
     Note:
@@ -214,13 +216,15 @@ cpdef cnp.ndarray[cnp.uint64_t, ndim=1] detect_deleted_area_candidates_old(cnp.n
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[cnp.int32_t, ndim=1] detect_deleted_area_candidates(cnp.ndarray[DTYPE_t, ndim=2] img, int min_area=0, object max_area=None):
-    """2値画像の小領域の削除面積のリストを作成する関数.
+    """2値画像から小領域の削除候補となる面積リストを作成する関数
 
     Args:
-        img (np.ndarray): 2値画像(画素値 : {0, any})
+        img (np.ndarray): 2値画像 (画素値: 0 またはその他)
+        min_area (int): 最小面積の閾値
+        max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)
 
     Returns:
-        np.ndarray: 小領域の面積のリスト
+        np.ndarray: 小領域の面積リスト
 
     Example:
         >>> import numpy as np
@@ -254,16 +258,18 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYP
     """画像から閾値を抽出する.
     
     Args:
-        img (np.ndarray): 2値画像.  
+        img (np.ndarray): グレースケール画像
 
     Returns:
-        np.ndarray: 画像から抽出した閾値のリスト.
+        np.ndarray: 画像から抽出した閾値のリスト
 
-    Examples:
+    Example:
+        >>> import numpy as np
+        >>> from VitLib import extract_threshold_values_old
         >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
         ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
         ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
-        >>> extract_threshold_values(a)
+        >>> extract_threshold_values_old(a)
         array([126, 254], dtype=uint8)
 
     Note:
@@ -277,15 +283,19 @@ cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values_old(cnp.ndarray[DTYP
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cpdef cnp.ndarray[DTYPE_t, ndim=1] extract_threshold_values(cnp.ndarray[DTYPE_t, ndim=2] img, int min_th=0, int max_th=255):
-    """画像から閾値を抽出する.
-    
+    """画像から閾値候補を抽出する関数
+
     Args:
         img (np.ndarray): グレースケール画像
+        min_th (int): 抽出する最小閾値 (デフォルト: 0)
+        max_th (int): 抽出する最大閾値 (デフォルト: 255)
 
     Returns:
-        np.ndarray: 画像から抽出した閾値のリスト
+        np.ndarray: 抽出された閾値候補のリスト
 
-    Examples:
+    Example:
+        >>> import numpy as np
+        >>> from VitLib import extract_threshold_values
         >>> a = np.array([  0,   0,   0,   0,   0,   0,   0,   0,   0],
         ...              [127, 127, 127, 127, 127, 127, 127, 127, 127],
         ...              [255, 255, 255, 255, 255, 255, 255, 255, 255], dtype=np.uint8)
