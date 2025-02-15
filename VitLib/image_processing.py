@@ -127,7 +127,7 @@ def change_value(img:np.ndarray, value_ratio:float) -> np.ndarray:
     return img
 
 def random_value(img_list:list, value_ratio_range:tuple) -> list:
-    """画像のリスト内の各画像の明度をランダムに変更します。
+    """画像のリスト内の各画像の明度をランダムに変更する関数
 
     Args:
         img_list (list): 画像のリスト
