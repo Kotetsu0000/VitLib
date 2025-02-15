@@ -113,7 +113,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.detect_deleted_area_candidates">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">detect_deleted_area_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_area=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_area=None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.detect_deleted_area_candidates" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 218)
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 216)
 2値画像から小領域の削除候補となる面積リストを作成する関数</p>
 <blockquote>
 <div><dl>
@@ -151,9 +151,7 @@ max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)</
 2値画像から小領域の削除候補となる面積リストを作成する関数</p>
 <blockquote>
 <div><dl>
-<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像 (画素値: 0 またはその他)
-min_area (int): 最小面積の閾値
-max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)</p>
+<dt>Args:</dt><dd><p>img (np.ndarray): 2値画像 (画素値: 0 またはその他)</p>
 </dd>
 <dt>Returns:</dt><dd><p>np.ndarray: 小領域の面積リスト</p>
 </dd>
@@ -181,8 +179,8 @@ max_area (int, optional): 最大面積の閾値 (Noneの場合は制限なし)</
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.extract_threshold_values">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">extract_threshold_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">min_th=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_th=255</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.extract_threshold_values" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 285)
-画像から閾値候補を抽出する関数</p>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 283)
+グレースケール画像から閾値のリストを抽出する関数</p>
 <blockquote>
 <div><dl>
 <dt>Args:</dt><dd><p>img (np.ndarray): グレースケール画像
@@ -210,8 +208,8 @@ max_th (int): 抽出する最大閾値 (デフォルト: 255)</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="VitLib.VitLib_cython.common.extract_threshold_values_old">
 <span class="sig-prename descclassname"><span class="pre">VitLib.VitLib_cython.common.</span></span><span class="sig-name descname"><span class="pre">extract_threshold_values_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndarray</span> <span class="pre">img</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#VitLib.VitLib_cython.common.extract_threshold_values_old" title="Link to this definition">¶</a></dt>
-<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 257)
-画像から閾値を抽出する.</p>
+<dd><p>File: VitLib/VitLib_cython/common.pyx (starting at line 255)
+グレースケール画像から閾値のリストを抽出する関数</p>
 <blockquote>
 <div><dl>
 <dt>Args:</dt><dd><p>img (np.ndarray): グレースケール画像</p>
