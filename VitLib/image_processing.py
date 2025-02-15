@@ -23,10 +23,10 @@ def gamma_correction(img: np.ndarray, gamma: float = 2.2) -> np.ndarray:
     return (np.power(img/255, 1/gamma)*255).astype(np.uint8)
 
 def change_hue(img:np.ndarray, hue_degree:int) -> np.ndarray:
-    """画像のリスト内の各画像の色相を変更する関数
+    """画像の色相を変更する関数
 
     Args:
-        img_list (list): 画像のリスト
+        img (np.ndarray): 画像 (画素値: 0〜255)
         hue_degree (int): 色相の変更量(0~180)
 
     Returns:
@@ -189,7 +189,7 @@ def cut_image(img: np.ndarray, top_left: tuple, size: tuple) -> np.ndarray:
     """画像を指定された位置とサイズで切り取る関数
 
     Args:
-        img (np.ndarray): 入力画像
+        img (np.ndarray): 画像 (画素値: 0〜255)
         top_left (tuple): 切り取り開始位置 (x, y)
         size (tuple): 切り取りサイズ (幅, 高さ)
 
@@ -247,7 +247,7 @@ def rotate_image(img: np.ndarray, rotate_times: int) -> np.ndarray:
     """画像を回転する関数
 
     Args:
-        img (np.ndarray): 入力画像
+        img (np.ndarray): 画像 (画素値: 0〜255)
         rotate_times (int): 90度単位で回転する回数 (正なら時計回り、負なら反時計回り)
 
     Returns:
@@ -292,11 +292,7 @@ def flip_image(img:np.ndarray, flip_code:int) -> np.ndarray:
 
     Args:
         img (np.ndarray): 画像 (画素値: 0〜255)
-        flip_code (int): 反転コード
-
-            - 0: 上下反転
-            - 1: 左右反転
-            - -1: 上下左右反転
+        flip_code (int): 反転コード(0: 上下反転, 1: 左右反転, -1: 上下左右反転)
 
     Returns:
         np.ndarray: 反転された画像
@@ -314,12 +310,6 @@ def random_flip_image(img_list:list) -> list:
 
     Args:
         img_list (list): 画像のリスト
-        flip_code_range (tuple): 反転コードの範囲
-
-            - 0: 上下反転
-            - 1: 左右反転
-            - -1: 上下左右反転
-            - 2: なし
 
     Returns:
         list: 反転された画像のリスト
